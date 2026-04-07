@@ -1,0 +1,9 @@
+﻿参数,属性,含义
+speed_download,,下载速度，单位-字节每秒
+time_namelookup,,DNS解析域名时间
+time_appconnect,,SSL|SSH等上层连接建立的时间
+time_starttransfer,,从请求开始到第一个字节将要传输的时间
+time_connect,,TCP连接的时间，三次握手的时间
+time_total,,总时间
+time_redirect,,从开始到最后一个请求事务的时间
+time_pretransfer,,从请求开始到响应开始传输的时间

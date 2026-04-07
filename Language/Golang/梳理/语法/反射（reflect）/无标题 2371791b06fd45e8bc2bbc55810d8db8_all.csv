@@ -1,0 +1,20 @@
+﻿方法名,备注
+ConvertibleTo,判断该类型能否转换为另外一种类型
+NumOut,函数的出参个数
+Len,返回array的长度
+Align,分配内存时的内存对齐字节数
+FieldAlign,作为struct的field时内存对齐字节数
+Implements,判断该类型是否实现了某个接口
+In,函数第n个入参
+NumIn,函数的入参数个数
+AssignableTo,判断该类型能否赋值给某个类型
+Comparable,判断该类型变量是否可以比较
+Elem,取该类型的元素
+Size,该类型变量占用字节数
+Key,返回map结构的key类型Type
+String,type的string表示方式
+PkgPath,"包路径， ""encoding/base64""， 内置类型返回empty string"
+ChanDir,返回channel的方向 recv/send/double
+Name,type名 string类型
+Out,函数第n个出参
+IsVariadic,判断函数是否接受可变参数

@@ -1,0 +1,9 @@
+﻿Type,Value,备注
+Kind,Kind,返回指定对象的Kind类型
+MethodByName,MethodByName,根据方法名找方法
+Method,Method,返回第i个方法
+NumMethod,NumMethod,返回拥有的方法总数，包括unexported方法
+Field,Field,取struct结构的第n个field
+FieldByIndex,FieldByIndex,"嵌套的方式取struct的field，比如v.FieldByIndex(1,2,3)等价于 v.field(1).field(2).field(3)"
+FieldByNameFunc,FieldByNameFunc,返回名称匹配match函数的field
+NumField,NumField,返回struct所包含的field数量

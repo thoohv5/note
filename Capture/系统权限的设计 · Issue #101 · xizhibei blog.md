@@ -1,0 +1,16 @@
+# 系统权限的设计  · Issue #101 · xizhibei/blog
+
+标签: Design
+URL: https://github.com/xizhibei/blog/issues/101
+状态: 已完成
+类型: 文字
+
+- 这里需要强调下，认证（Authentication）与授权（Authorization）是两个不同的概念，虽然他们的英文单词很像。
+
+认证的时候，只有能不能登录这种说法，在 Web 程序中对应的是 HTTP Status 401 错误，而授权认证则是登录之后才会进行的操作，对系统内的资源，你是不是有权限进行操作，没有的话对应的是 HTTP Status 403 错误。
+    - 📝 认证->登录，401
+    授权->权限，403
+
+[](https://opengraph.githubassets.com/ec1070f16cfc3405890c6049469e4906e48ecde18926f71c509fd28bffecbf7a/xizhibei/blog/issues/101)
+
+---

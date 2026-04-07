@@ -1,0 +1,204 @@
+# POSTGRESQL  13.1 bug 与 逻辑复制槽参数调优_51CTO博客_mysql逻辑复制
+
+标签: Postgres
+URL: https://blog.51cto.com/u_14150796/6534588
+状态: 待完成
+类型: 文字
+
+![](https://s2.51cto.com/images/blog/202306/16104030_648bcb9e6c66d89206.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+随着问问题的同学越来越多，公众号内部私信回答问题已经很困难了，所以建立了一个群，关于各种数据库的问题都可以，目前主要是 POSTGRESQL, MYSQL ,MONGODB ,POLARDB ,REDIS，SQL SERVER 等，期待你的加入，
+
+这里首先的写这篇文章的之前的感谢阿里云的 PG RDS 数据库组的同学们，基于隐私我就不提名字了，感谢他们对这个故障所付出的时间和经历。
+
+先说说问题是什么，核心的问题就是我们的逻辑复制槽，在工作的情况下，突发就不工作了，active 的状态为 f , 而这个问题困扰了我们一天的时间，最终还是通过阿里云的同学找到了问题的起因。
+
+这里我们使用的POSTGRESQL 的版本是13.1 ,主要有两个原因 1 当时采用的PG的版本时最新的版本就是 13.1 , 另外我们从PG10 直接升级到 PG 13 是经过测试的无误的情况下，主要的一个需求也是 逻辑复制槽的支持和相关的数据传输的问题。
+
+![](https://s2.51cto.com/images/blog/202306/16104030_648bcb9e91a4724851.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+![](https://s2.51cto.com/images/blog/202306/16104030_648bcb9ea894990577.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+首先逻辑decoding 是一个将数据库中持久化的更改的信息，用一种易于理解的数据格式的方式进行表达的方式，这里PG 是通过WAL 日志中的信息将这些内容进行表达的一种方式。
+
+复制槽逻辑复制主要是功能就是将数据库的信息变动进行重放根据信息产生的顺序来进行每一个逻辑复制槽就是针对一个PG 逻辑数据库的回放通道。如果逻辑复制槽不正常的情况下，PG 会遇到灾难性的问题
+
+1  数据库不在进行checkpoint  （手动也无效）
+
+2  随着checkpoint 不工作，则WAL 日志会快速堆积，无法在清理，包含你有归档的情况下
+
+对这方面不清楚的可以查看下面的文字
+
+![](https://s2.51cto.com/images/blog/202306/16104030_648bcb9ebc37b95600.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+[https://cloud.tencent.com/developer/article/1671149](https://cloud.tencent.com/developer/article/1671149)
+
+所以逻辑复制槽本身对于数据库和数据库的性能有至关重要的影响。
+
+这里的主要的问题的BUG 产生是这样的一个过程
+
+1  在逻辑复制中我们采用的是 FOR ALL TABLES ，也就是说我们采用的逻辑复制是对这个逻辑数据库中的所有的表进行的数据变更的确认，那么这里如果有表在DDL 期间 REWRITE 了，也就是DDL 导致这个重新建立，那么在这个期间会产生一个临时表 pg_temp_xxxx ，而这个表实际上并不应该包含在 FOR ALL TABLES 内，因为包含了，也无法对这个表进行数据的传输。这里PG 对于这个问题进行了过滤。那么BUG 是怎么产生的。
+
+2  BUG 的产生是对于逻辑复制中的对于DDL REWRITE 重写进行了处理，但是在我们这个版本 PG13.1中并未对 REWRITE 中的 TOAST 表进行处理，导致的问题。
+
+另外还有一些其他可能引起的问题，参加下面这段文字， memory leak 和  插入的数据覆盖还在使用的toast中的数据的问题。所以需要对当前的PG
+
+进行PTACH。
+
+If speculative insert has a toast table insert then if that tuple
+
+is not confirmed then the toast hash is not cleaned and that is
+
+creating various problem like a) memory leak b) next insert is
+
+using these uncleaned toast data for its insertion and other
+
+error and assersion failure.  So this patch handle that by
+
+queuing the spec abort changes and cleaning up the toast hash
+
+on spec abort.  Currently, in this patch we are queuing up all
+
+the spec abort changes, but as an optimization we can avoid
+
+queuing the spec abort for toast tables but for that we need to
+
+log that as a flag in WAL.
+
+下面逐一对PG13.2 以及后续版本在 logical 部分的bug fix进行一个信息的统计
+
+1 PG 13.2 更新了如下的logical 部分的问题
+
+Fix memory leak in walsender processes while sending new
+
+snapshots for logical decoding (Amit Kapila)
+
+Fix relation cache leak in walsender processes while
+
+sending row changes via the root of a partitioned relation
+
+during logical replication (Amit Langote, Mark Zhao)
+
+2 PG 13.3 更新了如下logical部分的问题
+
+Fix crash when a logical replication worker does
+
+ALTER SUBSCRIPTION REFRESH (Peter Smith)
+
+3 PG 13.4 更新了如下logical部分的问题
+
+Logical replication workers frequently used Asserts to check
+
+for cases that could be triggered by invalid or out-of-order
+
+replication commands. This seems unwise, so promote these
+
+tests to regular error checks.
+
+Fix assorted crash cases in logical replication of
+
+partitioned-table updates (Amit Langote, Tom Lane)
+
+Fix potential crash when firing AFTER triggers of partitioned
+
+tables in logical replication workers (Tom Lane)
+
+Fix deadlock when multiple logical replication workers try to
+
+truncate the same table (Peter Smith, Haiying Tang)
+
+Fix error cases and memory leaks in logical decoding of
+
+speculative insertions (Dilip Kumar)
+
+Fix memory leak in logical replication output (Amit Langote)
+
+4 PG 13.5 更新了如下logical 部分问题
+
+Fix logical decoding to correctly ignore toast-table changes
+
+for transient tables (Bertrand Drouvot)
+
+Logical decoding normally ignores changes in transient tables
+
+such as those created during an ALTER TABLE heap rewrite.
+
+But that filtering wasn't applied to the associated toast
+
+table if any, leading to possible errors when rewriting a table
+
+that's being published.
+
+Fix logical decoding's memory usage accounting to handle TOAST
+
+data correctly (Bertrand Drouvot)
+
+5 PG 13.6 更新了如下的logcial 部分的问题
+
+Be sure to fsync the pg_logical/mappings subdirectory during
+
+checkpoints (Nathan Bossart)
+
+On some filesystems this oversight could lead to losing logical
+
+rewrite status files after a system crash.
+
+而我们目前的问题就是 PG13.5 中FIX 的问题
+
+2 logcial_decoding_work_mem
+
+这里我们关注的是第二个参数 logcial_decoding_work_mem 的设置值的问题
+
+![](https://s2.51cto.com/images/blog/202306/16104030_648bcb9ed8fae47118.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+这里可以优化的参数在PG 13中被提供，可以通过开启更大的 logical_
+
+decoding_mem 来支持在处理数据的过程中，使用内存，而不是将数据防止在
+
+磁盘上。对于一些强依赖 logical 复制做大数据的情况下，是有意义的。
+
+那么我们回到问题，遇到这个BUG 如何解决，没有办法只能删除，并重建这个
+
+复制槽。然后我们准备对PG 进行小版本升级的工作。
+
+下面是一些监控逻辑复制槽部分的语句如果有需要可以自取
+
+select   pid, client_addr, state, sync_state,
+
+pg_wal_lsn_diff(sent_lsn, write_lsn) as write_lag,
+
+pg_wal_lsn_diff(sent_lsn, flush_lsn) as flush_lag,
+
+pg_wal_lsn_diff(sent_lsn, replay_lsn) as replay_lag
+
+from pg_stat_replication;
+
+![](https://s2.51cto.com/images/blog/202306/16104030_648bcb9ef11fc78027.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+SELECT slot_name, plugin, slot_type, database, active, restart_lsn,
+
+confirmed_flush_lsn FROM pg_replication_slots;
+
+![](https://s2.51cto.com/images/blog/202306/16104031_648bcb9f2e47a32013.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+ SELECT slot_name, 
+
+    pg_size_pretty(pg_wal_lsn_diff(pg_current_wal_lsn(), restart_lsn)) as replicationSlotLag, 
+
+     pg_size_pretty(pg_wal_lsn_diff(pg_current_wal_lsn(), confirmed_flush_lsn)) as confirmedLag,
+
+     active,wal_status
+
+ FROM pg_replication_slots;
+
+![](https://s2.51cto.com/images/blog/202306/16104031_648bcb9f4765291637.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)
+
+或者通过上面的命令来查看逻辑复制槽积压的数据的动态值，和复制槽的状态
+
+如wal_status 出现LOST 则说明你当前复制槽已经不可用，对方需要的数据已经
+
+被删除，如果是extended 则说明虽然逻辑复制槽还在保留数据但是保留的数据的
+
+的大小已经超过max_wal_size 的大小，需要注意了
+
+![](https://s2.51cto.com/images/blog/202306/16104031_648bcb9f5f4e090542.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_30,g_se,x_10,y_10,shadow_20,type_ZmFuZ3poZW5naGVpdGk=/format,webp/resize,m_fixed,w_1184)

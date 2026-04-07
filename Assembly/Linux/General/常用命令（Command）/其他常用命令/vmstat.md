@@ -1,0 +1,8 @@
+# vmstat
+
+### 使用率
+
+```
+vmstat 1 2|tail -n 1|awk '{print 100 -($15+$16)}'
+
+```

@@ -1,0 +1,5 @@
+# 理想RBAC模型
+
+![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202401261520051.png)
+
+![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202401261521910.png)

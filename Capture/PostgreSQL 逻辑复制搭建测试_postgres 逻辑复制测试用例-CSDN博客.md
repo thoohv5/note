@@ -1,0 +1,168 @@
+# PostgreSQL 逻辑复制搭建测试_postgres 逻辑复制测试用例-CSDN博客
+
+URL: https://blog.csdn.net/Hehuyi_In/article/details/104971342
+
+### 一、 准备工作
+
+### 1. Publication（发布）节点
+
+- postgersql.conf
+    
+    wal_level = logicalmax_replication_slots = 8 	max_wal_senders = 10		max_worker_processes=128
+    
+- pg_hba.conf
+    
+    host replication  repuser   192.0.0.0/8    md5
+    
+
+### 2. Subscription（订阅）节点
+
+- 初始化环境
+    
+    initdb -D $PGDATA -E UTF8 --locale=en_US.utf8pg_ctl –D $PGDATA start
+    
+- postgersql.conf
+    
+    max_replication_slots = 8max_logical_replication_workers = 8	max_worker_processes=128
+    
+
+### 二、 **发布与订阅**
+
+### **1. 创建测试表并设置replica identity**
+
+```
+create table test(id int primary key, info text, crt_time timestamp);  \d testalter table test replica identity using index test_pkey;\d test
+```
+
+### 2. 发布表
+
+```
+create publication pub1 for table test;select * from pg_publication;
+```
+
+![](https://img-blog.csdnimg.cn/b455e8bcf7c14a86b224742ad662b176.png)
+
+### 3. **订阅端创建订阅**
+
+注意整句基本都是要改的
+
+```
+create subscription sub_from_pub1 connection 'host=192.168.0.108 port=5432 user=postgres password=postgres' publication pub1;
+```
+
+![](https://img-blog.csdnimg.cn/42bfd4bc1b6a48a886fe51014a63b63d.png)
+
+### **4.** **发布端插入数据**
+
+```
+insert into test select generate_series(1, 10), 'test', now();
+```
+
+![](https://img-blog.csdnimg.cn/355c6a818c6c40b1bd198419c9e8d6e1.png)
+
+### **5.** **订阅端查询**
+
+```
+select * from test;
+```
+
+![](https://img-blog.csdnimg.cn/8402e8a135054a8692c4edb6f17f93aa.png)
+
+### 三、 相关视图
+
+### 1. 发布端信息 pg_publication
+
+[PostgreSQL: Documentation: 14: 52.39. pg_publication](https://www.postgresql.org/docs/14/catalog-pg-publication.html)
+
+```
+postgres=# select * from pg_publication;-[ RECORD 1 ]+oid          | 16559pubname      | pub1pubowner     | 10puballtables | fpubinsert    | tpubupdate    | tpubdelete    | tpubtruncate  | tpubviaroot   | f
+```
+
+### 2. 订阅端信息pg_subscription
+
+[PostgreSQL: Documentation: 14: 52.52. pg_subscription](https://www.postgresql.org/docs/14/catalog-pg-subscription.html)
+
+```
+postgres=# select * from pg_subscription;-[ RECORD 1 ]oid             | 16392subdbid         | 13893subname         | sub_from_pub1subowner        | 10subenabled      | tsubbinary       | fsubstream       | fsubconninfo     | host=192.168.0.108 port=5432 user=postgres password=postgressubslotname     | sub_from_pub1subsynccommit   | offsubpublications | {pub1}
+```
+
+### 3. 复制状态 pg_stat_replication
+
+```
+postgres=# select * from pg_stat_replication ;-[ RECORD 1 ]pid              | 19998usesysid         | 10usename          | postgresapplication_name | sub_from_pub1client_addr      | 192.168.0.109client_hostname  | client_port      | 40421backend_start    | 2023-01-26 12:56:22.065934+08backend_xmin     | state            | streamingsent_lsn         | 0/3002D928write_lsn        | 0/3002D928flush_lsn        | 0/3002D928replay_lsn       | 0/3002D928write_lag        | flush_lag        | replay_lag       | sync_priority    | 0sync_state       | asyncreply_time       | 2023-01-26 12:57:14.031458+08
+```
+
+查询逻辑复制延迟
+
+```
+select state,backend_start, pg_size_pretty(pg_wal_lsn_diff(pg_current_wal_insert_lsn(), sent_lsn)) send_gap, pg_size_pretty(pg_wal_lsn_diff(pg_current_wal_insert_lsn(), replay_lsn)) apply_gap, sent_lsn, write_lsn, flush_lsn, replay_lsn, sync_state, reply_time from pg_stat_replication;-[ RECORD 1 ]-+state         | streamingbackend_start | 2023-01-26 12:56:22.065934+08send_gap      | 0 bytesapply_gap     | 0 bytessent_lsn      | 0/3002E178write_lsn     | 0/3002E178flush_lsn     | 0/3002E178replay_lsn    | 0/3002E178sync_state    | asyncreply_time    | 2023-01-26 13:48:59.898499+08
+```
+
+### 4. 复制槽信息 pg_replication_slots
+
+```
+postgres=# select * from pg_replication_slots;-[ RECORD 1 ]slot_name           | sub_from_pub1plugin              | pgoutputslot_type           | logicaldatoid              | 13893database            | postgrestemporary           | factive              | tactive_pid          | 19998xmin                | catalog_xmin        | 870restart_lsn         | 0/3002D8F0confirmed_flush_lsn | 0/3002D928wal_status          | reservedsafe_wal_size       | two_phase           | f
+```
+
+### 5. 查看订阅端状态 pg_stat_subscription
+
+其中最主要的是订阅端接收的lsn信息
+
+[PostgreSQL: Documentation: 14: 28.2. The Statistics Collector](https://www.postgresql.org/docs/14/monitoring-stats.html#MONITORING-PG-STAT-SUBSCRIPTION)
+
+```
+select postgres-# pg_size_pretty(pg_wal_lsn_diff(received_lsn, latest_end_lsn)), * from pg_stat_subscription;-[ RECORD 1 ]pg_size_pretty        | 0 bytessubid                 | 16392subname               | sub_from_pub1pid                   | 8553relid                 | received_lsn          | 0/3002DA10last_msg_send_time    | 2023-01-26 12:59:36.582129+08last_msg_receipt_time | 2023-01-26 12:59:38.393401+08latest_end_lsn        | 0/3002DA10latest_end_time       | 2023-01-26 12:59:36.582129+08
+```
+
+### 6. 查看订阅端replay进度 pg_replication_origin_status
+
+- remote_lsn：已复制到订阅端的发布端 lsn
+- local_lsn：本地已持久化（写入事务日志文件）的lsn，只有在此之前的脏页才能刷入磁盘
+
+[PostgreSQL: Documentation: 14: 52.80. pg_replication_origin_status](https://www.postgresql.org/docs/14/view-pg-replication-origin-status.html)
+
+```
+postgres=# select * from pg_replication_origin_status; local_id | external_id | remote_lsn | local_lsn 1 | pg_16392    | 0/3002E058 | 0/170E998
+```
+
+### 四、 设置全部发布
+
+### 1. 发布端
+
+```
+postgres=# drop publication pub1 ;DROP PUBLICATIONpostgres=# create publication pub1 for all tables ;CREATE PUBLICATION
+```
+
+发布all table的情况下，测试新建一个表并插入数据，看订阅端能否识别
+
+```
+postgres=# create table test5(id int, crt_time timestamp);CREATE TABLEpostgres=# insert into test5 values(1, now());INSERT 0 1
+```
+
+### 2. 订阅端
+
+可以看到数据没有自动同步
+
+```
+postgres=# create table test5(id int, crt_time timestamp);CREATE TABLEpostgres=# select * from test5; id | crt_time (0 rows)
+```
+
+刷新订阅端
+
+```
+alter subscription sub_from_pub1 refresh publication;
+```
+
+![](https://img-blog.csdnimg.cn/be59b6af7a8440a3a65b652dac911c81.png)
+
+ 发布了所有表订阅端需要先创建对应表，或者把发布端无用表删除，否则会报错。
+
+![](https://img-blog.csdnimg.cn/e130e40b320c44d8bb24551dcaa21270.png)
+
+ 再次查询
+
+![](https://img-blog.csdnimg.cn/aba13da8017744f595a9fad15a5c64c9.png)
+
+参考
+
+PGCA课程《第46-47讲[PostgreSQL](https://so.csdn.net/so/search?q=PostgreSQL&spm=1001.2101.3001.7020) 逻辑复制》

@@ -1,0 +1,1 @@
+# key事件通知（Redis keyspace notifications）

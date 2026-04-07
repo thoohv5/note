@@ -1,0 +1,44 @@
+﻿方法名,备注
+Addr,v的指针，前提时CanAddr()返回true
+Bool,bool类型变量的值
+Bytes,[]bytes类型的值
+Call,调用函数
+CallSlice,调用具有可变参的函数
+CanAddr,判断能否取址
+CanInterface,判断Interface方法能否使用
+CanSet,判断v的值能否改变
+Cap,判断容量 Array/Chan/Slice
+Close,关闭Chan
+Complex,
+Convert,返回将v转换位type t的结果
+Elem,返回interface包含的实际值
+Float,
+Index,索引操作 Array/Slice/String
+Int,
+Interface,将当前value以interface{}形式返回
+IsNil,"判断是否为nil，chan, func, interface, map, pointer, or slice value"
+IsValid,是否是可操作的Value，返回false表示为zero Value
+Len,"适用于Array, Chan, Map, Slice, or String"
+MapIndex,对map类型按key取值
+MapKeys,map类型的所有key的列表
+OverflowComplex,
+OverflowFloat,溢出判断
+OverflowInt,
+OverflowUint,
+Pointer,返回uintptr 适用于slice
+Recv,chan接收
+Send,chan发送
+Set,将x赋值给v，类型要匹配
+SetBool,
+SetBytes,
+SetCap,slice调整切片
+SetMapIndex,map赋值
+SetUint,
+SetPointer,unsafe.Pointer赋值
+SetString,
+Slice,return v[i:j] 适用于Array/Slict/String
+String,return value的string表示方法
+TryRecv,chan非阻塞接收
+Try Send,chan非阻塞发送
+Type,返回value的Type
+UnsafeAddr,返回指向value的data的指针

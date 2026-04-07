@@ -1,0 +1,1 @@
+# ERROR: cannot ALTER TABLE "xxx" because it is being used by active queries in this session

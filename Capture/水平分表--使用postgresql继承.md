@@ -1,0 +1,10 @@
+# 水平分表--使用postgresql继承
+
+标签: Postgres
+URL: https://www.jianshu.com/p/705c359ed76e
+状态: 待完成
+类型: 文字
+
+![](https://upload.jianshu.io/users/upload_avatars/12747559/bd147062-57a1-48fb-8456-5cdd1054015a.png)
+
+---

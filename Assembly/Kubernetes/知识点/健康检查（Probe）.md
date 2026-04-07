@@ -1,0 +1,110 @@
+# 健康检查（Probe）
+
+### **健康检测探针**
+
+- **Liveness Probe（存活探针）**
+    
+    用于判断容器是否正在运行。如果存活探针失败，Kubernetes 会自动重启容器。
+    
+- **Readiness Probe（就绪探针）**
+    
+    用于判断容器是否已经准备好接受流量。如果就绪探针失败，Kubernetes 会将该 Pod 从服务的负载均衡池中移除，直到探针再次成功。
+    
+
+### **探针类型选择**
+
+- **HTTP GET**
+    
+    适用于大多数 Web 应用。通过向容器内的指定端点发送 HTTP GET 请求，根据返回的状态码判断容器是否健康。
+    
+- **TCP Socket**
+    
+    适用于需要监听特定端口的服务。通过尝试与容器内的指定端口建立 TCP 连接，根据连接的成功与否判断容器状态。
+    
+- **Exec Command**
+    
+    适用于需要执行复杂逻辑的场景。在容器内部执行一个命令，根据命令的退出状态码判断容器健康状况。
+    
+
+### **参数配置**
+
+- **initialDelaySeconds（启动延时）**
+    
+    容器启动后等待多长时间开始第一次健康检查。应根据应用的启动时间合理设置。
+    
+- **periodSeconds（间隔时间）**
+    
+    健康检查的频率（秒）。频繁的检查可能会增加系统负担，但可以更快地发现问题。
+    
+- **timeoutSeconds（响应延时）**
+    
+    每次健康检查的超时时间（秒）。应根据应用的响应时间合理设置。
+    
+- **successThreshold（健康阈值）**
+    
+    健康检查成功的阈值。连续成功多少次才认为容器是健康的。
+    
+- **failureThreshold（不健康阈值）**
+    
+    健康检查失败的阈值。连续失败多少次才认为容器不健康并触发重启。
+    
+
+- 示例
+    
+    ```yaml
+    livenessProbe:
+      httpGet:
+        path: /healthz
+        port: 8080
+        httpHeaders:
+          - name: Custom-Header
+            value: Awesome
+      initialDelaySeconds: 15  # 容器启动后等待多少秒开始检查
+      periodSeconds: 20       # 检查间隔时间(秒)
+      timeoutSeconds: 5       # 检查超时时间(秒)
+      successThreshold: 1     # 检查成功阈值
+      failureThreshold: 3     # 连续失败多少次判定为不健康
+    ```
+    
+
+- 示例
+    
+    ```yaml
+    spec:
+      containers:
+      - name: main-container
+        image: your-registry/order-service:latest
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 3
+          timeoutSeconds: 2
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 5
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/sh", "-c", "echo Shutting down... && sleep 5"]
+    
+    ```
+    
+    | 项目 | 作用 |
+    | --- | --- |
+    | `readinessProbe` | **就绪探针**，控制**什么时候对外暴露服务**。只有探针成功，Pod才加入 Service负载。 |
+    | `livenessProbe` | **存活探针**，探测容器是否存活，不活了就**重启容器**。 |
+    | `initialDelaySeconds` | 容器启动后，**延迟多少秒**才开始第一次检查。 |
+    | `periodSeconds` | 每隔多少秒**检查一次**。 |
+    | `timeoutSeconds` | 请求探针接口，如果超过多少秒**算超时失败**。 |
+    | `failureThreshold` | 连续失败多少次，K8s才判定为 **探针失败**（Readiness移出，或Liveness重启）。 |
+    | `lifecycle.preStop` | Pod要被删掉前，提前执行一个命令，**优雅退出**（比如通知下游，关闭连接）。 |

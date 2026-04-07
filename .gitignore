@@ -1,0 +1,15 @@
+# Obsidian 忽略规则
+.obsidian/
+.obsidian/*
+
+# 所有以 . 开头的文件/文件夹
+.*
+
+# 缓存和临时文件
+*.tmp
+Thumbs.db
+
+# 大文件
+*.pdf
+*.zip
+*.tar.gz

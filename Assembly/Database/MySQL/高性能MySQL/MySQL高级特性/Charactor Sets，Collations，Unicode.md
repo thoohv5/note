@@ -1,0 +1,17 @@
+# Charactor Sets，Collations，Unicode
+
+字符集设置级别：服务器、数据库、表、列
+
+> 字符集
+> 
+
+```bash
+SHOW CHARACTER SET;
+```
+
+> 字符集排序规则
+> 
+
+```bash
+SHOW COLLATION
+```
