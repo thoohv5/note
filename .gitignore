@@ -13,3 +13,8 @@ Thumbs.db
 *.pdf
 *.zip
 *.tar.gz
+
+
+
+# Ignore Smart Environment folder
+.smart-env
