@@ -1,0 +1,169 @@
+---
+title: "受够了复制粘贴，我把 Obsidian 直接接进了微信后台"
+source: "https://mp.weixin.qq.com/s/cJdaBZi-6_VWvsZjiV1SCA"
+author:
+  - "[[林大友]]"
+published:
+created: 2026-04-08
+description: "这次更新后，点一下按钮，文章就直接躺进草稿箱了。还支持多账号、本地图片自动上传。"
+tags:
+  - "clippings"
+---
+原创 林大友 *2026年2月5日 07:57*
+
+上次写了篇文章，介绍我做的一个 Obsidian 插件： [我做了个插件，让公众号排版不用离开 Obsidian](https://mp.weixin.qq.com/s?__biz=Mzk2NDAwMzAzMw==&mid=2247487479&idx=1&sn=d071e75da42910e0e275c8126e366959&scene=21#wechat_redirect) 。
+
+它可以在 Obsidian 的侧边栏里，实时预览文章在微信公众号里的显示效果。写完之后，点击复制，粘贴到公众号后台，发布。
+
+听起来已经很顺畅了对吧？
+
+但用了一段时间之后，我发现还是有点别扭。
+
+---
+
+## 那该死的「最后一公里」
+
+每次写完文章，预览效果确认没问题了，接下来的流程是这样的：
+
+1. 全选，复制
+2. 打开浏览器，登录公众号后台
+3. 新建图文，粘贴
+4. 把封面图另存为，再上传，再裁剪
+5. 手动填写摘要、作者
+
+这几步，每一步都不难。但加在一起，就像一道隐形的门槛。
+
+我心里盘算着：火箭都造好了，最后还得人工推到发射台上。这事儿怎么想都不对劲。
+
+---
+
+## 今天，打通了OB 到微信草稿箱的距离
+
+所以这两天我做了一次优化，发布了 **v2.0** 版本。
+
+折腾了两天，终于搞定了。
+
+核心目标只有一个： **干掉那最后一公里，让 Obsidian 直连微信草稿箱。**
+
+![CleanShot 2026-02-05 at 07.40.36.png|400](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+CleanShot 2026-02-05 at 07.40.36.png|400
+
+---
+
+### 一键同步到草稿箱
+
+现在，写完文章之后，只需要点一下「同步到微信草稿箱」按钮。
+
+标题、正文、封面图，一次性打包发送到微信后台。
+
+不用打开浏览器，不用复制粘贴，不用手动上传封面。
+
+本地图片也能自动处理。不管是相对路径的截图，还是 WikiLink 格式的图片，插件都会帮你上传到微信素材库。
+
+这可能是目前市面上唯一能做到「本地图片全自动同步」的方案。
+
+![CleanShot 2026-02-05 at 07.42.22.png|400](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+CleanShot 2026-02-05 at 07.42.22.png|400
+
+---
+
+### 多账号支持
+
+如果你像我一样，手上有不止一个公众号，这个功能会很实用。
+
+插件现在支持同时配置最多 **5 个公众号** 。
+
+你可以在 Obsidian 里一键切换账号。上一篇发给「技术号」，下一篇发给「生活号」，切换很方便。
+
+每个账号还能独立配置默认作者，不用每次都选一遍。
+
+![CleanShot 2026-02-05 at 07.43.16.png|400](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+CleanShot 2026-02-05 at 07.43.16.png|400
+
+---
+
+### 智能摘要与封面
+
+懒得写摘要？插件会自动提取文章前 120 字。
+
+封面图也不用单独处理了。会默认从文章中获取第一张图片作为封面，或者也可以上传一张特定的封面图。
+
+这些小细节，单独拿出来都不起眼。但加在一起，就是「少操心」三个字。
+
+![CleanShot 2026-02-05 at 07.43.50.png|400](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+CleanShot 2026-02-05 at 07.43.50.png|400
+
+---
+
+### 关于 IP 白名单
+
+用过微信公众号 API 的朋友可能知道，微信有个 IP 白名单限制。
+
+如果你的 IP 经常变动（比如在家办公、出差），每次都要去后台改白名单，很烦。
+
+这次我用 Cloudflare Worker 做了一个代理，绕过了这个限制。
+
+> 不懂代码也没关系。我在插件设置中放了一份傻瓜式的部署指南，照着操作就行。真·有手就行。
+
+配置好之后，不管你在哪里写作，同步都不会被卡住。
+
+![CleanShot 2026-02-05 at 07.44.34.png|400](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+CleanShot 2026-02-05 at 07.44.34.png|400
+
+### 完美支持数学公式
+
+在科研党和技术日常写作中，文章里往往会插入很多数学公式。现在我的插件也完美支持了数学公式的渲染和展示。
+
+同样的，你在 Markdown 文章中插入数学公式之后，可以一键跟随文章发布到微信草稿箱。
+
+![CleanShot 2026-02-05 at 07.48.04.png|400](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
+
+CleanShot 2026-02-05 at 07.48.04.png|400
+
+---
+
+### 如何安装和使用？
+
+插件已经在 GitHub 上开源：
+
+https://github.com/DavidLam-oss/obsidian-wechat-converter
+
+**下载方式** ：
+
+- 访问 GitHub Release 页面，下载最新的 zip 包
+- 或者用 BRAT 插件安装 beta 版本
+- 如果你访问 Github 有困难，关注公众号在后台回复“插件”即可获取安装包。
+
+**配置指南** ：  
+进入插件设置 → 填写你的 AppID 和 AppSecret → Done。
+
+具体的安装和配置过程也可以查看上方的视频，我已经把每个步骤都详细拆解做了演示。
+
+---
+
+我一直觉得， **最好的工具应该是隐形的** 。
+
+它不应该让你时刻意识到它的存在，而是默默地帮你把事情办了。
+
+现在，当灵感落笔成文的那一刻，只需要轻轻一点，它就已经安稳地躺在你的公众号草稿箱里，静候发布。
+
+这就是我理解的「Obsidian Workflow」。
+
+做这个插件的初衷，就是想让自己写作的时候少分心。现在终于做到了。
+
+如果这个功能解决了你的问题，欢迎给 GitHub 仓库点个 Star ⭐️
+
+如果使用过程中有任何问题或建议，欢迎与我联系：linauwawa。
+
+**微信扫一扫赞赏作者**
+
+继续滑动看下一个
+
+林小卫很行
+
+向上滑动看下一个
