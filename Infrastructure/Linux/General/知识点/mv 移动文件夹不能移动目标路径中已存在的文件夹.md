@@ -1,3 +1,11 @@
+---
+title: mv 移动文件夹不能移动目标路径中已存在的文件夹
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: complete
+---
+
 # mv 移动文件夹不能移动目标路径中已存在的文件夹
 
 ### 使用rsync 代替mv

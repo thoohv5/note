@@ -1,3 +1,11 @@
+---
+title: 常量（constant）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: note
+status: complete
+---
+
 # 常量（constant）
 
 在const 定义中，对常量名没有强制要求全部大写，不过我们一般都会**全部字母大写**，以便阅读。

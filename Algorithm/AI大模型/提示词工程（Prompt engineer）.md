@@ -1,3 +1,11 @@
+---
+title: 提示词工程（Prompt engineer）
+date: 2026-04-07
+tags: [算法, AI]
+type: reference
+status: complete
+---
+
 # 提示词工程（Prompt engineer）
 
 提示词工程（Prompt Engineering）是一门新兴的技术领域，主要专注于设计和优化与人工智能模型交互时使用的提示语。这项技能在人工智能时代变得越来越重要，因为它直接影响着AI模型输出的质量和准确性。

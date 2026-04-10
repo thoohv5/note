@@ -1,3 +1,11 @@
+---
+title: Nats
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: reference
+status: complete
+---
+
 # Nats
 
 # **NATS JetStream的设计目标**

@@ -1,3 +1,11 @@
+---
+title: 脚本（Script）
+date: 2026-04-07
+tags: [软件工具, Git]
+type: note
+status: incomplete
+---
+
 # 脚本（Script）
 
 ### 当前分支名

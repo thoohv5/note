@@ -1,3 +1,11 @@
+---
+title: autoload
+date: 2026-04-07
+tags: [编程语言, PHP]
+type: reference
+status: complete
+---
+
 # autoload
 
 __autoload & spl_autoload_register 自动加载

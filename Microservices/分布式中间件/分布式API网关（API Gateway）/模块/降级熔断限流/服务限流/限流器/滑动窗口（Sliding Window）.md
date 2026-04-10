@@ -1,3 +1,11 @@
+---
+title: 滑动窗口（Sliding Window）
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: reference
+status: complete
+---
+
 # 滑动窗口（Sliding Window）
 
 1.将时间划分为细粒度的区间，每个区间维持一个计数器，每进入一个请求则将计数器加一。

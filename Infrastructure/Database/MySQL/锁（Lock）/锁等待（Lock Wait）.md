@@ -1,3 +1,11 @@
+---
+title: 锁等待（Lock Wait）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: incomplete
+---
+
 # 锁等待（Lock Wait）
 
 # 附录

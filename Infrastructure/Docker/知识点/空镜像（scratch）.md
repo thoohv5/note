@@ -1,3 +1,11 @@
+---
+title: 空镜像（scratch）
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: note
+status: complete
+---
+
 # 空镜像（scratch）
 
 `scratch` 是 Docker 里**最特别的一个镜像**，它不是一个普通镜像，而是 **一个“虚拟占位符”**，代表“从空开始构建”（empty root filesystem）。

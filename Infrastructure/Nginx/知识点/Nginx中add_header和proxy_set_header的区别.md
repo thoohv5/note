@@ -1,3 +1,11 @@
+---
+title: Nginx中add_header和proxy_set_header的区别
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: note
+status: complete
+---
+
 # Nginx中add_header和proxy_set_header的区别
 
 proxy_set_header是nginx设置请求头给上游服务器，add_header是nginx设置响应头信息给浏览器。

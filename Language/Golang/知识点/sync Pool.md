@@ -1,3 +1,11 @@
+---
+title: sync.Pool
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # sync.Pool
 
 # 概述

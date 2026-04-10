@@ -1,3 +1,11 @@
+---
+title: Annotation (注解)
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: reference
+status: complete
+---
+
 # Annotation (注解)
 
 # 概述

@@ -1,3 +1,11 @@
+---
+title: Redis 脚本
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: guide
+status: complete
+---
+
 # Redis 脚本
 
 # 简介

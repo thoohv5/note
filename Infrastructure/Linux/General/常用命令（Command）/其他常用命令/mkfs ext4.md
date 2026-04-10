@@ -1,3 +1,11 @@
+---
+title: mkfs.ext4
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: reference
+status: complete
+---
+
 # mkfs.ext4
 
 # 概述

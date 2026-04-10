@@ -1,3 +1,11 @@
+---
+title: Floor and Ceiling
+date: 2026-04-07
+tags: [算法]
+type: note
+status: complete
+---
+
 # Floor and Ceiling
 
 四舍五入取整、向上取整、向下取整、小数截取

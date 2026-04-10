@@ -1,3 +1,11 @@
+---
+title: RPM解压
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # RPM解压
 
 ### 源码下载

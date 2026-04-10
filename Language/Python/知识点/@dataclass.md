@@ -1,3 +1,11 @@
+---
+title: @dataclass
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # @dataclass
 
 - `@dataclass` 的核心作用就是 **自动生成构造函数、比较函数、打印函数**

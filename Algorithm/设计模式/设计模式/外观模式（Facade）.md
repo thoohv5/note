@@ -1,3 +1,11 @@
+---
+title: 外观模式（Facade）
+date: 2026-04-07
+tags: [算法, 设计模式]
+type: reference
+status: incomplete
+---
+
 # 外观模式（Facade）
 
 ## 概念

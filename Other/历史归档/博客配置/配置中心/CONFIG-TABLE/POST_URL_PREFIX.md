@@ -1,3 +1,11 @@
+---
+title: POST_URL_PREFIX
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # POST_URL_PREFIX
 
 配置值: %category%

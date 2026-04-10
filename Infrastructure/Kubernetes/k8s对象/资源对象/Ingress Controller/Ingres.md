@@ -1,3 +1,11 @@
+---
+title: Ingres
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: reference
+status: complete
+---
+
 # Ingres
 
 **`Ingress`** 是 `Kubernetes` 中用于 **管理外部访问集群服务** 的资源对象，通常用于 `HTTP` 和 `HTTPS` 请求的路由控制。通过 `Ingress`，能够将外部请求引导到不同的服务，并且支持负载均衡、SSL 终止、基于域名或路径的路由等功能。

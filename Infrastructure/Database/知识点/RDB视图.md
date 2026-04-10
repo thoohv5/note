@@ -1,3 +1,11 @@
+---
+title: RDB视图
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: incomplete
+---
+
 # RDB视图
 
 ### RDB 视图？

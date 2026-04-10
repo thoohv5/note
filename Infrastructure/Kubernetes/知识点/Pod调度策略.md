@@ -1,3 +1,11 @@
+---
+title: Pod调度策略
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: guide
+status: complete
+---
+
 # Pod调度策略
 
 # 概述

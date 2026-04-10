@@ -1,3 +1,11 @@
+---
+title: 数据可视化（Grafana）
+date: 2026-04-07
+tags: [微服务, 服务治理]
+type: guide
+status: incomplete
+---
+
 # 数据可视化（Grafana）
 
 Prometheus 自带简单 UI，但推荐 **Grafana** 进行高级可视化：

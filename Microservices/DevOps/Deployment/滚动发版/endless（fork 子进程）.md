@@ -1,3 +1,11 @@
+---
+title: endless（fork 子进程）
+date: 2026-04-07
+tags: [微服务, DevOps]
+type: note
+status: complete
+---
+
 # endless（fork 子进程）
 
 ## FD 传递 (endless/tableflip) 的切换规则：接力棒规则

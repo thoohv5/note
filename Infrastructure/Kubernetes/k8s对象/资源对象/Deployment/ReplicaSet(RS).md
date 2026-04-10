@@ -1,3 +1,11 @@
+---
+title: ReplicaSet(RS)
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: reference
+status: complete
+---
+
 # ReplicaSet(RS)
 
 # 概述

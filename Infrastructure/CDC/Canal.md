@@ -1,3 +1,11 @@
+---
+title: Canal
+date: 2026-04-07
+tags: [基础设施, CDC]
+type: guide
+status: complete
+---
+
 # Canal
 
 ### **什么是 Canal？**

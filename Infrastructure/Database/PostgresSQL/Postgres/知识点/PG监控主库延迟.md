@@ -1,3 +1,11 @@
+---
+title: PG监控主库延迟
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: complete
+---
+
 # PG监控主库延迟
 
 ### 通过WAL延迟时间衡量

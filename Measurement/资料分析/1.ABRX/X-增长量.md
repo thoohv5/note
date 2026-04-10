@@ -1,3 +1,11 @@
+---
+title: 增长量计算
+date: 2024-08-23
+tags: [行测]
+type: note
+status: complete
+---
+
 DECK: 公务员::行测::资料分析::1.ABRX::X增长量
 
 # 增长量计算

@@ -1,3 +1,11 @@
+---
+title: SO_REUSEPORT
+date: 2026-04-07
+tags: [微服务, DevOps]
+type: note
+status: complete
+---
+
 # SO_REUSEPORT
 
 ## `SO_REUSEPORT` 的切换规则：内核哈希算法

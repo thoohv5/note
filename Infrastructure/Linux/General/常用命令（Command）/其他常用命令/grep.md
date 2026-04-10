@@ -1,3 +1,11 @@
+---
+title: grep
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # grep
 
 grep是一种强大的文本搜索工具[linux系统](https://www.linuxprobe.com/)界面，它可以在指定文件或标准输入中查找指定的文本。

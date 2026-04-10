@@ -1,3 +1,11 @@
+---
+title: 双端链表（LinkedList）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # 双端链表（LinkedList）
 
 list、发布与订阅、慢查询、监视器、客户端信息、客户端缓冲区

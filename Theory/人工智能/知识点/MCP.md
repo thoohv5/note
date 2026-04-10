@@ -1,3 +1,11 @@
+---
+title: MCP
+date: 2026-04-07
+tags: [理论, AI]
+type: reference
+status: complete
+---
+
 # MCP
 
 # 概述

@@ -1,3 +1,11 @@
+---
+title: golang 垃圾回收
+date: 2026-04-07
+tags: [其他]
+type: guide
+status: complete
+---
+
 # golang 垃圾回收
 
 踩内存，内存泄漏，野指针

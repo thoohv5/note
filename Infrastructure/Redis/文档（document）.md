@@ -1,3 +1,11 @@
+---
+title: 文档（document）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # 文档（document）
 
 # Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.

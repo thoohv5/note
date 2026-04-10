@@ -1,3 +1,11 @@
+---
+title: 排他锁（X Lock）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: reference
+status: incomplete
+---
+
 # 排他锁（X Lock）
 
 **工作原理**

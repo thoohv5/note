@@ -1,3 +1,11 @@
+---
+title: Docker安装
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: guide
+status: complete
+---
+
 # Docker安装
 
 # 依赖

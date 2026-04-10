@@ -1,3 +1,11 @@
+---
+title: PHPStorm
+date: 2026-04-07
+tags: [软件工具]
+type: guide
+status: complete
+---
+
 # PHPStorm
 
 ### php xdebug

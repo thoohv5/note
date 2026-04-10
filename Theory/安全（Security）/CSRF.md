@@ -1,3 +1,11 @@
+---
+title: CSRF
+date: 2026-04-07
+tags: [理论, 安全]
+type: note
+status: incomplete
+---
+
 # CSRF
 
 ## 简介

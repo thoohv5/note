@@ -1,3 +1,11 @@
+---
+title: GPM模型
+date: 2026-04-08
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # GPM模型
 
 # 概述

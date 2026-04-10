@@ -1,3 +1,11 @@
+---
+title: 联合索引B+树
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: incomplete
+---
+
 # 联合索引B+树
 
 # 附录

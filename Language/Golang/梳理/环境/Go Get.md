@@ -1,3 +1,11 @@
+---
+title: Go Get
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: complete
+---
+
 # Go Get
 
 ### **Why does "go get" use HTTPS when cloning a repository?**

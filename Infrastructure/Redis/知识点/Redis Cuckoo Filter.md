@@ -1,3 +1,11 @@
+---
+title: Redis Cuckoo Filter
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: reference
+status: complete
+---
+
 # Redis Cuckoo Filter
 
 Bloom Filter 的不足（尤其是无法删除元素）限制了其在某些场景下的应用。这时，布谷鸟过滤器（Cuckoo Filter）成为一个更好的选择。

@@ -1,3 +1,11 @@
+---
+title: 基于全局事务标识符（GTID）的复制
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # 基于全局事务标识符（GTID）的复制
 
 1. 在主DB服务上建立复制账号

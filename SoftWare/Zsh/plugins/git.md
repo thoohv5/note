@@ -1,3 +1,11 @@
+---
+title: git
+date: 2026-04-07
+tags: [软件工具, Zsh]
+type: note
+status: incomplete
+---
+
 # git
 
 ```go

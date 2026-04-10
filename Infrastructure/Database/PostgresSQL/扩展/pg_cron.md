@@ -1,3 +1,11 @@
+---
+title: pg_cron
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # pg_cron
 
 要在PostgreSQL启动时启动pg_cron后台工作程序，你需要把pg_cron添加到shared_preload_libraries参数中。如果是备库，pg_cron不会运行任何作业，但是备库提升为主库后它将自动启动。

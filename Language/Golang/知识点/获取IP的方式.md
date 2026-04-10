@@ -1,3 +1,11 @@
+---
+title: 获取IP的方式
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 获取IP的方式
 
 ---

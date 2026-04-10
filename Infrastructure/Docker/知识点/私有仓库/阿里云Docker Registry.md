@@ -1,3 +1,11 @@
+---
+title: 阿里云Docker Registry
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: note
+status: complete
+---
+
 # 阿里云Docker Registry
 
 ### **Docker将本地镜像发布到阿里云容器镜像服务仓库**

@@ -1,3 +1,11 @@
+---
+title: configure
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: note
+status: complete
+---
+
 # configure
 
 **Nginx+Chrome 修改js文件不生效**

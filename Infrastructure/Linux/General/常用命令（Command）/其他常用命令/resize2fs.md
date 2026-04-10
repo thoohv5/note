@@ -1,3 +1,11 @@
+---
+title: resize2fs
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: reference
+status: incomplete
+---
+
 # resize2fs
 
 # 概述

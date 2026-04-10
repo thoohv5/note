@@ -1,3 +1,11 @@
+---
+title: docker
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # docker
 
 ### 1️⃣ 卸载旧版本（如果存在）

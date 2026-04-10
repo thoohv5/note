@@ -1,3 +1,11 @@
+---
+title: English
+date: 2026-04-07
+tags: [编程语言]
+type: note
+status: complete
+---
+
 # English
 
 type: Menu

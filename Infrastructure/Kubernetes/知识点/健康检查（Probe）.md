@@ -1,3 +1,11 @@
+---
+title: 健康检查（Probe）
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: note
+status: complete
+---
+
 # 健康检查（Probe）
 
 ### **健康检测探针**

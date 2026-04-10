@@ -1,3 +1,11 @@
+---
+title: 方式（way）
+date: 2026-04-07
+tags: [理论, AI]
+type: guide
+status: incomplete
+---
+
 # 方式（way）
 
 ### 使用代理（**With agents**）

@@ -1,3 +1,11 @@
+---
+title: uv
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # uv
 
 ### **官网地址** https://docs.astral.sh/uv/‌

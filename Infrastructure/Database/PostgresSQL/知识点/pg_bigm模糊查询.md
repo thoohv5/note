@@ -1,3 +1,11 @@
+---
+title: 模糊查询（pg_bigm）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: incomplete
+---
+
 # 模糊查询（pg_bigm）
 
 标签: Postgres

@@ -1,3 +1,11 @@
+---
+title: 公共表达式CTE
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # 公共表达式CTE
 
 公共表达式，CTE（Common Table Expressions）

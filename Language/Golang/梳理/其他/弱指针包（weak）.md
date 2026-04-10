@@ -1,3 +1,11 @@
+---
+title: 弱指针包（weak）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: complete
+---
+
 # 弱指针包（weak）
 
 # 概述

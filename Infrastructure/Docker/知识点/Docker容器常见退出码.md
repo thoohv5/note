@@ -1,3 +1,11 @@
+---
+title: Docker容器常见退出码
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: note
+status: complete
+---
+
 # Docker容器常见退出码
 
 ### **Exit Code 1**

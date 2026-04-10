@@ -1,3 +1,11 @@
+---
+title: natstat
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # natstat
 
 Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships

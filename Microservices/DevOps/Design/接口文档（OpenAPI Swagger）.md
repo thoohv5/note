@@ -1,3 +1,11 @@
+---
+title: 接口文档（OpenAPI/Swagger）
+date: 2026-04-07
+tags: [微服务, DevOps]
+type: guide
+status: complete
+---
+
 # 接口文档（OpenAPI/Swagger）
 
 # **OpenAPI**

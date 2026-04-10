@@ -1,3 +1,11 @@
+---
+title: tmpfiles.d
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: incomplete
+---
+
 # tmpfiles.d
 
 # 附录

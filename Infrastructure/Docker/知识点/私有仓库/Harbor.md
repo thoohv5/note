@@ -1,3 +1,11 @@
+---
+title: Harbor
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: note
+status: complete
+---
+
 # Harbor
 
 Harbor 是 VMware 公司开源的企业级 Docker Registry 项目，其目标是帮助用户迅速搭建一个企业级的 Docker Registry 服务。

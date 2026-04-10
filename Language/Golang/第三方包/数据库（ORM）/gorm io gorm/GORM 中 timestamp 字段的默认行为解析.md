@@ -1,3 +1,11 @@
+---
+title: GORM 中 timestamp 字段的默认行为解析
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: note
+status: complete
+---
+
 # GORM 中 timestamp 字段的默认行为解析
 
 当您在 GORM 中使用 **`time.Time`** 类型作为模型字段时，生成的 MySQL **`timestamp`** 类型字段会带有 **`DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`** 属性，这是由 MySQL 和 GORM 共同作用的结果。

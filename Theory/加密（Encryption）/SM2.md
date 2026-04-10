@@ -1,3 +1,11 @@
+---
+title: SM2
+date: 2026-04-07
+tags: [理论, 加密]
+type: note
+status: complete
+---
+
 # SM2
 
 ### 椭圆曲线公钥密码算法（用于 **非对称加密**）

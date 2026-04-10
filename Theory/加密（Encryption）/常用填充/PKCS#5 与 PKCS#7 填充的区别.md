@@ -1,3 +1,11 @@
+---
+title: PKCS#5 与 PKCS#7 填充的区别
+date: 2026-04-07
+tags: [理论, 加密]
+type: guide
+status: complete
+---
+
 # PKCS#5 与 PKCS#7 填充的区别
 
 PKCS#5 和 PKCS#7 是两种极为相似的填充方案，它们的主要区别在于设计用途和适用范围，而非填充机制本身。

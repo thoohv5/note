@@ -1,3 +1,11 @@
+---
+title: inode
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # inode
 
 硬盘的最小存储单位叫做"扇区"（Sector）,每个扇区储存512字节（相当于0.5KB）

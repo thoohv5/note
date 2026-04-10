@@ -1,3 +1,11 @@
+---
+title: How to check how many CPUs are there in Linux system
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: complete
+---
+
 # How to check how many CPUs are there in Linux system
 
 URL: https://www.cyberciti.biz/faq/check-how-many-cpus-are-there-in-linux-system/

@@ -1,3 +1,11 @@
+---
+title: Go项目开发与编译
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # Go项目开发与编译
 
 [Go 模块解惑：到处都是 GO111MODULE ，这到底什么？](https://learnku.com/go/t/39086)

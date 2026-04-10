@@ -1,3 +1,11 @@
+---
+title: Redis 开发使用规范
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # Redis 开发使用规范
 
 [TOC]

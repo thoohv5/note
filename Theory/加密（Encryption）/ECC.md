@@ -1,3 +1,11 @@
+---
+title: ECC
+date: 2026-04-07
+tags: [理论, 加密]
+type: reference
+status: complete
+---
+
 # ECC
 
 # 概述

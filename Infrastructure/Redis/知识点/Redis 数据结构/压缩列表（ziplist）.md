@@ -1,3 +1,11 @@
+---
+title: 压缩列表（ziplist）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: reference
+status: complete
+---
+
 # 压缩列表（ziplist）
 
 # 概述

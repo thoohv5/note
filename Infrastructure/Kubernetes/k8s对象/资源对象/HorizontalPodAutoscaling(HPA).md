@@ -1,3 +1,11 @@
+---
+title: HorizontalPodAutoscaling(HPA)
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: reference
+status: complete
+---
+
 # HorizontalPodAutoscaling(HPA)
 
 # 概述

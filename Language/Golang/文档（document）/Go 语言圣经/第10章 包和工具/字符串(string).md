@@ -1,3 +1,11 @@
+---
+title: 字符串(string)
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 字符串(string)
 
 1. 双引号

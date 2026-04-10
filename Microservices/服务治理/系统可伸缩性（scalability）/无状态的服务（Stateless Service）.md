@@ -1,3 +1,11 @@
+---
+title: 无状态的服务（Stateless Service）
+date: 2026-04-07
+tags: [微服务, 服务治理]
+type: note
+status: complete
+---
+
 # 无状态的服务（Stateless Service）
 
 无状态服务(Stateless Service)在[架构](https://so.csdn.net/so/search?q=架)84&spm=1001.2101.3001.7020设计中都被当作铁律，因为无状态的服务很容易横向扩展，只需要在负载均衡之后增加节点就可以处理更多请求。但是，无状态服务也不是完美无缺的，其中一个缺点就是和数据层之间的请求延迟，以及为了解决这种延迟增加缓存所带来的复杂性和一致性问题。

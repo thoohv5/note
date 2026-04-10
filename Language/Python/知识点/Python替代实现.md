@@ -1,3 +1,11 @@
+---
+title: Python替代实现
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # Python替代实现
 
 主要的Python实现：

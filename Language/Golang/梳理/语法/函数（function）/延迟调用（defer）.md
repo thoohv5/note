@@ -1,3 +1,11 @@
+---
+title: 延迟调用（defer）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 延迟调用（defer）
 
 # 概述

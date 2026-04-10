@@ -1,3 +1,11 @@
+---
+title: Charactor Sets，Collations，Unicode
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: incomplete
+---
+
 # Charactor Sets，Collations，Unicode
 
 字符集设置级别：服务器、数据库、表、列

@@ -1,3 +1,11 @@
+---
+title: redis rdb tools
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: incomplete
+---
+
 # redis rdb tools
 
 [https://github.com/sripathikrishnan/redis-rdb-tools](https://github.com/sripathikrishnan/redis-rdb-tools)

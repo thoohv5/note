@@ -1,3 +1,11 @@
+---
+title: upstream指令
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: reference
+status: complete
+---
+
 # upstream指令
 
 # 概述

@@ -1,3 +1,11 @@
+---
+title: RPM包制作
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: incomplete
+---
+
 # RPM包制作
 
 The main tasks in building RPMs are:

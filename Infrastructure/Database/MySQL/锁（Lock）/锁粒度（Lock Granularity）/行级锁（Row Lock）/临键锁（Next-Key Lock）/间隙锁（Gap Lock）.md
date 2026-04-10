@@ -1,3 +1,11 @@
+---
+title: 间隙锁（Gap Lock）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: reference
+status: complete
+---
+
 # 间隙锁（Gap Lock）
 
 ## 概述

@@ -1,3 +1,11 @@
+---
+title: URI vs URL vs URN
+date: 2026-04-07
+tags: [理论, 网络]
+type: note
+status: complete
+---
+
 # URI vs URL vs URN
 
 ### 统一资源**标志符**(Uniform Resource **Identifier, URI**)

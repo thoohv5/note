@@ -1,3 +1,11 @@
+---
+title: Debezium
+date: 2026-04-07
+tags: [基础设施, CDC]
+type: guide
+status: complete
+---
+
 # Debezium
 
 **读法：得-比-自-厄姆**

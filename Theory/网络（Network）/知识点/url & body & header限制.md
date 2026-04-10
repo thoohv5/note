@@ -1,3 +1,11 @@
+---
+title: url & body & header限制
+date: 2026-04-07
+tags: [理论, 网络]
+type: reference
+status: complete
+---
+
 # url & body & header限制
 
 # 概述

@@ -1,3 +1,11 @@
+---
+title: Init 容器 & Pause/Infra 容器
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: note
+status: complete
+---
+
 # Init 容器 & Pause/Infra 容器
 
 ```mermaid

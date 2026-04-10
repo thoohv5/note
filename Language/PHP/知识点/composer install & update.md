@@ -1,3 +1,11 @@
+---
+title: composer install & update
+date: 2026-04-07
+tags: [编程语言, PHP]
+type: guide
+status: complete
+---
+
 # composer install & update
 
 当你执行`composer update`的时候，composer会去读取`composer.json`中指定的依赖，去分析他们，并且去拉取符合条件最新版本的依赖。然后他会把所拉取到的依赖放入vendor目录下，并且把所有拉取的依赖的精确版本号写入`composer.lock`文件中

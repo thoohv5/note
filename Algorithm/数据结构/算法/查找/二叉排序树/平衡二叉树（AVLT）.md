@@ -1,3 +1,11 @@
+---
+title: 平衡二叉树（AVLT）
+date: 2026-04-07
+tags: [算法, 数据结构]
+type: reference
+status: incomplete
+---
+
 # 平衡二叉树（AVLT）
 
 # 概念

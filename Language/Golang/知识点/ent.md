@@ -1,3 +1,11 @@
+---
+title: ent
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: note
+status: complete
+---
+
 # ent
 
 `entc`是`ent`框架中用于代码生成的核心包。除了命令行工具外，`entc`还可以直接作为包集成在项目中，允许开发者在代码中控制和自定义代码生成的过程。

@@ -1,3 +1,11 @@
+---
+title: hostname
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: incomplete
+---
+
 # hostname
 
 ### 命令行修改

@@ -1,3 +1,11 @@
+---
+title: 远程过程调用(gRPC)
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: note
+status: complete
+---
+
 # 远程过程调用(gRPC)
 
 [gRPC](https://www.grpc.io/)

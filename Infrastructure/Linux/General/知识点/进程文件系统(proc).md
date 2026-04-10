@@ -1,3 +1,11 @@
+---
+title: 进程文件系统(proc)
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # 进程文件系统(proc)
 
 Linux系统上的/proc目录是一种文件系统，即proc文件系统

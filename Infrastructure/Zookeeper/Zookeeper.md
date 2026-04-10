@@ -1,3 +1,11 @@
+---
+title: Zookeeper
+date: 2026-04-07
+tags: [基础设施]
+type: note
+status: complete
+---
+
 # Zookeeper
 
 ## **四种节点类型**

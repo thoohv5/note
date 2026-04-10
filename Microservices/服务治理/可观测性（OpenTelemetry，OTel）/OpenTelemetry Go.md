@@ -1,3 +1,11 @@
+---
+title: OpenTelemetry Go
+date: 2026-04-07
+tags: [微服务, 服务治理]
+type: reference
+status: complete
+---
+
 # OpenTelemetry Go
 
 ### **自动埋点支持**

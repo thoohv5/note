@@ -1,3 +1,11 @@
+---
+title: 部署策略（Deployment）
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: note
+status: complete
+---
+
 # 部署策略（Deployment）
 
 ### 蓝绿部署（Blue-Green Deployment）

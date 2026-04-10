@@ -1,3 +1,11 @@
+---
+title: TCP 泛洪攻击（SYN）
+date: 2026-04-07
+tags: [理论, 网络]
+type: guide
+status: complete
+---
+
 # TCP 泛洪攻击（SYN）
 
 ### 问题：

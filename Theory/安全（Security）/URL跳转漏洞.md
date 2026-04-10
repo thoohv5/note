@@ -1,3 +1,11 @@
+---
+title: URL跳转漏洞
+date: 2026-04-07
+tags: [理论, 安全]
+type: note
+status: incomplete
+---
+
 # URL跳转漏洞
 
 ## 简介

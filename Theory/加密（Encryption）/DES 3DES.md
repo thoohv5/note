@@ -1,3 +1,11 @@
+---
+title: DES/3DES
+date: 2026-04-07
+tags: [理论, 加密]
+type: reference
+status: complete
+---
+
 # DES/3DES
 
 # 概念

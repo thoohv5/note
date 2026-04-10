@@ -1,3 +1,11 @@
+---
+title: 上下文(context)
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 上下文(context)
 
 使用时遵循context规则

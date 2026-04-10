@@ -1,3 +1,11 @@
+---
+title: XSS
+date: 2026-04-07
+tags: [理论, 安全]
+type: note
+status: incomplete
+---
+
 # XSS
 
 ## 简介

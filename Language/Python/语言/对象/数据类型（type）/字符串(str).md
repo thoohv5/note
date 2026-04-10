@@ -1,3 +1,11 @@
+---
+title: 字符串(str)
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # 字符串(str)
 
 ## 定义

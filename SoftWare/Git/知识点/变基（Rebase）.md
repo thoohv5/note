@@ -1,3 +1,11 @@
+---
+title: 变基（Rebase）
+date: 2026-04-07
+tags: [软件工具, Git]
+type: note
+status: complete
+---
+
 # 变基（Rebase）
 
 ```bash

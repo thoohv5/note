@@ -1,3 +1,11 @@
+---
+title: ACL模型
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: note
+status: complete
+---
+
 # ACL模型
 
 ## **ACL (Access-Control List 访问控制列表)**

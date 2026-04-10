@@ -1,3 +1,11 @@
+---
+title: 子模块（Submodule）
+date: 2026-04-07
+tags: [软件工具, Git]
+type: reference
+status: complete
+---
+
 # 子模块（Submodule）
 
 # 概述

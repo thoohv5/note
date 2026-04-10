@@ -1,3 +1,11 @@
+---
+title: CMD & ENTRYPOINT
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: guide
+status: complete
+---
+
 # CMD & ENTRYPOINT
 
 当 CLI 命令`docker run`中带有参数时，

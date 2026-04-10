@@ -1,3 +1,11 @@
+---
+title: Redis Keys
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # Redis Keys
 
 - `KEYS` 命令的性能随着数据库数据的增多而越来越慢

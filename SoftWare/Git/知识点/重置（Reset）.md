@@ -1,3 +1,11 @@
+---
+title: 重置（Reset）
+date: 2026-04-07
+tags: [软件工具, Git]
+type: note
+status: incomplete
+---
+
 # 重置（Reset）
 
 ```bash

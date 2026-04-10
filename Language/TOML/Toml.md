@@ -1,3 +1,11 @@
+---
+title: Toml
+date: 2026-04-07
+tags: [编程语言]
+type: note
+status: complete
+---
+
 # Toml
 
 [https://github.com/toml-lang/toml](https://github.com/toml-lang/toml)

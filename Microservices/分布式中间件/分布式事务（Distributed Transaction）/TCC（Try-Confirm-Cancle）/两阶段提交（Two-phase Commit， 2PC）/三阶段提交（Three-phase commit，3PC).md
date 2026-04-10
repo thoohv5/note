@@ -1,3 +1,11 @@
+---
+title: 三阶段提交（Three-phase commit，3PC)
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: guide
+status: complete
+---
+
 # 三阶段提交（Three-phase commit，3PC)
 
 # 概念

@@ -1,3 +1,11 @@
+---
+title: 有限状态机（finite-state machine，FSM）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: complete
+---
+
 # 有限状态机（finite-state machine，FSM）
 
 # 概述

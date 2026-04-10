@@ -1,3 +1,11 @@
+---
+title: 布尔类型(bool)
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: incomplete
+---
+
 # 布尔类型(bool)
 
 - 只有 `True`(真)和 `False`(假)两个值，如比较或逻辑运算的结果就是一个 bool 型的数值

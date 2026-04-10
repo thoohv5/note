@@ -1,3 +1,11 @@
+---
+title: 基期计算
+date: 2024-08-23
+tags: [行测]
+type: cheatsheet
+status: complete
+---
+
 
 DECK: 公务员::行测::资料分析::1.ABRX::A基期量
 

@@ -1,3 +1,11 @@
+---
+title: 阿里云SLS
+date: 2026-04-07
+tags: [基础设施, 云服务]
+type: guide
+status: complete
+---
+
 # 阿里云SLS
 
 ### 术语表

@@ -1,3 +1,11 @@
+---
+title: 单例模式（single mode）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: complete
+---
+
 # 单例模式（single mode）
 
 # 单例实现

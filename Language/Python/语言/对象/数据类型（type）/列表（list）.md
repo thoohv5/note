@@ -1,3 +1,11 @@
+---
+title: 列表（list）
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # 列表（list）
 
 ## 定义

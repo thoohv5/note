@@ -1,3 +1,11 @@
+---
+title: TypedDict
+date: 2026-04-07
+tags: [编程语言, Python]
+type: reference
+status: complete
+---
+
 # TypedDict
 
 # ⚡ **什么时候用 TypedDict？**

@@ -1,3 +1,11 @@
+---
+title: PREVIEW_CATEGORY_COUNT
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # PREVIEW_CATEGORY_COUNT
 
 配置值: 2

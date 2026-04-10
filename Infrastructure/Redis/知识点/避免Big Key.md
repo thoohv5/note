@@ -1,3 +1,11 @@
+---
+title: 避免Big Key
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # 避免Big Key
 
 什么是 `Big Key`：我们将含有较大数据或含有大量成员、列表数的Key称之为大Key。

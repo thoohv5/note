@@ -1,3 +1,11 @@
+---
+title: 漏桶（Leaky Bucket）
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: note
+status: complete
+---
+
 # 漏桶（Leaky Bucket）
 
 - 一个固定大小的水桶

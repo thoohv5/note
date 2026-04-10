@@ -1,3 +1,11 @@
+---
+title: n-grams 语言模型
+date: 2026-04-07
+tags: [理论, AI]
+type: guide
+status: complete
+---
+
 # n-grams 语言模型
 
 # 概述

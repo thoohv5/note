@@ -1,3 +1,11 @@
+---
+title: mail
+date: 2024-03-28
+tags: [个人笔记]
+type: note
+status: incomplete
+---
+
 
 ### 2080775740@qq.com
 授权码：tbpzasvjxiuqejec

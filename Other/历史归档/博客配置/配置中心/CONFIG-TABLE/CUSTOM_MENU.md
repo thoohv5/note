@@ -1,3 +1,11 @@
+---
+title: CUSTOM_MENU
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # CUSTOM_MENU
 
 配置值: true

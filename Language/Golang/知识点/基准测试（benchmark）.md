@@ -1,3 +1,11 @@
+---
+title: 基准测试（benchmark）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: complete
+---
+
 # 基准测试（benchmark）
 
 # 概述

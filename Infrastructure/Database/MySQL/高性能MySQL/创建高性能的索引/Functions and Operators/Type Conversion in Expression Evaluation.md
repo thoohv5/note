@@ -1,3 +1,11 @@
+---
+title: Type Conversion in Expression Evaluation
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: complete
+---
+
 # Type Conversion in Expression Evaluation
 
 The following rules describe how conversion occurs for comparison operations:

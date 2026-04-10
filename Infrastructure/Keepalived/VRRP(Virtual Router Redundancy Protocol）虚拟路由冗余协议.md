@@ -1,3 +1,11 @@
+---
+title: VRRP(Virtual Router Redundancy Protocol）虚拟路由冗余协议
+date: 2026-04-07
+tags: [基础设施]
+type: guide
+status: complete
+---
+
 # VRRP(Virtual Router Redundancy Protocol）虚拟路由冗余协议
 
 # 目的

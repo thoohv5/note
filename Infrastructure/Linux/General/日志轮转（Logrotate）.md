@@ -1,3 +1,11 @@
+---
+title: 日志轮转（Logrotate）
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: complete
+---
+
 # 日志轮转（Logrotate）
 
 # 概述

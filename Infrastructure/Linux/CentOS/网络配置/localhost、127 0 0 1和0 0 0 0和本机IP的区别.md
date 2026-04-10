@@ -1,3 +1,11 @@
+---
+title: localhost、127.0.0.1和0.0.0.0和本机IP的区别
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: reference
+status: complete
+---
+
 # localhost、127.0.0.1和0.0.0.0和本机IP的区别
 
 # **localhost**

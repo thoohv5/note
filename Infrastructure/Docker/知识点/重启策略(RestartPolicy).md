@@ -1,3 +1,11 @@
+---
+title: 重启策略(RestartPolicy)
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: reference
+status: complete
+---
+
 # 重启策略(RestartPolicy)
 
 # 概述

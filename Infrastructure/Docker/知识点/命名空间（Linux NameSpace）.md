@@ -1,3 +1,11 @@
+---
+title: 命名空间（Linux NameSpace）
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: reference
+status: complete
+---
+
 # 命名空间（Linux NameSpace）
 
 # 概念

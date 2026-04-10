@@ -1,3 +1,11 @@
+---
+title: GREETING_WORDS
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # GREETING_WORDS
 
 配置值: 有志之人立长志，无志之人常立志

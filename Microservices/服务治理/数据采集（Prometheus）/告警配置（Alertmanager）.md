@@ -1,3 +1,11 @@
+---
+title: 告警配置（Alertmanager）
+date: 2026-04-07
+tags: [微服务, 服务治理]
+type: note
+status: complete
+---
+
 # 告警配置（Alertmanager）
 
 ### **安装**

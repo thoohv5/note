@@ -1,3 +1,11 @@
+---
+title: 二进制日志（binlog）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # 二进制日志（binlog）
 
 # 定义

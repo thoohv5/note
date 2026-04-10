@@ -1,3 +1,11 @@
+---
+title: tsenart/vegeta
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: complete
+---
+
 # tsenart/vegeta
 
 # **概述**

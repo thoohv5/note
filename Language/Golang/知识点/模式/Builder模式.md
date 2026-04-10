@@ -1,3 +1,11 @@
+---
+title: Builder模式
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # Builder模式
 
 Builder模式是一种用于构建复杂对象的设计模式。它将对象的构造过程与对象的表示分离，使得同样的构建过程可以创建不同的对象。Builder模式通过定义一个Builder接口，以及该接口的具体实现类来逐步构建对象。

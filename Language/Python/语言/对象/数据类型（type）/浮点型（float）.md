@@ -1,3 +1,11 @@
+---
+title: 浮点型（float）
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: incomplete
+---
+
 # 浮点型（float）
 
 - 浮点实数最多可以精 确到 15 位小数

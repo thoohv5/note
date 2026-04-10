@@ -1,3 +1,11 @@
+---
+title: drop_caches
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: note
+status: complete
+---
+
 # drop_caches
 
 Kernels 2.6.16 and newer provide a mechanism to have the kernel drop the page cache and/or inode and dentry caches on command, which can help free up a lot of memory. Now you can throw away that script that allocated a ton of memory just to get rid of the cache...

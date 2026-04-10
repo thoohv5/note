@@ -1,3 +1,11 @@
+---
+title: Redis Unlink
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # Redis Unlink
 
 DEL vs UNLINK （4.0.0）

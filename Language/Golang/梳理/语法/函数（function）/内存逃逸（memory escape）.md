@@ -1,3 +1,11 @@
+---
+title: 内存逃逸（memory escape）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 内存逃逸（memory escape）
 
 # 概述

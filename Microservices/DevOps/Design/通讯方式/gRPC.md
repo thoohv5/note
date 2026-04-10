@@ -1,3 +1,11 @@
+---
+title: gRPC
+date: 2026-04-07
+tags: [微服务, DevOps]
+type: reference
+status: complete
+---
+
 # gRPC
 
 进行API开发选gRPC还是HTTP APIs?

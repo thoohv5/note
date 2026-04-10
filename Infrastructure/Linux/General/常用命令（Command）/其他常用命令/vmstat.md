@@ -1,3 +1,11 @@
+---
+title: vmstat
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: incomplete
+---
+
 # vmstat
 
 ### 使用率

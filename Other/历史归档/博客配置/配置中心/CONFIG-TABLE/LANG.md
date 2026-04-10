@@ -1,3 +1,11 @@
+---
+title: LANG
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # LANG
 
 配置值: en-US

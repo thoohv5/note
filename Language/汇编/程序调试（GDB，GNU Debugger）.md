@@ -1,3 +1,11 @@
+---
+title: 程序调试（GDB，GNU Debugger）
+date: 2026-04-07
+tags: [编程语言]
+type: reference
+status: complete
+---
+
 # 程序调试（GDB，GNU Debugger）
 
 # 概述

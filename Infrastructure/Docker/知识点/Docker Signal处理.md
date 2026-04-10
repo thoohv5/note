@@ -1,3 +1,11 @@
+---
+title: Docker Signal处理
+date: 2026-04-07
+tags: [基础设施, Docker]
+type: note
+status: complete
+---
+
 # Docker Signal处理
 
 Docker对Linux Signal也做了很多的支持。

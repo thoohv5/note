@@ -1,3 +1,11 @@
+---
+title: 日志格式（Commit Format）
+date: 2026-04-07
+tags: [软件工具, Git]
+type: note
+status: complete
+---
+
 # 日志格式（Commit Format）
 
 # 注释格式化

@@ -1,3 +1,11 @@
+---
+title: 域名系统（DNS）
+date: 2026-04-07
+tags: [理论, 网络]
+type: reference
+status: complete
+---
+
 # 域名系统（DNS）
 
 # 概述

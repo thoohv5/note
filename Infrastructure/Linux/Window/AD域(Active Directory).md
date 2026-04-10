@@ -1,3 +1,11 @@
+---
+title: AD域(Active Directory)
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: reference
+status: complete
+---
+
 # AD域(Active Directory)
 
 # 概述

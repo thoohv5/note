@@ -1,3 +1,11 @@
+---
+title: CA证书代码
+date: 2026-04-07
+tags: [理论, 安全]
+type: reference
+status: complete
+---
+
 # CA证书代码
 
 # 概述

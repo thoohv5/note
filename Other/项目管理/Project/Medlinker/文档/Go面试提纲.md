@@ -1,3 +1,11 @@
+---
+title: Go面试提纲
+date: 2026-04-07
+tags: [其他]
+type: guide
+status: complete
+---
+
 # Go面试提纲
 
 # 一、基本原则

@@ -1,3 +1,11 @@
+---
+title: traceroute
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: reference
+status: complete
+---
+
 # traceroute
 
 # 概述

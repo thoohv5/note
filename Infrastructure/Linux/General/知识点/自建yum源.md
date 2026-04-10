@@ -1,3 +1,11 @@
+---
+title: 自建yum源
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: complete
+---
+
 # 自建yum源
 
 # 服务端配置

@@ -1,3 +1,11 @@
+---
+title: Zerotier根服务器
+date: 2026-04-07
+tags: [软件工具]
+type: guide
+status: complete
+---
+
 # Zerotier根服务器
 
 [https://post.smzdm.com/p/apxkx2m7/](https://post.smzdm.com/p/apxkx2m7/)

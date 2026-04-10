@@ -1,3 +1,11 @@
+---
+title: RESTful
+date: 2026-04-07
+tags: [理论, 网络]
+type: guide
+status: complete
+---
+
 # RESTful
 
 > 表现层状态转化(Representational State Transfer)

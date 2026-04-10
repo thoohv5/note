@@ -1,3 +1,11 @@
+---
+title: TCP keepalive
+date: 2026-04-07
+tags: [理论, 网络]
+type: reference
+status: complete
+---
+
 # TCP keepalive
 
 # 概述

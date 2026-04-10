@@ -1,3 +1,11 @@
+---
+title: CAN_COPY
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # CAN_COPY
 
 配置值: true

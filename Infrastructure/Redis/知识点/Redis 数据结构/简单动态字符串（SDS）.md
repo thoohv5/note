@@ -1,3 +1,11 @@
+---
+title: 简单动态字符串（SDS）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: guide
+status: complete
+---
+
 # 简单动态字符串（SDS）
 
 简单动态字符串（SDS，Simple Dynamic String）

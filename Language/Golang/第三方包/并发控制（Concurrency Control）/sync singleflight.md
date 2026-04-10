@@ -1,3 +1,11 @@
+---
+title: sync/singleflight
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: reference
+status: incomplete
+---
+
 # sync/singleflight
 
 原理：单飞模式通过合并对同一资源的并发请求，确保只有一个请求去查询数据库或执行其他耗时操作，并将结果缓存起来供后续请求共享。

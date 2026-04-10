@@ -1,3 +1,11 @@
+---
+title: Golang
+date: 2026-04-07
+tags: [算法, 设计模式]
+type: guide
+status: complete
+---
+
 # Golang
 
 2020年4月8日 

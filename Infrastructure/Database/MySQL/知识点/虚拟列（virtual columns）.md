@@ -1,3 +1,11 @@
+---
+title: 虚拟列（virtual columns）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: reference
+status: complete
+---
+
 # 虚拟列（virtual columns）
 
 # 概述

@@ -1,3 +1,11 @@
+---
+title: location 匹配规则
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: note
+status: incomplete
+---
+
 # location 匹配规则
 
 # 语法规则

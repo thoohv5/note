@@ -1,3 +1,11 @@
+---
+title: pg_trgm VS pg_bigm
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: complete
+---
+
 # pg_trgm VS pg_bigm
 
 [[https://github.com/digoal/blog/blob/master/202009/20200912_01]]

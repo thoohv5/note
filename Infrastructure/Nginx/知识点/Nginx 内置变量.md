@@ -1,3 +1,11 @@
+---
+title: Nginx 内置变量
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: note
+status: complete
+---
+
 # Nginx 内置变量
 
 ## 客户端相关

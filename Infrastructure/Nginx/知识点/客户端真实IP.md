@@ -1,3 +1,11 @@
+---
+title: 客户端真实IP
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: note
+status: complete
+---
+
 # 客户端真实IP
 
 通过测试模拟这样的环境验证下：

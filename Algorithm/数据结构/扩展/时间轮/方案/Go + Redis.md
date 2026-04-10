@@ -1,3 +1,11 @@
+---
+title: Go + Redis
+date: 2026-04-07
+tags: [算法, 数据结构]
+type: guide
+status: complete
+---
+
 # Go + Redis
 
 **核心思路**

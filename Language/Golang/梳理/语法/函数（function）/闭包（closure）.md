@@ -1,3 +1,11 @@
+---
+title: 闭包（closure）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 闭包（closure）
 
 # 概述

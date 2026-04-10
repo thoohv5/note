@@ -1,3 +1,11 @@
+---
+title: Golang错误处理
+date: 2026-04-07
+tags: [其他]
+type: guide
+status: complete
+---
+
 # Golang错误处理
 
 # [Error handing](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#error-handing)

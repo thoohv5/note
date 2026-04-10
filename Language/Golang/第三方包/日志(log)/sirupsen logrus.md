@@ -1,3 +1,11 @@
+---
+title: sirupsen/logrus
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: note
+status: complete
+---
+
 # sirupsen/logrus
 
 [sirupsen/logrus](https://github.com/sirupsen/logrus)

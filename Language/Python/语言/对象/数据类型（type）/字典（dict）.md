@@ -1,3 +1,11 @@
+---
+title: 字典（dict）
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: incomplete
+---
+
 # 字典（dict）
 
 - `dict` 是一个“键-值”对(key-value pairs)的无序集合

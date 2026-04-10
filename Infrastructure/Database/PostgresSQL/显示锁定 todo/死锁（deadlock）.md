@@ -1,3 +1,11 @@
+---
+title: 死锁（deadlock）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # 死锁（deadlock）
 
 # 现象

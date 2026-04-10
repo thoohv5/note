@@ -1,3 +1,11 @@
+---
+title: 分支（switch）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: note
+status: complete
+---
+
 # 分支（switch）
 
 # ExprSwitch

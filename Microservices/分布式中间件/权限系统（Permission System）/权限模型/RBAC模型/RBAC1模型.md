@@ -1,3 +1,11 @@
+---
+title: RBAC1模型
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: note
+status: incomplete
+---
+
 # RBAC1模型
 
 ### **角色继承的RBAC模型**

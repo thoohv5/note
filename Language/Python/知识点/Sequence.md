@@ -1,3 +1,11 @@
+---
+title: Sequence
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # Sequence
 
 在 Python 类型提示里，**`Sequence`** 是一个泛型类型，表示 **有顺序的容器**，可以通过索引访问元素，常见的类型有 **`list`、`tuple`、`str`**（字符串也算序列，但在这里不用）。

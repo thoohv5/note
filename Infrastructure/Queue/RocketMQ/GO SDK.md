@@ -1,3 +1,11 @@
+---
+title: GO SDK
+date: 2026-04-07
+tags: [基础设施, 消息队列]
+type: guide
+status: complete
+---
+
 # GO SDK
 
 ### **Apache RocketMQ Go 客户端完整对比**

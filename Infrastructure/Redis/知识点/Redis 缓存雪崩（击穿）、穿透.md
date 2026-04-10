@@ -1,3 +1,11 @@
+---
+title: Redis 缓存雪崩（击穿）、穿透
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: guide
+status: complete
+---
+
 # Redis 缓存雪崩（击穿）、穿透
 
 ### 缓存穿透

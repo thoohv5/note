@@ -1,3 +1,11 @@
+---
+title: 泛型（Generics）
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # 泛型（Generics）
 
 ## 什么是 Go 泛型？

@@ -1,3 +1,11 @@
+---
+title: JetStream
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: note
+status: complete
+---
+
 # JetStream
 
 JetStream是NATS内置的**分布式持久化存储系统**，构建在JetStream存储系统上的“core NATS”功能更多，消息可靠性更高。

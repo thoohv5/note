@@ -1,3 +1,11 @@
+---
+title: MySQL 字符集（Character Set）和排序规则（Collation）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: reference
+status: complete
+---
+
 # MySQL 字符集（Character Set）和排序规则（Collation）
 
 ## 一、基本概念

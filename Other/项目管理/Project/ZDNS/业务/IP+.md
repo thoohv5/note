@@ -1,3 +1,11 @@
+---
+title: IP+
+date: 2026-04-07
+tags: [其他]
+type: guide
+status: incomplete
+---
+
 # IP+
 
 1. 网络地址的 IPv4 掩码位数，DDI默认8位；IPV6 前缀位数，DDI 默认30

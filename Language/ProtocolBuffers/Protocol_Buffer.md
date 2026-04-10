@@ -1,3 +1,11 @@
+---
+title: Protocol Buffer
+date: 2026-04-07
+tags: [编程语言]
+type: reference
+status: incomplete
+---
+
 # Protocol Buffer
 
 # 概述（Overview）

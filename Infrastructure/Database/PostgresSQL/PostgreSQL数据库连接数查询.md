@@ -1,3 +1,11 @@
+---
+title: PostgreSQL数据库连接数查询
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # PostgreSQL数据库连接数查询
 
 # 命令

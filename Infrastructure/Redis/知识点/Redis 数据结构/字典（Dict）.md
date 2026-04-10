@@ -1,3 +1,11 @@
+---
+title: 字典（Dict）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: reference
+status: complete
+---
+
 # 字典（Dict）
 
 # 概述

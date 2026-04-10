@@ -1,3 +1,11 @@
+---
+title: 业务服务（Business Service）
+date: 2026-04-07
+tags: [微服务, DevOps]
+type: note
+status: complete
+---
+
 # 业务服务（Business Service）
 
 ## 微服务如何对外暴露

@@ -1,3 +1,11 @@
+---
+title: curl分析请求耗时情况， 以及curl命令详解_curl耗时变量参数_zzhongcy的博客-CSDN博客
+date: 2026-04-07
+tags: [软件工具, CURL]
+type: reference
+status: complete
+---
+
 # curl分析请求耗时情况， 以及curl命令详解_curl耗时变量参数_zzhongcy的博客-CSDN博客
 
 标签: Design

@@ -1,3 +1,11 @@
+---
+title: blpop
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: note
+status: complete
+---
+
 # blpop
 
 在redis server中有两个循环：IO循环和定时事件。

@@ -1,3 +1,11 @@
+---
+title: 查询缓存（query cache）
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: complete
+---
+
 # 查询缓存（query cache）
 
 ## 缓存命令

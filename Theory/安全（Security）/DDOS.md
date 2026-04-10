@@ -1,3 +1,11 @@
+---
+title: DDOS
+date: 2026-04-07
+tags: [理论, 安全]
+type: note
+status: complete
+---
+
 # DDOS
 
 分布式拒绝服务攻击

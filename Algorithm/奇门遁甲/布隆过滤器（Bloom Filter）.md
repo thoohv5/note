@@ -1,3 +1,11 @@
+---
+title: 布隆过滤器（Bloom Filter）
+date: 2026-04-07
+tags: [算法]
+type: guide
+status: complete
+---
+
 # 布隆过滤器（Bloom Filter）
 
 # 概念

@@ -1,3 +1,11 @@
+---
+title: DESCRIPTION
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # DESCRIPTION
 
 配置值: 速虎前沿

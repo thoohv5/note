@@ -1,3 +1,11 @@
+---
+title: Nginx 配置文件中字符 “/“ 的巨大作用
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: note
+status: complete
+---
+
 # Nginx 配置文件中字符 “/“ 的巨大作用
 
 **location如果没有“/”时，请求就可以模糊匹配以字符串开头的所有字符串，而有“/”时，只能精确匹配字符本身。**

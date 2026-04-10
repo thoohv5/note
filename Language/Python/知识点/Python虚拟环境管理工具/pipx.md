@@ -1,3 +1,11 @@
+---
+title: pipx
+date: 2026-04-07
+tags: [编程语言, Python]
+type: note
+status: complete
+---
+
 # pipx
 
 `pipx` 是一个 Python 命令行工具，用来 **安装和管理独立 Python 命令行应用**，它的核心特点是：

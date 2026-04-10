@@ -1,3 +1,11 @@
+---
+title: 恢复机制（RestartPolicy）
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: guide
+status: complete
+---
+
 # 恢复机制（RestartPolicy）
 
 ### 参数

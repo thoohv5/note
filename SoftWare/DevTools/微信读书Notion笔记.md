@@ -1,3 +1,11 @@
+---
+title: 微信读书+Notion，读书笔记王炸组合
+date: 2026-04-07
+tags: [软件工具, 开发工具]
+type: guide
+status: complete
+---
+
 # 微信读书+Notion，读书笔记王炸组合
 
 标签: Design

@@ -1,3 +1,11 @@
+---
+title: ICMP
+date: 2026-04-07
+tags: [理论, 网络]
+type: note
+status: complete
+---
+
 # ICMP
 
 网际控制报文协议，（ICMP，internet control message protocol）

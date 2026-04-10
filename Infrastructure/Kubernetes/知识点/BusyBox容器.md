@@ -1,3 +1,11 @@
+---
+title: BusyBox容器
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: reference
+status: complete
+---
+
 # BusyBox容器
 
 # 概述

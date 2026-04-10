@@ -1,3 +1,11 @@
+---
+title: 远程仓库关联（Remote）
+date: 2026-04-07
+tags: [软件工具, Git]
+type: note
+status: incomplete
+---
+
 # 远程仓库关联（Remote）
 
 ```bash

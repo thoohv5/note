@@ -1,3 +1,11 @@
+---
+title: Kafka再平衡(Rebalance)
+date: 2026-04-07
+tags: [基础设施, 消息队列]
+type: guide
+status: complete
+---
+
 # Kafka再平衡(Rebalance)
 
 在 Kafka 中，**消费者组 (Consumer Group)** 内的消费者要分配 **分区 (partition)** 来消费消息。

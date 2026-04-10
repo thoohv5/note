@@ -1,3 +1,11 @@
+---
+title: __CLASS__
+date: 2026-04-07
+tags: [编程语言, PHP]
+type: note
+status: incomplete
+---
+
 # __CLASS__
 
 说明: 类的名称（PHP 4.3.0 新加）。自 PHP 5 起本常量返回该类被定义时的名字（区分大小写）。在 PHP 4 中该值总是小写字母的。类名包括其被声明的作用区域（例如 Foo\Bar）。注意自 PHP 5.4 起 __CLASS__ 对 trait 也起作用。当用在 trait 方法中时，__CLASS__ 是调用 trait 方法的类的名字。

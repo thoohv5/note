@@ -1,3 +1,11 @@
+---
+title: Padding Oracle
+date: 2026-04-07
+tags: [理论, 安全]
+type: guide
+status: complete
+---
+
 # Padding Oracle
 
 Padding Oracle 攻击是一种针对 **CBC（Cipher Block Chaining）模式** 加密系统的侧信道攻击，攻击者利用服务器对 **填充（Padding）验证** 的不同响应来逐步解密或加密数据，而无需知道密钥。

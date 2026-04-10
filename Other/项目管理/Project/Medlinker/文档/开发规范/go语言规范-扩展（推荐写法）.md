@@ -1,3 +1,11 @@
+---
+title: go语言规范-扩展（推荐写法）
+date: 2026-04-07
+tags: [其他]
+type: guide
+status: complete
+---
+
 # go语言规范-扩展（推荐写法）
 
 ## 指导原则

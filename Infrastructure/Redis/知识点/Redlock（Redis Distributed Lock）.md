@@ -1,3 +1,11 @@
+---
+title: Redlock（Redis Distributed Lock）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: guide
+status: complete
+---
+
 # Redlock（Redis Distributed Lock）
 
 ### **redis单实例中实现分布式锁的正确方式（原子性非常重要）**

@@ -1,3 +1,11 @@
+---
+title: RPM包
+date: 2023-12-12
+tags: [个人笔记]
+type: note
+status: complete
+---
+
 
 ## 分类
 ### 二进制包（Binary Package）

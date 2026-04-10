@@ -1,3 +1,11 @@
+---
+title: 向量数据库（VectorDB）
+date: 2026-04-07
+tags: [算法, AI]
+type: reference
+status: complete
+---
+
 # 向量数据库（VectorDB）
 
 # 基本概念

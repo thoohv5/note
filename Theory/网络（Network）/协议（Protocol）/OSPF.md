@@ -1,3 +1,11 @@
+---
+title: OSPF
+date: 2026-04-07
+tags: [理论, 网络]
+type: reference
+status: incomplete
+---
+
 # OSPF
 
 开放式最短路径优先（Open Shortest Path First，OSPF）

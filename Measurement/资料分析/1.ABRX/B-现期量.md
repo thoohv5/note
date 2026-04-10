@@ -1,3 +1,11 @@
+---
+title: 保持增长量
+date: 2024-07-16
+tags: [行测]
+type: cheatsheet
+status: complete
+---
+
 DECK: 公务员::行测::资料分析::1.ABRX::B现期量
 
 # 保持增长量

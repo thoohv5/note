@@ -1,3 +1,11 @@
+---
+title: Redis 订阅事件
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: guide
+status: complete
+---
+
 # Redis 订阅事件
 
 # 开启键空间通知功能

@@ -1,3 +1,11 @@
+---
+title: 动态依赖(ldd)
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: reference
+status: complete
+---
+
 # 动态依赖(ldd)
 
 ## 命令

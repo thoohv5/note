@@ -1,3 +1,11 @@
+---
+title: k8s测试工具
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: note
+status: complete
+---
+
 # k8s测试工具
 
 ## **1. 全能型排查工具箱(已成功)**

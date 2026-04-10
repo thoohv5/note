@@ -1,3 +1,11 @@
+---
+title: FONT_STYLE
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # FONT_STYLE
 
 配置值: font-serif font-light

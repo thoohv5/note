@@ -1,3 +1,11 @@
+---
+title: Hashicorp go-plugin
+date: 2026-04-07
+tags: [编程语言, Golang]
+type: guide
+status: complete
+---
+
 # Hashicorp go-plugin
 
 # 概述

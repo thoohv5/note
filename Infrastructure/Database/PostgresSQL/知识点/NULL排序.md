@@ -1,3 +1,11 @@
+---
+title: NULL排序
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: incomplete
+---
+
 # NULL排序
 
 1、DEFAULT:（认为NULL比任意值都大）

@@ -1,3 +1,11 @@
+---
+title: find
+date: 2026-04-07
+tags: [基础设施, Linux]
+type: guide
+status: complete
+---
+
 # find
 
 # 概述

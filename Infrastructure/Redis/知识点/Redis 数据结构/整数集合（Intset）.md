@@ -1,3 +1,11 @@
+---
+title: 整数集合（Intset）
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: reference
+status: incomplete
+---
+
 # 整数集合（Intset）
 
 # 概述

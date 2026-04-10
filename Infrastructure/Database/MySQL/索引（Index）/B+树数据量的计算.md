@@ -1,3 +1,11 @@
+---
+title: B+树数据量的计算
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: complete
+---
+
 # B+树数据量的计算
 
 InnoDB存储引擎的最小存储单元页（Page） 16K

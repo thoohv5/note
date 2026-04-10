@@ -1,3 +1,11 @@
+---
+title: Lua 脚本调试
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: reference
+status: complete
+---
+
 # Lua 脚本调试
 
 # 调试

@@ -1,3 +1,11 @@
+---
+title: https功能
+date: 2026-04-07
+tags: [基础设施, Nginx]
+type: reference
+status: complete
+---
+
 # https功能
 
 # 概述

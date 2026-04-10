@@ -1,3 +1,11 @@
+---
+title: BLOG_FAVICON
+date: 2026-04-07
+tags: [其他]
+type: note
+status: incomplete
+---
+
 # BLOG_FAVICON
 
 配置值: https://cos.onewk.cn/img/202405011830005.ico

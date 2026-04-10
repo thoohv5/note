@@ -1,3 +1,11 @@
+---
+title: 时间轮（Timing Wheel）
+date: 2026-04-07
+tags: [微服务, 分布式]
+type: note
+status: incomplete
+---
+
 # 时间轮（Timing Wheel）
 
 [GitHub - x-thooh/timingwheel: Golang implementation of Hierarchical Timing Wheels.](https://github.com/x-thooh/timingwheel)

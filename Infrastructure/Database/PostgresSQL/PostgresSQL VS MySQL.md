@@ -1,3 +1,11 @@
+---
+title: PostgresSQL VS MySQL
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: guide
+status: complete
+---
+
 # PostgresSQL VS MySQL
 
 [PostgreSQL 与 MySQL 相比，优势何在？](https://www.zhihu.com/question/20010554)

@@ -1,3 +1,11 @@
+---
+title: Redis Cluster
+date: 2026-04-07
+tags: [基础设施, Redis]
+type: reference
+status: complete
+---
+
 # Redis Cluster
 
 Redis 集群并没有使用一致性hash，而是引入了哈希槽的概念

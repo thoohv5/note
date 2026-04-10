@@ -1,3 +1,11 @@
+---
+title: 存储过程faker数据
+date: 2026-04-07
+tags: [基础设施, 数据库]
+type: note
+status: complete
+---
+
 # 存储过程faker数据
 
 ### 表结构

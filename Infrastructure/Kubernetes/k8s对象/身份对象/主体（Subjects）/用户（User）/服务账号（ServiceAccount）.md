@@ -1,3 +1,11 @@
+---
+title: 服务账号（ServiceAccount）
+date: 2026-04-07
+tags: [基础设施, K8s]
+type: reference
+status: complete
+---
+
 # 服务账号（ServiceAccount）
 
 在 Kubernetes 中，`ServiceAccount` 是 Pod 在访问集群 API 时使用的身份。你可以使用它来控制 Pod 的权限（配合 `Role`/`ClusterRole` 和绑定）。
