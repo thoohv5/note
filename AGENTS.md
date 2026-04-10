@@ -20,6 +20,7 @@ This is an **Obsidian vault** - a personal knowledge management directory, NOT a
 | `SoftWare/` | 软件工具 - Git, Zsh, Wireshark, Proxy, DevTools, MacTools, CURL, Notes 等 |
 | `Measurement/` | 行测资料 - 言语理解, 资料分析, 判断推理, 申论, 常识, 数量关系, 综合知识 |
 | `Thooh/` | 个人技术笔记 - RPM打包, Nmap, GitHub, 错误码 |
+| `WebClipper/` | 网页收集 - 使用 Obsidian Web Clipper 保存的网页笔记 |
 | `Other/` | 其他 - 项目管理, 公司, 历史归档, 微信, 数据 |
 | `Excalidraw/` | Excalidraw 图表文件 |
 | `.obsidian/` | Obsidian 配置 |
