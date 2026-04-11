@@ -32,4 +32,6 @@ status: incomplete
 2. [Redis SREM](https://redis.io/docs/latest/commands/srem/)
 3. [Redis SSCAN](https://redis.io/docs/latest/commands/sscan/)
 # ZSet（有序集合）
-shi yon yon fa
+使用用法：
+1. [Redis ZADD](https://redis.io/docs/latest/commands/zadd/)
+2. [Redis ZRANGE](https://redis.io/docs/latest/commands/zrange/)
