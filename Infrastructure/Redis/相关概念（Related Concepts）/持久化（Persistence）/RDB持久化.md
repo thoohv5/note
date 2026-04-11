@@ -41,7 +41,7 @@ save 60 10000
 
 # RDB 文件结构
 
-- [ ] 写周报 ⏫ 📅 2026-04-15 🔁 every week on Monday #task
+- [ ] 完善 RDB 文件结构 #task
 
 # 附录
 
