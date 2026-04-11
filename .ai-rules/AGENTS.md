@@ -23,6 +23,7 @@ This is an **Obsidian vault** - a personal knowledge management directory, NOT a
 | `WebClipper/` | 网页收集 - 使用 Obsidian Web Clipper 保存的网页笔记 |
 | `Other/` | 其他 - 项目管理, 公司, 历史归档, 微信, 数据 |
 | `Excalidraw/` | Excalidraw 图表文件 |
+| `.ai-rules/` | AI 规则文件 - 笔记属性标准、目录组织规则等 |
 | `.obsidian/` | Obsidian 配置 |
 
 ## Notes for Agents
