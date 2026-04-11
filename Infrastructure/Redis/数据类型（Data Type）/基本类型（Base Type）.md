@@ -10,6 +10,7 @@ status: incomplete
 
 数据结构： [[简单动态字符串（simple dynamic string，SDS）]]
 
+使用用法：[Redis Set](https://redis.io/docs/latest/commands/set/)
 
 
 
