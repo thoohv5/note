@@ -1,7 +1,7 @@
 ---
 title: Trie树（前缀树，字典树，单词查找树）
 date: 2026-04-07
-tags: [算法]
+tags: [算法, 奇门遁甲]
 type: guide
 status: complete
 ---
