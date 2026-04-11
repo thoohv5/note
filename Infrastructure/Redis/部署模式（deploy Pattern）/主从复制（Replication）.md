@@ -1,3 +1,10 @@
+---
+title: 主从复制（Replication）
+date: 2026-04-11
+tags: [基础设施, Redis]
+type: note
+status: incomplete
+---
 - 主从架构作用
 - 主从同步原理（全量 + 增量）
 - 核心流程

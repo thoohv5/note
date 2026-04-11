@@ -1,3 +1,10 @@
+---
+title: 简单动态字符串（simple dynamic string，SDS）
+date: 2026-04-11
+tags: [基础设施, Redis]
+type: note
+status: incomplete
+---
 
 
 # 附录
