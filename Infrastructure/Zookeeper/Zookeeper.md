@@ -1,9 +1,11 @@
 ---
 title: Zookeeper
 date: 2026-04-07
-tags: [基础设施, Zookeeper]
+tags:
+  - 基础设施
+  - Zookeeper
 type: note
-status: complete
+status: incomplete
 ---
 
 # Zookeeper
