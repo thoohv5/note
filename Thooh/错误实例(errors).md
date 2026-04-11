@@ -1,11 +1,9 @@
 ---
 title: 错误实例(errors)
 date: 2023-12-08
-categories: Golang
-tags:
-  - golang
-description: Go 内置 errors
-share: "true"
+tags: [笔记]
+type: note
+status: incomplete
 ---
 
 # Go 内置 errors

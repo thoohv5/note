@@ -1,12 +1,9 @@
 ---
 title: NMAP(Network Mapper)
 date: 2023-12-12
-categories: Linux
-tags:
-  - Linux
-  - Software
-description: 网络探索工具和安全/端口扫描器
-share: "true"
+tags: [笔记]
+type: note
+status: incomplete
 ---
 # 概述
 ## NMAP

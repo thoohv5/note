@@ -1,9 +1,9 @@
 ---
 title: rpm-build
 date: 2023-12-12
-categories: Linux
-description: RPM 包管理器 （RPM） 是一个运行在 Red Hat Enterprise Linux、CentOS 和 Fedora 上的包管理系统。
-share: "true"
+tags: [笔记]
+type: note
+status: incomplete
 ---
 
 # 概述

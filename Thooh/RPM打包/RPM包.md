@@ -1,7 +1,7 @@
 ---
 title: RPM包
 date: 2023-12-12
-tags: [个人笔记]
+tags: [笔记, RPM打包]
 type: note
 status: complete
 ---
