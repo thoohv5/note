@@ -1,16 +1,17 @@
 ---
 title: Redis
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: guide
 status: complete
 ---
 
-# Redis
+### Redis
 
-# 基础知识
+### 基础知识
 
-## set
+### set
 
 Set `key` to hold the string `value`. If `key` already holds a value, it is overwritten, regardless of its type. Any previous time to live associated with the key is discarded on successful `SET` operation.
 
@@ -35,11 +36,10 @@ Set `key` to hold the string `value`. If `key` already holds a value, it is
 
 如果SET命令正常执行那么回返回OK，否则如果加了NX 或者 XX选项，但是没有设置条件。那么会返回nil。
 
-# Redis分布式锁
+### Redis分布式锁
 
-## 单实例实现
+### 单实例实现
 
-### 获取锁命令
 
 ```bash
 SET resource_name my_random_value NX PX expire-time
@@ -48,7 +48,6 @@ SET resource_name my_random_value NX PX expire-time
 - 自动失效时间PX expire-time，防止死锁
 - 开启独立的线程，增加失效时间，防止执行超时（WatchDog）
 
-### 释放锁的命令
 
 ```go
 if redis.call("get",KEYS[1]) == ARGV[1] then // ARGV[1] == my_random_value
@@ -60,15 +59,13 @@ end
 
 - 相同resource_name的获取者（竞争者），my_random_value唯一，安全释放锁，先检查随机值my_random_value，然后再删除，使用Lua脚本
 
-### 安全释放锁的场景
 
 a客户端获得的锁（键key）已经由于过期时间到了被redis服务器删除，但是这个时候a客户端还去执行`DEL`命令。而b客户端已经在a设置的过期时间之后重新获取了这个同样key的锁，那么a执行`DEL`就会释放了b客户端加好的锁。
 
-### 死锁的场景
 
 如果客户端出现故障，崩溃或者其他情况无法释放该锁会发生什么情况？锁会自动释放
 
-## 集群实现
+### 集群实现
 
 the RedLock algorithm
 
@@ -82,7 +79,7 @@ the RedLock algorithm
 4. 如果取到了锁，key的真正有效时间等于有效时间减去获取锁所使用的时间（步骤3计算的结果）。
 5. 如果因为某些原因，获取锁失败（*没有*在至少N/2+1个Redis实例取到锁或者取锁时间已经超过了有效时间），客户端应该在所有的Redis实例上进行解锁（即便某些Redis实例根本就没有加锁成功）。
 
-# 附录
+### 附录
 
 [REDIS distlock -- Redis中国用户组（CRUG）](http://redis.cn/topics/distlock.html)
 

@@ -1,14 +1,15 @@
 ---
 title: Kill Killall PKill
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# Kill Killall PKill
+## Kill Killall PKill
 
-## Kill
+### Kill
 
 kill - terminate a process
 
@@ -23,7 +24,7 @@ kill -l
 15(TREM) 完美地停止以一个进程
 ```
 
-## killall
+### killall
 
 killall - kill processes by name
 
@@ -34,7 +35,7 @@ killall mysql
 killall -9 mysql
 ```
 
-## pkil
+### pkil
 
 pgrep, pkill - look up or signal processes based on name and other attributes
 

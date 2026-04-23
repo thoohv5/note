@@ -1,14 +1,15 @@
 ---
 title: route
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# route
-
 ## route
+
+### route
 
 show / manipulate the IP routing table
 
@@ -30,7 +31,7 @@ route add [-net|-host] target [network Num][[default]gw Gw][dev If]
 route del [-net|-host] target [network Num][gw Gw][dev If]
 ```
 
-## ip route
+### ip route
 
 **routing table management**
 

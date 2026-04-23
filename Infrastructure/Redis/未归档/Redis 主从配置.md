@@ -1,14 +1,15 @@
 ---
 title: Redis 主从配置
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Redis 主从配置
+## Redis 主从配置
 
-## 配置
+### 配置
 
 ### 官网
 
@@ -41,16 +42,16 @@ cp
 ### 修改配置
 
 ```bash
-# 守护线程的方式启动
+## 守护线程的方式启动
 daemonize yes
 
-# 监听地址
+## 监听地址
 bind 0.0.0.0
 
-# 节点密码
+## 节点密码
 requirepass <password>
 
-# 远程连接
+## 远程连接
 protected-mode yes
 ```
 
@@ -66,13 +67,13 @@ slaveof <masterip> <mastetport>
 masterauth <password>
 ```
 
-## 主从手动切换
+### 主从手动切换
 
 ```bash
-# 从 => 主
+## 从 => 主
 slaveof no one
 
-# 主 => 从
+## 主 => 从
 slaveof <masterip> <masterport> 
 config set masterauth <password>
 ```
@@ -96,7 +97,7 @@ redis加载RDB文件，会专门处理文件中辅助字段(AUX fields）信息�
 从实例上报的master_repl_offset+1字节，还存在于主实例的复制积压缓冲区中，用于判断从库丢失部分是否在复制缓冲区中；
 ```
 
-# 警告
+## 警告
 
 ```bash
 WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
@@ -106,13 +107,13 @@ echo net.core.somaxconn=511 >> /etc/sysctl.conf
 WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect
 
 echo vm.overcommit_memory=1 >> /etc/sysctl.conf
-# 使/etc/sysctl.conf生效
+## 使/etc/sysctl.conf生效
 sysctl -p
 ```
 
-## 哨兵
+### 哨兵
 
-# 附录
+## 附录
 
 [redis-4.0.x中如何解决redis重启runid变化引起的全量复制](https://www.jianshu.com/p/54dabc470eb6)
 

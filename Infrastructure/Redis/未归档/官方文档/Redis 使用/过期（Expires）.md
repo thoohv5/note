@@ -1,14 +1,15 @@
 ---
 title: 过期（Expires）
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# 过期（Expires）
+## 过期（Expires）
 
-## **Redis如何淘汰过期的keys**
+### **Redis如何淘汰过期的keys**
 
 Redis keys过期有两种方式：**被动和主动方式**。
 

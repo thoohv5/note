@@ -1,12 +1,14 @@
 ---
 title: FOR UPDATE SKIP LOCKED
 date: 2026-04-11
-tags: [基础设施, 数据库, MySQL]
+  - 基础设施
+  - 数据库
+  - MySQL
 type: note
 status: incomplete
 ---
 
-# 概述
+## 概述
 
 语法：select语句后跟 for update skip locked
 作用：目标对象没有被其它会话加锁则可加锁，被其它会话加了锁就跳过。
@@ -19,7 +21,7 @@ status: incomplete
     - 它能跳过仅仅是它能跳过，不代表没加skip locked的X或S锁遇见这个锁不会发生阻塞。
     - **MySQL8才有的特性，5.7会报错**：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'skip locked' at line 1。
 
-# 实操
+## 实操
 ### 创建表结构
 ```sql
 CREATE TABLE `jobs` ( 
@@ -59,7 +61,7 @@ select * from `jobs` where `queue` = 'low' and ((`reserved_at` is null and `avai
 |3|/|select * from `jobs` where `queue` = 'default' and ((`reserved_at` is null and `available_at` <= 1735097879) or (`reserved_at` <= 1735094259)) order by `id` asc limit 1 FOR UPDATE SKIP LOCKED|会话2返回id为2的数据，直接跳过加锁的1|
 |4|update jobs set reserved_at = UNIX_TIMESTAMP() where id = 1;|update jobs set reserved_at = UNIX_TIMESTAMP() where id = 2;|将找到的任务标记为队列正在处理|
 |5|commit;|commit;|提交事务，结束流程|
-# 附录
+## 附录
 
 [MySQL for update skip locked 与 for update nowait - 小松聊PHP进阶 - 博客园](https://www.cnblogs.com/phpphp/p/18630869)
 [https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-reads.html#innodb-locking-reads-for-update](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-reads.html#innodb-locking-reads-for-update)

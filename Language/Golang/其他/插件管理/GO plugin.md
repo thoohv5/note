@@ -1,14 +1,15 @@
 ---
 title: GO plugin
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# GO plugin
+## GO plugin
 
-## 概述（Overview）
+### 概述（Overview）
 
 Package plugin implements loading and symbol resolution of Go plugins.
 
@@ -30,7 +31,7 @@ Currently plugins are only supported on Linux, FreeBSD, and macOS.
 
 目前插件**仅支持 Linux、FreeBSD 和 macOS。**
 
-## 函数
+### 函数
 
 Open opens a Go plugin. If a path has already been opened, then the existing *Plugin is returned. It is safe for concurrent use by multiple goroutines.
 
@@ -48,13 +49,13 @@ Lookup 在插件 p 中搜索名为 symName 的符号。符号可以是任何导�
 func (p *Plugin) Lookup(symName string) (Symbol, error)
 ```
 
-## 问题
+### 问题
 
 - 平台限制，目前仅支持：Linux, FreeBSD 和 macOS
 - 卸载限制，仅支持动态加载，不支持动态卸载。
 - 不提供统一接口，只能通过反射处理Plugin内部的属性和函数。
 
-# 附录
+## 附录
 
 > https://zhuanlan.zhihu.com/p/451382884
 > 

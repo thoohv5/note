@@ -1,12 +1,13 @@
 ---
 title: google.golang.org/grpc/status
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# google.golang.org/grpc/status
+## google.golang.org/grpc/status
 
 ### 创建
 
@@ -58,7 +59,7 @@ ds, _ := st.WithDetails(
 err := ds.Err()
 ```
 
-## **gRPC 状态码与 HTTP 状态码映射**
+### **gRPC 状态码与 HTTP 状态码映射**
 
 gRPC 使用自己的状态码体系（**`codes`** 包），但通常与 HTTP 状态码有以下对应关系：
 
@@ -74,7 +75,7 @@ gRPC 使用自己的状态码体系（**`codes`** 包），但通常与 HTTP �
 | **`codes.Unimplemented`** | 501 |
 | **`codes.Unavailable`** | 503 |
 
-## **与标准错误的互操作**
+### **与标准错误的互操作**
 
 **`status`** 包可以与标准 **`error`** 无缝协作：
 

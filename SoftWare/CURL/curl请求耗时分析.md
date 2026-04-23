@@ -1,12 +1,13 @@
 ---
 title: curl分析请求耗时情况， 以及curl命令详解_curl耗时变量参数_zzhongcy的博客-CSDN博客
 date: 2026-04-07
-tags: [软件工具, CURL]
+  - 软件工具
+  - CURL
 type: reference
 status: complete
 ---
 
-# curl分析请求耗时情况， 以及curl命令详解_curl耗时变量参数_zzhongcy的博客-CSDN博客
+## curl分析请求耗时情况， 以及curl命令详解_curl耗时变量参数_zzhongcy的博客-CSDN博客
 
 标签: Design
 URL: https://blog.csdn.net/zzhongcy/article/details/23372535
@@ -66,7 +67,7 @@ URL: https://blog.csdn.net/zzhongcy/article/details/23372535
 
 可以看到 `time_appconnect` 和 `time_redirect` 都不是 0 了，其中 SSL 协议处理时间为 `328-18=310ms`。而且 `pretransfer` 和 `starttransfer` 的时间都缩短了，这是重定向之后请求的时间。
 
-# 2、全部命令参数
+## 2、全部命令参数
 
 Usage: curl [options...] <url>
 

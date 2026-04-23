@@ -1,14 +1,15 @@
 ---
 title: Linux ctime & atime & mtime
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# Linux ctime & atime & mtime
+## Linux ctime & atime & mtime
 
-# 文件
+## 文件
 
 文件的 Access time，atime 是在读取文件或者执行文件时更改的任何对inode的访问都会使此处改变。
 
@@ -16,7 +17,7 @@ status: complete
 
 文件的 Change time，ctime 是在写入文件、更改所有者、权限或链接设置时随 Inode 的内容更改而更改的。只要stat出来的内容发生改变就会发生改变。mtime的改变必然导致ctime的改变。指文件属性或文件位置改动的时间，如使**用chmod、chown、mv**指令**及ln**做文件的硬式连接，就会改变文件的Change time.
 
-# 文件夹
+## 文件夹
 
 文件夹的 Access time，atime 是在读取文件或者执行文件时更改的（我们只cd进入一个目录然后cd ..不会引起atime的改变，但ls一下就不同了）。
 

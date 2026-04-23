@@ -19,7 +19,7 @@ tags:
 
 ---
 
-## 一、背景：后端为什么一定会踩 Excel 这个坑？
+### 一、背景：后端为什么一定会踩 Excel 这个坑？
 
 如果你做过后端系统，大概率遇到过这些场景：
 
@@ -52,7 +52,7 @@ rows, _ := f.GetRows("Sheet1")
 
 ---
 
-## 二、核心难点分析
+### 二、核心难点分析
 
 Excel 处理的本质问题，其实只有三个：
 
@@ -80,7 +80,7 @@ Excel 处理的本质问题，其实只有三个：
 
 ---
 
-## 三、整体架构设计
+### 三、整体架构设计
 
 ### 核心设计原则
 
@@ -108,7 +108,7 @@ Excel → 流式读取 → Worker Pool → 业务处理 → 流式写入 → 新
 
 ---
 
-## 四、核心库选型
+### 四、核心库选型
 
 Go 操作 Excel 主流库对比：
 
@@ -130,7 +130,7 @@ go get github.com/xuri/excelize/v2
 
 ---
 
-## 五、流式读取：解决 OOM 的关键
+### 五、流式读取：解决 OOM 的关键
 
 ### ❌ 错误示范（90% 的人这样写）
 
@@ -158,7 +158,7 @@ rows, err := f.Rows("Sheet1")if err != nil {    panic(err)}defer rows.Close()for
 
 ---
 
-## 六、并发处理模型设计（核心）
+### 六、并发处理模型设计（核心）
 
 ### 并发架构模型
 
@@ -204,7 +204,7 @@ jobs := make(chan []string, 1000)
 
 ---
 
-## 七、流式写入：性能提升 5~10 倍
+### 七、流式写入：性能提升 5~10 倍
 
 ### ❌ 传统写法
 
@@ -230,7 +230,7 @@ sw, err := f.NewStreamWriter("Sheet1")if err != nil {    panic(err)}for i, row :
 
 ---
 
-## 八、完整流水线实现示例
+### 八、完整流水线实现示例
 
 ```go
 func (e *ExcelPipeline) Run(in, out string) error {    r, err := excelize.OpenFile(in)    if err != nil {        return err    }    w := excelize.NewFile()    rows, err := r.Rows("Sheet1")    if err != nil {        return err    }    defer rows.Close()    jobs := make(chan []string, 1000)    results := make(chan []any, 1000)    workerNum := runtime.NumCPU() * 2    var wg sync.WaitGroup    // 启动 worker 池    for i := 0; i < workerNum; i++ {        wg.Add(1)        go func() {            defer wg.Done()            e.Worker(jobs, results)        }()    }    // 读取 Excel → jobs    go func() {        for rows.Next() {            row, _ := rows.Columns()            jobs <- row        }        close(jobs)    }()    // 等所有 worker 结束 → 关闭 results    go func() {        wg.Wait()        close(results)    }()    sw, err := w.NewStreamWriter("Sheet1")    if err != nil {        return err    }    idx := 1    for res := range results {        axis, _ := excelize.CoordinatesToCellName(1, idx)        sw.SetRow(axis, res)        idx++    }    sw.Flush()    return w.SaveAs(out)}
@@ -242,7 +242,7 @@ func (e *ExcelPipeline) Worker(jobs <-chan []string, results chan<- []any) {    
 
 ---
 
-## 九、性能实测对比
+### 九、性能实测对比
 
 测试环境：
 
@@ -260,7 +260,7 @@ func (e *ExcelPipeline) Worker(jobs <-chan []string, results chan<- []any) {    
 
 ---
 
-## 十、工程化目录结构推荐
+### 十、工程化目录结构推荐
 
 ```cs
 excel-batch/ ├── cmd/ ├── internal/ │    ├── reader/ │    ├── dispatcher/ │    ├── worker/ │    ├── writer/ │    └── pipeline/ ├── pkg/ └── main.go
@@ -275,7 +275,7 @@ excel-batch/ ├── cmd/ ├── internal/ │    ├── reader/ │    
 
 ---
 
-## 十一、生产级优化方案
+### 十一、生产级优化方案
 
 ### 1️⃣ 文件分片
 
@@ -297,7 +297,7 @@ export GOGC=50
 
 ---
 
-## 十二、真实业务场景
+### 十二、真实业务场景
 
 - 财务月报
 - 订单流水导出
@@ -309,7 +309,7 @@ export GOGC=50
 
 ---
 
-## 总结
+### 总结
 
 如果你需要在生产环境处理 **百万 / 千万级 Excel** ，请牢记这三点：
 

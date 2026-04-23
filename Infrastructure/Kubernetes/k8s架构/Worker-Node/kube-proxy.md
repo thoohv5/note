@@ -1,14 +1,15 @@
 ---
 title: kube-proxy
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# kube-proxy
+## kube-proxy
 
-# 概述
+## 概述
 
 负责服务发现和负载均衡
 

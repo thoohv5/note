@@ -1,12 +1,13 @@
 ---
 title: MyISAM引擎
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: guide
 status: complete
 ---
 
-# MyISAM引擎
+## MyISAM引擎
 
 ### 事务
 

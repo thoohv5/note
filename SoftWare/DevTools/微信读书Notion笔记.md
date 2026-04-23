@@ -1,12 +1,13 @@
 ---
 title: 微信读书+Notion，读书笔记王炸组合
 date: 2026-04-07
-tags: [软件工具, 开发工具]
+  - 软件工具
+  - 开发工具
 type: guide
 status: complete
 ---
 
-# 微信读书+Notion，读书笔记王炸组合
+## 微信读书+Notion，读书笔记王炸组合
 
 标签: Design
 URL: https://www.bilibili.com/read/cv27368538/
@@ -19,25 +20,25 @@ URL: https://www.bilibili.com/read/cv27368538/
 
 作为一个极致效率爱好者，发现了一个王炸组合：微信读书+Notion，十分钟完成配置，一劳永逸，之后每一天微信读书中的笔记和划线都可以自动同步到Notion中。
 
-## 效果展示及操作指南
+### 效果展示及操作指南
 
 [https://www.bilibili.com/video/BV1xQ4y1H7Aw/](https://www.bilibili.com/video/BV1xQ4y1H7Aw/)
 
-## 王炸特点
+### 王炸特点
 
 1. 轻松打造读书笔记卡片盒，归纳书籍和笔记，从此不再读一本忘一本
 2. 多终端联动，随时可翻阅笔记：支持在平板、手机、电脑端的微信读书划线，并同步到多端（平板、手机、电脑端）的Notion APP中
 3. 自动同步阅读进度、阅读时长、书籍信息、作者信息等
 
-## 操作步骤
+### 操作步骤
 
-## 准备工作
+### 准备工作
 
 已拥有**GitHub账号**、已拥有**微信读书账号**、已拥有**Notion账号**
 
 自动化的操作基于GitHub平台中定时运行的GitHub Action，每天固定时间爬取微信读书中的划线和笔记，再将数据同步到Notion的读书笔记卡片盒中。
 
-## Fork代码到自己的GitHub仓库
+### Fork代码到自己的GitHub仓库
 
 注册并登录GitHub账号（本文的后续的操作均基于malinkang大佬的开源项目）
 
@@ -47,7 +48,7 @@ URL: https://www.bilibili.com/read/cv27368538/
 
 Fork代码
 
-## 获取Weread_Cookie
+### 获取Weread_Cookie
 
 获取微信读书的Cookie
 
@@ -60,7 +61,7 @@ Fork代码
 
 复制 Weread_Cookie
 
-## 获取Notion_Token
+### 获取Notion_Token
 
 获取NotionToken
 
@@ -76,7 +77,7 @@ New integration
 
 复制Notion_Token
 
-## 添加Connection
+### 添加Connection
 
 我们在使用 Notion API 时，并不是以「账户」身份登录，来操作所有的数据表；而是通过创建一个个的机器人（称为 Integration或者connection）来完成。
 
@@ -88,7 +89,7 @@ New integration
 
 添加Connection
 
-## 获取NotionDatabaseID
+### 获取NotionDatabaseID
 
 获取NotionDatabaseID
 
@@ -100,7 +101,7 @@ New integration
 
 复制NOTION_DATABASE_ID
 
-## 配置自动化脚步运行所需变量
+### 配置自动化脚步运行所需变量
 
 在Github的Secrets中添加以下变量
 

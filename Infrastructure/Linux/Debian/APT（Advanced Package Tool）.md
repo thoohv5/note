@@ -1,12 +1,13 @@
 ---
 title: APT（Advanced Package Tool）
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: complete
 ---
 
-# APT（Advanced Package Tool）
+## APT（Advanced Package Tool）
 
 `apt-get` 是 Debian 系（包括 Ubuntu）Linux 系统中用于管理软件包的命令行工具，背后使用的是 **APT（Advanced Package Tool）**。
 

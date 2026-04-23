@@ -1,16 +1,17 @@
 ---
 title: Python替代实现
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# Python替代实现
+## Python替代实现
 
 主要的Python实现：
 
-## **1. PyPy**
+### **1. PyPy**
 
 - **特点**：使用JIT（即时编译）技术
 - **优势**：
@@ -19,7 +20,7 @@ status: complete
     - 兼容大部分Python库
 - **适用场景**：CPU密集型应用、长时间运行的服务
 
-## **2. Jython**
+### **2. Jython**
 
 - **特点**：运行在Java虚拟机（JVM）上
 - **优势**：
@@ -27,7 +28,7 @@ status: complete
     - 与Java生态系统无缝集成
 - **适用场景**：Java项目集成、使用Java库的应用
 
-## **3. IronPython**
+### **3. IronPython**
 
 - **特点**：运行在.NET平台上
 - **优势**：
@@ -35,7 +36,7 @@ status: complete
     - 与C#、[VB.NET](https://vb.net/)等互操作
 - **适用场景**：Windows平台开发、.NET集成
 
-## **4. MicroPython**
+### **4. MicroPython**
 
 - **特点**：为微控制器和嵌入式系统设计
 - **优势**：
@@ -43,7 +44,7 @@ status: complete
     - 支持硬件直接访问
 - **适用场景**：物联网设备、嵌入式系统
 
-## **5. Cython [标准]**
+### **5. Cython [标准]**
 
 - **特点**：Python的C扩展
 - **优势**：
@@ -51,7 +52,7 @@ status: complete
     - 性能接近C语言
 - **适用场景**：高性能计算、科学计算
 
-## **如何选择？**
+### **如何选择？**
 
 | **实现** | **最佳用途** | **性能特点** |
 | --- | --- | --- |

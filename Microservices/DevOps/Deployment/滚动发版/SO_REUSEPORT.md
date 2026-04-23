@@ -1,14 +1,15 @@
 ---
 title: SO_REUSEPORT
 date: 2026-04-07
-tags: [微服务, DevOps]
+  - 微服务
+  - DevOps
 type: note
 status: complete
 ---
 
-# SO_REUSEPORT
+## SO_REUSEPORT
 
-## `SO_REUSEPORT` 的切换规则：内核哈希算法
+### `SO_REUSEPORT` 的切换规则：内核哈希算法
 
 当你启动 V1 和 V2 共同监听端口时，切换规则是由 **Linux 内核** 硬编码的。
 

@@ -1,12 +1,13 @@
 ---
 title: 标准输入/输出(I/O)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 标准输入/输出(I/O)
+## 标准输入/输出(I/O)
 
 Go 语言中，为了方便开发者使用，将 I/O 操作封装在了大概如下几个包中：
 

@@ -1,12 +1,13 @@
 ---
 title: whereis
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: incomplete
 ---
 
-# whereis
+## whereis
 
 查找某个命令的二进制程序文件、帮助文档、源代码文件;也是从数据库中查找。
 

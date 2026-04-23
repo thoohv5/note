@@ -1,12 +1,13 @@
 ---
 title: Callable
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: incomplete
 ---
 
-# Callable
+## Callable
 
 ### 普通函数
 
@@ -14,7 +15,7 @@ status: incomplete
 def greet(name: str) -> str:
     return f"Hello {name}"
 
-# greet 是 Callable，可以传给 Agent
+## greet 是 Callable，可以传给 Agent
 tools = [greet]
 ```
 

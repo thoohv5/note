@@ -1,30 +1,31 @@
 ---
 title: LD_LIBRARY_PATH
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# LD_LIBRARY_PATH
+## LD_LIBRARY_PATH
 
-## LIBRARY_PATH
+### LIBRARY_PATH
 
 环境变量用于在程序编译期间查找[动态链接库](https://so.csdn.net/so/search?q=动态链接)93&spm=1001.2101.3001.7020时指定查找共享库的路径，例如，指定gcc编译需要用到的动态链接库的目录。
 
 ```
-# 设置方法
+## 设置方法
 
 export LIBRARY_PATH=libdir:$LIBRARY_PATH
 
 ```
 
-## LD_LIBRARY_PATH
+### LD_LIBRARY_PATH
 
 环境变量用于在程序加载运行期间查找动态链接库时指定**除了系统默认路径之外**的其他路径，注意，LD_LIBRARY_PATH中指定的路径会在系统默认路径之前进行查找。
 
 ```
-# 默认路径
+## 默认路径
 
 /lib
 /lib64
@@ -34,7 +35,7 @@ export LIBRARY_PATH=libdir:$LIBRARY_PATH
 ```
 
 ```
-# 设置方法
+## 设置方法
 
 export LD_LIBRARY_PATH=libdir:$LD_LIBRARY_PATH
 
@@ -46,7 +47,7 @@ export LD_LIBRARY_PATH=libdir:$LD_LIBRARY_PATH
 
 发布时，设置LD_LIBRARY_PATH，以便程序加载运行时能够自动找到需要的动态链接库。
 
-# Linux运行时，如何管理共享库(`.so`)
+## Linux运行时，如何管理共享库(`.so`)
 
 共享库的寻找和加载是由`/lib/ld.so`实现
 

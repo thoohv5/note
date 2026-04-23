@@ -1,12 +1,13 @@
 ---
 title: 监控 MySQL 配置
 date: 2026-04-07
-tags: [微服务, 服务治理]
+  - 微服务
+  - 服务治理
 type: guide
 status: complete
 ---
 
-# 监控 MySQL 配置
+## 监控 MySQL 配置
 
 ### 使用 `prom/mysqld-exporter` 监控MySQL：
 
@@ -19,8 +20,8 @@ status: complete
     volumes:
       - ./exporter/conf/my.cnf:/.my.cnf
     # 最新版本不支持了
-#    environment:
-#      - DATA_SOURCE_NAME=exporter:password@(mysql:3306)/mysql
+##    environment:
+##      - DATA_SOURCE_NAME=exporter:password@(mysql:3306)/mysql
     depends_on:
       - mysql
     networks:

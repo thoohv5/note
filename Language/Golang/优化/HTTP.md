@@ -1,12 +1,13 @@
 ---
 title: HTTP
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# HTTP
+## HTTP
 
 ```go
 package main
@@ -71,6 +72,6 @@ func httpClientWithMaxPerlHost(maxPerlHostConnect int) *http.Client {
 }
 ```
 
-# 附录
+## 附录
 
 [Golang 产生大量TIME_WAIT或ESTABLISHED的问题_go语言找'tcp'连接中存在多个'time_wait_男人如花花易落的博客-CSDN博客](https://blog.csdn.net/sinat_36436112/article/details/118698978)

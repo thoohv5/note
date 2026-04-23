@@ -1,12 +1,13 @@
 ---
 title: asdf
 date: 2026-04-07
-tags: [软件工具, 开发工具]
+  - 软件工具
+  - 开发工具
 type: guide
 status: complete
 ---
 
-# asdf
+## asdf
 
 ### 安装
 
@@ -41,7 +42,7 @@ asdf install php 7.2.34
 asdf plugin add python https://github.com/danhper/asdf-python.git
 ```
 
-## 全局
+### 全局
 
 ```bash
 asdf set php 8.2.29 -p

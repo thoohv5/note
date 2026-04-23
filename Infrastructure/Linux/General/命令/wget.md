@@ -1,12 +1,13 @@
 ---
 title: wget
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: incomplete
 ---
 
-# wget
+## wget
 
 ```bash
 wget [参数] [URL地址]
@@ -17,7 +18,7 @@ wget [参数] [URL地址]
 
 </aside>
 
-## 常用命令
+### 常用命令
 
 ```bash
 -nc, --no-clobber 不覆盖已有的文件
@@ -27,4 +28,4 @@ wget [参数] [URL地址]
 -O, --output-document=file 指定文件（文件重命名）
 ```
 
-# 安装
+## 安装

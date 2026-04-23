@@ -1,12 +1,13 @@
 ---
 title: sync/errgroup
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# sync/errgroup
+## sync/errgroup
 
 **errgroup 的优势**
 与 sync.WaitGroup 相比，errgroup.Group 具有以下优势：
@@ -15,7 +16,7 @@ status: complete
 • **简化并发编程**：使用 errgroup 可以减少错误处理的样板代码。开发者不需要手动管理错误状态和同步逻辑，使并发编程更简单、更易维护。
 • **限制并发数量**：errgroup 提供了限制并发 goroutine 数量的接口，以避免过载，这是 sync.WaitGroup 所不具备的功能。
 
-# Context取消
+## Context取消
 
 ```go
 package main
@@ -68,7 +69,7 @@ func main() {
 }
 ```
 
-# 限制并发数量
+## 限制并发数量
 
 ```go
 package main

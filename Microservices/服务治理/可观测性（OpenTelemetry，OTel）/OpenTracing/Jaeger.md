@@ -1,12 +1,13 @@
 ---
 title: Jaeger
 date: 2026-04-07
-tags: [微服务, 服务治理]
+  - 微服务
+  - 服务治理
 type: reference
 status: complete
 ---
 
-# Jaeger
+## Jaeger
 
 | 组件 | 作用 |
 | --- | --- |
@@ -16,7 +17,7 @@ status: complete
 
 ---
 
-## 🧩 三者角色与关系
+### 🧩 三者角色与关系
 
 ```mermaid
 graph LR
@@ -29,7 +30,7 @@ graph LR
 
 ---
 
-## 🔍 详细对比
+### 🔍 详细对比
 
 | 组件名 | 职责 | 运行位置 | 通信方式 | 对开发者的作用 |
 | --- | --- | --- | --- | --- |
@@ -39,7 +40,7 @@ graph LR
 
 ---
 
-## 🧪 示例端口
+### 🧪 示例端口
 
 | 组件 | 默认端口 | 描述 |
 | --- | --- | --- |
@@ -47,7 +48,7 @@ graph LR
 | Collector | `14268/http`, `14250/grpc` | 接收 span（来自 Agent 或 App） |
 | Query | `16686` | Web UI 和 API |
 
-## 两种模式对比
+### 两种模式对比
 
 | 模式 | 应用 ➝ Jaeger Agent ➝ Collector | 应用 ➝ Collector（直连） |
 | --- | --- | --- |
@@ -57,6 +58,6 @@ graph LR
 | **可靠性** | ✅ Agent 有缓冲和批处理，Collector 压力小 | ❌ Collector 容易被打爆❌ 应用网络抖动直接影响导出 |
 | **适用场景** | 🚀 正式环境（大规模服务部署） | 🧪 本地开发、小型服务、容器内运行 all-in-one |
 
-# 附录
+## 附录
 
 [Introduction](https://www.jaegertracing.io/docs/1.34/)

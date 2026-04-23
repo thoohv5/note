@@ -1,20 +1,21 @@
 ---
 title: NSQ
 date: 2026-04-07
-tags: [基础设施, 消息队列]
+  - 基础设施
+  - 消息队列
 type: reference
 status: complete
 ---
 
-# NSQ
+## NSQ
 
-# 概述
+## 概述
 
 [https://github.com/nsqio/nsq](https://github.com/nsqio/nsq)
 
 [NSQ Docs 1.2.1 - A realtime distributed messaging platform](https://nsq.io/)
 
-## NSQ是一个实时的分布式的消息处理平台
+### NSQ是一个实时的分布式的消息处理平台
 
 ### 特点
 

@@ -1,13 +1,14 @@
 ---
 title: ARP
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: reference
 status: incomplete
 ---
 
-# ARP
+## ARP
 
-# 概述
+## 概述
 
 通过目的的IP地址来获取目的的MAC地址

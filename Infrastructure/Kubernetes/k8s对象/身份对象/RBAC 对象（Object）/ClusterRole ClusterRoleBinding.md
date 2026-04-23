@@ -1,14 +1,15 @@
 ---
 title: ClusterRole/ClusterRoleBinding
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# ClusterRole/ClusterRoleBinding
+## ClusterRole/ClusterRoleBinding
 
-# **`ClusterRole`**
+## **`ClusterRole`**
 
 集群级别的权限，允许用户跨所有命名空间（或特定命名空间）访问 Kubernetes 资源。它是一个在整个集群范围内有效的角色，可以用于控制访问集群中的资源（如节点、命名空间、Pod 等）。
 
@@ -41,7 +42,7 @@ status: complete
 
 ---
 
-# **`ClusterRoleBinding`**
+## **`ClusterRoleBinding`**
 
 将 **ClusterRole** 分配给某个用户、组或服务账户的对象。它允许某个身份（用户、服务账户等）在集群范围内或特定命名空间内拥有 ClusterRole 中定义的权限。
 
@@ -68,15 +69,15 @@ status: complete
 
 ---
 
-# 查看
+## 查看
 
 ```bash
-# 查看所有 ClusterRoleBinding
+## 查看所有 ClusterRoleBinding
 kubectl get clusterrolebindings
 
-# 查看 ClusterRoleBinding 详情
+## 查看 ClusterRoleBinding 详情
 kubectl describe clusterrolebinding <binding-name>
 
-# 查看 ClusterRole 权限
+## 查看 ClusterRole 权限
 kubectl describe clusterrole <clusterrole-name>
 ```

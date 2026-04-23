@@ -1,15 +1,16 @@
 ---
 title: RocketMQ
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: incomplete
 ---
 
-# RocketMQ
+### RocketMQ
 
 Delay Message
 
-# 附录
+### 附录
 
 [定时/延时消息 | RocketMQ](https://rocketmq.apache.org/zh/docs/featureBehavior/02delaymessage)

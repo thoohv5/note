@@ -1,18 +1,19 @@
 ---
 title: Golang
 date: 2026-04-07
-tags: [算法, 设计模式]
+  - 算法
+  - 设计模式
 type: guide
 status: complete
 ---
 
-# Golang
+## Golang
 
 2020年4月8日 
 
 [xxjwxc/uber_go_guide_cn](https://github.com/xxjwxc/uber_go_guide_cn)
 
-## 指导原则
+### 指导原则
 
 1. 指向 interface 的指针
 2. 接收器 (receiver) 与接口
@@ -112,13 +113,13 @@ func use() {
 3. 不要 panic
 4. 使用 [go.uber.org/atomic](http://go.uber.org/atomic)
 
-## 性能
+### 性能
 
 1. 优先使用 strconv 而不是 fmt
 2. 避免字符串到字节的转换
 3. 尽量初始化时指定 Map 容量
 
-## 规范
+### 规范
 
 1. 一致性
 2. 相似的声明放在一组

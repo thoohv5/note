@@ -1,18 +1,19 @@
 ---
 title: JetStream
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# JetStream
+### JetStream
 
 JetStream是NATS内置的**分布式持久化存储系统**，构建在JetStream存储系统上的“core NATS”功能更多，消息可靠性更高。
 
 ![[Pasted image 20231122171113.png]]
 
-## Stream
+### Stream
 
 ```bash
 nats stream add  "TEST" \\\\   # Stream名称
@@ -31,14 +32,14 @@ nats stream add  "TEST" \\\\   # Stream名称
       --deny-purge \\\\        # 是否允许清空stream消息, --no-deny-purge
       --replicas=1 \\\\        # 消息副本的数量
 
-# 持久化的方式
+### 持久化的方式
 limits 消息限制
 interest 存在消费者就存储
 workq 队列形式存储
 
 ```
 
-## Consumer
+### Consumer
 
 ```sql
 nats consumer add "TEST" \\\\ # Stream名称
@@ -52,7 +53,7 @@ nats consumer add "TEST" \\\\ # Stream名称
 			--headers-only \\\\     # 是否只投递Header消息
 			--target "beijing.course.created" # 在“推送”模式下，消息实时发送到目标NATS主题，可以作为普通消息订阅beijing.course.created主题，pull类型的consumer该值为空
 
-# 消息投递策略
+### 消息投递策略
 all 默认配置，consumer需要处理从头开始的所有消息
 last 从stream中的最后一条消息开始
 subject 从stream中每个主题的最后一条消息开始 （第一次）
@@ -60,20 +61,19 @@ new 只处理consumer创建后的新消息，历史消息不处理
 msg sequence 指定sequence开始处理
 1h 指定时间开始处理
 
-# 消息确认方式
+### 消息确认方式
 none 不需要确认
 all 确定的消息之前的消息都确定
 explicit 每条消息都需要确定
 
-# 消息回放机制
+### 消息回放机制
 instant,立即消费，我创建完这个consumer就可以立即消费所有消息
 original,按照stream收到消息的这个频率来推送消息给我
 
 ```
 
-## 主题（Subject）命名以及通配符的使用
+### 主题（Subject）命名以及通配符的使用
 
-### 命令
 
 推荐字符: a to z, A to Z, 0 to 9 (大小写敏感，不能有空格). 特殊字符: 区分层次结构用“.”，两个通配符: “`*`”，“`>`”
 

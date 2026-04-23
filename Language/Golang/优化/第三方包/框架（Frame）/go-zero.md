@@ -1,27 +1,28 @@
 ---
 title: go-zero
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# go-zero
+## go-zero
 
-# 概述
+## 概述
 
 go-zero 是一个集成了各种工程实践的 web 和 rpc 框架。通过弹性设计保障了大并发服务端的稳定性，经受了充分的实战检验。
 
 go-zero 包含极简的 API 定义和生成工具 goctl，可以根据定义的 api 文件一键生成 Go, iOS, Android, Kotlin, Dart, TypeScript, JavaScript 代码，并可直接运行。
 
-# 安装
+## 安装
 
 ```
 go get -u github.com/zeromicro/go-zero
 
 ```
 
-## goctl
+### goctl
 
 ```
 go install github.com/zeromicro/go-zero/tools/goctl@latest
@@ -37,7 +38,7 @@ goctl rpc -o transform.proto
 
 ```
 
-# 工程维度
+## 工程维度
 
 ```
 .
@@ -53,7 +54,7 @@ goctl rpc -o transform.proto
 
 ```
 
-# 服务纬度
+## 服务纬度
 
 ```
 example														单个服务目录，一般是某微服务名称
@@ -75,6 +76,6 @@ example														单个服务目录，一般是某微服务名称
 
 ```
 
-# 附录
+## 附录
 
 [https://go-zero.dev/docs/tasks](https://go-zero.dev/docs/tasks)

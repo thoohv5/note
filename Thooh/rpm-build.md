@@ -1,32 +1,32 @@
 ---
 title: rpm-build
 date: 2023-12-12
-tags: [笔记]
+  - 笔记
 type: note
 status: incomplete
 ---
 
-# 概述
+## 概述
 
 RPM 包管理器 （RPM） 是一个运行在 Red Hat Enterprise Linux、CentOS 和 Fedora 上的包管理系统。RPM 使您能够更轻松地分发、管理和更新为红帽企业 Linux、CentOS 和 Fedora 创建的软件。许多软件供应商通过传统的存档文件（如压缩包）分发他们的软件。
 
-# 依赖
+## 依赖
 
 ```
-# centos7
+## centos7
 yum install -y gcc rpm-build rpm-devel rpmlint make python bash coreutils diffutils patch rpmdevtools
 
-# Centos8
+## Centos8
 dnf install -y gcc rpm-build rpm-devel rpmlint make python bash coreutils diffutils patch rpmdevtools
 
 ```
 
-## 工作目录
+### 工作目录
 
 RPM制作的工作目录，用于源代码解压，编译，安装以及打包的场所
 
 ```
-# 生成工作目录
+## 生成工作目录
 rpmdev-setuptree
 ```
 
@@ -71,12 +71,12 @@ rpmdev-newspec xxx
 | %changelog                                                          |                                                                                        |     |
 |                                                                     |                                                                                        |     |
 
-## 命令
+### 命令
 
 ```
 rpmbuild option xxx.spec
 
-# option
+## option
 -bp #只执行spec的%pre段(解开源码包并打补丁,即只做准备)
 -bc #执行spec的%pre和%build 段(准备并编译)
 -bi #执行spec中%pre,%build与%install(准备,编译并安装)
@@ -87,7 +87,7 @@ rpmbuild option xxx.spec
 ```
 
 
-## 常用宏路径
+### 常用宏路径
 
 ```
 %{_sysconfdir}       /etc
@@ -116,6 +116,6 @@ $RPM_BUILD_ROOT      %{buildroot}
 ```
 
 
-# 附录
+## 附录
 
 https://rpm-packaging-guide.github.io/

@@ -1,17 +1,18 @@
 ---
 title: 动态依赖(ldd)
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: reference
 status: complete
 ---
 
-# 动态依赖(ldd)
+## 动态依赖(ldd)
 
-## 命令
+### 命令
 
 ```
-# 可执行文件dependency
+## 可执行文件dependency
 ldd /usr/local/sbin/dhcpd
 
 ```
@@ -24,7 +25,7 @@ ldd /usr/local/sbin/dhcpd
 
 ![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202401261337847.png)
 
-## 参数说明
+### 参数说明
 
 ```
 Usage: ldd [OPTION]... FILE...
@@ -37,7 +38,7 @@ Usage: ldd [OPTION]... FILE...
 
 ```
 
-## 工作原理
+### 工作原理
 
 `ldd` 能够显示可执行模块的`dependency`，其原理是通过设置一系列的环境变量
 

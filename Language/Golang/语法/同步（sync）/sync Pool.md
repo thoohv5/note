@@ -1,14 +1,15 @@
 ---
 title: sync.Pool
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# sync.Pool
+## sync.Pool
 
-# 简介
+## 简介
 
 sync.Pool 是 Golang 内置的对象池技术，可用于缓存临时对象，避免因频繁建立临时对象所带来的消耗以及对 GC 造成的压力。
 
@@ -56,8 +57,8 @@ sync.Pool缓存的期限只是两次gc之间这段时间
 > sync.Pool设计的目的是用来保存和复用临时对象，以减少内存分配，降低CG压力
 > 
 
-# 源码
+## 源码
 
-# 附录
+## 附录
 
 [深度分析 Golang sync.Pool 底层原理](https://mp.weixin.qq.com/s/_GxRIzVJ2YKZkZms0wYqRg)

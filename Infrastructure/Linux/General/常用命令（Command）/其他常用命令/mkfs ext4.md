@@ -1,25 +1,26 @@
 ---
 title: mkfs.ext4
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: reference
 status: complete
 ---
 
-# mkfs.ext4
+## mkfs.ext4
 
-# 概述
+## 概述
 
 mkfs.ext4命令来自英文词组make filesystem Ext4的缩写，其功能是对磁盘设备进行EXT4格式化操作。
 
-## 语法
+### 语法
 
 ```
 mkfs.ext4 参数 设备名
 
 ```
 
-## 常用参数
+### 常用参数
 
 | 参数 | 说明 |
 | --- | --- |

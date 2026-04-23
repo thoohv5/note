@@ -1,12 +1,13 @@
 ---
 title: 联合文件系统（UnionFS）
 date: 2026-04-07
-tags: [基础设施, Docker]
+  - 基础设施
+  - Docker
 type: note
 status: incomplete
 ---
 
-# 联合文件系统（UnionFS）
+## 联合文件系统（UnionFS）
 
 `Union` 文件系统（如 OverlayFS）支持将多个目录挂载到同一目录，Docker 镜像就构建于此之上。
 

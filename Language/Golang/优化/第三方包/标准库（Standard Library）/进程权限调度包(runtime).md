@@ -1,12 +1,13 @@
 ---
 title: 进程权限调度包(runtime)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: incomplete
 ---
 
-# 进程权限调度包(runtime)
+## 进程权限调度包(runtime)
 
 ```bash
 
@@ -16,7 +17,7 @@ runtime.GOMAXPROCS()
 
 ```
 
-# runtime.Caller
+## runtime.Caller
 
 ```bash
 func Caller(skip int) (pc uintptr, file string, line int, ok bool)

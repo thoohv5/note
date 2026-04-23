@@ -1,14 +1,15 @@
 ---
 title: 范围类型(Range)
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# 范围类型(Range)
+## 范围类型(Range)
 
-# 概念
+## 概念
 
 范围类型是表达某种元素类型（称为范围的*subtype*）的一个值的范围的数据类型。
 
@@ -16,7 +17,7 @@ status: complete
 
 具有“infinity”概念的元素类型可以用它们作为显式边界值。 例如，在时间戳范围，`[today,infinity)` 不包括特殊的 `timestamp` 值 `infinity`,尽管 `[today,infinity]` 包括它, 就好比 `[today,)` 和 `[today,]`.
 
-# 内建范围类型
+## 内建范围类型
 
 `int4range`  `integer`的范围
 
@@ -39,7 +40,7 @@ SUBTYPE = subtype
 [ , SUBTYPE_DIFF = subtype_diff_function ]
 ```
 
-# 使用
+## 使用
 
 ```sql
 -- 包含
@@ -80,7 +81,7 @@ Range类型支持的操作符：
 | * | intersection | select int4range’[1,4)’ * int4range’[2,5)’; | [2,4) |
 | - | difference | select int4range’[1,4)’ - int4range’[2,5)’; | [1,2) |
 
-# 示例
+## 示例
 
 ```sql
 CREATE TYPE inet_range AS Range (subtype=inet);

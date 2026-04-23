@@ -1,12 +1,13 @@
 ---
 title: English
 date: 2026-04-07
-tags: [编程语言, English]
+  - 编程语言
+  - English
 type: note
 status: complete
 ---
 
-# English
+## English
 
 type: Menu
 status: Published
@@ -21,23 +22,23 @@ slug: /en
 
 </aside>
 
-# 📝 主旨内容
+## 📝 主旨内容
 
-## 观点1
-
-> 引用的话语
-> 
-
-## 观点2
+### 观点1
 
 > 引用的话语
 > 
 
-# 🤗 总结归纳
+### 观点2
+
+> 引用的话语
+> 
+
+## 🤗 总结归纳
 
 总结文章的内容
 
-# 📎 参考文章
+## 📎 参考文章
 
 - 一些引用
 - 引用文章

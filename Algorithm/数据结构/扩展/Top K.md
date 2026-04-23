@@ -1,12 +1,13 @@
 ---
 title: Top K
 date: 2026-04-07
-tags: [算法, 数据结构]
+  - 算法
+  - 数据结构
 type: note
 status: incomplete
 ---
 
-# Top K
+## Top K
 
 ### 问题
 

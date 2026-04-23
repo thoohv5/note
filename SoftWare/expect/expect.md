@@ -1,12 +1,12 @@
 ---
 title: expect
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: note
 status: incomplete
 ---
 
-# expect
+## expect
 
 [Centos expect spawn、linux expect 用法](https://www.cnblogs.com/zhangmingcheng/p/7449776.html)
 

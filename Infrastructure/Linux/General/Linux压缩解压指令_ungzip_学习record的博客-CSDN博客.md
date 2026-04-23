@@ -1,12 +1,13 @@
 ---
 title: Linux压缩解压指令_ungzip_学习record的博客-CSDN博客
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: complete
 ---
 
-# Linux压缩解压指令_ungzip_学习record的博客-CSDN博客
+## Linux压缩解压指令_ungzip_学习record的博客-CSDN博客
 
 [https://blog.csdn.net/qq_60787657/article/details/125828842](https://blog.csdn.net/qq_60787657/article/details/125828842)
 
@@ -33,7 +34,7 @@ status: complete
 
 ```
 
-## zip/unzip 指令（压缩时不动原文件）（压缩文件或文件夹）
+### zip/unzip 指令（压缩时不动原文件）（压缩文件或文件夹）
 
 基本语法：压缩：zip [选项] 文件名.zip 文件或文件夹
 
@@ -57,7 +58,7 @@ zip error: Nothing to do! (test.zip)[root@localhost home]# zip -r test.zip test 
 [root@localhost home]# unzip -d /home/csdn/ /home/test.zipArchive:  /home/test.zip   creating: /home/csdn/test/  inflating: /home/csdn/test/test extracting: /home/csdn/test/test.zip extracting: /home/csdn/test/ooo[root@localhost home]# cd csdn/[root@localhost csdn]# lltotal 4-rw-r--r--. 1 root root 29 Jul 15 09:15 date.txtdrwxr-xr-x. 2 root root 45 Jul 17 09:28 test
 ```
 
-## tar指令（压缩时不动原文件）（压缩文件或文件夹）
+### tar指令（压缩时不动原文件）（压缩文件或文件夹）
 
 基本语法：压缩：tar [选项] 压缩文件名称.tar.gz 原文件名称
 
@@ -89,7 +90,7 @@ zip error: Nothing to do! (test.zip)[root@localhost home]# zip -r test.zip test 
 
 注意：选项中的 vf 的顺序不能改变，改变会报错
 
-# 一、zip/gzip 命令
+## 一、zip/gzip 命令
 
 1️⃣zip命令参数列表：
 
@@ -114,7 +115,7 @@ zip error: Nothing to do! (test.zip)[root@localhost home]# zip -r test.zip test 
 1. 如果不指定解压后的文件，会把原文件替换掉
 2. zip 必须要用 unzip 命令进行解压，而 gzip 压缩的文件可以用 ungzip 解压，也可以用 gzip 加 -d 选项进行解压。
 
-# 二、unzip/ungzip命令
+## 二、unzip/ungzip命令
 
 1️⃣unzip命令参数列表：
 
@@ -156,7 +157,7 @@ zip error: Nothing to do! (test.zip)[root@localhost home]# zip -r test.zip test 
 2. unzip [-cflptuvz][-agCjLMnoqsVX][-P <密码>][.zip文件][文件][-d <目 录>][-x <文件>] 或 unzip [-Z] 补充说明：unzip为.zip压缩文件的解压缩程序。
 3. 如果出现这个提示： -bash: zip: command not found 不能执行ZIP压缩，是因为没有安装ZIP， 运行下这条安装命令即可 yum install zip
 
-# 三、tar命令
+## 三、tar命令
 
 1️⃣tar命令参数列表：
 

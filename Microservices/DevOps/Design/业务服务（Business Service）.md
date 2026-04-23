@@ -1,18 +1,19 @@
 ---
 title: 业务服务（Business Service）
 date: 2026-04-07
-tags: [微服务, DevOps]
+  - 微服务
+  - DevOps
 type: note
 status: complete
 ---
 
-# 业务服务（Business Service）
+## 业务服务（Business Service）
 
-## 微服务如何对外暴露
+### 微服务如何对外暴露
 
 ![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202401251944393.png)
 
-## 微服务如何拆分
+### 微服务如何拆分
 
 - 在对业务领域不是特别熟悉的时候，按照**部门职能进行划分，例如账号、财务等**
     - 注意划分的时候**要闭环**，不要相同的功能散落到几个部门当中

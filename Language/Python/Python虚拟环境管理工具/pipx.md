@@ -1,18 +1,19 @@
 ---
 title: pipx
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# pipx
+## pipx
 
 `pipx` 是一个 Python 命令行工具，用来 **安装和管理独立 Python 命令行应用**，它的核心特点是：
 
 ---
 
-## 🔹 pipx 是什么
+### 🔹 pipx 是什么
 
 - 安装 Python CLI 工具（如 `langgraph-cli`、`black`、`httpie`）
 - **每个 CLI 工具都会在独立的虚拟环境里安装**
@@ -21,7 +22,7 @@ status: complete
 
 ---
 
-## 🔹 优势
+### 🔹 优势
 
 | 特点 | 说明 |
 | --- | --- |
@@ -32,7 +33,7 @@ status: complete
 
 ---
 
-## 🔹 基本用法
+### 🔹 基本用法
 
 ### 1. 安装 pipx（macOS）
 
@@ -49,7 +50,7 @@ pipx ensurepath
 
 ```bash
 pipx install langgraph-cli
-# 或者带可选功能
+## 或者带可选功能
 pipx install "langgraph-cli[inmem]"
 
 ```

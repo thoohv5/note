@@ -1,12 +1,13 @@
 ---
 title: 声明式API
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: incomplete
 ---
 
-# 声明式API
+## 声明式API
 
 命令式命令行操作
 

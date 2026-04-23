@@ -1,14 +1,15 @@
 ---
 title: ServiceAccountToken
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# ServiceAccountToken
+## ServiceAccountToken
 
-# 概述
+## 概述
 
 如果你查看一下任意一个运行在 Kubernetes 集群里的 Pod，就会发现，每一个 Pod，都已经自动声明一个类型是 Secret、名为 default-token-xxxx 的 Volume，然后 自动挂载在每个容器的一个固定目录上。
 

@@ -1,12 +1,13 @@
 ---
 title: blpop
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: note
 status: complete
 ---
 
-# blpop
+## blpop
 
 在redis server中有两个循环：IO循环和定时事件。
 在IO循环中，redis完成客户端连接应答、命令请求处理和命令处理结果回复等;

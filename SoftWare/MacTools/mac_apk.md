@@ -1,14 +1,14 @@
 ---
 title: mac apk
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: guide
 status: complete
 ---
 
-# mac apk
+## mac apk
 
-## 步骤
+### 步骤
 
 ### 使用apktool工具对APK进行反编译
 
@@ -45,7 +45,7 @@ status: complete
 1. 下载并安装`jd-gui`
 2. 打开安装好的JD-GUI，直接把第二步生成的.jar文件拖进去，就能看到反编译出来的java源码了
 
-## 工具
+### 工具
 
 ### apktool
 

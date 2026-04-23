@@ -1,12 +1,13 @@
 ---
 title: offset性能问题
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# offset性能问题
+## offset性能问题
 
 type: Post
 status: Published
@@ -15,9 +16,9 @@ summary: 使用LIMIT和OFFSET在处理大量数据时可能导致查询性能下
 tags: MySQL, 理论
 category: Assembly
 
-# 概述
+## 概述
 
-## 语法
+### 语法
 
 ```sql
 SELECT * FROM table_references [LIMIT {[offset,] row_count | row_count OFFSET offset}]
@@ -36,7 +37,7 @@ SELECT * FROM table_name LIMIT row_count OFFSET offset;
 
 </aside>
 
-# 实验
+## 实验
 
 ### 数据结构
 
@@ -125,6 +126,6 @@ SELECT a.* FROM `user` AS a JOIN (SELECT id FROM `user` LIMIT 10 OFFSET 80000) A
 
 `LIMIT` 和 `OFFSET` 在最后（12）执行，在回表之前（10），所以含有`LIMIT` 或 `OFFSET`的操作，在**跨度很大且查询数据很多**的情况，会很慢，基于以上的分析，我们应该采用**延迟关联**，**方案四**。
 
-# 附录
+## 附录
 
 [MySQL :: MySQL 8.0 Reference Manual :: 13.2.10 SELECT Statement](https://dev.mysql.com/doc/refman/8.0/en/select.html)

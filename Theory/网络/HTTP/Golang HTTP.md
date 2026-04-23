@@ -1,12 +1,13 @@
 ---
 title: Golang HTTP
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: note
 status: complete
 ---
 
-# Golang HTTP
+## Golang HTTP
 
 ```erlang
 var DefaultTransport RoundTripper = &Transport{
@@ -105,7 +106,7 @@ type Client struct {
 }
 ```
 
-## Client参数
+### Client参数
 
 ### `Transport` (底层连接池)
 
@@ -135,7 +136,7 @@ type Client struct {
     3. **握手超时**`Transport.TLSHandshakeTimeout`仅限 HTTPS 加密握手阶段。
     4. **空闲超时**`Transport.IdleConnTimeout`连接不用时，在池子里能活多久（与 EOF 强相关）。
 
-## DefaultTransport参数
+### DefaultTransport参数
 
 ### **`Proxy: ProxyFromEnvironment`**
 

@@ -1,16 +1,17 @@
 ---
 title: 获取IP的方式
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 获取IP的方式
+## 获取IP的方式
 
 ---
 
-## 逻辑链路全景图
+### 逻辑链路全景图
 
 当一个请求从用户端发出，经过代理（如 Nginx），到达你的 Go 服务时，IP 的变化如下：
 
@@ -20,7 +21,7 @@ status: complete
 
 ---
 
-## Gin 的双层获取机制
+### Gin 的双层获取机制
 
 ### 第一层：`c.RemoteIP()` —— “谁在敲我的门？”
 
@@ -40,7 +41,7 @@ status: complete
 
 ---
 
-## 最佳实践建议
+### 最佳实践建议
 
 ### 场景 A：直接暴露在公网（无代理）
 

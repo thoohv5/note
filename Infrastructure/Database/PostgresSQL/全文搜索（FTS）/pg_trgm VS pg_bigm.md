@@ -1,16 +1,17 @@
 ---
 title: pg_trgm VS pg_bigm
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# pg_trgm VS pg_bigm
+## pg_trgm VS pg_bigm
 
 [[https://github.com/digoal/blog/blob/master/202009/20200912_01]]
 
-## pg_trgm
+### pg_trgm
 
 将对象进行切词，每3个字节为一组进行切割，所以单、双字节的就无法覆盖到。
 
@@ -42,7 +43,7 @@ explain analyze select * from t_trgm_test where info like '%3ab%'; # Bitmap Heap
 explain analyze select * from t_trgm_test where info ilike '%3ab%'; # Bitmap Heap Scan
 ```
 
-## pg_bigm
+### pg_bigm
 
 将对象进行切词，每2个字节为一组进行切割，可以支持任意字数模糊查询
 

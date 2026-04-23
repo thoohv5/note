@@ -1,16 +1,17 @@
 ---
 title: EXISTS & IN
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# EXISTS & IN
+## EXISTS & IN
 
-# 概述
+## 概述
 
-## EXISTS场景
+### EXISTS场景
 
 ```sql
 select * from A where id in(select id from B)
@@ -43,7 +44,7 @@ select * from A where id in(select id from B)
     结论:in()适合B表比A表数据小的情况
     
 
-## IN场景
+### IN场景
 
 ```sql
 select a.* from A a where exists(select 1 from B b where [a.id=b.id](http://a.id=b.id/))
@@ -73,12 +74,12 @@ select a.* from A a where exists(select 1 from B b where [a.id=b.id](http://a.id
     结论:exists()适合B表比A表数据大的情况
     
 
-# MySQL 5.7
+## MySQL 5.7
 
 EXISTS与IN的使用效率的问题，通常情况下采用exists要比in效率高，因为IN不走索引，但要看实际情况具体使用：
 
 IN适合于外表大而内表小的情况；EXISTS适合于外表小而内表大的情况。
 
-# 附录
+## 附录
 
 [SQL中IN和EXISTS用法的区别](https://www.cnblogs.com/clarke157/p/7912871.html)

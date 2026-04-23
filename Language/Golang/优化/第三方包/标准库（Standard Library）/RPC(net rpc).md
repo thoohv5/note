@@ -1,12 +1,13 @@
 ---
 title: RPC(net/rpc)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# RPC(net/rpc)
+## RPC(net/rpc)
 
 Go标准包中已经提供了对RPC的支持，支持三个级别的RPC：TCP、HTTP、JSONRPC，下面将一一说明
 

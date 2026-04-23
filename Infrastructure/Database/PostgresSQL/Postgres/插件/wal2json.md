@@ -1,14 +1,15 @@
 ---
 title: wal2json
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# wal2json
+## wal2json
 
-# wal2json插件
+## wal2json插件
 
 wal2json是逻辑解码插件，使用该插件可以访问INSERT和UPDATE生成的元组，解析WAL中的内容。wal2json插件会在每个事务中生成一个JSON对象。JSON对象总提供了所有新/旧元组，额外选项还可以包括事务时间戳，限定架构，数据类型，事务ID等属性。
 
@@ -37,7 +38,7 @@ wal2json是逻辑解码插件，使用该插件可以访问INSERT和UPDATE生成
 | format-version | 格式化方式，可选值为1和2，默认为1 |
 | actions | 解析的actions，默认是所有的action（insert，update，delete） |
 
-# 附录
+## 附录
 
 [https://github.com/eulerto/wal2json](https://github.com/eulerto/wal2json)
 

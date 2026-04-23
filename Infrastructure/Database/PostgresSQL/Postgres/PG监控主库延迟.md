@@ -1,12 +1,13 @@
 ---
 title: PG监控主库延迟
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# PG监控主库延迟
+## PG监控主库延迟
 
 ### 通过WAL延迟时间衡量
 
@@ -26,6 +27,6 @@ from pg_stat_replication;
 
 ```
 
-# 附录
+## 附录
 
 [http://blog.itpub.net/69990629/viewspace-2846602/](http://blog.itpub.net/69990629/viewspace-2846602/)

@@ -1,12 +1,14 @@
 ---
 title: 概述
 date: 2026-04-09
-tags: [算法, 数据结构, 算法]
+  - 算法
+  - 数据结构
+  - 算法
 type: note
 status: incomplete
 ---
 
-# 概念
+## 概念
 
 基本有序：小的关键字基本在前面，大的基本在后面，不大不小的基本在中间。
 
@@ -14,7 +16,7 @@ status: incomplete
 
 ![](https://raw.githubusercontent.com/thoohv5/ob/main/picture849589-20180331170017421-364506073.gif)
 
-## 复杂度
+### 复杂度
 
 ```jsx
 O(nlogn)

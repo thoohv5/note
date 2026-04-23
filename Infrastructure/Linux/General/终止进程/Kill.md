@@ -1,16 +1,17 @@
 ---
 title: Kill
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# Kill
+## Kill
 
 kill - terminate a process
 
-## 用途
+### 用途
 
 kill 命令很容易让人产生误解，以为它仅仅就是用来杀死进程的。我们来看一下 man page 对它的解释：kill - send a signal to a process.从官方的解释不难看出，**kill 是向进程发送信号的命令**。当然我们可以向进程发送一个终止运行的信号，此时的 kill 命令才是名至实归。事实上如果我们不给 kill 命令传递信号参数，它**默认传递终止进程运行的信号给进程**！这是 kill 命令最主要的用法，也是本文要介绍的内容。
 
@@ -26,7 +27,7 @@ kill -l
 
 ```
 
-## 可用的进程信号
+### 可用的进程信号
 
 ```
 [root@localhost ~]# kill -l

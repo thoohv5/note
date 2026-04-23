@@ -1,12 +1,12 @@
 ---
 title: 错误实例(errors)
 date: 2023-12-08
-tags: [笔记]
+  - 笔记
 type: note
 status: incomplete
 ---
 
-# Go 内置 errors
+## Go 内置 errors
 
 Go `error` 接口
 
@@ -18,11 +18,11 @@ type error interface {
 
 
 
-# error 创建
+## error 创建
 
 错误的两种创建方式
 
-## errors.New()
+### errors.New()
 
 ```
 // http://golang.org/pkg/errors/error.go
@@ -46,7 +46,7 @@ func New(text string) error {
 
 
 
-## fmt.Errof()
+### fmt.Errof()
 
 ```
 type wrapError struct {

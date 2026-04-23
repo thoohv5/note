@@ -1,15 +1,16 @@
 ---
 title: db log
 date: 2026-04-07
-tags: [编程语言, PHP]
+  - 编程语言
+  - PHP
 type: note
 status: complete
 ---
 
-# db log
+## db log
 
 ```bash
-# Laravel 5.1
+## Laravel 5.1
 \DB::listen(function ($sql, $bindings, $time, $connection) {         
 });
 

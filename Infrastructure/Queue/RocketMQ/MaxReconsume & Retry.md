@@ -1,22 +1,23 @@
 ---
 title: MaxReconsume & Retry
 date: 2026-04-07
-tags: [基础设施, 消息队列]
+  - 基础设施
+  - 消息队列
 type: guide
 status: complete
 ---
 
-# MaxReconsume & Retry
+## MaxReconsume & Retry
 
-# 概述
+## 概述
 
 RocketMQ 中的 `maxReconsume` 和 `retry` 是两个相关但用途不同的机制，下面是它们的**区别与联系**总结：
 
 ---
 
-# **消费者重试`(**WithMaxReconsume`)
+## **消费者重试`(**WithMaxReconsume`)
 
-## 概念
+### 概念
 
 **消费者端** 配置：**消费失败最多重试次数**
 
@@ -63,7 +64,7 @@ ex：
 
 **注意： 一条消息无论重试多少次，这些重试消息的 Message ID 不会改变。**
 
-## 设置方式（Go SDK）
+### 设置方式（Go SDK）
 
 ```go
 consumer, _ := rocketmq.NewPushConsumer(
@@ -72,26 +73,26 @@ consumer, _ := rocketmq.NewPushConsumer(
 )
 ```
 
-## 行为
+### 行为
 
 - 消息消费失败时（返回 `ConsumeRetryLater` 或报错），RocketMQ 会自动将消息转入 retry 队列 `%RETRY%your_group`；
 - 重试达到最大次数后（例如 3 次），消息会转入 `%DLQ%your_group`，等待你手动处理。
 
 ---
 
-# **生产者重试（**`WithRetry`）
+## **生产者重试（**`WithRetry`）
 
-## 概念
+### 概念
 
 **发送端** 配置：**发送失败时最多重试次数**（比如网络不通时）。
 
-## 设置方式（Go SDK）
+### 设置方式（Go SDK）
 
 ```go
 producer.SendSync(ctx, msg, producer.WithRetry(3)) // 最多尝试发送 3 次
 ```
 
-## 行为
+### 行为
 
 仅控制“消息发送失败”时的自动重试次数；
 
@@ -101,7 +102,7 @@ producer.SendSync(ctx, msg, producer.WithRetry(3)) // 最多尝试发送 3 次
 
 ---
 
-# 对比总结
+## 对比总结
 
 | 对比项 | `maxReconsumeTimes` | `WithRetry` |
 | --- | --- | --- |

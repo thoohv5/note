@@ -1,18 +1,18 @@
 ---
 title: Composer
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: note
 status: complete
 ---
 
-# Composer
+## Composer
 
-# 四种模式
+## 四种模式
 
 composer 自动载入 autoload 的使用详解
 
-## psr-0 标准 autoload_namespaces
+### psr-0 标准 autoload_namespaces
 
 懒加载，将目标目录作为基目录再进行命名空间和路径的映射后继续向后加载
 
@@ -28,7 +28,7 @@ composer 自动载入 autoload 的使用详解
 
 </aside>
 
-## psr-4 标准 autoload_psr4
+### psr-4 标准 autoload_psr4
 
 懒加载，将目标目录直接映射为命名空间对应的目录继续向后加载
 
@@ -41,7 +41,7 @@ composer 自动载入 autoload 的使用详解
 }
 ```
 
-## classmap 模式 autoload_classmap
+### classmap 模式 autoload_classmap
 
 懒加载，扫描目录下的所有类文件，支持递归扫描， 生成对应的类名=>路径的映射，当载入需要的类时直接取出路径，速度最快
 
@@ -52,7 +52,7 @@ composer 自动载入 autoload 的使用详解
 ]
 ```
 
-## files 模式
+### files 模式
 
 自动载入的文件，主要用来载入一些没办法懒加载的公共函数
 
@@ -65,11 +65,11 @@ composer 自动载入 autoload 的使用详解
 ]
 ```
 
-# getLoader
+## getLoader
 
 ![](Composer/Untitled.png)
 
-## 线上问题
+### 线上问题
 
 由于项目设计没有使用composer.lock、composer私有库以及构建环境的复杂性问题导致，composer 无法构建，采用手动上传Vendor的方式替代，上传的Vendor存在问题导致`Class xxx does not exist`
 

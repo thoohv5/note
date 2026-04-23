@@ -1,19 +1,20 @@
 ---
 title: Alpine
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: complete
 ---
 
-# Alpine
+## Alpine
 
 ```
 Alpine Linux is an independent(独立的), non-commercial(非商业的), general purpose(通用的) Linux distribution designed for power users who appreciate security(安全), simplicity(简单) and resource efficiency(高效). Alpine Linux is built around musl libc and [busybox](<https://so.csdn.net/so/search?q=busybox&spm=1001.2101.3001.7020>).
 
 ```
 
-## 配置国内镜像源
+### 配置国内镜像源
 
 ```
 vim /etc/apk/repositories
@@ -39,7 +40,7 @@ sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
 ```
 
-## 操作
+### 操作
 
 ### 更新包索引
 
@@ -85,7 +86,7 @@ apk del openjdk17-jdk
 
 ```
 
-## 拓展
+### 拓展
 
 ### Alpine安装telnet
 
@@ -94,6 +95,6 @@ apk add busybox-extras
 
 ```
 
-# 附录
+## 附录
 
 [https://mirrors.ustc.edu.cn/help/index.html](https://mirrors.ustc.edu.cn/help/index.html)

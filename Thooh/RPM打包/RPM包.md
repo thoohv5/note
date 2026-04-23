@@ -1,13 +1,14 @@
 ---
 title: RPM包
 date: 2023-12-12
-tags: [笔记, RPM打包]
+  - 笔记
+  - RPM打包
 type: note
 status: complete
 ---
 
 
-## 分类
+### 分类
 ### 二进制包（Binary Package）
 
    - **内容：** 包含已经编译过的二进制文件、库、可执行文件等，以及所需的配置文件、文档等。

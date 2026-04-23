@@ -1,14 +1,15 @@
 ---
 title: Chroot
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Chroot
+## Chroot
 
-## **Chroot 带来的安全性问题**
+### **Chroot 带来的安全性问题**
 
 ![](https://pic4.zhimg.com/80/v2-23007c60e1fd6a0bdff18a3341ba01f3_720w.webp)
 

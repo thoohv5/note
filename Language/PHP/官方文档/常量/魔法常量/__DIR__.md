@@ -1,11 +1,12 @@
 ---
 title: __DIR__
 date: 2026-04-07
-tags: [编程语言, PHP]
+  - 编程语言
+  - PHP
 type: note
 status: incomplete
 ---
 
-# __DIR__
+## __DIR__
 
 说明: 文件所在的目录。如果用在被包括文件中，则返回被包括的文件所在的目录。它等价于 dirname(__FILE__)。除非是根目录，否则目录中名不包括末尾的斜杠。（PHP 5.3.0中新增） =

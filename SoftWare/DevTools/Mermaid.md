@@ -1,14 +1,15 @@
 ---
 title: Mermaid
 date: 2026-04-07
-tags: [软件工具, 开发工具]
+  - 软件工具
+  - 开发工具
 type: reference
 status: complete
 ---
 
-# Mermaid
+## Mermaid
 
-# 概述
+## 概述
 
 Mermaid 是一款基于 JavaScript 的图表和制图工具，它使用 Markdown 风格的文本定义和渲染器来创建和修改复杂的图表。Mermaid 的主要目的是帮助文档跟上开发的步伐。
 以下是 Mermaid 支持的一些主要图表类型：
@@ -23,7 +24,7 @@ Mermaid 是一款基于 JavaScript 的图表和制图工具，它使用 Markdown
 • Git 图 (`Git Graph`)
 • 需求图 (`Requirement Diagram`)
 
-# 集成
+## 集成
 
 浏览器集成
 
@@ -38,7 +39,7 @@ Mermaid 是一款基于 JavaScript 的图表和制图工具，它使用 Markdown
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.min.js"></script>
 ```
 
-# 示例
+## 示例
 
 ### **流程图**
 
@@ -79,6 +80,6 @@ Bob-->>John: Jolly good!
 
 ```
 
-# 附录
+## 附录
 
 [GitHub - mermaid-js/mermaid: Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown](https://github.com/mermaid-js/mermaid)

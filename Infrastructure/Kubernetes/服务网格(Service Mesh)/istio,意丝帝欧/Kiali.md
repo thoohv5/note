@@ -1,14 +1,15 @@
 ---
 title: Kiali
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# Kiali
+## Kiali
 
-## **添加 Kiali Helm 仓库**
+### **添加 Kiali Helm 仓库**
 
 ```bash
 helm repo add kiali https://kiali.org/helm-charts
@@ -17,7 +18,7 @@ helm repo update
 
 ---
 
-## **安装 Kiali**
+### **安装 Kiali**
 
 ### **基础安装（默认配置）**
 
@@ -39,19 +40,19 @@ helm install kiali-server kiali/kiali-server \
 
 ---
 
-## **验证安装**
+### **验证安装**
 
 ```bash
-# 检查 Pod 状态
+## 检查 Pod 状态
 kubectl get pods -n istio-system -l app.kubernetes.io/name=kiali
 
-# 检查 Service
+## 检查 Service
 kubectl describe svc kiali -n istio-system  # 或 kiali-server
 ```
 
 ---
 
-## **访问 Kiali Dashboard**
+### **访问 Kiali Dashboard**
 
 ### **临时访问（Port-Forward）**
 
@@ -85,7 +86,7 @@ spec:
 
 ---
 
-## **升级/卸载**
+### **升级/卸载**
 
 ### **升级 Kiali**
 

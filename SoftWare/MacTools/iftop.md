@@ -1,14 +1,14 @@
 ---
 title: iftop
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: guide
 status: complete
 ---
 
-# iftop
+## iftop
 
-# 概述
+## 概述
 
 Linux系统下即时监控服务器的网络带宽使用情况
 
@@ -16,15 +16,15 @@ iftop 是 Linux 系统一个免费的网卡实时流量监控工具，类似于 
 
 备注：以root身份才能运行
 
-# 安装
+## 安装
 
 1. 通过软件管理工具安装
 
 ```
-# CentOS
+## CentOS
 $ sudo yum install iftop
 
-# Ubuntu
+## Ubuntu
 $ sudo apt install iftop
 
 ```
@@ -32,10 +32,10 @@ $ sudo apt install iftop
 1. 通过源代码编译安装
 
 ```
-# 安装比较软件包
+## 安装比较软件包
 $ sudo um install libpcap libpcap-devel ncurses ncurses-devel flex byacc
 
-# 下载软件包
+## 下载软件包
 $ wget "<http://www.ex-parrot.com/~pdw/iftop/download/iftop-0.17.tar.gz>"
 $ tar zxvf iftop-0.17.tar.gz
 $ cd iftop-0.17
@@ -44,7 +44,7 @@ $ make && make install
 
 ```
 
-## 常用参数
+### 常用参数
 
 ```
 -i 指定需要检测的网卡， 如果有多个网络接口，则需要注意网络接口的选择，如：# iftop -i eth1
@@ -67,8 +67,8 @@ $ make && make install
 
 ```
 
-## 界面操作
+### 界面操作
 
-# 附录
+## 附录
 
 [https://blog.csdn.net/qq_40907977/article/details/115066452](https://blog.csdn.net/qq_40907977/article/details/115066452)

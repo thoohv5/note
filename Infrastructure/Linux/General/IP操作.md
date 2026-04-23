@@ -1,14 +1,15 @@
 ---
 title: IP操作
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: incomplete
 ---
 
-# IP操作
+## IP操作
 
-# 添加
+## 添加
 
 ### 临时IP
 
@@ -18,7 +19,7 @@ sudo ip addr add 192.168.1.100/24 dev eth0
 
 sudo ifconfig eth0:1 192.168.1.100 netmask 255.255.255.0 up
 
-# macos
+## macos
 sudo ifconfig en0 alias 192.168.65.151 192.168.65.255
 ```
 
@@ -39,7 +40,7 @@ DNS2=8.8.8.8
 systemctl restart network
 ```
 
-# 查看
+## 查看
 
 ```bash
 ip route show

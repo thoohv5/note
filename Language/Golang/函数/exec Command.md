@@ -1,12 +1,13 @@
 ---
 title: exec.Command
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# exec.Command
+## exec.Command
 
 ```go
 cmd := exec.Command("ls", "-lh", "/usr/local/logs/*.log")
@@ -17,7 +18,7 @@ err := cmd.Run()
 outStr, errStr := string(stdout.Bytes()), string(stderr.Bytes())
 ```
 
-# 执行带管道的命令
+## 执行带管道的命令
 
 ```sql
 ps aux|grep go

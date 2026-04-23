@@ -1,12 +1,13 @@
 ---
 title: 调用（Invocation）
 date: 2026-04-07
-tags: [理论, AI]
+  - 理论
+  - AI
 type: note
 status: incomplete
 ---
 
-# 调用（Invocation）
+## 调用（Invocation）
 
 ### **Invoke调用**
 

@@ -1,12 +1,13 @@
 ---
 title: Redis 性能测试
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: note
 status: complete
 ---
 
-# Redis 性能测试
+## Redis 性能测试
 
 ```bash
 Usage: redis-benchmark [OPTIONS] [COMMAND ARGS...]
@@ -79,6 +80,6 @@ Examples:
 ```
 
 ```bash
-# 随机 set/get 100万条命令，1000 个并发
+## 随机 set/get 100万条命令，1000 个并发
 bin/redis-benchmark -a 123456 -h 192.168.61.129 -p 6379 -t set,get -r 1000000 -n 1000000 -c 1000
 ```

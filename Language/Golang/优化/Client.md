@@ -1,12 +1,13 @@
 ---
 title: Client
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# Client
+## Client
 
 http.Client 默认使用开启keepalive，默认使用长连接
 

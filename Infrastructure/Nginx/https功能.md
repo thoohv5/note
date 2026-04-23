@@ -1,21 +1,22 @@
 ---
 title: https功能
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: reference
 status: complete
 ---
 
-# https功能
+## https功能
 
-# 概述
+## 概述
 
-# 安装
+## 安装
 
 ### 模块检查
 
 ```bash
-# 如果打印结果中有--with-http_ssl_module即已启用https功能
+## 如果打印结果中有--with-http_ssl_module即已启用https功能
 nginx -V
 ```
 
@@ -27,7 +28,7 @@ make
 make install
 ```
 
-# 配置
+## 配置
 
 ```bash
 server {
@@ -50,20 +51,20 @@ server {
 }
 ```
 
-# 证书生成
+## 证书生成
 
-## OpenSSL
+### OpenSSL
 
 ```bash
 #!/usr/bin/env bash
 
-## root
+### root
 #openssl genrsa -out ca.pem 2048
 #openssl ecparam -genkey -name secp384r1 -out ca.pem
 openssl genrsa -out ca.key 2048
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 3650 -out ca.crt -config conf/ca.cnf
 
-## server
+### server
 openssl genrsa -out server.key 2048
 #openssl ecparam -genkey -name secp384r1 -out server.key
 #openssl req -config conf/server.cnf -new -key server.key -out server_reqout.txt
@@ -71,7 +72,7 @@ openssl genrsa -out server.key 2048
 openssl req -new -key server.key -out server.csr -config conf/server.cnf
 openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 3650 -sha256 -extfile conf/extfile.cnf
 
-## client
+### client
 openssl genrsa -out client.key 2048
 #openssl ecparam -genkey -name secp384r1 -out client.key
 #openssl req -config conf/client.cnf -new -key client.key -out client_reqout.txt

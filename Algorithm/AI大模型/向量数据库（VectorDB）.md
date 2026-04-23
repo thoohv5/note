@@ -1,16 +1,17 @@
 ---
 title: 向量数据库（VectorDB）
 date: 2026-04-07
-tags: [算法, AI]
+  - 算法
+  - AI
 type: reference
 status: complete
 ---
 
-# 向量数据库（VectorDB）
+## 向量数据库（VectorDB）
 
-# 基本概念
+## 基本概念
 
-## 向量（Vector）
+### 向量（Vector）
 
 多维数学空间中的一个坐标点
 
@@ -23,16 +24,16 @@ status: complete
 **语音向量**
 通过声学模型Acoustic Model从音频信号中提取的音频的频谱特征向量，频谱特征向量提取声音的高维特性，如音调、节奏、音色等，可用于语音识别、声纹识别等任务：
 
-## 嵌入（Embeding）
+### 嵌入（Embeding）
 
 非结构化数据转换成向量的过程
 
-# 向量数据库（VectorDB）
+## 向量数据库（VectorDB）
 
-## 架构
+### 架构
 
-## 对比
+### 对比
 
-# 相似性搜索（Similarity Search）
+## 相似性搜索（Similarity Search）
 
-# 相似性度量（Similarity ）
+## 相似性度量（Similarity ）

@@ -1,14 +1,14 @@
 ---
 title: ZooKeeper
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# ZooKeeper
+### ZooKeeper
 
-### 应用场景
 
 - 服务注册与订阅（共用节点）
 - 分布式通知（监听znode）
@@ -16,11 +16,9 @@ status: complete
 - 数据订阅、发布（watcher）
 - 分布式锁（临时节点）
 
-### 什么是ZK
 
 他是个数据库，文件存储系统，并且有监听通知机制（观察者模式）
 
-### 节点
 
 zk的节点类型有4大类
 

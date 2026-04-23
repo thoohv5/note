@@ -1,12 +1,13 @@
 ---
 title: Envoy
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# Envoy
+## Envoy
 
 Envoy 是一个独立的进程，旨在与每个应用程序服务器一起运行。
 

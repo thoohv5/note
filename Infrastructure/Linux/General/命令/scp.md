@@ -1,18 +1,19 @@
 ---
 title: scp
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: incomplete
 ---
 
-# scp
+## scp
 
 ```bash
 scp [参数] [原路径] [目标路径]
 ```
 
-## 常用
+### 常用
 
 ```bash
 -r 递归复制

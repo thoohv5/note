@@ -1,12 +1,13 @@
 ---
 title: docker
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# docker
+## docker
 
 ### 1️⃣ 卸载旧版本（如果存在）
 
@@ -39,9 +40,9 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/dock
 
 ------2---------
 
-# 备份原有配置
+## 备份原有配置
 sudo cp /etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo.bak
-# 删除错误配置
+## 删除错误配置
 sudo rm -f /etc/yum.repos.d/docker-ce.repo
 
 sudo tee /etc/yum.repos.d/docker-ce.repo <<-'EOF'
@@ -53,9 +54,9 @@ gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
 EOF
 
-# 清理所有缓存
+## 清理所有缓存
 sudo yum clean all
-# 重新生成缓存（关键：拉取新配置的仓库元数据）
+## 重新生成缓存（关键：拉取新配置的仓库元数据）
 sudo yum makecache
 ```
 

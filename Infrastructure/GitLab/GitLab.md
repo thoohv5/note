@@ -1,12 +1,13 @@
 ---
 title: GitLab
 date: 2026-04-07
-tags: [基础设施, GitLab]
+  - 基础设施
+  - GitLab
 type: note
 status: complete
 ---
 
-# GitLab
+## GitLab
 
 <aside>
 💡
@@ -15,27 +16,27 @@ status: complete
 
 </aside>
 
-# 依赖
+## 依赖
 
 ```bash
-# 依赖项
+## 依赖项
 sudo yum install -y curl openssh-server postfix
 
-# 启动并设置 sshd和 postfix服务为开机自启
+## 启动并设置 sshd和 postfix服务为开机自启
 sudo systemctl enable sshd postfix
 sudo systemctl start sshd postfix
 ```
 
-# 安装
+## 安装
 
 ```bash
-# 添加GitLab的官方仓库：
+## 添加GitLab的官方仓库：
 curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
 
-# 安装GitLab
+## 安装GitLab
 sudo yum install -y gitlab-ce
 
-# 离线安装
+## 离线安装
 https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/
 
 yum install -y perl
@@ -44,7 +45,7 @@ rpm -ivh gitlab-ce-17.1.1-ce.0.el7.x86_64.rpm
 
 ```
 
-# 配置
+## 配置
 
 ```bash
 sudo vi /etc/gitlab/gitlab.rb
@@ -64,11 +65,11 @@ server {
 	}
 }
 
-# 加载配置
+## 加载配置
 sudo gitlab-ctl reconfigure
 ```
 
-# 防火墙
+## 防火墙
 
 ```bash
 sudo firewall-cmd --permanent --zone=public --add-service=http
@@ -80,64 +81,64 @@ sudo firewall-cmd --reload
 firewall-cmd --zone=public --add-port=8001/tcp --permanent
 ```
 
-# 命令
+## 命令
 
 ```bash
-## 开机自起
+### 开机自起
 systemctl start gitlab-runsvdir.service
  
-## 关闭
+### 关闭
 systemctl disable gitlab-runsvdir.service
 
-## 启动
+### 启动
 gitlab-ctl start
  
-## 重启
+### 重启
 gitlab-ctl restart
  
-## 停止
+### 停止
 gitlab-ctl stop
  
-## 重新加载配置文件
+### 重新加载配置文件
 gitlab-ctl reconfigure
  
-## 查看状态
+### 查看状态
 gitlab-ctl status
  
-## 检查gitlab
+### 检查gitlab
 gitlab-rake gitlab:check SANITIZE=true
  
-## 查看日志
+### 查看日志
 gitlab-ctl tail 
  
-## gitlab是根据hash值来保存的路径，这个值是项目id,项目id在每个项目的设置页面可以找到
+### gitlab是根据hash值来保存的路径，这个值是项目id,项目id在每个项目的设置页面可以找到
 echo -n  22 | sha256sum
 ```
 
-# 密码
+## 密码
 
 ```bash
-# 密码
+## 密码
 /etc/gitlab/initial_root_password
 
 ```
 
-## 登录控制台修改初始密码
+### 登录控制台修改初始密码
 
 ```makefile
 
-# 进入控制台
+## 进入控制台
 gitlab-rails console -e production
 
-# 查询id为1的用户，id为1的用户是超级管理员
+## 查询id为1的用户，id为1的用户是超级管理员
 user = User.where(id:1).first
 
-# 修改密码为lqz123456
+## 修改密码为lqz123456
 user.password='#Ab123456'
 
-# 保存
+## 保存
 user.save!
 
-# 退出
+## 退出
 exit
 ```

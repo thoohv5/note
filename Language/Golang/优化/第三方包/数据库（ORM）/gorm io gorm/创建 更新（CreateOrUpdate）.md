@@ -1,23 +1,24 @@
 ---
 title: 创建 | 更新（CreateOrUpdate）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# 创建 | 更新（CreateOrUpdate）
+## 创建 | 更新（CreateOrUpdate）
 
-# 概述
+## 概述
 
 `CreateOrUpdate` 是业务开发中很常见的场景，我们支持用户对某个业务实体进行创建/更新。希望实现的 repository 接口要达到以下两个要求：
 
 - 如果此前不存在该实体，创建一个新的；
 - 如果此前该实体已经存在，更新相关属性。
 
-# 方法理解
+## 方法理解
 
-## **`Update & Updates`**
+### **`Update & Updates`**
 
 - `Update` 前者更新单个列。
 - `Updates` 更新多列，且当使用 struct 更新时，默认情况下，**GORM 只会更新非零值的字段（可以用 Select 指定来解这个问题）。使用 map 更新时则会全部更新。**
@@ -38,7 +39,7 @@ func (db *DB) Updates(values interface{}) (tx *DB) {
 }
 ```
 
-## **`FirstOrInit`**
+### **`FirstOrInit`**
 
 获取第一条匹配的记录，或者根据给定的条件初始化一个实例（**仅支持 struct 和 map**）
 
@@ -74,7 +75,7 @@ func (db *DB) FirstOrInit(dest interface{}, conds ...interface{}) (tx *DB) {
 
 </aside>
 
-## **`FirstOrCreate`**
+### **`FirstOrCreate`**
 
 获取第一条匹配的记录，或者根据给定的条件创建一条新纪录（仅支持 struct 和 map 条件）。**FirstOrCreate可能会执行两条sql，他们是一个事务中的**。
 
@@ -129,9 +130,9 @@ func (db *DB) FirstOrCreate(dest interface{}, conds ...interface{}) (tx *DB) {
 - 若没有查到结果，将 where 条件，Attrs() 以及 Assign() 方法赋值的属性写入对象，从源码可以看到是通过三次 assignInterfacesToValue 实现的。属性更新后，调用 Create 方法往数据库中插入；
 - 若查到了结果，但 Assign() 此前已经写入了一些属性，就将其写入对象，进行 Updates 调用。
 
-# 创建 | 更新
+## 创建 | 更新
 
-## **`Assign + FirstOrCreate`**
+### **`Assign + FirstOrCreate`**
 
 ```go
 // 未找到 user，根据条件和 Assign 属性创建记录
@@ -147,7 +148,7 @@ db.Where(User{Name: "jinzhu"}).Assign(User{Age: 20}).FirstOrCreate(&user)
 // user -> User{ID: 111, Name: "jinzhu", Age: 20}
 ```
 
-# **`Upsert`**
+## **`Upsert`**
 
 鉴于 MySQL 提供了 `ON DUPLICATE KEY UPDATE` 的能力，我们可以充分利用唯一键的约束，来搞定并发场景下的 CreateOrUpdate。
 

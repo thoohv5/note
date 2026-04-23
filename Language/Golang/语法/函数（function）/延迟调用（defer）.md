@@ -1,14 +1,15 @@
 ---
 title: 延迟调用（defer）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 延迟调用（defer）
+## 延迟调用（defer）
 
-# 概述
+## 概述
 
 `defer`是Go语言提供的一种用于注册延迟调用的机制：让函数或语句可以在当前函数执行完毕后（包括通过return正常结束或者panic导致的异常结束）执行。
 
@@ -18,18 +19,18 @@ Each time a "defer" statement executes, the function value and parameters to the
 每次执行“defer”语句时，调用的函数值和参数都会像往常一样被计算并重新保存，但实际函数不会被调用。相反，延迟函数在周围函数返回之前立即被调用，顺序与它们被延迟的顺序相反。也就是说，如果周围的函数通过显式return语句返回，则在该return语句设置任何结果参数之后，但在函数返回给调用者之前，将执行延迟函数。如果一个延迟函数的值为nil，则在调用函数时执行会死机，而不是在执行“defer”语句时。
 ```
 
-## 应用场景
+### 应用场景
 
 1. 资源释放
 2. 异常的捕获和处理
 
-# 规则
+## 规则
 
 1. 在函数内，defer执行顺序为先进后出
 2. return时，先返回值赋值，然后执行defer，最后返回
 3. panic之后，会执行defer
 
-## defer return
+### defer return
 
 defer return:  返回值赋值 → 执行defer → 返回
 
@@ -107,7 +108,7 @@ func main() {
 }
 ```
 
-## defer recover
+### defer recover
 
 ```go
 go func() {
@@ -123,13 +124,13 @@ go func() {
 }()
 ```
 
-# 源码
+## 源码
 
 在defer出现的地方，插入了指令`call runtime.deferproc`，然后在函数返回之前的地方，插入指令`call runtime.deferreturn`。
 
 `goroutine`的控制结构中，有链表记录defer，调用`runtime.deferproc`时会将需要defer的表达式记录在栈中，而在调用`runtime.deferreturn`的时候，则会依次从defer链表中出栈并执行。
 
-## `_defer`
+### `_defer`
 
 ```go
 runtime/runtime2.go
@@ -169,7 +170,7 @@ type _defer struct {
 }
 ```
 
-## `runtime.deferproc`
+### `runtime.deferproc`
 
 ```go
 runtime/panic.go
@@ -208,7 +209,7 @@ func deferproc(fn func()) {
 }
 ```
 
-## `runtime.deferreturn`
+### `runtime.deferreturn`
 
 ```go
 runtime/panic.go
@@ -249,7 +250,7 @@ func deferreturn() {
 }
 ```
 
-# 附录
+## 附录
 
 [Golang 之轻松化解 defer 的温柔陷阱 - qcrao 的博客](https://qcrao.com/post/how-to-keep-off-trap-of-defer/)
 

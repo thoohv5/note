@@ -1,12 +1,12 @@
 ---
 title: tcpdump
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: note
 status: complete
 ---
 
-# tcpdump
+## tcpdump
 
 ```bash
 -c : 抓包次数，打到指定次数后停止抓包

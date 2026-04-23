@@ -1,14 +1,15 @@
 ---
 title: TCP keepalive
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: reference
 status: complete
 ---
 
-# TCP keepalive
+## TCP keepalive
 
-# 概述
+## 概述
 
 ### **keepalive机制**
 
@@ -22,7 +23,7 @@ TCP保活机制，就是为了保证连接的有效性，探测连接的对端�
 
 此时，tcp keep-alive机制就可以解决大量无用连接无法回收、占用资源的问题了. KeepAlive并不是TCP协议规范的一部分，但在几乎所有的TCP/IP协议栈（不管是Linux还是Windows）中，都实现了KeepAlive功能，本片文章主要是基于linux操作系统上来进行说明。
 
-## 术语
+### 术语
 
 ### 什么是TCP 保活
 
@@ -40,10 +41,10 @@ TCP keepalive 默认情况下未启用，因为它可能并不适合所有场景
 
 TCP keepalive 是诊断和排除网络问题的有用工具，可提供有关 TCP 连接状态和运行状况的反馈。要监视 TCP keepalive，您可以使用 netstat 命令行实用程序来显示活动连接及其状态，使用 tcpdump 来捕获和显示网络接口上的流量，并使用 ss 命令行实用程序来显示有关 TCP 套接字的详细信息。此外，日志记录和警报机制可以记录并通知与 TCP keepalive 相关的任何异常或错误，例如连接超时或重置。
 
-# 命令
+## 命令
 
 ```bash
-# 查看
+## 查看
 sysctl -a | grep keepalive
 
 ---
@@ -58,7 +59,7 @@ net.ipv4.tcp_keepalive_time = 7200
 - `tcp_keepalive_probes` 在tcp_keepalive_time之后，没有接收到对方确认，继续发送保活探测包次数，**默认值为9（次）**
 - `tcp_keepalive_intvl`，在tcp_keepalive_time之后，没有接收到对方确认，继续发送保活探测包的发送频率，**默认值为75s。**
 
-# 语言
+## 语言
 
 ### Golang
 
@@ -146,11 +147,11 @@ func main() {
 
 ```
 
-# 注意
+## 注意
 
 **`http 1.0`中默认是关闭的**，需要在http头加入"Connection: Keep-Alive"，才能启用Keep-Alive；**`http 1.1`中默认启用Keep-Alive**，如果加入"Connection: close "，才关闭。目前大部分浏览器都是用http1.1协议，也就是说默认都会发起Keep-Alive的连接请求了，所以是否能完成一个完整的Keep-Alive连接就看服务器设置情况。
 
-# 附录
+## 附录
 
 [阿里-马云的学习笔记](https://www.cnblogs.com/alimayun/p/12667204.html)
 

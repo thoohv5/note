@@ -1,12 +1,13 @@
 ---
 title: 集合（set）
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# 集合（set）
+## 集合（set）
 
 - `set` 是不包含重复元素的无序集合。set 是用左右花括号`{}`，包围的，以逗号隔开的一组元素
 - 因为集合无序，所以**不能用下标操作其中的元素**

@@ -1,18 +1,19 @@
 ---
 title: ResourceQuota
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# ResourceQuota
+## ResourceQuota
 
-# 概述
+## 概述
 
 ResourceQuota 是 Kubernetes 用来**限制命名空间内资源使用上限**的一种机制。
 
-# 命令
+## 命令
 
 ```yaml
 kubectl get resourcequota -n dev
@@ -20,7 +21,7 @@ kubectl get resourcequota -n dev
 kubectl describe quota dev-quota -n dev
 ```
 
-# 示例
+## 示例
 
 ### 限制命令空间
 

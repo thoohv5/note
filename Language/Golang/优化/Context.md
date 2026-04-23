@@ -1,18 +1,19 @@
 ---
 title: Context
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Context
+## Context
 
-# 实现
+## 实现
 
 mutex与channel
 
-# 使用
+## 使用
 
 ```bash
 func main() {

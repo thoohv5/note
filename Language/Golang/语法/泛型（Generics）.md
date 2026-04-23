@@ -1,14 +1,15 @@
 ---
 title: 泛型（Generics）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 泛型（Generics）
+## 泛型（Generics）
 
-## 什么是 Go 泛型？
+### 什么是 Go 泛型？
 
 泛型就是 **支持在代码中使用类型参数（type parameter）**，从而编写更通用的函数和数据结构，而不用为每种类型单独写一份。
 
@@ -17,7 +18,7 @@ status: complete
 - **泛型函数**：函数可以有类型参数。
 - **泛型类型**：类型（比如结构体、接口）可以有类型参数。
 
-## 泛型函数
+### 泛型函数
 
 ```bash
 // 泛型函数：T 是类型参数，约束是 any（任意类型）
@@ -49,7 +50,7 @@ func main() {
 }
 ```
 
-## 泛型类型
+### 泛型类型
 
 ```bash
 // 泛型结构体
@@ -74,14 +75,14 @@ func main() {
 }
 ```
 
-# **类型约束（Constraints）**
+## **类型约束（Constraints）**
 
 约束是通过接口实现的。接口里可以定义：
 
 1. **方法集约束**（类型必须实现这些方法）
 2. **类型集约束**（类型必须是某些底层类型）
 
-## 方法集约束
+### 方法集约束
 
 ```bash
 type Stringer interface {
@@ -93,7 +94,7 @@ func Print[T Stringer](v T) {
 }
 ```
 
-## 类型集约束
+### 类型集约束
 
 ```bash
 type Number interface {
@@ -109,7 +110,7 @@ func Sum[T Number](nums []T) T {
 }
 ```
 
-# 泛型接口
+## 泛型接口
 
 接口也可以有类型参数：
 
@@ -122,7 +123,7 @@ type Adder[T any] interface {
 
 ---
 
-# 不支持的东西
+## 不支持的东西
 
 - **泛型方法**（方法级别的类型参数）❌
 - **协变/逆变**（像 Java/C# 那样的复杂类型推导）❌

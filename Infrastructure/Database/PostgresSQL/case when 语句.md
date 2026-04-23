@@ -1,14 +1,15 @@
 ---
 title: case when 语句
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: incomplete
 ---
 
-# case when 语句
+## case when 语句
 
-## 语法一
+### 语法一
 
 ```bash
 case 
@@ -18,7 +19,7 @@ case
 end
 ```
 
-## 语法二
+### 语法二
 
 ```bash
 case 表达式

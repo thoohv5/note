@@ -1,12 +1,12 @@
 ---
 title: [厦门航空12W固定地址下，dhcp配置文件生成优化
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: incomplete
 ---
 
-# [厦门航空12W固定地址下，dhcp配置文件生成优化
+## [厦门航空12W固定地址下，dhcp配置文件生成优化
 
 1. 影响dhcp配置文件的大数据量操作
 2. 重新生成dhcp配置的操作

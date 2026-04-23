@@ -1,19 +1,20 @@
 ---
 title: exec.Command
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# exec.Command
+## exec.Command
 
-# 执行方式
+## 执行方式
 
 ### 同步
 
 ```go
-# 同步
+## 同步
 cmd := exec.Command("ls")
 cmd.Run()
 ```
@@ -21,13 +22,13 @@ cmd.Run()
 ### 异步
 
 ```go
-# 异步
+## 异步
 cmd := exec.Command("ls")
 cmd.Start()
 cmd.Wait()
 ```
 
-# `Kill`子进程
+## `Kill`子进程
 
 ### 正常场景
 
@@ -60,12 +61,12 @@ func main() {
 ### 进程fork出子进程
 
 ```bash
-# scripts/script.sh
+## scripts/script.sh
 #!/bin/sh
 
 /bin/sh "$PWD"/scripts/second.sh
 
-# scripts/second.sh
+## scripts/second.sh
 #!/bin/sh
 
 while true; do date >> /tmp/date.txt; sleep 1; done

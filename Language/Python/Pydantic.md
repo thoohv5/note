@@ -1,14 +1,15 @@
 ---
 title: Pydantic
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: reference
 status: complete
 ---
 
-# Pydantic
+## Pydantic
 
-# 基本概念
+## 基本概念
 
 **BaseModel 是 Pydantic 的核心数据类，用于：**
 
@@ -25,9 +26,9 @@ status: complete
 from pydantic import BaseModel, Field, validator
 from typing import List
 
-# -----------------------------
-# 嵌套模型
-# -----------------------------
+## -----------------------------
+## 嵌套模型
+## -----------------------------
 class Item(BaseModel):
     name: str = Field(..., min_length=3, pattern=r"^[A-Za-z]+$") # 验证
     quantity: int = 1  # 默认数量 1
@@ -54,9 +55,9 @@ class Order(BaseModel):
             raise ValueError("Customer name cannot be empty")
         return v
 
-# -----------------------------
-# 使用示例
-# -----------------------------
+## -----------------------------
+## 使用示例
+## -----------------------------
 if __name__ == "__main__":
     # 正确创建
     order1 = Order(

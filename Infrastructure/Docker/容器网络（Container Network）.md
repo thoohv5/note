@@ -1,22 +1,23 @@
 ---
 title: 容器网络（Container Network）
 date: 2026-04-07
-tags: [基础设施, Docker]
+  - 基础设施
+  - Docker
 type: note
 status: complete
 ---
 
-# 容器网络（Container Network）
+## 容器网络（Container Network）
 
-# 容器网络技术栈
+## 容器网络技术栈
 
 ![](https://github.com/zdnscloud/k8s-knowledge-share/raw/9c00633481d15b79e485ea75f002ea7db788178a/network/pictures/container_network_stack.jpg)
 
-## 低层网络层（Low-level networking）
+### 低层网络层（Low-level networking）
 
 包括网络设备，iptables，路由，IPVLAN和Linux命名空间
 
-## 容器网络层（Docker neworking）
+### 容器网络层（Docker neworking）
 
 Docker单节点网络
 
@@ -24,17 +25,17 @@ Docker多节点网络
 
 CNI
 
-## 容器编排层（Service discovery）
+### 容器编排层（Service discovery）
 
 K8S网络
 
-# Docker网络
+## Docker网络
 
 Docker内建了3个网络
 
 ![](https://github.com/zdnscloud/k8s-knowledge-share/raw/9c00633481d15b79e485ea75f002ea7db788178a/network/pictures/docker_network_ls.png)
 
-## `Docker single-host networking`（单节点网络**）**
+### `Docker single-host networking`（单节点网络**）**
 
 ### `Bridge`
 
@@ -133,13 +134,13 @@ Docker守护进程创建了docker0，它是一个虚拟以太网网桥，它可�
 ### Bridge
 
 ```bash
-# 创建自定义网络，其中--driver后面支持的类型有三种：bridge、macvlan、overlay
+## 创建自定义网络，其中--driver后面支持的类型有三种：bridge、macvlan、overlay
 docker network create --driver network_type network_name
 
-# 查看网络信息
+## 查看网络信息
 docker network inspect network_name
 
-# 查看网桥
+## 查看网桥
 brctl show
 ```
 
@@ -157,7 +158,7 @@ Overlay 可以使得我们将报文在 IP 报文之上再次封装，VXLAN 技�
 > 
 
 ```bash
-# 创建overlay 网络（只需在一个节点执行）
+## 创建overlay 网络（只需在一个节点执行）
 docker network create -d overlay my-overlay
 ```
 
@@ -180,7 +181,7 @@ ip netns
 
 docker 默认为 overlay 网络分配 24 位掩码的子网（10.0.0.0/24），所有主机共享这个 subnet，容器启动时会顺序从此空间分配 IP。当然我们也可以通过 --subnet 指定 IP 空间。
 
-## `Docker multi-host networking`多节点网络
+### `Docker multi-host networking`多节点网络
 
 ### **基于实现方式分为**
 
@@ -220,9 +221,9 @@ Docker Libnetwork的优势就是原生，而且和Docker容器生命周期结合
 
 兼容其他容器技术(e.g. rkt)及上层编排系统(Kuberneres & Mesos)，而且社区活跃势头迅猛，Kubernetes加上CoreOS主推；缺点是非Docker原生
 
-# K8S网络
+## K8S网络
 
-## Pod网络与Docker网络
+### Pod网络与Docker网络
 
 ![](https://github.com/zdnscloud/k8s-knowledge-share/raw/9c00633481d15b79e485ea75f002ea7db788178a/network/pictures/k8s-docker.png)
 
@@ -230,7 +231,7 @@ K8S中每个Pod在创建时都是先创建一个pause容器，业务容器与pau
 
 `docker inspect $ID` 会发现业务容器的网络模式是container，而pause容器的网络模式是none，因为k8s使用了cni，具体的容器网卡、IP、路由等信息是有cni配置的
 
-## Kubelet逻辑分析
+### Kubelet逻辑分析
 
 kubelet调用createPodSandbox来创建pause容器，并为其配置网络环境
 
@@ -274,7 +275,7 @@ func (pm *PluginManager) SetUpPod(podNamespace, podName string, id kubecontainer
 [github.com/kubernetes/pkg/kubelet/dockershim/network/cni/cni.go](http://github.com/kubernetes/pkg/kubelet/dockershim/network/cni/cni.go)
 
 ```go
-# 获取配置文件
+## 获取配置文件
 func getDefaultCNINetwork(confDir string, binDirs []string) (*cniNetwork, error) {
 
       files, err := libcni.ConfFiles(confDir, []string{.conf, .conflist, .json})
@@ -295,7 +296,7 @@ func getDefaultCNINetwork(confDir string, binDirs []string) (*cniNetwork, error)
 
 }
 
-# 配置pause容器的eth0接口的网络
+## 配置pause容器的eth0接口的网络
 func (plugin *cniNetworkPlugin) SetUpPod(namespace string, name string, id kubecontainer.ContainerID, annotations, options map[string]string) error {
 
       _, err = plugin.addToNetwork(plugin.getDefaultNetwork(), name, namespace, id, netnsPath, annotations, options)
@@ -313,7 +314,7 @@ func (c *CNIConfig) AddNetworkList(list *NetworkConfigList, rt *RuntimeConf) (ty
       prevResult, err = invoke.ExecPluginWithResult(pluginPath, newConf.Bytes, c.args(ADD, rt))
 
 }
-# 该函数会遍历plugin，根据cni的type在binDir中找到同名插件，返回该插件的全路径。最后执行ExecPluginWithResult函数，它将调用cni的二进制文件并传入newConf参数以及RuntimeConf和一个ADD参数，其中ADD代表给容器添加网络。
+## 该函数会遍历plugin，根据cni的type在binDir中找到同名插件，返回该插件的全路径。最后执行ExecPluginWithResult函数，它将调用cni的二进制文件并传入newConf参数以及RuntimeConf和一个ADD参数，其中ADD代表给容器添加网络。
 
 ```
 

@@ -1,32 +1,33 @@
 ---
 title: HTTP传输大文件
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: guide
 status: complete
 ---
 
-# HTTP传输大文件
+## HTTP传输大文件
 
-## 数据压缩
+### 数据压缩
 
 ```sql
 Accept-Encoding
 Content-Encoding
 ```
 
-## 工作原理
+### 工作原理
 
 1. 首先浏览器（也就是客户端）发送请求时，通过Accept-Encoding带上自己支持的内容编码格式列表；
 2. 服务端在接收到请求后，从中挑选出一种用来对响应信息进行编码，并通过Content-Encoding来说明服务端选定的编码信息
 3. 浏览器在拿到响应正文后，依据Content-Encoding进行解压。
 
-## 数据分块传输
+### 数据分块传输
 
 ```sql
 Tranfer-Encodeing:chunked
 
-# 与上面互斥
+## 与上面互斥
 Content-Length:
 ```
 
@@ -35,7 +36,7 @@ Content-Length:
 - 数据块紧跟其后，最后同样使用CRLF结尾，但数据不包含CRLF。
 - 最后用一个长度为0的块（即最后的空行）来表示结束，即"0\r\n\r\n"。
 
-## 范围请求
+### 范围请求
 
 ```sql
 Accept-Ranges: bytes
@@ -55,12 +56,12 @@ Accept-Ranges: bytes
 2. 开 N 个线程，每个线程使用 Range 字段划分出各自负责下载的片段，发请求传输数据；
 3. 下载意外中断也不怕，不必重头再来一遍，只要根据上次的下载记录，用 Range 请求剩下的那一部分就可以了。
 
-## 多段数据
+### 多段数据
 
 ```sql
 multipart/byteranges
 ```
 
-# 附录
+## 附录
 
 [HTTP 协议中的Content-Encoding_枫秀天涯的博客-CSDN博客_content-encoding](https://blog.csdn.net/u014569188/article/details/78912446)

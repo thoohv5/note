@@ -1,14 +1,15 @@
 ---
 title: 通用网关接口（CGI Common Gateway Interface）
 date: 2026-04-07
-tags: [编程语言, PHP]
+  - 编程语言
+  - PHP
 type: reference
 status: complete
 ---
 
-# 通用网关接口（CGI Common Gateway Interface）
+## 通用网关接口（CGI Common Gateway Interface）
 
-## CGI
+### CGI
 
 Web Server 与 Web Application 之间数据交换的一种协议
 
@@ -18,7 +19,7 @@ web服务器收到用户请求，就会把请求提交给cgi程序（如php-cgi�
 
 **fork-and-execute模式：**每一次web请求都会有启动和退出过程
 
-## FastCGI
+### FastCGI
 
 常驻(long-live)型的CGI
 
@@ -36,6 +37,6 @@ PHP FastCGI 进程管理器，用于管理PHP 进程池的软件，用于接受w
 
 PHP-FPM提供了更好的PHP进程管理方式，可以有效控制内存和进程、可以平滑重载PHP配置。
 
-## ISAPI
+### ISAPI
 
-## WSGI
+### WSGI

@@ -1,12 +1,12 @@
 ---
 title: CUSTOM_RIGHT_CLICK_CONTEXT_MENU
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# CUSTOM_RIGHT_CLICK_CONTEXT_MENU
+## CUSTOM_RIGHT_CLICK_CONTEXT_MENU
 
 配置值: false
 创建日期: 2025年2月25日 10:57

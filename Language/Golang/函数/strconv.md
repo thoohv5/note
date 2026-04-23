@@ -1,12 +1,13 @@
 ---
 title: strconv
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# strconv
+## strconv
 
 ### 字符串转为整型
 
@@ -24,6 +25,6 @@ func FormatInt(i int64, base int) string    // 有符号整型转字符串
 func Itoa(i int) string
 ```
 
-# 附录
+## 附录
 
 [Golang 进阶：strconv -- 字符串和基本数据类型之间转换_ItLearner-CSDN博客](https://blog.csdn.net/weixin_41036574/article/details/97785959)

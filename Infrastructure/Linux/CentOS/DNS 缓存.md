@@ -1,25 +1,26 @@
 ---
 title: DNS 缓存
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: incomplete
 ---
 
-# DNS 缓存
+## DNS 缓存
 
 ```bash
-# 安装nscd
+## 安装nscd
 yum -y install nscd
 
-# 查看状态
+## 查看状态
 systemctl status nscd
-# 启动 nscd
+## 启动 nscd
 systemctl start nscd
-# 重新加载
+## 重新加载
 systemctl reload nscd
 
-# 清空DNS缓存
+## 清空DNS缓存
 nscd -i hosts
 ```
 

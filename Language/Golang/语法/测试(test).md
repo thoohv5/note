@@ -1,12 +1,13 @@
 ---
 title: 测试(test)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: incomplete
 ---
 
-# 测试(test)
+## 测试(test)
 
 [stretchr/testify](http://github.com/stretchr/testify)
 
@@ -16,7 +17,7 @@ status: incomplete
 mockgen -destination=mock_redis.go -package=unit github.com/gomodule/redigo/redis Conn
 ```
 
-# 覆盖率
+## 覆盖率
 
 ```sql
 go test -v -cover -run ${test文件内函数名}

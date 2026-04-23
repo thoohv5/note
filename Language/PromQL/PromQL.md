@@ -1,14 +1,15 @@
 ---
 title: PromQL
 date: 2026-04-07
-tags: [编程语言, PromQL]
+  - 编程语言
+  - PromQL
 type: reference
 status: complete
 ---
 
-# PromQL
+## PromQL
 
-# **PromQL概述**
+## **PromQL概述**
 
 PromQL (Prometheus Query Language)是Prometheus Server内置数据查询语言，基于PromQL表达式，用户可以针对指定的特征及其细分的纬度进行过滤、聚合、统计等运算从而产生期望的计算结果，进行实时的数据查询及聚合操作
 
@@ -20,7 +21,7 @@ PromQL支持处理两种向量，并内置提供了一组用于数据处理的�
 - 即时向量：最近一次的时间戳上跟踪的数据指标；
 - 时间范围向量：指定时间范围内的所有时间戳上的数据指标；
 
-# **PromQL的数据类型**
+## **PromQL的数据类型**
 
 PromQL的表达式中支持4种数据类型
 
@@ -31,13 +32,13 @@ PromQL的表达式中支持4种数据类型
 
 ![](https://i-blog.csdnimg.cn/direct/c3ca69672a184db08307fd4ca4651908.png)
 
-# **时间序列选择器**
+## **时间序列选择器**
 
 PromQL的查询操作需要针对有限个时间序列上的样本数据进行，挑选出目标时间序列是构建表达式时最为关键的一步
 
 用户可使用向量选择器表达式来挑选出给定指标名称下的所有时间序列或部分时间序列的即时（当前）样本值或现在至过去某个时间范围内的样本值，前者称为即时向量选择器，后者称为范围向量选择器
 
-## **向量选择器表达式使用要点**
+### **向量选择器表达式使用要点**
 
 表达式的返回值类型亦是即时向量、范围向量、标题或字符串4种数据类型其中之一，但是，有些使用场景要求表达式返回值必须满足特定的条件，例如
 
@@ -46,7 +47,7 @@ PromQL的查询操作需要针对有限个时间序列上的样本数据进行�
 
 由于范围向量选择器的返回的是范围向量型数据，它不能用于表达式浏览器中图形绘制功能，否则，表达式浏览器会返回以下错误：`Error executing query: invalid expression type "range vector" for range query, must be Scalar or instant Vector`
 
-## **即时向量选择器**
+### **即时向量选择器**
 
 即时向量选择器（Instant Vector Selectors）：返回0个、1个或多个时间序列上在给定时间戳（instant）上的各自的一个样本，该样本也可称为即时样本；
 
@@ -88,7 +89,7 @@ Prometheus会周期性的对Exporter的target进行Pull。我们查询最新的M
 - 使用 `“__name__”` 做为标签名称，还能够对指标名称进行过滤；
     - 例如，`{__name__=~"http_requests_.*"}` 能够匹配所有以 `“ http_requests_ ”` 为前缀的所有指标
 
-## **范围向量选择器**
+### **范围向量选择器**
 
 范围向量选择器（Range Vector Selectors） ：返回0个、1个或多个时间序列上在给定时间范围内的各自的一组样本；
 
@@ -109,7 +110,7 @@ Prometheus会周期性的对Exporter的target进行Pull。我们查询最新的M
 - 例如，一个时间序列可能在某秒的第一毫秒采集了数据，而另一个时间序列则在同秒的最后毫秒采集了数据；
 - 因而，Prometheus在趋势上准确，但并非绝对精准；
 
-## **偏移量修改器**
+### **偏移量修改器**
 
 默认情况下，即时向量选择器和范围向量选择器都以当前时间为基准时间点，而偏移量修改器能够修改该基准；
 
@@ -124,9 +125,9 @@ http_requests_total[5m] offset 1d
 12345
 ```
 
-# **PromQL的指标类型**
+## **PromQL的指标类型**
 
-## **Counter型指标及常用函数**
+### **Counter型指标及常用函数**
 
 计数器，单调递增，除非重置（例如服务器或进程重启）
 
@@ -153,7 +154,7 @@ http_requests_total[5m] offset 1d
 
 ![](https://i-blog.csdnimg.cn/direct/d0564ae6196a4d0ead3aa804c544cc70.png)
 
-## **Gauge型指标及常用函数**
+### **Gauge型指标及常用函数**
 
 仪表盘，可增可减的数据（上下波动），用于表示瞬时值
 
@@ -189,7 +190,7 @@ delta(cpu_temp_celsius{host="server01.wu.com"}[2h])
 topk(3, jvm_memory_bytes_used{area="heap"})
 ```
 
-## **Histogram**
+### **Histogram**
 
 ### **Histogram概述**
 
@@ -233,6 +234,6 @@ Histogram类型的每个指标有一个基础指标名称 `<basename>` ，它�
 #总的观测次数，它自身本质上是一个Counter类型的指标<basename>_count
 ```
 
-# 附录
+## 附录
 
 [Prometheus全面详解！！！（透透透）-CSDN博客](https://blog.csdn.net/m0_75233142/article/details/146704903)

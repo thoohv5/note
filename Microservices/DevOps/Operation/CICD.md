@@ -1,12 +1,13 @@
 ---
 title: CICD
 date: 2026-04-07
-tags: [微服务, DevOps]
+  - 微服务
+  - DevOps
 type: note
 status: incomplete
 ---
 
-# CICD
+## CICD
 
 CI 持续集成
 

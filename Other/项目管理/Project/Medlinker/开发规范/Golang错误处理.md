@@ -1,20 +1,20 @@
 ---
 title: Golang错误处理
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: complete
 ---
 
-# Golang错误处理
+## Golang错误处理
 
-# [Error handing](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#error-handing)
+## [Error handing](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#error-handing)
 
 前半部分说明目前的规范，后半部分详细说明为什么要规范，以及规范能解决的问题。
 
 本文不包含OpenAPI的错误设计，可能存在重叠的部分，但是本文主要以内部微服务作为规范范畴。
 
-## [规范](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#规)83
+### [规范](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#规)83
 
 ### [**代码错误处理规范**](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#代码错误处理规)83
 
@@ -106,7 +106,7 @@ if ec.Code() == "自定义错误码" {
 
 ```
 
-## [详解](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#详)A3
+### [详解](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#详)A3
 
 ### [**Go code error**](https://wiki.medlinker.com/pages/viewpage.action?pageId=17599603#go-code-error)
 

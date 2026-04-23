@@ -1,27 +1,26 @@
 ---
 title: 三阶段提交（Three-phase commit，3PC)
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: guide
 status: complete
 ---
 
-# 三阶段提交（Three-phase commit，3PC)
+### 三阶段提交（Three-phase commit，3PC)
 
-# 概念
+### 概念
 
 三阶段提交（Three-phase commit），也叫三阶段提交协议（Three-phase commit protocol），是二阶段提交（2PC）的改进版本。除了引入**超时机制**之外，3PC把2PC的准备阶段再次一分为二，这样三阶段提交就有**CanCommit、PreCommit、DoCommit**三个阶段。
 
-## 三个阶段
+### 三个阶段
 
-### CanCommit阶段
 
 3PC的CanCommit阶段其实和2PC的准备阶段很像。协调者向参与者发送commit请求，参与者如果可以提交就返回Yes响应，否则返回No响应。
 
 1. 事务询问：协调者向参与者发送CanCommit请求。询问是否可以执行事务提交操作。然后开始等待参与者的响应。
 2. 响应反馈：参与者接到CanCommit请求之后，正常情况下，如果其自身认为可以顺利执行事务，则返回Yes响应，并进入预备状态。否则反馈No
 
-### PreCommit阶段
 
 协调者根据参与者的反应情况来决定是否可以事务的PreCommit操作。根据响应情况，有以下两种可能。
 
@@ -36,7 +35,6 @@ status: complete
 1. 发送中断请求：协调者向所有参与者发送abort请求。
 2. 中断事务：参与者收到来自协调者的abort请求之后（**或超时之后，仍未收到协调者的请求**），执行事务的中断。
 
-### DoCommit阶段
 
 该阶段进行真正的事务提交，也可以分为以下两种情况。
 
@@ -59,7 +57,7 @@ status: complete
 
 </aside>
 
-## 总体流程
+### 总体流程
 
 1. 协调者向参与者发起"预提交"请求，同时协调者进行参与者响应超时监听
 
@@ -75,6 +73,6 @@ status: complete
 
 5. 协调者通知调用端完成事务或者取消事务
 
-# 区别
+### 区别
 
 与 2PC 相比，3PC 在 PreCommit 阶段引入了超时机制，允许参与者在没有接收到协调者的最终指令时自行决定中止事务，这减少了协调者成为单点故障的可能性。

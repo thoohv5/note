@@ -1,23 +1,24 @@
 ---
 title: ACID测试
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# ACID测试
+## ACID测试
 
 > 事物隔离级别 测试
 > 
 
 ```bash
-# read-uncommitted 未提交读
-# read-committed 已提交读
-# repeatable-read 可重复读
-# serializable 可串行化
+## read-uncommitted 未提交读
+## read-committed 已提交读
+## repeatable-read 可重复读
+## serializable 可串行化
 
-# 自动事物
+## 自动事物
 autocommit=1
 
 show global variables like '%autocommit%';

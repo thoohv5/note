@@ -1,14 +1,15 @@
 ---
 title: ABI(Application Binary Interface，应用二进制接口)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# ABI(Application Binary Interface，应用二进制接口)
+## ABI(Application Binary Interface，应用二进制接口)
 
-# 概述
+## 概述
 
 **ABI（Application Binary Interface，应用二进制接口）** 是计算机系统中两个**二进制程序模块**（通常是编译后的库与操作系统，或一个库与另一个库）之间的底层接口。
 
@@ -38,20 +39,20 @@ ABI 规定了程序在特定 CPU 架构和操作系统上运行时的所有底�
 
 ABI 规定了二进制文件的组织方式（如 Linux 的 **ELF** 或 Windows 的 **PE**），以及如何处理函数名（Name Mangling），这在 C++ 等支持重载的语言中尤为重要。
 
-# 动态连接技术
+## 动态连接技术
 
-## **动态链接库**
+### **动态链接库**
 
 windows平台所支持的动态链接库（Dynamic Link Library），一般后缀名为`.dll`
 
-## **动态共享对象**
+### **动态共享对象**
 
 Linux平台所支持的动态共享对象（dynamic shared objects），一般后缀名为`.so`
 
-## **非编译语言的动态技术**
+### **非编译语言的动态技术**
 
 非编译语言，由于本身是通过源代码发布，所以实现动态加载程序模块或者更新模块，直接修改源代码即可。
 
-# C ABI
+## C ABI
 
 在二进制的世界里，**C ABI** 被称为“通用的通用语言”。几乎所有的现代操作系统（Linux, Windows, macOS）和编程语言（Python, Rust, Go, Java）都将 C ABI 作为互操作的**黄金标准**。

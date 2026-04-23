@@ -1,12 +1,13 @@
 ---
 title: 监控 Docker 配置
 date: 2026-04-07
-tags: [微服务, 服务治理]
+  - 微服务
+  - 服务治理
 type: guide
 status: complete
 ---
 
-# 监控 Docker 配置
+## 监控 Docker 配置
 
 ### 使用 **cAdvisor** 监控容器：
 

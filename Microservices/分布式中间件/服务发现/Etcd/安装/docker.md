@@ -1,12 +1,13 @@
 ---
 title: docker
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# docker
+## docker
 
 ```go
 ETCD_VER=v3.5.18
@@ -41,6 +42,6 @@ docker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl put foo bar
 docker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl get foo
 ```
 
-# 附录
+## 附录
 
 https://github.com/etcd-io/etcd/releases

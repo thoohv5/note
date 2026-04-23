@@ -1,14 +1,15 @@
 ---
 title: StatefulSet
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# StatefulSet
+## StatefulSet
 
-# 概述
+## 概述
 
 StatefulSet 是为了解决有状态服务的问题（对应 Deployments 和 ReplicaSets 是为无状态服务而设计），其应用场景包括：
 
@@ -17,9 +18,9 @@ StatefulSet 是为了解决有状态服务的问题（对应 Deployments 和 Rep
 - **有序部署，有序扩展**，即 Pod 是有顺序的，在部署或者扩展的时候要依据定义的顺序依次依次进行（即从 0 到 N-1，在下一个 Pod 运行之前所有之前的 Pod 必须都是 Running 和 Ready 状态），基于 init containers 来实现
 - **有序收缩，有序删除**（即从 N-1 到 0）
 
-## **稳定的持久化存储**
+### **稳定的持久化存储**
 
-## **稳定的网络标志**
+### **稳定的网络标志**
 
 ```yaml
 
@@ -91,4 +92,4 @@ Name:      web-1.nginx
 Address 1: 10.244.2.7
 ```
 
-## **有序部署，有序扩展/有序收缩，有序删除**
+### **有序部署，有序扩展/有序收缩，有序删除**

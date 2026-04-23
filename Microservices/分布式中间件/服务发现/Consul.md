@@ -1,12 +1,13 @@
 ---
 title: Consul
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# Consul
+### Consul
 
 ```go
 docker run -d -p 8500:8500 --name=consul \

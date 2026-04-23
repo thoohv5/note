@@ -1,16 +1,17 @@
 ---
 title: Perfdhcp
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: note
 status: complete
 ---
 
-# Perfdhcp
+## Perfdhcp
 
-# Perfdhcp：平常使用的发包工具
+## Perfdhcp：平常使用的发包工具
 
-## DHCPv4报文：
+### DHCPv4报文：
 
 ### 基本用法：
 
@@ -30,7 +31,7 @@ perfdhcp -4 -r 2 -R 100 -t 1 -p 180 -o60,485a434e435354425631 dhcp_se
 - -l eth0 指定发包的网卡,默认eth0
 - -p 表示发包时长
 
-## DHCPv6报文：
+### DHCPv6报文：
 
 ### 基本用法：
 
@@ -49,6 +50,6 @@ perfdhcp -6 -r 2 -R 100 -t 1 -p 10 -l eth1 -b mac=11:11:11:11:11:11
 
 需要注意的是，perfdhcp发送DHCPv6请求时候发送的广播报文
 
-# 附录
+## 附录
 
 [perfdhcp - DHCP benchmarking tool - Kea 1.6.2-git documentation](https://kea.readthedocs.io/en/kea-1.6.2/man/perfdhcp.8.html)

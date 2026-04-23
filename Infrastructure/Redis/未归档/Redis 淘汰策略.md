@@ -1,14 +1,15 @@
 ---
 title: Redis 淘汰策略
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Redis 淘汰策略
+## Redis 淘汰策略
 
-## 过期策略
+### 过期策略
 
 1. 被动删除：当读/写一个已经过期的key时，会触发惰性删除策略，直接删除掉这个过期key
 2. 主动删除：由于惰性删除策略无法保证冷数据被及时删掉，所以Redis会定期主动淘汰一批已过期的key
@@ -31,7 +32,7 @@ status: complete
         
 3. 当前已用内存超过maxmemory限定时，触发主动清理策略
 
-## 淘汰策略
+### 淘汰策略
 
 当前已用内存超过maxmemory限定时，触发**主动清理**策略
 

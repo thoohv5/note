@@ -1,12 +1,13 @@
 ---
 title: root与alias
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# root与alias
+## root与alias
 
 - alias是目录别名的定义，如果uri以“/”结束，alias必须要用“/”结束，否则403
 

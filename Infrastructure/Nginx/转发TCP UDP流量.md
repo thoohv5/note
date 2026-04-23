@@ -1,12 +1,13 @@
 ---
 title: 转发TCP/UDP流量
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# 转发TCP/UDP流量
+## 转发TCP/UDP流量
 
 - `proxy_pass`
     - 设置代理服务器地址，可以为域名或IP。
@@ -28,7 +29,7 @@ status: complete
     - 与上游服务器或客户端的连接有效时间，在此时间范围内没有数据传输连接会被关闭。默认值10m。
     - 可配置在`stream, server`块中。
 
-# 示例
+## 示例
 
 ```yaml
 #user  nobody;worker_processes  1;

@@ -1,12 +1,12 @@
 ---
 title: iHandy
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: reference
 status: complete
 ---
 
-# iHandy
+## iHandy
 
 Golang
 1-GC流程、GC怎么解决循环引用问题

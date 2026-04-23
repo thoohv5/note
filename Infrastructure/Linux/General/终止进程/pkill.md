@@ -1,12 +1,13 @@
 ---
 title: pkill
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# pkill
+## pkill
 
 pgrep, pkill - look up or signal processes based on name and other attributes
 
@@ -46,16 +47,16 @@ pkill mysql
 pkill -9 mysql
 pkill -u make,danny
 
-# 使用w命令查询本机已经登录的用户
+## 使用w命令查询本机已经登录的用户
 w
-# 强制杀死从pts/1虚拟终端登陆的进程
+## 强制杀死从pts/1虚拟终端登陆的进程
 pkill -9 -t pts/1
 
-# 根据进程名
+## 根据进程名
 pkill script
 pkill -f "python script.py"
 
-# 根据进程ID
+## 根据进程ID
 pkill --signal 9 -PID 5678
 
 ```

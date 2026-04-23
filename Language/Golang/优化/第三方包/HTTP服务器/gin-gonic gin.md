@@ -1,12 +1,13 @@
 ---
 title: gin-gonic/gin
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: incomplete
 ---
 
-# gin-gonic/gin
+## gin-gonic/gin
 
 ```go
 r := gin.New()
@@ -26,6 +27,6 @@ r.Run(":8080")
 
 ```
 
-# 附录
+## 附录
 
 [gin-gonic/gin](https://github.com/gin-gonic/gin)

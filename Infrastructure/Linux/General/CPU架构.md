@@ -1,16 +1,17 @@
 ---
 title: CPU架构
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# CPU架构
+## CPU架构
 
-# 分类
+## 分类
 
-## ARM架构
+### ARM架构
 
 ### aarch64（或称为arm64）
 
@@ -23,7 +24,7 @@ status: complete
 - `arm` 是一种 RISC（Reduced Instruction Set Computing）架构，广泛应用于移动设备、嵌入式系统和其他领域。ARM 架构的不同版本用于不同的用途。
 - `arm6` 和 `arm7` 是 ARMv6 和 ARMv7 指令集的版本，分别属于 ARM 公司的早期架构。这些版本的 ARM 架构通常用于低功耗和嵌入式系统，例如早期的智能手机和嵌入式设备。
 
-## X86架构
+### X86架构
 
 ### x86（或称为 386）
 
@@ -39,19 +40,19 @@ status: complete
 
 `amd64` 是由 AMD（Advanced Micro Devices）命名的 64 位 x86 指令集。虽然最初是由 AMD 开发，但由于其广泛的采用，它成为了 x86_64 架构的一种通用称呼。
 
-## MIPS架构
+### MIPS架构
 
 mips
 
-## PPC64架构
+### PPC64架构
 
 IBM PowerPC 64-bit 架构，它是一种用于 64 位 PowerPC 处理器的架构。PowerPC 是由 IBM、Apple 和 Motorola 共同开发的一种处理器架构，广泛用于服务器、工作站和嵌入式系统。PowerPC 处理器在过去曾经是 Apple Macintosh 计算机的主要架构，后来转向了基于 Intel 架构的处理器。
 
 在 Linux 中，`ppc64` 和 `ppc64le` 分别表示大端和小端的 PowerPC 64 位系统，因为 PowerPC 架构可以以不同的字节顺序运行。
 
-# 命令
+## 命令
 
-## 查询系统CPU机构
+### 查询系统CPU机构
 
 ```bash
 Arch命令

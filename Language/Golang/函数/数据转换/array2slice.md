@@ -1,12 +1,13 @@
 ---
 title: array2slice
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: incomplete
 ---
 
-# array2slice
+## array2slice
 
 在Go中，数组是相同数据类型组成长度固定的连续内存数据结构，slice只是指向底层数组的引用类型。
 

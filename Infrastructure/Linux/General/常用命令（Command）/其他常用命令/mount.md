@@ -1,21 +1,22 @@
 ---
 title: mount
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# mount
+## mount
 
-# 命令
+## 命令
 
 ```
 mount [-t vfstype] [-o options] device dir
 
 ```
 
-## 其中
+### 其中
 
 - `t vfstype` 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：
 

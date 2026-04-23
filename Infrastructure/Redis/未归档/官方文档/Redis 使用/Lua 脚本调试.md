@@ -1,14 +1,15 @@
 ---
 title: Lua 脚本调试
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: reference
 status: complete
 ---
 
-# Lua 脚本调试
+## Lua 脚本调试
 
-# 调试
+## 调试
 
 ```bash
   --ldb              Used with --eval enable the Redis Lua debugger.
@@ -22,7 +23,7 @@ status: complete
 - `c` / `continue` → 继续执行到结束
 - `abort` → 退出调试
 
-# 日志
+## 日志
 
 ```lua
 
@@ -39,7 +40,7 @@ redis.log(redis.LOG_DEBUG, "example text")
     - `redis.LOG_WARNING` → 警告
 - **message**：你要打印的字符串
 
-# 错误
+## 错误
 
 在 **Redis Lua 脚本**里，`error()` 和 `redis.error_reply()` 都能让脚本返回错误，但 **用途和行为略有区别**：
 

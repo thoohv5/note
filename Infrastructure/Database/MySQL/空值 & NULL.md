@@ -1,12 +1,13 @@
 ---
 title: 空值 & NULL
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# 空值 & NULL
+## 空值 & NULL
 
 ```jsx
 In SQL, the NULL value is never true in comparison to any other value, even NULL.

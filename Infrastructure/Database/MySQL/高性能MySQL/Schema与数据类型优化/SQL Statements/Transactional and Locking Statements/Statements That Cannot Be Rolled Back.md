@@ -1,9 +1,10 @@
 ---
 title: Statements That Cannot Be Rolled Back
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: incomplete
 ---
 
-# Statements That Cannot Be Rolled Back
+## Statements That Cannot Be Rolled Back

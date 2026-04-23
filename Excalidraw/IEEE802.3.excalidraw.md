@@ -1,13 +1,13 @@
 ---
 
 excalidraw-plugin: parsed
-tags: [excalidraw]
+  - excalidraw
 
 ---
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 
-# Text Elements
+## Text Elements
 D.MAC ^N4se0Gmj
 
 S.MAC ^jDZMITLm
@@ -27,7 +27,7 @@ SNAP ^zhFAl19j
 IEEE802.3 ^7iSIofuH
 
 %%
-# Drawing
+## Drawing
 ```json
 {
 	"type": "excalidraw",

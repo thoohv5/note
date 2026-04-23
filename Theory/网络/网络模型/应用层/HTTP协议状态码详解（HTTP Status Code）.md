@@ -1,12 +1,13 @@
 ---
 title: HTTP协议状态码详解（HTTP Status Code）
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: note
 status: complete
 ---
 
-# HTTP协议状态码详解（HTTP Status Code）
+## HTTP协议状态码详解（HTTP Status Code）
 
 使用ASP.NET/PHP/JSP 或者javascript都会用到http的不同状态，一些常见的状态码为：
 

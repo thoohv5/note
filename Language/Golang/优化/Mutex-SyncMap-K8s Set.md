@@ -1,12 +1,13 @@
 ---
 title: Mutex & SyncMap & K8s Set
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Mutex & SyncMap & K8s Set
+## Mutex & SyncMap & K8s Set
 
 ```go
 package main

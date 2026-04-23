@@ -1,14 +1,15 @@
 ---
 title: PG EXPLAIN
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# PG EXPLAIN
+## PG EXPLAIN
 
-# 命令
+## 命令
 
 ```
 EXPLAIN [ ( option [, ...] ) ] statement
@@ -26,7 +27,7 @@ where option can be one of:
 
 ```
 
-## 参数说明
+### 参数说明
 
 - **ANALYZE 选项为TRUE 会实际执行SQL，并获得相应的查询计划，默认为FALSE。如果优化一些修改数据的SQL 需要真实的执行但是不能影响现有的数据，可以放在一个事务中，分析完成后可以直接回滚。**
 - VERBOSE 选项为TRUE 会显示查询计划的附加信息，默认为FALSE。附加信息包括查询计划中每个节点（后面具体解释节点的含义）输出的列（Output），表的SCHEMA 信息，函数的SCHEMA 信息，表达式中列所属表的别名，被触发的触发器名称等。
@@ -36,11 +37,11 @@ where option can be one of:
 - SUMMARY 选项为TRUE 会在查询计划后面输出总结信息，例如查询计划生成的时间和查询计划执行的时间。当ANALYZE 选项打开时，它默认为TRUE。
 - FORMAT 指定输出格式，默认为TEXT。各个格式输出的内容都是相同的，其中XML | JSON | YAML 更有利于我们通过程序解析SQL 语句的查询计划，为了更有利于阅读，我们下文的例子都是使用TEXT 格式的输出结果。
 
-# 节点类型
+## 节点类型
 
-## 控制节点（Control Node)
+### 控制节点（Control Node)
 
-## 扫描节点（ScanNode)
+### 扫描节点（ScanNode)
 
 扫描节点，简单来说就是为了扫描表的元组，每次获取一条元组（Bitmap Index Scan除外）作为上层节点的输入。当然严格的说，不光可以扫描表，还可以扫描函数的结果集、链表结构、子查询结果集等。
 
@@ -62,10 +63,10 @@ where option can be one of:
 - Foreign Scan，用于外键扫描
 - Custom Scan，用于用户自定义的扫描
 
-## 物化节点（Materialization Node)
+### 物化节点（Materialization Node)
 
-## 连接节点（Join Node)
+### 连接节点（Join Node)
 
-# 附录
+## 附录
 
 [https://blog.csdn.net/weixin_41287260/article/details/124394206](https://blog.csdn.net/weixin_41287260/article/details/124394206)

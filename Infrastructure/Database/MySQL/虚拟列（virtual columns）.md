@@ -1,14 +1,15 @@
 ---
 title: 虚拟列（virtual columns）
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# 虚拟列（virtual columns）
+## 虚拟列（virtual columns）
 
-# 概述
+## 概述
 
 **Generated Column**
 
@@ -32,9 +33,9 @@ col_name data_type [GENERATED ALWAYS] AS (expr)
   [COMMENT 'string']
 ```
 
-# 场景
+## 场景
 
-# 附录
+## 附录
 
 [MySQL :: MySQL 8.4 Reference Manual :: 15.1.20.8 CREATE TABLE and Generated Columns](https://dev.mysql.com/doc/refman/8.4/en/create-table-generated-columns.html)
 

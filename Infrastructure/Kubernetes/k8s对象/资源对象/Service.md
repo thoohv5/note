@@ -1,18 +1,19 @@
 ---
 title: Service
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# Service
+## Service
 
-# 概述
+## 概述
 
 Pod 是动态创建、销毁的，它们的 IP 是不固定的。**Service 解决了 Pod 网络不稳定的问题**，提供了一个**长期不变的访问入口**，并能根据标签自动找到后端的 Pod。
 
-# **概念**
+## **概念**
 
 `Service` 是 `Kubernetes` 中用于定义一组 `Pod` 访问策略的抽象层，主要功能：
 
@@ -20,7 +21,7 @@ Pod 是动态创建、销毁的，它们的 IP 是不固定的。**Service 解�
 - **负载均衡**：在多个 `Pod` 实例间分配流量
 - **抽象后端**：解耦前端应用与后端 `Pod` 的直接依赖
 
-## **类型**
+### **类型**
 
 ### `ClusterIP` 【**默认类型**】
 
@@ -168,7 +169,7 @@ kubectl exec -it <pod_name> -- nslookup demo.default.svc.cluster.local
     ```
     
 
-## 对比
+### 对比
 
 | 类型 | 是否可集群外访问 | 是否需要云服务支持 | 用途 |
 | --- | --- | --- | --- |

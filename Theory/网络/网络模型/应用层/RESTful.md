@@ -1,12 +1,13 @@
 ---
 title: RESTful
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: guide
 status: complete
 ---
 
-# RESTful
+## RESTful
 
 > 表现层状态转化(Representational State Transfer)
 > 
@@ -30,7 +31,7 @@ DELETE: 用来删除资源
 - URI包含动词
 - URI中加入版本号
 
-## 版本控制策略
+### 版本控制策略
 
 1. The Knot：无版本
 2. Point-to-Point：点对点，即平台的API版本自带版本号
@@ -42,7 +43,7 @@ DELETE: 用来删除资源
 2. Request Parameter， 即在每个请求后添加一个version参数，表示请求的是哪个版本。
 3. Mdedia Type， 即在HTTP请求的header中使用Media Type标记该请求想获取的资源， 同样的可以不设置或设置通用的Media Type表示最新版本的API。
 
-# 附录
+## 附录
 
 [理解RESTful架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)
 

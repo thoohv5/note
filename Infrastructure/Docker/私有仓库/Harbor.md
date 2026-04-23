@@ -1,12 +1,13 @@
 ---
 title: Harbor
 date: 2026-04-07
-tags: [基础设施, Docker]
+  - 基础设施
+  - Docker
 type: note
 status: complete
 ---
 
-# Harbor
+## Harbor
 
 Harbor 是 VMware 公司开源的企业级 Docker Registry 项目，其目标是帮助用户迅速搭建一个企业级的 Docker Registry 服务。
 
@@ -28,6 +29,6 @@ docker tag tomcat 127.0.0.1/myproject-lichen/nginx:a1
 docker push 127.0.0.1/myproject-lichen/nginx:a1
 ```
 
-# 附录
+## 附录
 
 [Docker--harbor私有仓库部署与管理_harbor仓库-CSDN博客](https://blog.csdn.net/wys_jj/article/details/138421833)

@@ -1,12 +1,13 @@
 ---
 title: Server SQL Modes
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# Server SQL Modes
+## Server SQL Modes
 
 在MySQL 5.7的默认SQL模式包括以下模式：ONLY_FULL_GROUP_BY， STRICT_TRANS_TABLES， NO_ZERO_IN_DATE， NO_ZERO_DATE， ERROR_FOR_DIVISION_BY_ZERO， NO_AUTO_CREATE_USER，和 NO_ENGINE_SUBSTITUTION。
 

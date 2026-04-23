@@ -1,14 +1,15 @@
 ---
 title: JOIN算法
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: guide
 status: complete
 ---
 
-# JOIN算法
+## JOIN算法
 
-# 概述
+## 概述
 
 在`MySQL`中，使用`Nested-Loop Join`的算法思想去优化`join`，`Nested-Loop Join`翻译成中文则是“嵌套循环连接”。
 
@@ -26,13 +27,13 @@ select * from t1 inner join t2 on t1.id=t2.tid
 **Index Nested-LoopJoin > Block Nested-Loop Join > Simple Nested-Loop Join**
 ```
 
-# 实现
+## 实现
 
-## 简单嵌套循环连接（`Simple Nested-LoopJoin, SNLJ`）
+### 简单嵌套循环连接（`Simple Nested-LoopJoin, SNLJ`）
 
 简单嵌套循环连接实际上就是简单粗暴的嵌套循环
 
-## 索引嵌套循环连接（`Index Nested-LoopJoin, INLJ`)
+### 索引嵌套循环连接（`Index Nested-LoopJoin, INLJ`)
 
 ### 设计
 
@@ -44,7 +45,7 @@ select * from t1 inner join t2 on t1.id=t2.tid
 
 只有内层表join的列有索引时，才能用到`Index Nested-LoopJoin`进行连接。
 
-## 缓存块嵌套循环连接（`Block Nested-Loop Join, BNLJ`）
+### 缓存块嵌套循环连接（`Block Nested-Loop Join, BNLJ`）
 
 ### 设计
 
@@ -56,6 +57,6 @@ select * from t1 inner join t2 on t1.id=t2.tid
 
 当不使用Index Nested-Loop Join的时候，默认使用Block Nested-Loop Join
 
-# 附录
+## 附录
 
 [学习Mysql的join算法：Index Nested-Loop Join和Block Nested-Loop Join_Java程序员的进阶之路-CSDN博客](https://blog.csdn.net/u010841296/article/details/89790399)

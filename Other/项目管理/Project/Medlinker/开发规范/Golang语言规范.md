@@ -1,14 +1,14 @@
 ---
 title: Golang语言规范
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: complete
 ---
 
-# Golang语言规范
+## Golang语言规范
 
-## 介绍
+### 介绍
 
 样式是支配我们代码的惯例。术语{{样式}}有点用词不当，因为这些约定涵盖的范围不限于由{{gofmt}}替我们处理的源文件格式。本指南基于{{Uber Golang开发规范}}而制定，该指南最初由Prashant Varanasi和Simon Newton编写，目的是使一些同事能快速使用Golang。多年来，该指南已根据其他人的反馈进行了修改，其中许多是Golang的通用准则，而其他扩展准则依赖于下面外部的指南
 
@@ -23,7 +23,7 @@ status: complete
 - 如果不习惯使用{{Go fmt}}可以使用IDE自带的代码格式化来完成
 - 不同的语言在代码格式化上处理不同，比如Java则不建议使用代码格式化而是 **坚持自己写出来的代码就比格式化出来的代码要好**
 
-## 规范
+### 规范
 
 ### **项目命名规范**
 
@@ -909,6 +909,6 @@ func NewServiceXXX() serviceXXX  {
 
 建议保持模块顺序，type 后放置对应的构造方法（如有）。参见 [#关于构造方法的使用](https://wiki.medlinker.com/pages/viewpage.action?pageId=7505066#Golang语言规范-关于构造方法的使)A8
 
-## 推荐规范项
+### 推荐规范项
 
 - [推荐项](https://wiki.medlinker.com/pages/viewpage.action?pageId=30507581)

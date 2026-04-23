@@ -1,14 +1,15 @@
 ---
 title: 逻辑流复制协议（Logical Streaming Replication Protocol）
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# 逻辑流复制协议（Logical Streaming Replication Protocol）
-
 ## 逻辑流复制协议（Logical Streaming Replication Protocol）
+
+### 逻辑流复制协议（Logical Streaming Replication Protocol）
 
 启动消息流
 
@@ -17,7 +18,7 @@ START_REPLICATION SLOT slot_name LOGICAL
 
 ```
 
-## 逻辑流复制参数（Logical Streaming Replication Parameter）
+### 逻辑流复制参数（Logical Streaming Replication Parameter）
 
 proto_version
 
@@ -33,13 +34,13 @@ Publication_names
 
 	需要订阅（接受更改）的发布名称的逗号分隔列表
 
-## 逻辑复制协议消息（Logical Replication Protocol Messages）
+### 逻辑复制协议消息（Logical Replication Protocol Messages）
 
 所有顶级协议消息都以消息类型字节开头
 
 由于流式复制协议提供消息长度，因此顶级协议消息无需在其标头中嵌入长度
 
-## 逻辑复制协议流（Logical Replication Protocol Message Flow）
+### 逻辑复制协议流（Logical Replication Protocol Message Flow）
 
 逻辑复制协议逐个发送各个事务。
 

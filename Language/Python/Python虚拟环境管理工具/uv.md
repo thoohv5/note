@@ -1,12 +1,13 @@
 ---
 title: uv
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# uv
+## uv
 
 ### **官网地址** https://docs.astral.sh/uv/‌
 
@@ -26,66 +27,66 @@ uv工具有如下功能：
 
 ```css
 curl -LsSf https://astral.sh/uv/install.sh | sh
-# 或者wget（效果一样）
+## 或者wget（效果一样）
 wget -qO- https://astral.sh/uv/install.sh | sh
 ```
 
 ### 命令
 
 ```bash
-# 验证安装
+## 验证安装
 uv --version
 
-# 卸载
+## 卸载
 uv cache clean
 rm -r "$(uv python dir)"
 rm -r "$(uv tool dir)"
 
-# mac/linux
+## mac/linux
 rm ~/.local/bin/uv ~/.local/bin/uvx
-# windows
+## windows
 rm $HOME.local\bin\uv.exe
 rm $HOME.local\bin\uvx.exe
 
-# 列表
+## 列表
 uv python list
 
-# 安装
+## 安装
 uv python install 3.12
 uv python install pypy@3.10
 
-# 查找
+## 查找
 uv python find 3.10
 
-# 使用
+## 使用
 uv python pin 版本号
 
-# 创建虚拟环境
+## 创建虚拟环境
 uv init # 初始化
 uv venv --python=cpython-3.13.11 --seed
 
-# 安装pip
+## 安装pip
 python -m ensurepip --upgrade
 python -m pip install --upgrade pip setuptools wheel
 
-# 安装依赖
+## 安装依赖
 python -m pip install -e .
 
-# 同步依赖
+## 同步依赖
 uv sync
 
-# 添加依赖
+## 添加依赖
 uv add 依赖项=版本号
 
-# 运行程序
+## 运行程序
 uv run 程序文件名 [命令行参数]
 uv run python -m pip xxx
 
-# uvx
+## uvx
 uvx python main.py
-# 等价于
+## 等价于
 uv run main.py
-# 等价于
+## 等价于
 uv tool run main.py
 
 ```

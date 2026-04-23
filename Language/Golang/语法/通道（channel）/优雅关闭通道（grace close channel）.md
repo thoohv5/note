@@ -1,12 +1,13 @@
 ---
 title: 优雅关闭通道（grace close channel）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 优雅关闭通道（grace close channel）
+## 优雅关闭通道（grace close channel）
 
 ### 一个 sender，一个 receiver
 
@@ -233,6 +234,6 @@ wgReceivers.Wait()
 log.Println("stopped by", stoppedBy)
 ```
 
-# 附录
+## 附录
 
 [go语言学习--channel的关闭-CSDN博客](https://blog.csdn.net/weixin_34391854/article/details/94574753)

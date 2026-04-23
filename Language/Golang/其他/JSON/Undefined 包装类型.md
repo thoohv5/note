@@ -1,12 +1,13 @@
 ---
 title: Undefined 包装类型
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Undefined 包装类型
+## Undefined 包装类型
 
 思路：利用结构体“零值”+`omitzero` 标签。
 

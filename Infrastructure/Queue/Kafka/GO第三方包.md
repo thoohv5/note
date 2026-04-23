@@ -1,14 +1,15 @@
 ---
 title: GO第三方包
 date: 2026-04-07
-tags: [基础设施, 消息队列]
+  - 基础设施
+  - 消息队列
 type: guide
 status: complete
 ---
 
-# GO第三方包
+## GO第三方包
 
-# **confluent-kafka-go**
+## **confluent-kafka-go**
 
 [https://github.com/confluentinc/confluent-kafka-go.git](https://github.com/confluentinc/confluent-kafka-go.git)
 
@@ -37,7 +38,7 @@ status: complete
 
 [https://github.com/confluentinc/confluent-kafka-go/issues/1454](https://github.com/confluentinc/confluent-kafka-go/issues/1454)
 
-# **sarama**
+## **sarama**
 
 [https://github.com/IBM/sarama](https://github.com/IBM/sarama)
 

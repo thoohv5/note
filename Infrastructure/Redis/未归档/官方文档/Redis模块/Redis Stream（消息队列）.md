@@ -1,14 +1,15 @@
 ---
 title: Redis Stream（消息队列）
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Redis Stream（消息队列）
+## Redis Stream（消息队列）
 
-# 概述
+## 概述
 
 Redis5.0 中还增加了一个数据类型[Stream](https://so.csdn.net/so/search?q=Stream&spm=1001.2101.3001.7020)，它借鉴了Kafka的设计，是一个新的强大的支持多播的可持久化的[消息队列](https://so.csdn.net/so/search?q=消息队)97&spm=1001.2101.3001.7020
 
@@ -19,13 +20,13 @@ Redis5.0 中还增加了一个数据类型[Stream](https://so.csdn.net/so/search
 - 基于**List LPUSH+BRPOP** 或者 **基于Sorted-Set**的实现
     - 支持了持久化，但是**不支持多播，分组消费**等
 
-## **特征：**
+### **特征：**
 
 1. **数据结构**：Redis Stream是一个由有序消息组成的日志数据结构，每个消息都有一个全局唯一的ID，确保消息的顺序性和可追踪性。
 2. **消息ID**：消息的ID由两部分组成，分别是毫秒级时间戳和序列号。这种设计确保了消息ID的单调递增性，即新消息的ID总是大于旧消息的ID。
 3. **消费者组**：Redis Stream支持消费者组的概念，允许多个消费者以组的形式订阅Stream，并且每个消息只会被组内的一个消费者处理，避免了消息的重复消费。
 
-## **优势:**
+### **优势:**
 
 1. **持久化存储**：Stream中的消息可以被持久化存储，确保数据不会丢失，即使在Redis服务器重启后也能恢复消息。
 2. **有序性**：消息按照产生顺序生成消息ID, 被添加到Stream中，并且可以按照指定的条件检索消息，保证了消息的有序性。
@@ -34,7 +35,7 @@ Redis5.0 中还增加了一个数据类型[Stream](https://so.csdn.net/so/search
 5. **阻塞读取**：消费者可以选择阻塞读取模式，当没有新消息时，消费者会等待直至新消息到达。
 6. **消息可回溯**: 方便补数、特殊数据处理, 以及问题回溯查询
 
-# **命令**
+## **命令**
 
 1. **XADD**：向Stream中添加消息。**如果指定的Stream不存在，则会自动创建**。
 2. **XREAD**：以阻塞/非阻塞方式获取Stream中的消息列表。
@@ -45,7 +46,7 @@ Redis5.0 中还增加了一个数据类型[Stream](https://so.csdn.net/so/search
 7. XRANGE: 查询消息
 8. XINFO：查询信息
 
-## **XADD 消息记录**
+### **XADD 消息记录**
 
 XADD命令用于向Redis Stream（流）数据结构中添加消息。
 
@@ -84,7 +85,7 @@ XADD命令的一个重要用途是实现消息发布功能，发布者可以使�
         **MAXLEN参数可以限制Stream的大小**
         
 
-## 普通模式
+### 普通模式
 
 ### **XREAD 消息消费**
 
@@ -157,7 +158,7 @@ XREAD COUNT 2 STREAMS userinfo_stream 1722159931000-0
 2. **消费者组**：虽然XREAD命令本身不直接涉及消费者组的概念，但Redis Streams还支持消费者组模式，允许一组消费者协作消费同一流中的消息。在消费者组模式下，通常会使用XREADGROUP命令而不是XREAD命令来读取消息。
 3. **性能考虑**：XREAD命令在读取大量消息时可能会消耗较多的CPU和内存资源。因此，在实际应用中需要根据实际情况合理设置COUNT参数的值，避免一次性读取过多消息导致性能问题。
 
-## **Consumer Group 消费组模式**
+### **Consumer Group 消费组模式**
 
 典型的多播模式，在实时性要求比较高的场景，如果你想加快对消息的处理。那这是一个不错的选择，我们让队列在逻辑上进行分区，用不同的消费组来隔离消费。所以：
 
@@ -170,13 +171,13 @@ XREAD COUNT 2 STREAMS userinfo_stream 1722159931000-0
 使用 XGROUP CREATE 命令创建消费者组。
 
 ```bash
-# stream_name：队列名称
-# consumer_group：消费者组
-# msgIdStartIndex：消息Id开始位置
-# msgIdStartIndex：消息Id结束位置
-# $ 表示从流的当前末尾（即最新消息）开始创建消费者组。如果流不存在，MKSTREAM 选项将自动创建流
+## stream_name：队列名称
+## consumer_group：消费者组
+## msgIdStartIndex：消息Id开始位置
+## msgIdStartIndex：消息Id结束位置
+## $ 表示从流的当前末尾（即最新消息）开始创建消费者组。如果流不存在，MKSTREAM 选项将自动创建流
 XGROUP CREATE <stream> <group> <message-id>-<message-id>
-# 或者
+## 或者
 XGROUP CREATE <stream> <group> $ MKSTREAM
 ```
 
@@ -195,17 +196,17 @@ XGROUP CREATE <stream> <group> $ MKSTREAM
 消费者可以通过 `XREADGROUP` 命令从消费者组中读取消息。`XREADGROUP` 命令不仅读取消息，还会更新消费者组中的消费者状态，即标记哪些消息已被读取。
 
 ```bash
-# group_name: 消费者群组名
-# consumer_name: 消费者名称
-# COUNT number: count 消费个数
-# BLOCK ms: 表示如果流中没有新消息，则命令将阻塞最多 xx 毫秒，0则无限阻塞
-# stream_name: 队列名称
-# id: 消息消费ID
-# []：代表可选参数
-# `>`：放在命令参数的最后面，表示从尚未被消费的消息开始读取；
+## group_name: 消费者群组名
+## consumer_name: 消费者名称
+## COUNT number: count 消费个数
+## BLOCK ms: 表示如果流中没有新消息，则命令将阻塞最多 xx 毫秒，0则无限阻塞
+## stream_name: 队列名称
+## id: 消息消费ID
+## []：代表可选参数
+## `>`：放在命令参数的最后面，表示从尚未被消费的消息开始读取；
 
 XREADGROUP GROUP group_name consumer_name [COUNT number] [BLOCK ms] STREAMS stream_name [stream ...] id [id ...]
-# 或者
+## 或者
 XREADGROUP GROUP group_name consumer_name COUNT 1 BLOCK 2000 STREAMS stream_name >
 ```
 
@@ -228,15 +229,15 @@ XREADGROUP GROUP group_name consumer_name COUNT 1 BLOCK 2000 STREAMS stream_name
 处理完消息后，消费者需要发送 XACK 命令来确认消息。这告诉 Redis 这条消息已经被成功处理，并且可以从消费者组的待处理消息列表中移除
 
 ```bash
-# stream_name: 队列名称
-# group_name: 消费者群组名
-# <message-id> 是要确认的消息的 ID。
+## stream_name: 队列名称
+## group_name: 消费者群组名
+## <message-id> 是要确认的消息的 ID。
 
 XACK <stream> <group> <message-id>
 ```
 
 ```bash
-# ACK 确认两条消息
+## ACK 确认两条消息
 XACK userinfo_stream consumer_group 1722159931000-0 1722159932000-0
 (integer) 2
 ```
@@ -292,6 +293,6 @@ XINFO GROUPS consumer_group
 XINFO CONSUMERS userinfo_stream consumer_group
 ```
 
-# 附录
+## 附录
 
 详细的stream操作见官网文档：[https://redis.io/docs/data-types/streams-tutorial/](https://redis.io/docs/data-types/streams-tutorial/)

@@ -1,12 +1,13 @@
 ---
 title: (67条消息) nginx: [emerg] could not build server_names_hash, you should increase server_names_hash_bucket_size:_ItisNagatoYuki的博客-CSDN博客
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# (67条消息) nginx: [emerg] could not build server_names_hash, you should increase server_names_hash_bucket_size:_ItisNagatoYuki的博客-CSDN博客
+## (67条消息) nginx: [emerg] could not build server_names_hash, you should increase server_names_hash_bucket_size:_ItisNagatoYuki的博客-CSDN博客
 
 [https://blog.csdn.net/qq_35899407/article/details/90516171](https://blog.csdn.net/qq_35899407/article/details/90516171)
 

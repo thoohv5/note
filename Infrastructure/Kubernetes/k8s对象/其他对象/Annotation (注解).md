@@ -1,14 +1,15 @@
 ---
 title: Annotation (注解)
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# Annotation (注解)
+## Annotation (注解)
 
-# 概述
+## 概述
 
 Annotation与Label类似，也使用key/value键值对的形式进行定义。不同的是Label具有严格的命名规则，它定义的是Kubernetes对象的元数据(Metadata)，并且用于LabelSelector。而Annotation则是用户任意定义的“附加”信息，以便于外部工具进行查找，很多时候,Kubernetes的模块自身会通过Annotation的方式标记资源对象的一些特殊信息。
 

@@ -1,12 +1,13 @@
 ---
 title: PostgreSQL 变化数据捕捉（CDC）_pgoutput-CSDN博客
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# PostgreSQL 变化数据捕捉（CDC）_pgoutput-CSDN博客
+## PostgreSQL 变化数据捕捉（CDC）_pgoutput-CSDN博客
 
 URL: https://blog.csdn.net/sunny05296/article/details/128960676
 

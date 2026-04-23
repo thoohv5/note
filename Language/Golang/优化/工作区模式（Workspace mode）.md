@@ -1,14 +1,15 @@
 ---
 title: 工作区模式（Workspace mode）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# 工作区模式（Workspace mode）
+## 工作区模式（Workspace mode）
 
-# 背景
+## 背景
 
 在项目开发的时候不仅仅需要使用别人开发的开源模块，还有自己公司内部项目。比如 sso module 等。
 
@@ -18,13 +19,13 @@ status: complete
 
 做法就是在 `go.mod` 文件中添加一条指令 `replace` ，涉及修改mod文件。
 
-# 概述
+## 概述
 
 针对 mo module 的问题，Michael Matloob 提出了 Workspace Mode（工作区模式）。相关 issue 讨论：[cmd/go: add a workspace mode](https://github.com/golang/go/issues/45713) ， [[https://go.googlesource.com/proposal/+/master/design/45713-workspace]]，感兴趣的可以去参阅。
 
 想使用 go work，那基本的要求就是你的 golang version 必须是 `golang 1.18` 以上的版本
 
-## 命令
+### 命令
 
 ```bash
 ❯ go help work

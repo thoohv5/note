@@ -1,14 +1,15 @@
 ---
 title: 全局锁（Global Lock）
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# 全局锁（Global Lock）
+## 全局锁（Global Lock）
 
-## 概述
+### 概述
 
 **全局锁**是指锁住整个 MySQL **实例的所有库和表**，当加上全局锁后，**其他线程不能进行任何写操作**（插入、更新、删除等），只允许读操作（如查询）。
 
@@ -20,7 +21,7 @@ FLUSH TABLES WITH READ LOCK;
 
 ---
 
-## 作用
+### 作用
 
 - **保持数据一致性**
     - 逻辑备份时（如 `mysqldump`），防止数据被写入导致备份不一致。
@@ -31,10 +32,10 @@ FLUSH TABLES WITH READ LOCK;
 
 ---
 
-## 示例
+### 示例
 
 ```sql
-# FTWRL
+## FTWRL
 FLUSH TABLES WITH READ LOCK;
 
 -- 执行批量更新操作
@@ -44,7 +45,7 @@ UNLOCK TABLES;
 
 ---
 
-## 注意事项
+### 注意事项
 
 官方自带的逻辑备份工具是 `mysqldump`。当 `mysqldump` 使用参数`–single-transaction` 的时候，导数据之前就会启动一个事务，来确保拿到一致性视图。而由于 **MVCC** 的支持，这个过程中数据是可以正常更新的。
 

@@ -1,18 +1,19 @@
 ---
 title: Zset
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Zset
+## Zset
 
 Redis 的 **ZSet（有序集合）** 是一个核心数据结构，底层实现比较精妙，它结合了 **跳表（SkipList）** 和 **哈希表（dict）**，同时兼顾 **快速按分数排序和快速按成员查找**。下面我给你梳理源码实现结构和关键原理。
 
 ---
 
-## 1️⃣ 数据结构概览
+### 1️⃣ 数据结构概览
 
 Redis `zset` 的底层结构：
 
@@ -45,7 +46,7 @@ typedef struct zskiplistNode {
 
 ---
 
-## 2️⃣ 操作原理
+### 2️⃣ 操作原理
 
 ### 2.1 添加元素（ZADD）
 

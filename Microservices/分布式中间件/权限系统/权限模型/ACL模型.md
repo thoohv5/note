@@ -1,14 +1,15 @@
 ---
 title: ACL模型
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# ACL模型
+## ACL模型
 
-## **ACL (Access-Control List 访问控制列表)**
+### **ACL (Access-Control List 访问控制列表)**
 
 在ACL中，包含**用户、资源、资源操作** 三个关键要素。通过将资源以及资源操作授权给用户而使用户获取对资源进行操作的权限。
 

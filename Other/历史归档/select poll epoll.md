@@ -1,12 +1,12 @@
 ---
 title: select poll epoll
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# select poll epoll
+## select poll epoll
 
 零拷贝： sendfile
 
@@ -14,6 +14,6 @@ status: incomplete
 
 内存直接直接映射：mmap
 
-# 附录
+## 附录
 
 [深入揭秘 epoll 是如何实现 IO 多路复用的！](https://mp.weixin.qq.com/s/MIZGBkT7LRFVuB7dXxie5g)

@@ -1,12 +1,13 @@
 ---
 title: How to check how many CPUs are there in Linux system
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: complete
 ---
 
-# How to check how many CPUs are there in Linux system
+## How to check how many CPUs are there in Linux system
 
 URL: https://www.cyberciti.biz/faq/check-how-many-cpus-are-there-in-linux-system/
 
@@ -51,7 +52,7 @@ nixCraft: Privacy First, Reader Supported
 
 [Join **Patreon** ➔](https://www.patreon.com/nixcraft)
 
-## How do you check how many CPUs are there in Linux system?
+### How do you check how many CPUs are there in Linux system?
 
 You can use one of the following command to find the number of physical CPU cores including all cores on Linux:
 
@@ -64,7 +65,7 @@ You can use one of the following command to find the number of physical CPU core
 
 Let us see all commands and examples in details.
 
-## How to display information about the CPU on Linux
+### How to display information about the CPU on Linux
 
 Just run the lscpu command:
 `$ lscpu  
@@ -85,7 +86,7 @@ The following line indicates that I have two physical CPUs:
 
 CPU socket(s):         2
 
-## Use /proc/cpuinfo to find out how many CPUs are there in Linux
+### Use /proc/cpuinfo to find out how many CPUs are there in Linux
 
 The [lscpu command gathers CPU architecture information from sysfs, /proc/cpuinfo](https://www.cyberciti.biz/faq/lscpu-command-find-out-cpu-architecture-information/) and other sources. To view use the [cat command](https://www.cyberciti.biz/faq/linux-unix-appleosx-bsd-cat-command-examples/) and [more command](https://bash.cyberciti.biz/guide/More_command) as follows:
 `$ cat /proc/cpuinfo`
@@ -98,7 +99,7 @@ $ grep 'cpu cores' /proc/cpuinfo | uniq`
 
 ![](https://www.cyberciti.biz/media/new/faq/2018/10/Command-To-Check-Number-Of-CPU-Cores-On-Linux.png)
 
-## Run top or htop command to obtain the number of CPUs/cores in Linux
+### Run top or htop command to obtain the number of CPUs/cores in Linux
 
 Simply run the following command and hit ‘1’:
 `$ top`
@@ -112,7 +113,7 @@ Another option is to run lovely htop:
 
 [How do I Find Out Linux CPU Utilization?](https://www.cyberciti.biz/tips/how-do-i-find-out-linux-cpu-utilization.html)
 
-## Execute nproc print the number of CPUs available on Linux
+### Execute nproc print the number of CPUs available on Linux
 
 Let us print the number of installed processors on your system i.e core count:
 `$ nproc --all  
@@ -132,11 +133,11 @@ hwinfo
 
 .
 
-## How to probe for CPU/core on Linux using hwinfo command
+### How to probe for CPU/core on Linux using hwinfo command
 
 ![](https://www.cyberciti.biz/media/new/faq/2018/10/Linux-see-CPU-core-information-with-hwinfo.png)
 
-## Linux display CPU core with getconf _NPROCESSORS_ONLN command
+### Linux display CPU core with getconf _NPROCESSORS_ONLN command
 
 One can query Linux system configuration variables with getconf command:
 `$ getconf _NPROCESSORS_ONLN  
@@ -145,7 +146,7 @@ Sample outputs:
 
 Number of CPU/cores online at nixcraft-asus.nixcraft.com: 16
 
-## dmidecode -t processor command
+### dmidecode -t processor command
 
 You can use [get BIOS and hardware information with dmidecode command (DMI table decoder) on Linux](https://www.cyberciti.biz/tips/querying-dumping-bios-from-linux-command-prompt.html). To find out how many CPUs are there in Linux system, run:
 `$ sudo dmidecode -t 4  
@@ -159,7 +160,7 @@ $ sudo dmidecode -t 4 | egrep -i 'core (count|enabled)|thread count|Version'`
 
 ![](https://i.ytimg.com/vi/ID/hqdefault.jpg)
 
-## Conclusion
+### Conclusion
 
 You learned how to display information about the CPU architecture, core, threads, CPU version/model, vendor and other information using various Linux command line options. See the following manula pages using the [help command](https://bash.cyberciti.biz/guide/Help_command) or [man command](https://bash.cyberciti.biz/guide/Man_command):
 `$ man lscpu  

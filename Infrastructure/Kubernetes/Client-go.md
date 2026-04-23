@@ -1,14 +1,15 @@
 ---
 title: Client-go
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# Client-go
+## Client-go
 
-# 概述
+## 概述
 
 ![image.png](../../../Language/Golang/第三方包/K8S/kubernetes20client-go/image.png
 
@@ -84,6 +85,6 @@ go get k8s.io/client-go
 
 [Kubernetes API Reference Docs](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#pod-v1-core)
 
-# 附录
+## 附录
 
 [https://github.com/kubernetes/client-go](https://github.com/kubernetes/client-go)

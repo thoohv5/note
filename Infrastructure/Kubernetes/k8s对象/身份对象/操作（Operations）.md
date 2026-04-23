@@ -1,12 +1,13 @@
 ---
 title: 操作（Operations）
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: incomplete
 ---
 
-# 操作（Operations）
+## 操作（Operations）
 
 list、get、create、update、delete、watch、patch
 

@@ -1,14 +1,15 @@
 ---
 title: CSRF
 date: 2026-04-07
-tags: [理论, 安全]
+  - 理论
+  - 安全
 type: note
 status: incomplete
 ---
 
-# CSRF
+## CSRF
 
-## 简介
+### 简介
 
 跨站请求伪造(Cross-site request forgery, CSRF)
 

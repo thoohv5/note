@@ -1,12 +1,12 @@
 ---
 title: huawei
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: complete
 ---
 
-# huawei
+## huawei
 
 昨天下午和客户汇报了上周日凌晨应急演练遇到的HA切换慢的问题，并且也讲了下我们以后新版本（主线）的HA机制，客户提了几个点，我在这里先讲一下：
 

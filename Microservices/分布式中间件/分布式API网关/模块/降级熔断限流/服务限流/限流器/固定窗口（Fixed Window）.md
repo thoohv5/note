@@ -1,12 +1,13 @@
 ---
 title: 固定窗口（Fixed Window）
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: reference
 status: complete
 ---
 
-# 固定窗口（Fixed Window）
+### 固定窗口（Fixed Window）
 
 - 在单位时间内进行计数,如果大于设置的最大值,则进行拒绝
 - 如果过了单位时间,则重新进行计数

@@ -1,14 +1,15 @@
 ---
 title: pt-online-schema-change
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# pt-online-schema-change
+## pt-online-schema-change
 
-## 流程
+### 流程
 
 - 新建一张临时表 `mydb._users_new`，进行结构变更。
 - 在原表 `users` 上加触发器，保证数据同步`_users_new`。
@@ -57,7 +58,7 @@ D=demo,t=user \
 
 `--critical-load`服务器负载阈值（如Threads_running>80暂停）
 
-# 附录
+## 附录
 
 [https://github.com/percona/percona-toolkit](https://github.com/percona/percona-toolkit)
 

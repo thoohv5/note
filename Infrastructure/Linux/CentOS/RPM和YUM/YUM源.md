@@ -1,24 +1,25 @@
 ---
 title: YUM源
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# YUM源
+## YUM源
 
-# CentOS7
+## CentOS7
 
 ```bash
 sudo yum install yum-utils -y
 
-# 下载yum源
+## 下载yum源
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
 curl -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo
 curl -o /etc/yum.repos.d/epel.repo http://mirrors.cloud.tencent.com/repo/epel-7.repo
 
-# 清理&更新缓存
+## 清理&更新缓存
 yum clean all && yum makecache
 ```
 
@@ -48,7 +49,7 @@ EOF
 
 sed -i '/^baseurl=/a sslverify=0' /etc/yum.repos.d/CentOS-Vault.repo
 
-# 清理&更新缓存
+## 清理&更新缓存
 yum clean all && yum makecache
 ```
 
@@ -60,13 +61,13 @@ update-ca-trust force-enable
 update-ca-trust extract
 ```
 
-# CentOS
+## CentOS
 
 ```bash
 wget -O /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-vault-6.10.repo --no-check-certificate
 ```
 
-# update & upgrade
+## update & upgrade
 
 ```bash
 yum check-update
@@ -78,7 +79,7 @@ yum -y upgrade：只升级所有包，不升级软件和系统内核，软件和
 
 唯一不同的是，yum upgrade会删除旧版本的package，而yum update则会保留(obsoletes=0)
 
-# 附录
+## 附录
 
 ```yaml
 yum install -y epel-release

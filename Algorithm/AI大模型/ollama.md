@@ -1,20 +1,21 @@
 ---
 title: ollama
 date: 2026-04-07
-tags: [算法, AI]
+  - 算法
+  - AI
 type: note
 status: complete
 ---
 
-# ollama
+## ollama
 
-# 安装
+## 安装
 
 ```yaml
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-## 开启端口
+### 开启端口
 
 ```yaml
 sudo vim /etc/systemd/system/ollama.service

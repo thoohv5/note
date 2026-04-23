@@ -1,24 +1,25 @@
 ---
 title: 远程过程调用(gRPC)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 远程过程调用(gRPC)
+## 远程过程调用(gRPC)
 
 [gRPC](https://www.grpc.io/)
 
-## Protocol Buffers
+### Protocol Buffers
 
 [Developer Guide | Protocol Buffers | Google Developers](https://developers.google.com/protocol-buffers/docs/overview)
 
-# [golang](https://github.com/golang)/[**protobuf**](https://github.com/golang/protobuf)
+## [golang](https://github.com/golang)/[**protobuf**](https://github.com/golang/protobuf)
 
 [golang/protobuf](https://github.com/golang/protobuf)
 
-## protoc-gen-bin
+### protoc-gen-bin
 
 ```sql
 GIT_TAG="v1.4.3" # change as needed
@@ -37,11 +38,11 @@ git -C "/Users/thooh/Workspace/go"/src/github.com/golang/protobuf checkout $GIT_
 go install github.com/golang/protobuf/protoc-gen-go
 ```
 
-# [gogo](https://github.com/gogo)/[**protobuf**](https://github.com/gogo/protobuf)
+## [gogo](https://github.com/gogo)/[**protobuf**](https://github.com/gogo/protobuf)
 
 [gogo/protobuf](https://github.com/gogo/protobuf)
 
-## Protobuf
+### Protobuf
 
 [protocolbuffers/protobuf](https://github.com/google/protobuf)
 
@@ -51,7 +52,7 @@ In the downloads section of each release, you can find pre-built binaries in zip
 protoc "$file" -I "$path" --go_out=plugins=grpc:"$out"
 ```
 
-## Protoc-go-inject-tag
+### Protoc-go-inject-tag
 
 [favadi/protoc-go-inject-tag](https://github.com/favadi/protoc-go-inject-tag)
 
@@ -59,7 +60,7 @@ protoc "$file" -I "$path" --go_out=plugins=grpc:"$out"
 protoc-go-inject-tag -input="$pb_file" >>"$debug" 2>&1
 ```
 
-## Grpc-gateway
+### Grpc-gateway
 
 [grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway)
 

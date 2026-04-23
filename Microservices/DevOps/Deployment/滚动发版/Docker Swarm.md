@@ -1,9 +1,10 @@
 ---
 title: Docker Swarm
 date: 2026-04-07
-tags: [微服务, DevOps]
+  - 微服务
+  - DevOps
 type: note
 status: incomplete
 ---
 
-# Docker Swarm
+## Docker Swarm

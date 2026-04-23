@@ -1,12 +1,13 @@
 ---
 title: Go + Redis
 date: 2026-04-07
-tags: [算法, 数据结构]
+  - 算法
+  - 数据结构
 type: guide
 status: complete
 ---
 
-# Go + Redis
+## Go + Redis
 
 **核心思路**
 1. **存储结构**：使用 Redis 的 **Sorted Set（ZSet）**，以任务的 **执行时间戳** 作为分数（Score），任务内容作为成员（Member）。

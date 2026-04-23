@@ -1,12 +1,13 @@
 ---
 title: NetworkManager
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# NetworkManager
+## NetworkManager
 
 在CentOS系统上，目前有NetworkManager和network两种网络管理工具。如果两种都配置会引起冲突，而且NetworkManager在网络断开的时候，会清理路由，如果一些自定义的路由，没有加入到NetworkManager的配置文件中，路由就被清理掉，网络连接后需要自定义添加上去。
 
@@ -19,7 +20,7 @@ systemctl stop NetworkManager
 systemctl disable NetworkManager
 ```
 
-# **系统设置了静态IP之后还会获取动态IP的问题解决**
+## **系统设置了静态IP之后还会获取动态IP的问题解决**
 
 ```bash
 root:/etc/sysconfig/network-scripts # cat ifcfg-ens34

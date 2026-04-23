@@ -1,19 +1,20 @@
 ---
 title: url & body & header限制
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: reference
 status: complete
 ---
 
-# url & body & header限制
+## url & body & header限制
 
-# 概述
+## 概述
 
 http协议对url长度没有限制
 如果服务器不能处理太长的URI的时候，服务器应该返回414状态（此状态码代表Request-URI太长）
 
-## GET 请求
+### GET 请求
 
 ### 浏览器
 
@@ -32,21 +33,21 @@ http协议对url长度没有限制
 
 ```
 
-# 客户端请求头信息最大缓冲区，默认：4K
+## 客户端请求头信息最大缓冲区，默认：4K
 client_header_buffer_size 512k;
 
-# 客户端请求头信息的大小，默认：1K
+## 客户端请求头信息的大小，默认：1K
 large_client_header_buffers 7 512k;
 
 ```
 
-## POST 请求
+### POST 请求
 
 ### 服务器
 
 ### nginx
 
 ```yaml
-# 客户端请求体的消息，默认：1M
+## 客户端请求体的消息，默认：1M
 client_max_body_size 20m;
 ```

@@ -1,12 +1,13 @@
 ---
 title: ICMP
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: note
 status: complete
 ---
 
-# ICMP
+## ICMP
 
 网际控制报文协议，（ICMP，internet control message protocol）
 
@@ -15,7 +16,7 @@ status: complete
 
 </aside>
 
-## 差错报文
+### 差错报文
 
 ### 终点不可达
 
@@ -35,7 +36,7 @@ status: complete
 
 - 路由器把“改变路由”报文发送给主机，让主机知道下次应将数据报发送给另一个路由器，这样可以通过更好的路由
 
-## 询问报文
+### 询问报文
 
 ### 回送请求和回答
 
@@ -45,10 +46,10 @@ status: complete
 
 - 用于时钟同步和时间测量
 
-# 应用
+## 应用
 
-## 分组网间探测(ping, Packet InterNet Groper)
+### 分组网间探测(ping, Packet InterNet Groper)
 
-## 跟踪路由（traceroute）
+### 跟踪路由（traceroute）
 
 [[../../../Assembly/Linux/CentOS/网络配置/网关/traceroute]]

@@ -1,12 +1,13 @@
 ---
 title: 技术文章配图——Excalidraw
 date: 2026-04-07
-tags: [理论, 画图]
+  - 理论
+  - 画图
 type: note
 status: complete
 ---
 
-# 技术文章配图——Excalidraw
+## 技术文章配图——Excalidraw
 
 标签: Design
 URL: https://zhuanlan.zhihu.com/p/425837520
@@ -15,7 +16,7 @@ URL: https://zhuanlan.zhihu.com/p/425837520
 
 ![](https://pic1.zhimg.com/v2-9a12725336525e6afa849455e072d05f_r.jpg?source=172ae18b)
 
-## 引言
+### 引言
 
 在技术文章的创作或文档撰写中，我们除了需要展示文字和代码之外，经常还需要配以图表或者图形来更加丰富的呈现。
 
@@ -27,7 +28,7 @@ URL: https://zhuanlan.zhihu.com/p/425837520
 
 Excalidraw 是一款开源的虚拟白板绘图工具，可以让您绘制看起来像是手工完成的图表。它的开发始于 2020 年 1 月 1 日，仅在一年后就成为了一款成熟的白板产品，到目前为止，它在 [Github](https://github.com/excalidraw/excalidraw) 上已经拥有 24k 颗星。
 
-## 基本使用
+### 基本使用
 
 以下是这款虚拟白板一些不错的功能。
 
@@ -109,7 +110,7 @@ Excalidraw 开始多人协作也十分容易，在左上角有一个协作图标
 
 Excalidraw 的官方在线版只提供英文字体的手写版，默认情况下并不支持中文手写体。如果我们有中文手写体的需求的话，则需要对官方仓库进行修改部署。
 
-## 示例
+### 示例
 
 关于 Excalidraw 都能够应对哪些主流场景，我在官网和 Twiiter 上找了一些例子以供参考。
 
@@ -129,13 +130,13 @@ Excalidraw 的官方在线版只提供英文字体的手写版，默认情况下
 
 ![](https://pic1.zhimg.com/v2-239d58ae039612d51b55b3abc2ccbe30_b.jpg)
 
-## 总结
+### 总结
 
 就像前面介绍的，Excalidraw 设计简洁，易于上手，能够绘制各种漂亮的手绘风格图形，特别是对于配图有颜值需求的写作者，我强烈推荐您使用体验一下。
 
 当然它也不是适用于所有的绘图场景，例如一些正式、复杂精确或者特定领域的制图任务。找到合适的工具才是最重要的。
 
-## 参考文献
+### 参考文献
 
 - [Rethinking Virtual Whiteboard](https://link.zhihu.com/?target=https3A//blog.excalidraw.com/rethinking-virtual-whiteboard/
 - [One Year of Excalidraw](https://link.zhihu.com/?target=https3A//blog.excalidraw.com/one-year-of-excalidraw/

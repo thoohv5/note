@@ -1,14 +1,15 @@
 ---
 title: Nats
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: reference
 status: complete
 ---
 
-# Nats
+### Nats
 
-# **NATS JetStream的设计目标**
+### **NATS JetStream的设计目标**
 
 - The system must be easy to configure and operate and be observable.
     
@@ -43,6 +44,6 @@ status: complete
     系统不能依赖第三方软件
     
 
-# 附录
+### 附录
 
 [https://docs.nats.io/](https://docs.nats.io/)[https://github.com/nats-io/go-nats-examples](https://github.com/nats-io/go-nats-examples)

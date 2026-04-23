@@ -1,12 +1,13 @@
 ---
 title: Sidecar 模式
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: incomplete
 ---
 
-# Sidecar 模式
+## Sidecar 模式
 
 idecar 是一种将应用功能从应用本身剥离出来作为单独进程的设计模式，可以允许向应用中无侵入的添加功能，避免为了满足第三方需求而添加额外的代码。
 

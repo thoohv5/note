@@ -1,14 +1,15 @@
 ---
 title: kubeadm
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# kubeadm
+## kubeadm
 
-# 概述
+## 概述
 
 kubeadm：集群初始化工具
 
@@ -27,41 +28,41 @@ kubeadm：集群初始化工具
 - 启动 control plane 的组件（apiserver, controller-manager, scheduler 等）
 - 设置网络配置（需要你手动装 CNI，如 flannel 或 calico）
 
-# 命令
+## 命令
 
-## `kubeadm init`
+### `kubeadm init`
 
 ```bash
 kubeadm init --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.23.6 --pod-network-cidr=10.244.0.0/16
 ```
 
-## `kubeadm token`
+### `kubeadm token`
 
 ```bash
-# 查看
+## 查看
 kubeadm token list
 
-# 重新获取
+## 重新获取
 kubeadm token create --print-join-command
 ```
 
-## `kubeadm join`
+### `kubeadm join`
 
 ```bash
-# 添加节点
+## 添加节点
 kubeadm join <master-ip>:<master-port> --token <token> --discovery-token-ca-cert-hash sha256:<hash>
 ```
 
-## `kubeadm certs`
+### `kubeadm certs`
 
 ```bash
-# 检测证书
+## 检测证书
 kubeadm certs check-expiration
 
-# 更新证书
+## 更新证书
 kubeadm certs renew all
 ```
 
-# 附录
+## 附录
 
 [使用 kubeadm 引导集群](https://kubernetes.io/zh-cn/docs/setup/production-environment/tools/kubeadm/)

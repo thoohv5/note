@@ -1,14 +1,15 @@
 ---
 title: 文档（document）
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: note
 status: complete
 ---
 
-# 文档（document）
+## 文档（document）
 
-# Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.
+## Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.
 
 [知乎技术分享：从单机到2000万QPS并发的Redis高性能缓存实践之路-其它分享/专项技术区 - 即时通讯开发者社区!](http://www.52im.net/thread-1968-1-1.html)
 

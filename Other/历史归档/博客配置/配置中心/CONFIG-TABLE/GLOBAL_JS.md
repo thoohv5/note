@@ -1,12 +1,12 @@
 ---
 title: GLOBAL_JS
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# GLOBAL_JS
+## GLOBAL_JS
 
 配置值: console.log('test');
 创建日期: 2025年2月25日 10:57

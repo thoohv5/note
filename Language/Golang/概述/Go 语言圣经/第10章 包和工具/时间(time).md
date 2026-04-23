@@ -1,16 +1,17 @@
 ---
 title: 时间(time)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 时间(time)
+## 时间(time)
 
-# 获取
+## 获取
 
-## 当前
+### 当前
 
 ```go
 // 当前时间
@@ -25,9 +26,9 @@ fmt.Println(time.Now().Date())     // 2021 January 11
 fmt.Println(time.Now().Clock())    // 16 14 19
 ```
 
-## 格式化时间
+### 格式化时间
 
-## 时间戳转时间字符串
+### 时间戳转时间字符串
 
 ```go
 // 格式化 年-月-日 时:分:秒 
@@ -47,7 +48,7 @@ fmt.Println(time.ParseInLocation("2006-01-02 15:04:05", "2016-11-02 16:14:25", t
 fmt.Println(time.Parse("2006-01-02 15:04:05", "2016-11-02 16:14:25")) // 2016-11-02 16:14:25 +0000 UTC <nil>
 ```
 
-# 时间比较
+## 时间比较
 
 ```go
 t1, _ := time.ParseDuration("1h1m1s")
@@ -66,7 +67,7 @@ fmt.Println(time.Since(now.Add(t1))) // -1h1m0.999982131s
 fmt.Println(time.Until(now.Add(t1))) // 1h1m0.999979717s
 ```
 
-# 日期比较
+## 日期比较
 
 ```go
 now := time.Now()

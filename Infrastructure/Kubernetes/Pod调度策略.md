@@ -1,18 +1,19 @@
 ---
 title: Pod调度策略
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# Pod调度策略
+## Pod调度策略
 
-# 概述
+## 概述
 
 在 Kubernetes 中，Pod 的调度策略决定了 **Pod 会被调度到哪个节点上运行**。K8s 提供了多种机制来控制这一行为，让你可以灵活地把 Pod 调度到满足你要求的节点上。
 
-# 总览
+## 总览
 
 | 策略类型 | 用途说明 |
 | --- | --- |
@@ -33,19 +34,19 @@ status: complete
 ### 节点标签
 
 ```yaml
-# 找到你要访问的那个 Pod，打一个唯一标签
+## 找到你要访问的那个 Pod，打一个唯一标签
 kubectl label node <pod-name> scope=demo
 
-# 查看标签
+## 查看标签
 kubectl get node --show-labels
 
-# 移除标签
+## 移除标签
 kubectl label node <node-name> scope-
 ```
 
-# 策略类型
+## 策略类型
 
-## 使用资源请求控制调度
+### 使用资源请求控制调度
 
 ```yaml
 resources:
@@ -59,7 +60,7 @@ resources:
 
 ---
 
-## `nodeSelector`
+### `nodeSelector`
 
 ```yaml
 spec:
@@ -72,7 +73,7 @@ spec:
 
 ---
 
-## `nodeAffinity`
+### `nodeAffinity`
 
 > 可以使用 In、NotIn、Exists 等复杂表达式控制调度行为。
 > 
@@ -92,7 +93,7 @@ spec:
 
 ---
 
-## `taints/tolerations`
+### `taints/tolerations`
 
 在 Kubernetes 中，**`taints`**和**`tolerations`**  是一对用于控制 Pod 和节点调度的机制。它们一起工作，用于确保某些 Pod 只能调度到某些特定的节点，或者某些节点只能接收特定的 Pod。
 
@@ -156,7 +157,7 @@ kubectl get nodes --show-labels
 kubectl describe node <node-name> | grep -i taints
 ```
 
-## `podAffinity/podAntiAffinity`
+### `podAffinity/podAntiAffinity`
 
 ### `podAffinity`与某类 Pod 同节点
 

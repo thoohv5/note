@@ -1,12 +1,13 @@
 ---
 title: CREATE TABLE Statement
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# CREATE TABLE Statement
+## CREATE TABLE Statement
 
 > CREATE TABLE Statement
 > 
@@ -150,9 +151,9 @@ query_expression:
 ```
 
 ```bash
-# 复制表，包括在原始表中定义的任何列属性和索引
+## 复制表，包括在原始表中定义的任何列属性和索引
 CREATE TABLE new_tbl LIKE orig_tbl;
 
-# 复制表
+## 复制表
 CREATE TABLE new_tbl AS SELECT * FROM orig_tbl;
 ```

@@ -1,12 +1,13 @@
 ---
 title: 上下文(context)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 上下文(context)
+## 上下文(context)
 
 使用时遵循context规则
 
@@ -17,7 +18,7 @@ status: complete
 
 在子Context被传递到的协程中，应该对该子Context的Done通道（channel）进行监控，一旦该通道被关闭（即上层运行环境撤销了本协程的执行），应主动终止对当前请求信息的处理，释放资源并返回。
 
-## 定义
+### 定义
 
 ```go
 type Context interface {
@@ -32,7 +33,7 @@ type Context interface {
 }
 ```
 
-## 初始化
+### 初始化
 
 ```go
 // TODO 返回一个非 nil 但空的上下文。
@@ -44,7 +45,7 @@ func TODO() Context
 func Background() Context
 ```
 
-## 函数
+### 函数
 
 ```go
 // 基于父级创建一个具有 Done channel 的 context
@@ -57,6 +58,6 @@ func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
 func WithValue(parent Context, key interface{}, val interface{}) Context
 ```
 
-# 附录
+## 附录
 
 [Go Context 详解之终极无惑-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/1996581)

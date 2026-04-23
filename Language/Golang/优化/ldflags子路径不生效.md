@@ -1,12 +1,13 @@
 ---
 title: golang编译参数ldflags子路径不生效
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# golang编译参数ldflags子路径不生效
+## golang编译参数ldflags子路径不生效
 
 标签: Golang
 URL: https://segmentfault.com/a/1190000041335961

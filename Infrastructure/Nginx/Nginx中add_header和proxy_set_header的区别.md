@@ -1,12 +1,13 @@
 ---
 title: Nginx中add_header和proxy_set_header的区别
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# Nginx中add_header和proxy_set_header的区别
+## Nginx中add_header和proxy_set_header的区别
 
 proxy_set_header是nginx设置请求头给上游服务器，add_header是nginx设置响应头信息给浏览器。
 
@@ -30,7 +31,7 @@ proxy_set_header version 1.0;
 add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Headers' 'X-Requested-With';
 add_header 'Access-Control-Allow-Methods' 'GET,POST,OPTIONS'
-# 由于跨域请求，浏览器会先发送一个OPTIONS的预检请求，我们可以缓存第一次的预检请求的失效时间
+## 由于跨域请求，浏览器会先发送一个OPTIONS的预检请求，我们可以缓存第一次的预检请求的失效时间
 if ($request_method = 'OPTIONS') {
 	add_header 'Access-Control-Max-Age' 2592000;
 	add_header 'Content-Type' 'text/plain; charset=utf-8';

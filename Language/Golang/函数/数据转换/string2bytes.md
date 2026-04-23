@@ -1,15 +1,16 @@
 ---
 title: string2bytes
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# string2bytes
+## string2bytes
 
 ```bash
-# go 1.6
+## go 1.6
 
 // StringToBytes converts string to byte slice without a memory allocation.
 func StringToBytes(s string) (b []byte) {
@@ -26,7 +27,7 @@ func BytesToString(b []byte) string {
 ```
 
 ```bash
-# go 1.7
+## go 1.7
 
 // StringToBytes converts string to byte slice without a memory allocation.
 func StringToBytes(s string) (b []byte) {

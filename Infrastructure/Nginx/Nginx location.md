@@ -1,12 +1,13 @@
 ---
 title: Nginx location
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# Nginx location
+## Nginx location
 
 **location如果没有“/”时，请求就可以模糊匹配以字符串开头的所有字符串，而有“/”时，只能精确匹配字符本身。**
 
@@ -58,7 +59,7 @@ server {
 
 ```
 
-# 总结
+## 总结
 
 ```
 proxy_pass代理地址端口后无任何字符，转发后地址：代理地址+访问URL目录部分

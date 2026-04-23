@@ -1,12 +1,13 @@
 ---
 title: Kafka再平衡(Rebalance)
 date: 2026-04-07
-tags: [基础设施, 消息队列]
+  - 基础设施
+  - 消息队列
 type: guide
 status: complete
 ---
 
-# Kafka再平衡(Rebalance)
+## Kafka再平衡(Rebalance)
 
 在 Kafka 中，**消费者组 (Consumer Group)** 内的消费者要分配 **分区 (partition)** 来消费消息。
 
@@ -14,7 +15,7 @@ status: complete
 
 ---
 
-## 触发 Rebalance 的场景
+### 触发 Rebalance 的场景
 
 主要有几类：
 
@@ -30,7 +31,7 @@ status: complete
 
 ---
 
-## Rebalance 的过程
+### Rebalance 的过程
 
 1. **Group 协调器（Group Coordinator）** 检测到需要 rebalance。
 2. 通知所有消费者 **暂停消费**，进入 rebalance 状态。
@@ -44,7 +45,7 @@ status: complete
 
 ---
 
-## 影响
+### 影响
 
 - **吞吐中断**：在 rebalance 期间，消费者必须暂停消费，消息处理延迟增加。
 - **重复消费**：如果有些 offset 未提交，rebalance 后可能从旧位置重新消费。
@@ -52,7 +53,7 @@ status: complete
 
 ---
 
-## 优化方式（减少不必要的 Rebalance）
+### 优化方式（减少不必要的 Rebalance）
 
 1. **使用静态成员 (Static Membership)**
     - 配置 `group.instance.id`，Pod 短暂下线不会触发 rebalance。

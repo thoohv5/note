@@ -1,14 +1,15 @@
 ---
 title: Volume
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# Volume
+## Volume
 
-# 概述
+## 概述
 
 `Volume`是`Pod`中能够被多个容器访问的共享目录。`Kubernetes`的`volume`概念、用途和目的与`Docker`的`Volume`比较类似，但两者不能等价。
 
@@ -45,7 +46,7 @@ status: complete
     ```
     
 
-## `Volume`类型
+### `Volume`类型
 
 ### `emptyDir`
 
@@ -103,4 +104,4 @@ status: complete
     ```
     
 
-# 附录
+## 附录

@@ -1,14 +1,15 @@
 ---
 title: 二叉排序树（BST）
 date: 2026-04-07
-tags: [算法, 数据结构]
+  - 算法
+  - 数据结构
 type: reference
 status: incomplete
 ---
 
-# 二叉排序树（BST）
+## 二叉排序树（BST）
 
-# 概念
+## 概念
 
 二叉排序树，又称二叉查找树
 

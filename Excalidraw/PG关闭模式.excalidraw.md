@@ -1,13 +1,13 @@
 ---
 
 excalidraw-plugin: parsed
-tags: [excalidraw]
+  - excalidraw
 
 ---
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 
-# Text Elements
+## Text Elements
 pg_ctl ^h0IGloOi
 
 postmaster ^1c0v9Lsb
@@ -31,7 +31,7 @@ wait exit ^9MlVXBno
 如果connsAllowed值不为ALLOW_NO_CONNS时，本次不处理，在下次收到客户端连接退出后发送的SIGCHLD信号后继续处理。 ^QtL9Vxwk
 
 %%
-# Drawing
+## Drawing
 ```json
 {
 	"type": "excalidraw",

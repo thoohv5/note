@@ -1,18 +1,19 @@
 ---
 title: poetry
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: incomplete
 ---
 
-# poetry
+## poetry
 
 ```yaml
-# Linux / macOS
+## Linux / macOS
 curl -sSL https://install.python-poetry.org | python3 -
 
-# Windows (PowerShell)
+## Windows (PowerShell)
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
 ```
 

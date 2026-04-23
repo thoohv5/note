@@ -1,9 +1,10 @@
 ---
 title: OpenAI API
 date: 2026-04-07
-tags: [算法, AI]
+  - 算法
+  - AI
 type: reference
 status: incomplete
 ---
 
-# OpenAI API
+## OpenAI API

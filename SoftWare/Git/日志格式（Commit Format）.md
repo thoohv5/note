@@ -1,14 +1,15 @@
 ---
 title: 日志格式（Commit Format）
 date: 2026-04-07
-tags: [软件工具, Git]
+  - 软件工具
+  - Git
 type: note
 status: complete
 ---
 
-# 日志格式（Commit Format）
+## 日志格式（Commit Format）
 
-# 注释格式化
+## 注释格式化
 
 ### 规范
 
@@ -51,6 +52,6 @@ perf 提高性能
 
 ```
 
-# 附录
+## 附录
 
 [https://ruby-china.org/topics/15737](https://ruby-china.org/topics/15737)[https://blog.51cto.com/u_14637492/2897168](https://blog.51cto.com/u_14637492/2897168)

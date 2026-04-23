@@ -1,18 +1,19 @@
 ---
 title: resize2fs
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: reference
 status: incomplete
 ---
 
-# resize2fs
+## resize2fs
 
-# 概述
+## 概述
 
 resize2fs,resize to filesystem,用于同步文件系统容量到内核
 
-# 命令
+## 命令
 
 ```
 

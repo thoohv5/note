@@ -1,14 +1,14 @@
 ---
 title: kafka规范
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: complete
 ---
 
-# kafka规范
+## kafka规范
 
-# 1.名词解释
+## 1.名词解释
 
 Broker：Kafka集群包含一个或多个服务器，这种服务器被称为broker
 
@@ -28,7 +28,7 @@ Leader：每个Replication集合中的Partition都会选出一个唯一的Leader
 
 ISR(In-Sync Replica)：是Replicas的一个子集，表示目前Alive且与Leader能够“Catch-up”的Replicas集合。由于读写都是首先落到Leader上，所以一般来说通过同步机制从Leader上拉取数据的Replica都会和Leader有一些延迟(包括了延迟时间和延迟条数两个维度)，任意一个超过阈值都会把该Replica踢出ISR。每个Partition都有它自己独立的ISR。
 
-# 2.consumer使用规范
+## 2.consumer使用规范
 
 1. consumer的owner线程需确保不会异常退出，避免客户端无法发起消费请求，阻塞消费。
 2. 确保处理完消息后再做消息commit，避免业务消息处理失败，无法重新拉取处理失败的消息。
@@ -40,14 +40,14 @@ ISR(In-Sync Replica)：是Replicas的一个子集，表示目前Alive且与Leade
 8. Kafka不能保证消费重复的消息，业务侧需保证消息处理的幂等性。
 9. 消费线程退出要调用consumer的close方法，避免同一个组的其他消费者阻塞[sesstion.timeout.ms](http://sesstion.timeout.ms/)的时间。
 
-# 3.producer使用规范
+## 3.producer使用规范
 
 1. 同步复制客户端需要配合使用：ack=all
 2. 配置发送失败重试：retries=3
 3. 发送优化：[linger.ms](http://linger.ms/)=0
 4. 生产端的JVM内存要足够，避免内存不足导致发送阻塞
 
-# 4.topic使用规范
+## 4.topic使用规范
 
 配置要求：推荐3副本，同步复制，最小同步副本数为2，且同步副本数不能等于topic副本数，否则宕机1个副本会导致无法生产消息。
 
@@ -57,7 +57,7 @@ ISR(In-Sync Replica)：是Replicas的一个子集，表示目前Alive且与Leade
 
 topic副本数为3（当前版本限制，不可调整）。
 
-# 5.其他建议
+## 5.其他建议
 
 连接数限制：3000
 
@@ -71,7 +71,7 @@ topic副本数为3（当前版本限制，不可调整）。
 
 如果同一业务，生产者比较小，则可以合并生产者。通过‘atype’的方式，即在消费体指定类型，消费端去处理类型进行消费。
 
-# 6.命名规范【建议】
+## 6.命名规范【建议】
 
 分隔符：只能用'_'，以英文字符开头，不允许出现其他特殊符号
 
@@ -87,7 +87,7 @@ consumer_group：服务名称_b_业务名称，例如med-im需要订阅用户相
 
 如果consumer_group,自己的一个服务只想维护一个，则是服务名称为_b_all，例如:med_im_b_all
 
-# 7.消费规范
+## 7.消费规范
 
 1. 不允许跨app(仓库)消费，用其他仓库的consumer_group消费topic给自己用
 2. 消费者原则上，自己app(仓库)的消费者，只能写在自己维护的项目中

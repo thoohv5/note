@@ -1,14 +1,15 @@
 ---
 title: 列表（list）
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# 列表（list）
+## 列表（list）
 
-## 定义
+### 定义
 
 `Python` 提供了一些组合数据类型，用于将多个值组合在一起，其中，最常用的组合数据类型就 是列表(list)。通过将所有值写在一对方括号`[]`里并以逗号，隔开就可以创建一个`list`对象。列表中 的值(对象)称为列表中的数据元素。这些元素的**数据类型可以不同**。
 
@@ -18,7 +19,7 @@ my_list =[2, 3.14, 8, 'python',[9,10],'hello']
 print(type(my_list)) # <class 'list'>
 ```
 
-## **访问**
+### **访问**
 
 可以用切片操作(slicing operator) 访问一个范围内的多个元素，其格式为:`list[start:end:step=1]`
 
@@ -27,13 +28,13 @@ print(type(my_list)) # <class 'list'>
 ```python
 my_list =[2, 3.14, 8, 'python',[9,10],'hello']
 
-# 通过向下标运算符[]访问元素
+## 通过向下标运算符[]访问元素
 print(my_list[0])   # 2
 print(my_list[3])   # python
 print(my_list[-1])  # hello
 print(my_list[-2])  # [9, 10]
 
-# 通过向下标运算符[]传递起始位置和结束位置的两个下标，返回连续多个元素组成的子 列表(不包含结束位置的元素)
+## 通过向下标运算符[]传递起始位置和结束位置的两个下标，返回连续多个元素组成的子 列表(不包含结束位置的元素)
 print(my_list[1:4]) # [3.14, 8, 'python']
 print(my_list[1:])  # [3.14, 8, 'python', [9, 10], 'hello']
 print(my_list[:4])  # [2, 3.14, 8, 'python']
@@ -49,15 +50,15 @@ print(my_list[::-1])   # ['hello', [9, 10], 'python', 8, 3.14, 2]
 ```python
 my_list =[2, 3.14, 8, 'python',[9,10],'hello']
 
-# list对象是可修改的(mutable)
+## list对象是可修改的(mutable)
 my_list[2]='小白'
 print(my_list) # [2, 3.14, '小白', 'python', [9, 10], 'hello']
 
-# 为指定下标范围内的元素重新赋值，从而替换为另一个 list
+## 为指定下标范围内的元素重新赋值，从而替换为另一个 list
 my_list[2:5]=[10,25]
 print(my_list) # [2, 3.14, 10, 25, 'hello']
 
-# 为指定下标范围内的元素赋值一个空的 list[ ]，相当于删除这个范围内的元素
+## 为指定下标范围内的元素赋值一个空的 list[ ]，相当于删除这个范围内的元素
 my_list[2:4]=[]
 print(my_list) # [2, 3.14, 'hello']
 
@@ -65,7 +66,7 @@ del my_list[1]  # 删除1个元素
 del my_list     # 删除整个list
 ```
 
-## **包含和遍历**
+### **包含和遍历**
 
 ### 用`in`可判断1个元素是否在1个`list`里
 
@@ -89,7 +90,7 @@ print(odd + [9, 7, 5])  # [1, 3, 5, 9, 7, 5]
 print(["re"] * 3)       # ['re', 're', 're']
 ```
 
-## 内置函数
+### 内置函数
 
 ### 枚举函数 enumerate()
 
@@ -124,7 +125,7 @@ print(sorted(my_list, reverse=True)) # [22, 12, 8, 3.14, 2, 1]
 - `sorted()` 返回新的排好序的list(原来的list不改变)。
 - `sum()` 返回list中所有元素的和。
 
-## 成员方法
+### 成员方法
 
 - `append()` 将一个元素加到list的最后。
 - `extend()` 将一个list中所有元素加到另外一个list的后面。

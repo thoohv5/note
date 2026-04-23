@@ -1,16 +1,17 @@
 ---
 title: VRRP
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: note
 status: incomplete
 ---
 
-# VRRP
+## VRRP
 
 虚拟路由器同余协议（Virtual Router Redundancy Protocol，VRRP）
 
-## 工作过程
+### 工作过程
 
 选举Master
 

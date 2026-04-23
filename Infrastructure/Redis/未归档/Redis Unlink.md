@@ -1,12 +1,13 @@
 ---
 title: Redis Unlink
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: note
 status: complete
 ---
 
-# Redis Unlink
+## Redis Unlink
 
 DEL vs UNLINK （4.0.0）
 
@@ -18,6 +19,6 @@ Time complexity: O(1) for each key removed regardless of its size. Then the comm
 This command is very similar to DEL: it removes the specified keys. Just like DEL a key is ignored if it does not exist. However the command performs the actual memory reclaiming in a different thread, so it is not blocking, while DEL is. This is where the command name comes from: the command just unlinks the keys from the keyspace. The actual removal will happen later asynchronously.
 ```
 
-# 附录
+## 附录
 
 [Redis 4.0 非阻塞删除](http://www.russellluo.com/2018/08/async-del-since-redis-4-0.html)

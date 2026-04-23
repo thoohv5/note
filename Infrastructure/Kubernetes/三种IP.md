@@ -1,16 +1,17 @@
 ---
 title: 三种IP
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# 三种IP
+## 三种IP
 
-# 概念
+## 概念
 
-## `Pod IP` —— Pod 的「身份证」
+### `Pod IP` —— Pod 的「身份证」
 
 Pod IP 是每个Pod的卫P地址，它是Docker Engine 根据docker0网桥的P 地址段进 行分配的，通常是 一个虚拟的二层网络，前面我们说过，Kubernetes 要求位于不同 Node 上的 Pod 能够彼此直接通信，所以 Kuber netes 里一 个Pod 里的容器访问另外一 个Pod 里的容器，就 是通过Pod IP 所在的虚拟二层网络进行通信的，而真实的TCP/P 流量则是通过NodeIP所在的 物 理 网 卡流 出 的 。
 
@@ -31,7 +32,7 @@ Pod IP 是每个Pod的卫P地址，它是Docker Engine 根据docker0网桥的P �
 
 ---
 
-## `Cluster IP` —— Service 的统一入口
+### `Cluster IP` —— Service 的统一入口
 
 ### 定义：
 
@@ -58,7 +59,7 @@ Pod IP 是每个Pod的卫P地址，它是Docker Engine 根据docker0网桥的P �
 
 ---
 
-## `Node IP` —— 集群的出口/入口
+### `Node IP` —— 集群的出口/入口
 
 NodeIP是Kubernetes集群中每个节点的物理网卡的IP地址，这是一个真实存在的物理冈络，所有属于这个网络的服务器之间都能通过这个网络直接通信，不管它们中是否有部分节点不属于这个Kubernetes集群。这也表明了Kubernetes集群之外的节点访问区ubernetes集群之内的某个节点或者TCP/IP服务的时候，必须要通过NodeIP进行通信。
 
@@ -78,7 +79,7 @@ NodeIP是Kubernetes集群中每个节点的物理网卡的IP地址，这是一�
 
 ---
 
-# 三种 IP 之间的关系图解：
+## 三种 IP 之间的关系图解：
 
 ```mermaid
 graph LR

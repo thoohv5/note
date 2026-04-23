@@ -3,13 +3,13 @@ title: 概述
 date: 2026-04-15
 ---
 
-# 概述
+## 概述
 
 - **客户端真实 IP**（穿透代理 Nginx/CDN，最重要）
 - **直接连接的代理 IP**（谁直接连了我的服务器）
 - **服务器本机 IP**（我自己的 IP）
 
-# Gin 框架（最常用）
+## Gin 框架（最常用）
 
 ```go
 package main
@@ -89,7 +89,7 @@ func GetServerIP() (string, error) {
 
 ---
 
-# Go 原生 net/http
+## Go 原生 net/http
 
 ```go
 package main
@@ -162,9 +162,9 @@ func GetServerIP() (string, error) {
 
 ---
 
-# 最重要的说明
+## 最重要的说明
 
-## Nginx/CDN 配置
+### Nginx/CDN 配置
 
 ```c
 proxy_set_header X-Real-IP $remote_addr;
@@ -204,7 +204,7 @@ spec:
 	externalTrafficPolicy: Local # ✅ 关键
 ```
 
-## 区别总结
+### 区别总结
 
 |字段|含义|来源|
 |---|---|---|

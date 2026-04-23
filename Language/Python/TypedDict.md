@@ -1,14 +1,15 @@
 ---
 title: TypedDict
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: reference
 status: complete
 ---
 
-# TypedDict
+## TypedDict
 
-# ⚡ **什么时候用 TypedDict？**
+## ⚡ **什么时候用 TypedDict？**
 
 你应该用 TypedDict 当：
 
@@ -22,7 +23,7 @@ status: complete
 
 ---
 
-# ⚡ **什么时候用 Pydantic？**
+## ⚡ **什么时候用 Pydantic？**
 
 你需要：
 

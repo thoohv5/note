@@ -1,12 +1,12 @@
 ---
 title: CodeView
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: incomplete
 ---
 
-# CodeView
+## CodeView
 
 1. go format
 2. https—-

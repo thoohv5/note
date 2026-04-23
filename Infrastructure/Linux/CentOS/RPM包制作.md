@@ -1,12 +1,13 @@
 ---
 title: RPM包制作
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: incomplete
 ---
 
-# RPM包制作
+## RPM包制作
 
 The main tasks in building RPMs are:
 
@@ -19,4 +20,4 @@ The main tasks in building RPMs are:
 7. BUilding the RPMs
 8. Testing the RPMs
 
-## Spec Files
+### Spec Files

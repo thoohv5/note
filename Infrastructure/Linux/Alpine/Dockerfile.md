@@ -1,12 +1,13 @@
 ---
 title: Dockerfile
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# Dockerfile
+## Dockerfile
 
 ```bash
 FROM golang:1.17-alpine

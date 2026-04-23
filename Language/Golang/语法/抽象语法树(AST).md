@@ -1,14 +1,15 @@
 ---
 title: 抽象语法树(AST)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 抽象语法树(AST)
+## 抽象语法树(AST)
 
-# 简介
+## 简介
 
 ### AST（Abstract Syntax Tree）
 
@@ -16,11 +17,11 @@ status: complete
 
 大多数编译器和解释器都使用AST作为源代码的内部表示，AST通常会省略语法树中的分号、换行字符、白空格、大括号、方括号和圆括号等。
 
-## 生成步骤
+### 生成步骤
 
 词法分析器(Lexar)对文本(Source Code)进行词法分析，生成Token。一般接下来是将它传给一个解析器，然后检索生成AST。
 
-## Golang中的AST
+### Golang中的AST
 
 ### 官方包
 
@@ -238,7 +239,7 @@ func main() {
 
 ![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202312281708541.png)
 
-# 附录
+## 附录
 
 [https://yuroyoro.github.io/goast-viewer/index.html](https://yuroyoro.github.io/goast-viewer/index.html)
 

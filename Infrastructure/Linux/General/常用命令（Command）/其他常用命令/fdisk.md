@@ -1,36 +1,37 @@
 ---
 title: fdisk
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: reference
 status: complete
 ---
 
-# fdisk
+## fdisk
 
-# 概述
+## 概述
 
 fdisk, Partition table manipulator for Linux, 用于管理磁盘的分区信息
 
-# 命令
+## 命令
 
 [[fdisk]]
 [[mkfs.ext4]]
 
 ```
-# 查看分区
+## 查看分区
 ll /dev/sd*
 
-# 查看硬盘分区
+## 查看硬盘分区
 fdisk -l
 
-# 格式化磁盘
+## 格式化磁盘
 mkfs.ext4 /dev/sd[a/b]
 
 ```
 
 ```
-# 分区
+## 分区
 fdisk /dev/sd[a/b]
 
 ```
@@ -55,9 +56,9 @@ fdisk /dev/sd[a/b]
 | **w write table to disk and exit** | 写分区表信息到硬盘，保存操作并退出 |
 | x extra functionality (experts only) | 额外功能(仅限专家) |
 
-# [[磁盘分区]]
+## [[磁盘分区]]
 
-# `df -h` 和 `fdisk -l`
+## `df -h` 和 `fdisk -l`
 
 `df -h`
 

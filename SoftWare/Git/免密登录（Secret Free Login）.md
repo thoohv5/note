@@ -1,12 +1,13 @@
 ---
 title: 免密登录（Secret Free Login）
 date: 2026-04-07
-tags: [软件工具, Git]
+  - 软件工具
+  - Git
 type: note
 status: complete
 ---
 
-# 免密登录（Secret Free Login）
+## 免密登录（Secret Free Login）
 
 ```bash
 git config --global user.name thooh
@@ -30,13 +31,13 @@ ssh -T git@zdns.cn
 ```
 
 ```bash
-# Could not open a connection to your authentication agent.
+## Could not open a connection to your authentication agent.
 ssh-agent bash
 
-# 启动 SSH 代理并设置环境变量
+## 启动 SSH 代理并设置环境变量
 eval "$(ssh-agent -s)"
 
-# 正确的权限
+## 正确的权限
 chmod 400 id_rsa
 
 ```

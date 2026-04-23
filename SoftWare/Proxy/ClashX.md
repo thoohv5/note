@@ -1,14 +1,14 @@
 ---
 title: ClashX
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: note
 status: incomplete
 ---
 
-# ClashX
+## ClashX
 
-# 出站模式
+## 出站模式
 
 全局模式：电脑的所有流量通过[代理服务器](https://so.csdn.net/so/search?q=代理服务)A8&spm=1001.2101.3001.7020进行转发
 

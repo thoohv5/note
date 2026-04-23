@@ -1,12 +1,13 @@
 ---
 title: 监控 Linux 服务器
 date: 2026-04-07
-tags: [微服务, 服务治理]
+  - 微服务
+  - 服务治理
 type: guide
 status: complete
 ---
 
-# 监控 Linux 服务器
+## 监控 Linux 服务器
 
 ### 使用 **Node Exporter** 收集主机指标：
 

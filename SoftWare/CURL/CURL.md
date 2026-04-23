@@ -1,12 +1,13 @@
 ---
 title: CURL
 date: 2026-04-07
-tags: [软件工具, CURL]
+  - 软件工具
+  - CURL
 type: note
 status: complete
 ---
 
-# CURL
+## CURL
 
 ```bash
 curl -w "%{time_namelookup}::%{time_connect}::%{time_starttransfer}::%{time_total}::%{speed_download}" "\n"

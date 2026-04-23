@@ -1,12 +1,13 @@
 ---
 title: 图片去重（oss+哈希算法）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 图片去重（oss+哈希算法）
+## 图片去重（oss+哈希算法）
 
 ### 哈希算法
 
@@ -27,10 +28,10 @@ pHash中文叫感知哈希算法，通过离散余弦变换(DCT)降低图片频�
 5. **哈希值计算**。将每个DCT值，与平均值进行比较。大于或等于平均值，记为1，小于平均值，记为0，由此生成二进制数组。*（与aHash类似）*
 6. **图片配对，计算汉明距离**
 
-# 代码
+## 代码
 
 ```python
-# -*- coding: utf-8 -*-
+## -*- coding: utf-8 -*-
 import pandas as pd
 import cv2
 import time

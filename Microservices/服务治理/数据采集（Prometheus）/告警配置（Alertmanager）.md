@@ -1,12 +1,13 @@
 ---
 title: 告警配置（Alertmanager）
 date: 2026-04-07
-tags: [微服务, 服务治理]
+  - 微服务
+  - 服务治理
 type: note
 status: complete
 ---
 
-# 告警配置（Alertmanager）
+## 告警配置（Alertmanager）
 
 ### **安装**
 
@@ -62,6 +63,6 @@ receivers:
 
 ---
 
-# 附录
+## 附录
 
 [Prometheus全面详解！！！（透透透）-CSDN博客](https://blog.csdn.net/m0_75233142/article/details/146704903)

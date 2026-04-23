@@ -1,12 +1,13 @@
 ---
 title: which
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# which
+## which
 
 查看可执行文件的位置，在**PATH**变量指定的路径中，搜索某个系统命令的位置，并且返回**第一个**搜索结果
 

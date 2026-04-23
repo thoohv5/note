@@ -1,12 +1,13 @@
 ---
 title: 当通过ldflags选项传递给go命令时，w标志是什么意思？(What does the w flag mean when passed in via the ldflags option to the go command?)_电脑培训
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 当通过ldflags选项传递给go命令时，w标志是什么意思？(What does the w flag mean when passed in via the ldflags option to the go command?)_电脑培训
+## 当通过ldflags选项传递给go命令时，w标志是什么意思？(What does the w flag mean when passed in via the ldflags option to the go command?)_电脑培训
 
 标签: Golang
 URL: https://www.656463.com/wenda/dtgldflagsxxcdjgomlswbzssmys_373
@@ -18,14 +19,14 @@ URL: https://www.656463.com/wenda/dtgldflagsxxcdjgomlswbzssmys_373
 Context:go 1.2, ubuntu 12.10Goal:Reduce size of compiled binariesCurrently in my build process, I run "go install" to generate the binary. The I read from somewhere that if I pass in-w it will shrink the binary. I tried it by passing it into the-ldflags option & my binary lost 1MB in size.Is this-w flag documented anywhere? What does it actually do?I then discovered thestrip -s <binary> command and ran that on top of-w and got another weight loss of 750KB ! The resulting binary runs fine. Does stripping cause problems in any situations ?
 ```
 
-## 最满意答案
+### 最满意答案
 
 ```
  如果使用-ldflags'-w -s'进行编译，您将获得最小的二进制文件。 -w关闭DWARF调试信息：由于所有元数据gdb所需的内容都不会包含在内，所以您将无法在二进制文件上使用gdb查看特定函数或设置断点或获取堆栈跟踪。 您也将无法使用其他依赖于信息的工具，如pprof分析。 -s关闭Go符号表的生成：您将无法使用'go tool nm'列出二进制文件中的符号。 strip -s就像传递给-ldflags一样，但是它不会去掉很多东西。 '去工具纳米'可能仍然工作'strip -s'后。 我不完全确定。 这些 - 不是-ldflags -w，不是-ldflags -s，而不是strip -s - 都不会影响实际程序的执行。 它们只影响您是否可以使用其他工具调试或分析程序。
 You will get the smallest binaries if you compile with -ldflags '-w -s'. The -w turns off DWARF debugging information: you will not be able to use gdb on the binary to look at specific functions or set breakpoints or get stack traces, because all the metadata gdb needs will not be included. You will also not be able to use other tools that depend on the information, like pprof profiling. The -s turns off generation of the Go symbol table: you will not be able to use 'go tool nm' to list the symbols in the binary. Strip -s is like passing -s to -ldflags but it doesn't strip quite as much. 'Go tool nm' might still work after 'strip -s'. I am not completely sure.None of these - not -ldflags -w, not -ldflags -s, not strip -s - should affect the execution of the actual program. They only affect whether you can debug or analyze the program with other tools.
 ```
 
-## 相关问答
+### 相关问答
 
 [更多](https://www.656463.com/wenda)
 

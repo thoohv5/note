@@ -1,14 +1,15 @@
 ---
 title: Operator
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# Operator
+## Operator
 
-# 概述
+## 概述
 
 **Operator 是一种用于自动化管理 Kubernetes 应用程序的控制器，结合了业务逻辑和 Kubernetes 原生机制。**
 
@@ -17,13 +18,13 @@ status: complete
 > Operator = 自定义控制器 + 自定义资源（CRD）它能像 K8s 的原生命令一样“理解你的业务应用”，并做出智能运维操作。
 > 
 
-# 使用场景
+## 使用场景
 
 - 自动创建数据库副本（如：MongoDB Operator）•
 - 自动故障迁移 / 恢复• 自动扩容 / 缩容• 定时备份 / 升级
 - 一键安装复杂系统（Kafka、Redis、Elastic）
 
-# 核心构成
+## 核心构成
 
 | 组件 | 作用 |
 | --- | --- |
@@ -31,7 +32,7 @@ status: complete
 | Controller | 监听资源变动并自动执行相应逻辑 |
 | Reconcile Loop | 核心逻辑：当前状态 ≠ 期望状态 → 修正它 |
 
-# Operator 框架（Operator SDK）
+## Operator 框架（Operator SDK）
 
 官方推荐使用 Operator SDK 来快速开发 Operator，支持：
 
@@ -39,7 +40,7 @@ status: complete
 - Ansible（适合脚本驱动）
 - Helm（适合已有 Helm chart）
 
-# 实操
+## 实操
 
 ### **第 1 步：安装 Operator SDK**
 

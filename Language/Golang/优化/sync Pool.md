@@ -1,14 +1,15 @@
 ---
 title: sync.Pool
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# sync.Pool
+## sync.Pool
 
-# 概述
+## 概述
 
 **`sync.Pool`** 是 Go 标准库中提供的一个对象池实现，用于缓存和复用临时对象，减少内存分配和垃圾回收压力。
 
@@ -24,12 +25,12 @@ status: complete
 - GC 之后，如果还有 goroutine 来 `pool.Get()`，但 active cache 已经空了，就会去 victim cache里找。
 - 这样就避免了在 GC 后，**缓存对象一下子全丢光**的问题。
 
-# **核心特点**
+## **核心特点**
 
 - **不保证对象一定会被复用**（GC 时可能清理）。
 - **线程安全**，可在多 goroutine 下安全使用。
 
-# **基本用法**
+## **基本用法**
 
 ```go
 var myPool = sync.Pool{
@@ -53,23 +54,23 @@ func PutObject(obj *MyObject) {
 }
 ```
 
-# **核心设计思想**
+## **核心设计思想**
 
-## **两级缓存架构**
+### **两级缓存架构**
 
 **`sync.Pool`** 采用了两级缓存设计：
 
 - **P-local pool**：每个 P (Processor) 维护的本地池，有private，shared两部分
 - **victim cache**：上次 GC 时幸存的对象缓存
 
-## **无锁优化**
+### **无锁优化**
 
 通过 `P-local` 设计减少锁竞争：
 
 - Get/Put 操作优先访问当前 P 的本地池
 - 只有本地池为空时才会尝试从其他 P "偷"对象
 
-## **数据结构**
+### **数据结构**
 
 ### **核心结构**
 
@@ -98,13 +99,13 @@ type poolLocalInternal struct {
     shared  poolChain // 本地P可以push/pop，其他P只能pop}
 ```
 
-## **关键设计点**
+### **关键设计点**
 
 1. **poolLocal 填充**：通过 **`pad`** 填充缓存行(通常128字节)，避免 CPU 缓存伪共享(false sharing)
 2. **private 字段**：快速路径，无锁访问
 3. **shared 字段**：无锁队列(poolChain)，使用原子操作实现
 
-## **工作流程**
+### **工作流程**
 
 ### **Get 操作流程**
 
@@ -125,7 +126,7 @@ type poolLocalInternal struct {
 2. 清空 local 池
 3. 下次 Get 时会先检查 victim cache
 
-## **技术优化**
+### **技术优化**
 
 ### **无锁队列(poolChain)**
 
@@ -173,14 +174,14 @@ type poolDequeue struct {
     ```
     
 
-## **性能优化**
+### **性能优化**
 
 1. **private 字段**：避免高频小对象的锁竞争
 2. **poolChain 设计**：写入和读取分离，减少竞争
 3. **批量转移**：GC 时批量处理对象，减少停顿
 4. **缓存行填充**：防止多核 CPU 缓存失效
 
-# 附录
+## 附录
 
 [Golang Sync.Pool浅析](https://segmentfault.com/a/1190000019973632)
 

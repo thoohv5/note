@@ -1,12 +1,13 @@
 ---
 title: 结构体(struct)
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: incomplete
 ---
 
-# 结构体(struct)
+## 结构体(struct)
 
 go语言仅支持封装，不支持继承和多态
 

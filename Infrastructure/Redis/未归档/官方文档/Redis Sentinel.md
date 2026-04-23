@@ -1,18 +1,19 @@
 ---
 title: Redis Sentinel
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: incomplete
 ---
 
-# Redis Sentinel
+## Redis Sentinel
 
-## 作用
+### 作用
 
 主从切换
 
-## 切换过程
+### 切换过程
 
 ### 监控
 

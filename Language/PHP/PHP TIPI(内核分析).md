@@ -1,14 +1,15 @@
 ---
 title: PHP TIPI(内核分析)
 date: 2026-04-07
-tags: [编程语言, PHP]
+  - 编程语言
+  - PHP
 type: guide
 status: complete
 ---
 
-# PHP TIPI(内核分析)
+## PHP TIPI(内核分析)
 
-## PHP源码目录结构
+### PHP源码目录结构
 
 1. 根目录
 README.* 各种说明文件
@@ -31,7 +32,7 @@ PHP的测试脚本集合，包含PHP各项功能的测试文件
 10. win32
 windows平台相关的一些实现
 
-## 生命周期
+### 生命周期
 
 ```
 graph TB
@@ -74,26 +75,26 @@ D-->E(模块关闭阶段)
 
 ![](http://www.php-internals.com/images/book/chapt02/02-01-013-multithreaded-lift-cycle.png)
 
-## SAPI接口
+### SAPI接口
 
 SAPI(ServerApplication PRogramming Interface) PHP提供的一个接口机制，使得PHP可以和其他应用进行交互数据/协作。
 
 ![](http://www.php-internals.com/images/book/chapt02/02-02-01-sapi.png)
 
-## 变量
+### 变量
 
-## 函数
+### 函数
 
-## 类和对象
+### 类和对象
 
-## 内存管理
+### 内存管理
 
-## Zend虚拟机
+### Zend虚拟机
 
-## 线程安全
+### 线程安全
 
-## 异常和错误
+### 异常和错误
 
-## 缓冲
+### 缓冲
 
 ##

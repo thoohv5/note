@@ -1,18 +1,19 @@
 ---
 title: RSYSLOG
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# RSYSLOG
+## RSYSLOG
 
 ```
 
 ps aux | grep "rsyslog" | grep -v "grep"
 
-# 开机自启动
+## 开机自启动
 chkconfig --list | grep rsyslog
 systemctl list-unit-files rsyslog.service
 

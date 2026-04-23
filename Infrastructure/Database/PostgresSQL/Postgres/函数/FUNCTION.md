@@ -1,12 +1,13 @@
 ---
 title: FUNCTION
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# FUNCTION
+## FUNCTION
 
 ```
 CREATE [ OR REPLACE ] FUNCTION
@@ -30,7 +31,7 @@ CREATE [ OR REPLACE ] FUNCTION
 
 ```
 
-# 重载
+## 重载
 
 指在同一个模式下定义具有相同名称但参数列表不同的多个函数。
 函数重载主要基于函数的参数签名（参数数量、类型以及类型顺序）
@@ -47,14 +48,14 @@ create or replace
 
 ```
 
-## 打印
+### 打印
 
 ```
 raise notice xx
 
 ```
 
-# 示例
+## 示例
 
 ```
 

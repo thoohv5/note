@@ -1,12 +1,13 @@
 ---
 title: MySQL 8.0 Instant算法
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: guide
 status: complete
 ---
 
-# MySQL 8.0 Instant算法
+## MySQL 8.0 Instant算法
 
 ```sql
 ALTER TABLE ... ALGORITHM=INSTANT

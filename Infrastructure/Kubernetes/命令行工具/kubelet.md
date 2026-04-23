@@ -1,12 +1,13 @@
 ---
 title: kubelet
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: incomplete
 ---
 
-# kubelet
+## kubelet
 
 kubelet：节点服务进程
 

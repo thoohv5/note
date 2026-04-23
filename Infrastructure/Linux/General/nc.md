@@ -1,12 +1,13 @@
 ---
 title: nc
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# nc
+## nc
 
 ```bash
 yum install nc -y
@@ -30,10 +31,10 @@ yum install nc -y
 ### CentOS6
 
 ```bash
-# 扫描TCP端口，端口范围是 20-2000
+## 扫描TCP端口，端口范围是 20-2000
 nc -rz  -w 2 10.252.32.122 20-2000
 
-# 扫描UDP端口，端口范围是 20-2000
+## 扫描UDP端口，端口范围是 20-2000
 nc -z -u -w 2 10.252.32.122 20-2000
 ```
 

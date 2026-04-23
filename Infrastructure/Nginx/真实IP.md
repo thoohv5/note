@@ -1,12 +1,13 @@
 ---
 title: 真实IP
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: incomplete
 ---
 
-# 真实IP
+## 真实IP
 
 ```bash
 如果你想让上游知道真实客户端 IP → 用 X-Forwarded-For。

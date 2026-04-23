@@ -1,14 +1,15 @@
 ---
 title: Role/RoleBinding
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# Role/RoleBinding
+## Role/RoleBinding
 
-# **Role**
+## **Role**
 
 作用于命名命名空间。
 
@@ -30,7 +31,7 @@ status: complete
     ```
     
 
-# **RoleBinding**
+## **RoleBinding**
 
 把 Role 绑定给用户或服务账户。
 
@@ -53,20 +54,20 @@ status: complete
     ```
     
 
-# 查看
+## 查看
 
 ```bash
-# 查看所有 RoleBinding
+## 查看所有 RoleBinding
 kubectl get rolebindings --all-namespaces
 
-# 查看 RoleBinding 详情
+## 查看 RoleBinding 详情
 kubectl describe rolebinding <binding-name> -n <namespace>
 
-# 查看 Role 权限
+## 查看 Role 权限
 kubectl describe role <role-name> -n <namespace>
 ```
 
-# 实验
+## 实验
 
 - YAML示例
     

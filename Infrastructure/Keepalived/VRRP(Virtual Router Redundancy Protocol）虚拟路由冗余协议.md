@@ -1,14 +1,15 @@
 ---
 title: VRRP(Virtual Router Redundancy Protocol）虚拟路由冗余协议
 date: 2026-04-07
-tags: [基础设施, Keepalived]
+  - 基础设施
+  - Keepalived
 type: guide
 status: complete
 ---
 
-# VRRP(Virtual Router Redundancy Protocol）虚拟路由冗余协议
+## VRRP(Virtual Router Redundancy Protocol）虚拟路由冗余协议
 
-# 目的
+## 目的
 
 IETF（Internet Engineering Task Force，因特网工程任务组）推出了**VRRP（Virtual Router Redundancy Protocol）虚拟路由冗余协议**，**来解决局域网主机访问外部网络的可靠性问题**。
 
@@ -16,7 +17,7 @@ VRRP是一种容错协议，它通过把几台路由设备联合组成一台虚�
 
 使用VRRP的优势在于：既不需要改变组网情况，也不需要在主机上配置任何动态路由或者路由发现协议，就可以获得更高可靠性的缺省路由。
 
-## **工作过程**
+### **工作过程**
 
 路由器使用VRRP 功能后，会根据优先级确定自己在备份组中的角色。优先级高的路由器成为Master 路由器，优先级低的成为Backup 路由器。**Master 拥有对外服务的虚拟IP，提供各种网络功能，并定期发送VRRP 报文，通知备份组内的其他设备自己工作正常；Backup 路由器只接收Master 发来的报文信息，用来监控Master 的运行状态。当Master 失效时，Backup 路由器进行选举，优先级高的Backup 将成为新的Master 。**
 
@@ -26,7 +27,7 @@ VRRP是一种容错协议，它通过把几台路由设备联合组成一台虚�
 
 如果Backup 路由器的定时器超时后仍未收到Master 路由器发送来的VRRP报文，则认为Master 路由器已经无法正常工作，此时Backup 路由器会认为自己是Master 路由器，并对外发送VRRP报文。备份组内的路由器根据优先级选举出Master 路由 器，承担报文的转发功能。
 
-## 选举机制
+### 选举机制
 
 VRRP路由器在运行过程中有三种状态
 
@@ -45,7 +46,7 @@ VRRP路由器在运行过程中有三种状态
 
 </aside>
 
-# 附录
+## 附录
 
 [VRRP概述](https://www.cnblogs.com/yechuan/archive/2012/04/17/2453707.html)
 

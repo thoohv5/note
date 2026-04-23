@@ -1,12 +1,13 @@
 ---
 title: WithNsResolver WithNameServer WithNameServerDomain
 date: 2026-04-07
-tags: [基础设施, 消息队列]
+  - 基础设施
+  - 消息队列
 type: note
 status: complete
 ---
 
-# WithNsResolver WithNameServer WithNameServerDomain
+## WithNsResolver WithNameServer WithNameServerDomain
 
 `WithNsResolver`、`WithNameServer`、`WithNameServerDomain` 是 RocketMQ Go SDK 中用于配置 NameServer 地址的方式，它们的作用类似，但适用场景不同。下面是它们的详细区别总结：
 

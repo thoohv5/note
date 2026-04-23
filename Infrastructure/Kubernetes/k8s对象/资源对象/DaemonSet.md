@@ -1,14 +1,15 @@
 ---
 title: DaemonSet
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# DaemonSet
+## DaemonSet
 
-# 概述
+## 概述
 
 `DaemonSet` 是 Kubernetes 中的一种特殊控制器，用于在 **每个节点（或指定节点）上运行一个 Pod 副本**。它非常适合需要在所有节点上运行的系统服务，比如：
 
@@ -24,7 +25,7 @@ status: complete
 
 ---
 
-## 示例 YAML
+### 示例 YAML
 
 ```yaml
 apiVersion: apps/v1
@@ -49,7 +50,7 @@ spec:
 
 ---
 
-## 📌 关键点说明
+### 📌 关键点说明
 
 1. 每个 Node，会自动调度一个 Pod 副本
 2. 新节点加入，自动部署对应 Pod
@@ -62,7 +63,7 @@ spec:
 
 ---
 
-## 🔍 查看 DaemonSet 状态
+### 🔍 查看 DaemonSet 状态
 
 ```bash
 kubectl get daemonset -n kube-system
@@ -71,7 +72,7 @@ kubectl describe daemonset <name> -n <namespace>
 
 ---
 
-## 🎯 限定某些节点运行（通过 NodeSelector 或 Tolerations）
+### 🎯 限定某些节点运行（通过 NodeSelector 或 Tolerations）
 
 如果只想在特定节点上运行，比如标签是 `node-role.kubernetes.io/worker=true`：
 
@@ -95,7 +96,7 @@ tolerations:
 
 ---
 
-## 🔁 DaemonSet 与 Deployment 对比
+### 🔁 DaemonSet 与 Deployment 对比
 
 | 特性 | DaemonSet | Deployment |
 | --- | --- | --- |
@@ -106,7 +107,7 @@ tolerations:
 
 ---
 
-## ⚙️ 滚动升级 DaemonSet（从 Kubernetes 1.6+ 开始支持）
+### ⚙️ 滚动升级 DaemonSet（从 Kubernetes 1.6+ 开始支持）
 
 ```bash
 kubectl rollout status daemonset <name> -n <namespace>

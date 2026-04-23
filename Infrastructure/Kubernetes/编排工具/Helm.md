@@ -1,14 +1,15 @@
 ---
 title: Helm
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# Helm
+## Helm
 
-## **Helm 与 Chart**
+### **Helm 与 Chart**
 
 Helm是由Deis 公司开发的一种更具系统性的管理和封装应用的解决方案，它参考了各大 Linux 发行版管理应用的思路，应用格式是 Chart。(相当于yum之于CentOs，apt-get之于Ubuntu)
 

@@ -1,12 +1,13 @@
 ---
 title: SQL中JOIN...ON...AND与JOIN...ON...WHERE的区别
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: guide
 status: complete
 ---
 
-# SQL中JOIN...ON...AND与JOIN...ON...WHERE的区别
+## SQL中JOIN...ON...AND与JOIN...ON...WHERE的区别
 
 ### INNER JOIN
 
@@ -18,7 +19,7 @@ status: complete
 2. 若需连接后全局筛选（可接受左表行丢失） → 筛选条件放 WHERE；
 3. 若需筛选聚合结果（如：SUM/COUNT 后） → 用 HAVING 替代 WHERE，避免过滤左表。
 
-# 附录
+## 附录
 
 [MySql 之 left join 避坑指南](https://mp.weixin.qq.com/s/83h0QD58Gz0zUikSRtqqdA)
 

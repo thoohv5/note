@@ -1,26 +1,27 @@
 ---
 title: Redis 订阅事件
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Redis 订阅事件
+## Redis 订阅事件
 
-# 开启键空间通知功能
+## 开启键空间通知功能
 
-## 配置
+### 配置
 
 ```yaml
-# 文件配置
+## 文件配置
 notify-keyspace-events Ex
 
-# 动态配置
+## 动态配置
 redis-cli config set notify-keyspace-events Ex
 ```
 
-## 选项
+### 选项
 
 - `K` 键空间事件，通过 `__keyspace@ 发布 <db>__` 前缀。
 - `E` Keyevent 事件，以 `__keyevent@ 发布 <db>__` 前缀。
@@ -40,7 +41,7 @@ redis-cli config set notify-keyspace-events Ex
 
 “notify-keyspace-events”以由零个或多个字符组成的字符串作为参数。空字符串表示通知被禁用
 
-# 订阅事件
+## 订阅事件
 
 ```yaml
 __keyevent@<db>__:<event> 或 __keyspace@<db>__:<key>
@@ -50,6 +51,6 @@ redis-cli psubscribe '__keyevent@0__:del'
 redis-cli psubscribe '__keyspace@0__:mykey'
 ```
 
-# 附录
+## 附录
 
 [Redis keyspace notifications](https://redis.io/docs/latest/develop/use/keyspace-notifications/)

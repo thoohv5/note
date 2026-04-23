@@ -1,14 +1,15 @@
 ---
 title: k8s测试工具
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# k8s测试工具
+## k8s测试工具
 
-## **1. 全能型排查工具箱(已成功)**
+### **1. 全能型排查工具箱(已成功)**
 
 **镜像名称**: **`nicolaka/netshoot`**
 
@@ -23,7 +24,7 @@ kubectl run tmp-shell --rm -it --image nicolaka/netshoot -- /bin/bash
 - HTTP工具：curl, httpie
 - 其他：jq, yq, vim, tmux
 
-## **2. 网络诊断专用**
+### **2. 网络诊断专用**
 
 **镜像名称**: **`alpine/socat`**
 
@@ -37,7 +38,7 @@ kubectl run tmp-socat --rm -it --image alpine/socat -- sh
 - TCP/UDP 连接验证
 - 网络代理调试
 
-## **3. 存储系统排查**
+### **3. 存储系统排查**
 
 **镜像名称**: **`bitnami/kubectl`**
 
@@ -51,7 +52,7 @@ kubectl run test-kubectl --rm -it --image bitnami/kubectl -- bash
 - 存储类检查
 - 访问集群内部资源
 
-## **4. 性能分析工具**
+### **4. 性能分析工具**
 
 **镜像名称**: **`sysdig/sysdig`**
 
@@ -65,7 +66,7 @@ kubectl run test-sysdig --rm -it --image sysdig/sysdig -- bash
 - csysdig 交互式监控
 - 容器性能分析
 
-## **5. 安全审计工具**
+### **5. 安全审计工具**
 
 **镜像名称**: **`aquasec/kube-bench`**
 
@@ -79,7 +80,7 @@ kubectl run test-bench --rm -it --image aquasec/kube-bench -- bash
 - 安全配置检查
 - 合规性审计
 
-## **6. 集群状态诊断**
+### **6. 集群状态诊断**
 
 **镜像名称**: **`bitnami/kube-state-metrics`**
 
@@ -102,7 +103,7 @@ spec:
 - 对象计数统计
 - 资源分配分析
 
-## **7. 网络策略验证**
+### **7. 网络策略验证**
 
 **镜像名称**: **`network-multitool`**
 

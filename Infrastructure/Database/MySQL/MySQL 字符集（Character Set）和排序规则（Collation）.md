@@ -1,14 +1,15 @@
 ---
 title: MySQL 字符集（Character Set）和排序规则（Collation）
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# MySQL 字符集（Character Set）和排序规则（Collation）
+## MySQL 字符集（Character Set）和排序规则（Collation）
 
-## 一、基本概念
+### 一、基本概念
 
 ### 字符集（Character Set）
 
@@ -80,7 +81,7 @@ status: complete
 
 ---
 
-## 层级设置
+### 层级设置
 
 MySQL 的字符集和排序规则可以在多个层级定义：
 
@@ -107,20 +108,20 @@ SET character_set_results = utf8mb4; # MySQL返回编码`   | 当前客户端连
 
 ---
 
-## 常用命令
+### 常用命令
 
 ### 查看全局字符集设置
 
 ```sql
-# 字符集
+## 字符集
 SHOW VARIABLES LIKE 'character_set_%';
-# 排序规则
+## 排序规则
 SHOW VARIABLES LIKE 'collation_%';
 ```
 
 ---
 
-## 推荐配置（现代系统）
+### 推荐配置（现代系统）
 
 在 **MySQL 8.0** 或新项目中，建议统一使用：
 
@@ -136,7 +137,7 @@ COLLATE utf8mb4_0900_ai_ci
 
 ---
 
-## ⚠️常见问题
+### ⚠️常见问题
 
 | 问题 | 原因 | 解决方案 |
 | --- | --- | --- |
@@ -146,8 +147,8 @@ COLLATE utf8mb4_0900_ai_ci
 | 联表排序报错 “Illegal mix of collations” | 两列排序规则不同 | 在 SQL 中用 `COLLATE` 明确指定 |
 
 ```sql
-# When comparing nonbinary strings (CHAR, VARCHAR, TEXT),
-# MySQL ignores trailing spaces.
+## When comparing nonbinary strings (CHAR, VARCHAR, TEXT),
+## MySQL ignores trailing spaces.
 SELECT _utf8mb4'1' COLLATE utf8mb4_unicode_ci = _utf8mb4'1 ' COLLATE utf8mb4_unicode_ci;
 
 SELECT 'a' = 'a ';     -- 1

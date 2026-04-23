@@ -1,32 +1,32 @@
 ---
 title: Zerotier根服务器
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: guide
 status: complete
 ---
 
-# Zerotier根服务器
+## Zerotier根服务器
 
 [https://post.smzdm.com/p/apxkx2m7/](https://post.smzdm.com/p/apxkx2m7/)
 
-# 外网访问家庭局域网方案
+## 外网访问家庭局域网方案
 
 随着NAS、软路由的普及，越来越多的人产生了外网访问家庭网络的需求。当前访问家庭网络的方案主要分为三类：
 
-## **公网ip**
+### **公网ip**
 
 这一类当然是最方便的，也是花费较少的方案。可以通过ip地址直接访问家庭网络，即使是变动的公网ip，也只需购买域名配置DDNS即可。但随着政策的加严，获取ipv4公网ip的渠道越来越少，之前寄托了很多希望的ipv6现在看来也存在诸多问题。
 
-# **隧道穿透**
+## **隧道穿透**
 
 这一类是通过一台具有公网ip的机器（通常是一台云[服务器](https://www.smzdm.com/fenlei/fuwuqi/)）作为中转，在这台机器与家庭局域网内的机器建立隧道，借由公网下的服务器作为跳板访问家庭网络。这一类服务有自建的，如Frp、NPS等，也有商家提供服务的，如SakuraFrp、DDNSTO等。
 
-# **虚拟局域网**
+## **虚拟局域网**
 
 这一类更适合私人或小团体使用，其原理是建立一个虚拟的广域网，并为加入这个虚拟网络的设备分配一个虚拟的ip，并在这个广域网内通过虚拟ip互访。最知名的代表就是Zerotier，也是我今天所要介绍的
 
-## Zerotier的优缺点
+### Zerotier的优缺点
 
 通俗来讲就是 Peer to Peer (P2P) ，ZeroTier 根服务器记录请求路径来做类似于DNS的解析。主要功能，就是可以把多个不同网络的设备连接在一起，用来就像在一个局域网下 。
 
@@ -36,7 +36,7 @@ Zerotier的优点在于其部署十分简便，只需在zerotier官网注册登�
 
 在之前，对于这种情况，我们的解决方案是在国内的服务器上搭建一个zerotier的moon中转节点，作为zerotier根服务器的代理加速，但加速效果有好有坏（有的人说速度很快，但我的中转就很慢），而且这种方式的一个问题就是，**安卓端的[手机](https://www.smzdm.com/fenlei/zhinengshouji/)无法加入moon节点**。这个问题很快就被解决了，kaaass大佬做了一个[ZerotierFix](https://github.com/kaaass/ZerotierFix)的app，相比于官方增加了可以加入moon节点的功能。
 
-## **Zerotier-planet**
+### **Zerotier-planet**
 
 虽然大佬的app解决了安卓客户端不能加入moon节点的问题，但moon节点的搭建以及客户端的配置仍然不是一个比较简单的过程，又要配置服务器端又要配置客户端，zerotier便捷性的优点就体现不出来了。
 
@@ -102,7 +102,7 @@ ip分配
 
 基于zerotier网络可以实现许多功能，例如windows端的远程桌面连接，ssh连接linux服务器，访问个人服务器上的博客
 
-## 应用扩展-允许openwrt客户端自动NAT
+### 应用扩展-允许openwrt客户端自动NAT
 
 尽管zerotier已经支持相当多的平台了，但仍有一些设备不受支持，比如我升级到DSM 7.0的小猫盘。为了让这些无法安装zerotier客户端的设备也加入到这个虚拟网络中，我们需要一个支持zerotier的openwrt[路由器](https://www.smzdm.com/fenlei/luyouqi/)。以我的R2S为例
 

@@ -1,14 +1,15 @@
 ---
 title: 忽略已提交的文件（.gitignore）
 date: 2026-04-07
-tags: [软件工具, Git]
+  - 软件工具
+  - Git
 type: guide
 status: complete
 ---
 
-# 忽略已提交的文件（.gitignore）
+## 忽略已提交的文件（.gitignore）
 
-# 操作
+## 操作
 
 只针对已经commit过且有改动的文件 (因为rm的是cached列表中的文件, cached列表即修改列表)
 
@@ -23,13 +24,13 @@ git rm -r --cached -f .
 
 ```
 
-# `.gitignore`
+## `.gitignore`
 
-## **前言**
+### **前言**
 
 在[Git版本控制](https://so.csdn.net/so/search?q=Git版本控)B6&spm=1001.2101.3001.7020系统中，**.gitignore** 文件用于指定[Git](https://so.csdn.net/so/search?q=Git&spm=1001.2101.3001.7020)应该忽略哪些文件和目录。通过忽略不必要的文件，可以减少[代码库](https://so.csdn.net/so/search?q=代码)93&spm=1001.2101.3001.7020的混乱，提高代码管理的效率。
 
-## **语法规则**
+### **语法规则**
 
 ### **注释**
 
@@ -86,13 +87,13 @@ git rm -r --cached -f .
         例如：**/temp/*  忽略任何位置的临时文件目录
         
 
-## 命令
+### 命令
 
 ```bash
-# 可以查看为什么某个文件或目录被 Git 忽略，这可以帮助你调试 .gitignore 文件的问题
+## 可以查看为什么某个文件或目录被 Git 忽略，这可以帮助你调试 .gitignore 文件的问题
 git check-ignore -v 文件路径 
 ```
 
-# `.git/info/exclude`
+## `.git/info/exclude`
 
 `.gitignore`和`.git/info/exclude`都能实现相同的功能，能够让Git忽略它们标记的文件。最重要的区别就是`.gitignore`能够在团队成员中共享，因此当某个文件被公认为“无需版本控制”，那么最好就把它放在`.gitignore`文件中。而`.git/info/exclude`文件则是供个人专用的，仅当自己觉得这个文件不用版本控制时，才把它放在`.git/info/exclude`文件中。

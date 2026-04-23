@@ -1,12 +1,13 @@
 ---
 title: Channel or Mutex
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Channel or Mutex
+## Channel or Mutex
 
 ```go
 // 不要通过共享内存来通信，而是通过通信来实现内存共享
@@ -14,7 +15,7 @@ Do not communicate by sharing memory; instead, share memory by communicating
 
 ```
 
-# Channel
+## Channel
 
 场景：数据流动
 
@@ -34,7 +35,7 @@ communicating async results
 
 </aside>
 
-# Mutex
+## Mutex
 
 场景：数据固定
 
@@ -46,7 +47,7 @@ caches
 state
 ```
 
-# 附录
+## 附录
 
 [MutexOrChannel · golang/go Wiki](https://github.com/golang/go/wiki/MutexOrChannel)
 

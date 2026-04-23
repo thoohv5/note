@@ -1,16 +1,17 @@
 ---
 title: sync.Cond
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# sync.Cond
+## sync.Cond
 
-# 概述
+## 概述
 
-## 定义
+### 定义
 
 `sync.Cond`是Go语言标准库中的一个类型，代表条件变量。条件变量是用于多个goroutine之间进行同步和互斥的一种机制。`sync.Cond`可以用于等待和通知goroutine，以便它们可以在特定条件下等待或继续执行。
 
@@ -64,7 +65,7 @@ func (c *Cond) Broadcast() {}
  // c.Signal() // 通知唤醒一个阻塞的 goroutine
 ```
 
-# **原理**
+## **原理**
 
 ### **3.1 基本原理**
 

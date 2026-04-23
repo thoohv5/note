@@ -1,19 +1,20 @@
 ---
 title: UUID
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: incomplete
 ---
 
-# UUID
+## UUID
 
 ```sql
 select * from pg_extension;
 \dx
 ```
 
-## 数据库插件
+### 数据库插件
 
 ```sql
 yum -y install e2fsprogs-devel uuid uuid-devel libuuid-devel

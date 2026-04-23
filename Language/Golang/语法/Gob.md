@@ -1,14 +1,15 @@
 ---
 title: Gob
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# Gob
+## Gob
 
-# 序列化
+## 序列化
 
 ```go
 package main
@@ -68,7 +69,7 @@ func main() {
 }
 ```
 
-# 反序列化
+## 反序列化
 
 ```go
 package main

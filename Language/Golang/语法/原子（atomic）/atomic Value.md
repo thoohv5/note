@@ -1,18 +1,19 @@
 ---
 title: atomic.Value
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# atomic.Value
+## atomic.Value
 
-# 概述
+## 概述
 
 此类型的值相当于一个容器，可以被用来“原子地”存储（Store）和加载（Load）任意类型的值。当然这个类型也是原子性的。
 
-# 模型
+## 模型
 
 有了`atomic.Value`这个类型，这样用户就可以在不依赖`Go`内部类型`unsafe.Pointer`的情况下使用到atomic提供的原子操作。
 
@@ -30,7 +31,7 @@ type Value struct {
 - `v.Store(c)` - 写操作，将原始的变量c存放到一个`atomic.Value`类型的v里。
 - `c = v.Load()` - 读操作，从线程安全的v中读取上一步存放的内容。
 
-# **Load**
+## **Load**
 
 ```go
 *// ifaceWords is interface{} internal representation.*
@@ -60,7 +61,7 @@ type Value struct {
     - typ为nil表示还没有写入值
     - `uintptr(typ) == ^uintptr(0)`表示有第一次写入还没有完成
 
-# **Store**
+## **Store**
 
 ```go
 *// 如果两次Store的类型不同将会panic// 如果写入nil，也会panic*
@@ -124,7 +125,7 @@ type Value struct {
 
 ![](https://boilingfrog.github.io/img/golang/atomic_store_2.png)
 
-# **总结**
+## **总结**
 
 1. atomic中的操作是原子性的；
 2. 原子操作由底层硬件支持，而锁则由操作系统的调度器实现。锁应当用来保护一段逻辑，对于一个变量更新的保护，原子操作通常会更有效率，并且更能利用计算机多核的优势，如果要更新的是一个复合对象，则应当使用`atomic.Value`封装好的实现。

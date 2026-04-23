@@ -1,12 +1,13 @@
 ---
 title: 客户端真实IP
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# 客户端真实IP
+## 客户端真实IP
 
 通过测试模拟这样的环境验证下：
 
@@ -61,7 +62,7 @@ server {    
 192.168.118.16 开启 8080 端口
 
 ```yaml
-# curl http://192.168.118.16:8080/a.html
+## curl http://192.168.118.16:8080/a.html
 
 <h1>192.168.118.16: a.html</h1>
 ```
@@ -69,7 +70,7 @@ server {    
 直接访问 192.168.118.15
 
 ```yaml
-# curl http://192.168.118.15/a.html
+## curl http://192.168.118.15/a.html
 
 <h1>192.168.118.15: a.html</h1>
 ```

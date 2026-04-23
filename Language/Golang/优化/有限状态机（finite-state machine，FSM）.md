@@ -1,18 +1,19 @@
 ---
 title: 有限状态机（finite-state machine，FSM）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# 有限状态机（finite-state machine，FSM）
+## 有限状态机（finite-state machine，FSM）
 
-# 概述
+## 概述
 
 有限状态机（FSM）是管理复杂状态流转的优雅工具，其核心在于通过明确定义**状态**、**事件**和**转换规则**，将业务逻辑模块化
 
-## 特征如下：
+### 特征如下：
 
 - 状态（state）个数是有限的。
 - 任意一个时刻，只处于其中一种状态。
@@ -72,12 +73,12 @@ status: complete
     ```
     
 
-## **使用场景建议**
+### **使用场景建议**
 
 - 当需要严格的状态管理和明确的转换规则时，优先考虑 FSM
 - 当需要松耦合的组件间通信时，使用 EventBus
 - 对于复杂应用，可以结合两者：FSM 管理核心业务逻辑状态，EventBus 处理UI/服务间通信
 
-# 附录
+## 附录
 
 [https://github.com/looplab/fsm](https://github.com/looplab/fsm)

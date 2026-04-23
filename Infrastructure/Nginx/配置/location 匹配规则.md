@@ -1,20 +1,21 @@
 ---
 title: location 匹配规则
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: incomplete
 ---
 
-# location 匹配规则
+## location 匹配规则
 
-# 语法规则
+## 语法规则
 
 ```sql
 location [=|~|~*|^~] /uri/ { … }
 ```
 
-## 说明
+### 说明
 
 - `=` 表示精确匹配;
 - `^~` 表示uri以某个常规字符串开头，理解为匹配 url路径即可;

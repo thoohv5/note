@@ -1,26 +1,27 @@
 ---
 title: InnoDB引擎
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: guide
 status: complete
 ---
 
-# InnoDB引擎
+## InnoDB引擎
 
-## 事务
+### 事务
 
 MVVC,AICD,Redo Log & Undo Log
 
-## 锁
+### 锁
 
 行级锁
 
-## 索引
+### 索引
 
 ~~HASH~~，BTREE
 
-## 存储结构：
+### 存储结构：
 
 ```sql
 show variables like 'innodb_file_per_table'
@@ -30,7 +31,7 @@ ON 独立空间：frm、tablename.ibd
 
 OFF 系统表空间：frm、IBDATAX
 
-# 使用场景
+## 使用场景
 
 1.  用来处理大量短期事务，短期事务大部分情况是正常提交，很少会被回滚
 2. InnoDB适合大多数OLTP应用

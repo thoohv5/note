@@ -1,18 +1,19 @@
 ---
 title: Debezium
 date: 2026-04-07
-tags: [基础设施, CDC]
+  - 基础设施
+  - CDC
 type: guide
 status: complete
 ---
 
-# Debezium
+## Debezium
 
 **读法：得-比-自-厄姆**
 
-# 组合 Kafka + Kafka Connect + Debezium
+## 组合 Kafka + Kafka Connect + Debezium
 
-## docker-compose.yml
+### docker-compose.yml
 
 ```yaml
 services:
@@ -99,7 +100,7 @@ services:
       CONNECT_INTERNAL_KEY_CONVERTER_SCHEMA_REGISTRY_TOPIC: "schema-changes.testdb"
 ```
 
-## 配置 MySQL 账号权限
+### 配置 MySQL 账号权限
 
 ```yaml
 docker exec -it mysql mysql -uroot -prootpassword
@@ -109,7 +110,7 @@ GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *
 FLUSH PRIVILEGES;
 ```
 
-## 注册CDC任务
+### 注册CDC任务
 
 ```yaml
 curl -X POST http://localhost:8083/connectors -H 'Content-Type: application/json' -d '{
@@ -142,7 +143,7 @@ curl -X DELETE http://localhost:8083/connectors/mysql-connector
 curl -s http://localhost:8083/connectors/mysql-connector/status | jq
 ```
 
-## 验证
+### 验证
 
 ```yaml
 docker exec -it mysql mysql -uroot -prootpassword testdb

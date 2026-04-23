@@ -1,18 +1,19 @@
 ---
 title: find
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: complete
 ---
 
-# find
+## find
 
-# 概述
+## 概述
 
 `find`命令是一种通过条件匹配在指定目录下查找对应文件或者目录的工具。匹配的条件可以是文件名称、类型、大小、权限属性、[时间戳](https://link.zhihu.com/?target=https://so.csdn.net/so/search?q=%E6%97%B6%E9%97%B4%E6%88%B3&spm3D1001.2101.3001.7020等。`find`命令还可以配合相关命令对匹配到的文件作出后续处理。
 
-## 工作原理
+### 工作原理
 
 `find`在工作时会遍历指定的目录，通过匹配指定的条件搜寻我们需要的文件或者目录。因此，`find`命令具有以下特点：
 
@@ -21,7 +22,7 @@ status: complete
 - 实时查找
 - 可能只搜索用户具备读取和执行权限的目录（这点同locate）
 
-# 命令
+## 命令
 
 ```bash
 find [path...] [expression]
@@ -35,9 +36,9 @@ find [path...] [expression]
 
 ```
 
-# 场景
+## 场景
 
-## 指定搜索目录层级/深度
+### 指定搜索目录层级/深度
 
 ```bash
 find / -maxdepth 2 -name "*.conf"
@@ -49,7 +50,7 @@ find / -maxdepth 2 -name "*.conf"
 
 ```
 
-## 根据文件名和inode查找
+### 根据文件名和inode查找
 
 ```bash
 find . -name "f*"
@@ -65,7 +66,7 @@ find . -name "f*"
 
 ```
 
-## 根据文件类型查找
+### 根据文件类型查找
 
 ```bash
 find /dev -type b
@@ -82,7 +83,7 @@ p  管道文件
 
 ```
 
-## 根据文件大小查找
+### 根据文件大小查找
 
 ```bash
 find /app -size 2M
@@ -101,7 +102,7 @@ find [path] -size [+|-]N
 
 ```
 
-## 根据时间戳查找
+### 根据时间戳查找
 
 ```bash
 find /app -atime +1
@@ -129,7 +130,7 @@ find /app -atime +1
 
 ```
 
-## 根据权限查找
+### 根据权限查找
 
 ```bash
 find ./ -name "f*" -perm 311
@@ -144,7 +145,7 @@ find ./ -name "f*" -perm 311
 
 ```
 
-## 多条件查询
+### 多条件查询
 
 find命令常用的多条件组合查询方式：
 
@@ -156,7 +157,7 @@ find ./ -type f -o -type l
 - `or  -o`   或   #
 - `not  !`    非   # 相反的条件
 
-## 处理动作
+### 处理动作
 
 ```bash
 find ./test1/ -type f -perm -001 -exec chmod o-x {} \\;

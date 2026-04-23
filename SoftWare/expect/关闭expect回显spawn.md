@@ -1,12 +1,12 @@
 ---
 title: 关闭expect执行spawn时回显spawn - 道霖 - 博客园
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: note
 status: complete
 ---
 
-# 关闭expect执行spawn时回显spawn - 道霖 - 博客园
+## 关闭expect执行spawn时回显spawn - 道霖 - 博客园
 
 [https://www.cnblogs.com/t-road/p/16336072.html](https://www.cnblogs.com/t-road/p/16336072.html)
 

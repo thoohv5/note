@@ -1,18 +1,19 @@
 ---
 title: 公共表表达式（CTE）
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# 公共表表达式（CTE）
+## 公共表表达式（CTE）
 
-# 概述
+## 概述
 
 在 **MySQL** 中，公共表表达式（**Common Table Expression，简称 CTE**）是一种临时的结果集，可以在 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 语句中引用，语法上使用 `WITH` 子句定义。
 
-# 语法
+## 语法
 
 ```sql
 WITH cte_name AS (
@@ -22,7 +23,7 @@ SELECT * FROM cte_name;
 ```
 
 ```sql
-# 多个 CTE 联合使用
+## 多个 CTE 联合使用
 WITH cte1 AS (...),
      cte2 AS (...)
 SELECT ...
@@ -30,9 +31,9 @@ FROM cte1
 JOIN cte2 ON ...
 ```
 
-# 示例
+## 示例
 
-## 数据
+### 数据
 
 ```sql
 CREATE TABLE employees (
@@ -80,7 +81,7 @@ LIMIT 100;  -- 生成 100 条数据
 
 ---
 
-## 非递归CTE
+### 非递归CTE
 
 查询每个部门平均工资大于 10000 的员工信息
 
@@ -99,7 +100,7 @@ WHERE a.avg_salary > 10000;
 
 ---
 
-## 递归 CTE
+### 递归 CTE
 
 找出某位经理下的所有下属（层级结构）：
 

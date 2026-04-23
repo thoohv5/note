@@ -1,20 +1,21 @@
 ---
 title: LimitRange
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# LimitRange
+## LimitRange
 
-# 概述
+## 概述
 
 `LimitRange` 是 Kubernetes 中的一种 **资源限制策略**，用于对 **Pod 或容器的资源请求与限制（CPU/内存）设定默认值和上限**，确保资源使用的规范性，特别适用于多租户环境或开发团队共享集群的场景。
 
 ---
 
-# 作用
+## 作用
 
 在命名空间内设定：
 
@@ -29,7 +30,7 @@ status: complete
 
 ---
 
-## 示例 YAML
+### 示例 YAML
 
 ```yaml
 apiVersion: v1
@@ -58,7 +59,7 @@ spec:
 
 ---
 
-## 含义解读：
+### 含义解读：
 
 | 字段 | 含义 |
 | --- | --- |
@@ -70,7 +71,7 @@ spec:
 
 ---
 
-## 示例应用前后对比
+### 示例应用前后对比
 
 ### 未设置资源的 Pod：
 

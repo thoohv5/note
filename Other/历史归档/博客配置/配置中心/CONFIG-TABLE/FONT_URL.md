@@ -1,12 +1,12 @@
 ---
 title: FONT_URL
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# FONT_URL
+## FONT_URL
 
 配置值:  [
 "https:notion://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css",

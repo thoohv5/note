@@ -1,14 +1,15 @@
 ---
 title: traceroute
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: reference
 status: complete
 ---
 
-# traceroute
+## traceroute
 
-# 概述
+## 概述
 
 traceroute是用来检测发出数据包的主机到目标主机之间所经过的网关数量的工具
 
@@ -17,7 +18,7 @@ traceroute是用来检测发出数据包的主机到目标主机之间所经过�
 
 </aside>
 
-# 命令
+## 命令
 
 ### 语法格式
 
@@ -61,6 +62,6 @@ traceroute [-dFlnrvx][-f<存活数值>][-g<网关>...][-i<网络界面>][-m<存�
 
 ```
 
-# 附录
+## 附录
 
 [traceroute命令详解](https://www.cnblogs.com/machangwei-8/p/10353279.html)

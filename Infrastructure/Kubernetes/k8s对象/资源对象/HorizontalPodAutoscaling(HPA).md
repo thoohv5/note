@@ -1,18 +1,19 @@
 ---
 title: HorizontalPodAutoscaling(HPA)
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# HorizontalPodAutoscaling(HPA)
+## HorizontalPodAutoscaling(HPA)
 
-# 概述
+## 概述
 
 `HorizontalPodAutoscaling`简称`HPA`，意思是**Pod横向自动扩容**，与之前的`RC`、`Deployment`一样，也属于一种`Kubernetes`资源对象。通过追踪分析RC控制的所有目标Pod的负载变化情况，来确定是否需要针对性地调整目标Pod的副本数，这是HIPA的实现原理。当前，HPA可以有以下两种方式作为Pod负载的度量指标。
 
-# 度量指标
+## 度量指标
 
 ### `CPUUtilizationPercentage`
 

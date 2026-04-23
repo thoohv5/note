@@ -1,18 +1,19 @@
 ---
 title: FNV 哈希取模
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# FNV 哈希取模
+## FNV 哈希取模
 
-# 概述
+## 概述
 
 FNV哈希是一种非加密型哈希函数，由Glenn Fowler、Landon Curt Noll和Phong Vo共同设计。Golang标准库中提供了两种FNV实现：fnv32和fnv64。它的特点就是计算速度快，哈希分布均匀，实现简单以及适合非加密场景。
 
-## 示例
+### 示例
 
 ```go
 // ShardByFNV 使用FNV哈希取模进行分流

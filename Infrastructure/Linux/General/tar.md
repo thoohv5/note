@@ -1,12 +1,13 @@
 ---
 title: tar
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: incomplete
 ---
 
-# tar
+## tar
 
 ```sql
 -c: 建立压缩档案
@@ -17,7 +18,7 @@ status: incomplete
 ```
 
 ```sql
-# 解压
+## 解压
 tar -zxvf xx.tar.gz
 tar -zjvf xx.tar.bz2
 tar -Zxvf xx.tar.Z
@@ -26,7 +27,7 @@ unzip xx.zip
 
 tar -zxvf xx.tar.gz -C /tmp
 
-# 压缩
+## 压缩
 tar -cvf xx.tar *.jpg
 tar -zcvf xx.tar.gz *.jpg
 tar -jcvf xx.tar.bz2 *.jpg

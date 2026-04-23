@@ -1,14 +1,15 @@
 ---
 title: n-grams 语言模型
 date: 2026-04-07
-tags: [理论, AI]
+  - 理论
+  - AI
 type: guide
 status: complete
 ---
 
-# n-grams 语言模型
+## n-grams 语言模型
 
-# 概述
+## 概述
 
 `N-Gram`是一种基于统计语言模型的算法。它的基本思想是将文本里面的内容按照字节进行大小为N的滑动窗口操作，形成了长度是N的字节片段序列。
 
@@ -16,7 +17,7 @@ status: complete
 
 该模型基于这样一种假设，**第N个词的出现只与前面N-1个词相关，而与其它任何词都不相关**，整句的概率就是各个词出现概率的乘积。这些概率可以通过直接从语料中统计N个词同时出现的次数得到。常用的是二元的[Bi-Gram](https://zhida.zhihu.com/search?content_id=5320991&content_type=Article&match_order=1&q=Bi-Gram&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NjU5MzkxNjcsInEiOiJCaS1HcmFtIiwiemhpZGFfc291cmNlIjoiZW50aXR5IiwiY29udGVudF9pZCI6NTMyMDk5MSwiY29udGVudF90eXBlIjoiQXJ0aWNsZSIsIm1hdGNoX29yZGVyIjoxLCJ6ZF90b2tlbiI6bnVsbH0.n4u3OM4mh2NsqMWqVLqO901VghZfPuR1_KvcQpWmW1Y&zhida_source=entity)和三元的[Tri-Gram](https://zhida.zhihu.com/search?content_id=5320991&content_type=Article&match_order=1&q=Tri-Gram&zd_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ6aGlkYV9zZXJ2ZXIiLCJleHAiOjE3NjU5MzkxNjcsInEiOiJUcmktR3JhbSIsInpoaWRhX3NvdXJjZSI6ImVudGl0eSIsImNvbnRlbnRfaWQiOjUzMjA5OTEsImNvbnRlbnRfdHlwZSI6IkFydGljbGUiLCJtYXRjaF9vcmRlciI6MSwiemRfdG9rZW4iOm51bGx9.n1rItmw5TWwCUTI1aDgmH6E5KutvLy9ob-koN6NJoi0&zhida_source=entity)。
 
-## 概率：**从联合概率到条件概率**
+### 概率：**从联合概率到条件概率**
 
 我们的目标是得到一个由 `m`个词元组成的任意序列（即一个包含 `m`个词元的句子）的概率：
 
@@ -30,7 +31,7 @@ $$
 P(w_1,w_2,...,w_{i-1},w_i) = P(w_1)P(w_2|w_1)P(w_3|w_1,w_2)|P(w_4|w_1,w_2,w_3)...P(w_{i-1}|w_1,w_2,...,P(w_{i-2})
 $$
 
-## **马尔可夫假设（The Markov Assumption）**
+### **马尔可夫假设（The Markov Assumption）**
 
 目前，这仍然是一个比较棘手的问题，因为随着上下文的不断增加，我们构建的模型中将包含越来越多的参数。所以这里，我们采用一种称为 “马尔可夫假设” 的简化假设：**某个单词出现的概率不再依赖于全部上下文，而是取决于离它最近的 `n`个单词**。因此，我们得到：
 
@@ -65,7 +66,7 @@ $$
     在 trigram 模型中，我们假设句子中每个单词出现的概率都和它前两个单词出现的概率有关。
     
 
-## **最大似然估计**
+### **最大似然估计**
 
 **我们如何计算这些概率？**
 
@@ -96,7 +97,7 @@ $$
     **同理，我们计算 n-gram 出现的次数，除以 (n-1)-gram（即上下文）出现的次数。**
     
 
-## **Trigram 例子**
+### **Trigram 例子**
 
 现在，让我们来看一个玩具例子，假设我们有一个只包含两个句子的语料库。
 
@@ -141,13 +142,13 @@ $$
         可以看到，子序列 “`<s>,<s>,yes`” 在语料库中只出现过 1 次；而子序列 “`<s>,<s>`” 在语料库中一共出现了 2 次，所以第一个条件概率项的结果为 1/2。其余各条件概率项的计算方式同理，另外请注意，在计算第四个条件概率项时，bigram 上下文 “`no,no`” 在语料库中一共出现了 5 次。
         
 
-## 优劣
+### 优劣
 
 1. `n-grams` **具备对未知文本的泛化能力。但是，这种泛化能力会随着 n 的增大而逐渐减弱。**在 n-grams 语言模型中，n 代表了拟合语料库的能力与对未知文本的泛化能力之间的权衡。当 n 过大时，语料库中难以找到与 n-gram 一模一样的词序列，可能出现大量“零概率”现象；在 n 过小时，n-gram 难以承载足够的语言信息，不足以反应语料库的特性。因此，在 n-grams 语言模型中，n 的值是影响性能的关键因素。
 2. `数据稀疏问题严重`，词汇量大时，很多 n-gram 组合在训练语料中根本没出现，导致概率为 0
 3. `难以捕捉长距离依赖`，由于只考虑 n 个词，无法理解句子中远距离词之间的关系
 4. `存储需求大`，n 增大时，可能出现指数级增长的组合数量，存储和查询效率下降。
 
-# 附录
+## 附录
 
 [自然语言处理 03：N-gram 语言模型 - YEY 的博客 | YEY Blog](https://yey.world/2020/03/09/COMP90042-03/)

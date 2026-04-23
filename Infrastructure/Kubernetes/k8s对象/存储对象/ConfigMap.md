@@ -1,18 +1,19 @@
 ---
 title: ConfigMap
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# ConfigMap
+## ConfigMap
 
-# 概述
+## 概述
 
 在 Kubernetes 中，`ConfigMap` 是一种用于**存储非机密的配置数据**的对象，主要用于将配置从代码中解耦，让应用部署更加灵活。
 
-# 创建
+## 创建
 
 ### 通过 YAML 文件创建【优先】
 
@@ -33,14 +34,14 @@ data:
 ### 通过命令行创建
 
 ```bash
-# 创建 ConfigMap（从命令行）
+## 创建 ConfigMap（从命令行）
 kubectl create configmap my-config --from-literal=APP_PORT=8080
 
-# 创建（从文件）
+## 创建（从文件）
 kubectl create configmap my-config --from-file=config.yaml
 ```
 
-# 使用
+## 使用
 
 ### 作为环境变量
 

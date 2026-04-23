@@ -8,9 +8,9 @@ type: note
 status: incomplete
 ---
 
-# Zookeeper
+## Zookeeper
 
-## **四种节点类型**
+### **四种节点类型**
 
 PERSISTI   PERSIST_SEQUENTIAL   EPHEMERAL    EPHEMERAL_SEQUENTIAL
 
@@ -20,7 +20,7 @@ PERSISTI   PERSIST_SEQUENTIAL   EPHEMERAL    EPHEMERAL_SEQUENTIAL
 
 （3）SEQUENTIAL:顺序节点。假设不是顺序节点的话，Client1创建了节点/a，那么其它Client就不能再创建节点/a，否则将报错。但是如果是SEQUENTIAL节点的话，Client1创建了节点/a，若其它Client也创建节点/a，则不会报错，也可以创建成功，只不过命名规则会在末尾加序号，越早创建的序号靠前。
 
-## **可注册Watch操作**
+### **可注册Watch操作**
 
 为什么要注册Watch操作呢？因为我们其实希望Client可以感知到节点的各种更新操作，但是也不喜欢定时去查看这种变化，而是去订阅这种变化，每当节点有变化时，把这信息发给客户端。
 
@@ -32,7 +32,7 @@ PERSISTI   PERSIST_SEQUENTIAL   EPHEMERAL    EPHEMERAL_SEQUENTIAL
 
 （4）子节点的相关操作
 
-## 选举方式
+### 选举方式
 
 ### **抢注leader节点——非公平模式**
 
@@ -64,7 +64,7 @@ PERSISTI   PERSIST_SEQUENTIAL   EPHEMERAL    EPHEMERAL_SEQUENTIAL
 
 （5）Leader节点可通过自行删除自己创建的节点以放弃Leader
 
-# 数据模型
+## 数据模型
 
 节点类型与特性
 
@@ -80,6 +80,6 @@ PERSISTI   PERSIST_SEQUENTIAL   EPHEMERAL    EPHEMERAL_SEQUENTIAL
 
 所谓节点有序是说在我们创建有序节点的时候，ZooKeeper 服务器会自动使用一个单调递增的数字作为后缀，追加到我们创建节点的后边。
 
-# ACL权限控制
+## ACL权限控制
 
-# Watch监控
+## Watch监控

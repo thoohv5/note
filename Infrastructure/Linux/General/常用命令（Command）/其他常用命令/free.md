@@ -1,22 +1,23 @@
 ---
 title: free
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# free
+## free
 
 [[buff_cache]]
 
-# free 与 available
+## free 与 available
 
 在 free 命令的输出中，有一个 free 列，同时还有一个 available 列。这二者到底有何区别？
 
 free 是真正尚未被使用的物理内存数量。至于 available 就比较有意思了，它是从应用程序的角度看到的可用内存数量。Linux 内核为了提升磁盘操作的性能，会消耗一部分内存去缓存磁盘数据，就是我们介绍的 buffer 和 cache。所以对于内核来说，buffer 和 cache 都属于已经被使用的内存。当应用程序需要内存时，如果没有足够的 free 内存可以用，内核就会从 buffer 和 cache 中回收内存来满足应用程序的请求。所以从应用程序的角度来说，**available  = free + buffer + cache**。请注意，这只是一个很理想的计算方式，实际中的数据往往有较大的误差。
 
-# 交换空间(swap space)
+## 交换空间(swap space)
 
 swap space 是磁盘上的一块区域，可以是一个分区，也可以是一个文件。所以具体的实现可以是 swap 分区也可以是 swap 文件。当系统物理内存吃紧时，Linux 会将内存中不常访问的数据保存到 swap 上，这样系统就有更多的物理内存为各个进程服务，而当系统需要访问 swap 上存储的内容时，再将 swap 上的数据加载到内存中，这就是常说的换出和换入。交换空间可以在一定程度上缓解内存不足的情况，但是它需要读写磁盘数据，所以性能不是很高。
 
@@ -27,21 +28,21 @@ vm.swappiness=10
 如果系统的内存不足，则需要根据物理内存的大小来设置交换空间的大小。具体的策略网上有很丰富的资料，这里笔者不再赘述。
 
 ```
-# centos 6
+## centos 6
 [root@localhost ~]# free -h
              total       used       free     shared    buffers     cached
 Mem:          996M       521M       474M        56K        35M       118M
 -/+ buffers/cache:       368M       628M
 Swap:         1.5G       234M       1.2G
 
-# centos 7.8> (7.2)
+## centos 7.8> (7.2)
 [root@localhost ~]# free -h
               total        used        free      shared  buff/cache   available
 Mem:           7.6G        947M        2.7G         18M        4.1G        6.4G
 
 ```
 
-# /proc/meminfo 文件
+## /proc/meminfo 文件
 
 其实 free 命令中的信息都来自于 /proc/meminfo 文件。/proc/meminfo 文件包含了更多更原始的信息，只是看起来不太直观：
 
@@ -132,7 +133,7 @@ cache = cached + slab
 广义空闲内存（generalized free）
 
 ```
-# buffers 和 cache是系统为了提升性能而使用的缓存，内存紧张时可随时回收另做他用。
+## buffers 和 cache是系统为了提升性能而使用的缓存，内存紧张时可随时回收另做他用。
 g_free = free + buffers + cache
 
 ```
@@ -155,12 +156,12 @@ g_free = free + buffers + cache
 
 可用内存值的是可用于启动一个新应用进程的内存，该指标是内核提供的一个预估值
 
-# 说明
+## 说明
 
 centos6系统内存使用：“-/+ buffers/cached”行的used和free作为参考
 centos7系统内存使用：available
 
-# 计算使用率
+## 计算使用率
 
 ```
 free | awk 'BEGIN{total=0;used=0;} (NR==2){total=$2; used=$3;} ($1=="-/+"){used=total-$4;} END{printf "%.2f\\n",used/total*100;}'

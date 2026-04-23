@@ -1,12 +1,13 @@
 ---
 title: PostgreSQL通用分布式数据库架构-citus - lightdb - 博客园
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: incomplete
 ---
 
-# PostgreSQL通用分布式数据库架构-citus - lightdb - 博客园
+## PostgreSQL通用分布式数据库架构-citus - lightdb - 博客园
 
 标签: Postgres
 URL: https://www.cnblogs.com/lightdb/p/15200257.html

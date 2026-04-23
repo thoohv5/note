@@ -1,14 +1,15 @@
 ---
 title: 将Redis当做使用LRU算法的缓存来使用
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# 将Redis当做使用LRU算法的缓存来使用
+## 将Redis当做使用LRU算法的缓存来使用
 
-## 淘汰机制
+### 淘汰机制
 
 ### 检查易失数据 （server.db[i].expires）
 
@@ -45,14 +46,14 @@ status: complete
     默认策略，返回错误当内存限制达到并且客户端尝试执行会让更多内存被使用的命令（大部分的写入指令，但DEL和几个例外）
     
 
-## 配置
+### 配置
 
 ```c
-# 内存限制， 0没有限制
+## 内存限制， 0没有限制
 maxmemory
-# 内存限制达到时，内存回收策略
+## 内存限制达到时，内存回收策略
 maxmemory-policy
-# 每次回收时检查的采样数量
+## 每次回收时检查的采样数量
 maxmemory-samples
 ```
 

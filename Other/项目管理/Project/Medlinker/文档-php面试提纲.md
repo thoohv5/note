@@ -1,12 +1,12 @@
 ---
 title: php面试提纲
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: guide
 status: complete
 ---
 
-# php面试提纲
+## php面试提纲
 
 **项目部分**
 1. 介绍一下过往最熟悉的项目架构

@@ -1,16 +1,17 @@
 ---
 title: tcpdump
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# tcpdump
+## tcpdump
 
 dump traffic on a network
 
-## 命令
+### 命令
 
 ### 语法格式
 

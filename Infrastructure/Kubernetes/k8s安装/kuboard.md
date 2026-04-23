@@ -1,12 +1,13 @@
 ---
 title: kuboard
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# kuboard
+## kuboard
 
 ```bash
 sudo docker run -d 
@@ -94,6 +95,6 @@ Kuboard123
     ```
     
 
-# 附录
+## 附录
 
 [https://kuboard.cn/install/v3/install-built-in.html#部署计划](https://kuboard.cn/install/v3/install-built-in.html#部署计)92

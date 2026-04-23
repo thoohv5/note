@@ -1,12 +1,13 @@
 ---
 title: ALTER TABLE Statement
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# ALTER TABLE Statement
+## ALTER TABLE Statement
 
 ```bash
 ALTER TABLE table_name
@@ -44,20 +45,20 @@ ALTER TABLE table_name
 - `RENAME INDEX old_index_name TO new_index_name`: 重命名索引。
 - `RENAME new_tbl_name`: 重命名表。
 
-## for explain
+### for explain
 
 ```sql
-# 添加一行
+## 添加一行
 ALTER TABLE user ADD name VARCHAR(20) DEFAULT 'xx' COMMENT 'yy' AFTER 字段;
 ALTER TABLE supplier ADD is_third_party tinyint(2) NOT NULL DEFAULT '0' COMMENT '是否第三方（0: 本地，1：第三方）' AFTER 'delivery_cycle_desc';
 
-# 添加多行
+## 添加多行
 ALTER TABLE user ADD age INT, ADD email VARCHAR(50);
 
-# 重命名列
+## 重命名列
 ALTER TABLE user RENAME COLUMN name TO username;
 
-# 修改列
+## 修改列
 ALTER TABLE user MODIFY username VARCHAR(45);
 
 ALTER TABLE user CHANGE username name VARCHAR(30);

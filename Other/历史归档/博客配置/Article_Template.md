@@ -1,12 +1,12 @@
 ---
 title: Article Template
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: complete
 ---
 
-# Article Template
+## Article Template
 
 type: Post
 status: Draft
@@ -19,23 +19,23 @@ status: Draft
 
 </aside>
 
-# 📝 主旨内容
+## 📝 主旨内容
 
-## 观点1
-
-> 引用的话语
-> 
-
-## 观点2
+### 观点1
 
 > 引用的话语
 > 
 
-# 🤗 总结归纳
+### 观点2
+
+> 引用的话语
+> 
+
+## 🤗 总结归纳
 
 总结文章的内容
 
-# 📎 参考文章
+## 📎 参考文章
 
 - 一些引用
 - 引用文章

@@ -1,12 +1,13 @@
 ---
 title: Redis 慢查询
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Redis 慢查询
+## Redis 慢查询
 
 Redis 的慢查询日志功能用于记录执行时间超过给定时长的命令请求， 用户可以通过这个功能产生的日志来监视和优化查询速度。
 

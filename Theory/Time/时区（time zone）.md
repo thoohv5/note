@@ -1,12 +1,13 @@
 ---
 title: 时区（time zone）
 date: 2026-04-07
-tags: [理论, Time]
+  - 理论
+  - Time
 type: note
 status: complete
 ---
 
-# 时区（time zone）
+## 时区（time zone）
 
 - **DST：Daylight Saving Time**中文名叫“夏令时”，一般在天亮早的夏季人为将时间调快一小时，可以使人早起早睡，减少照明量，以充分利用光照资源，从而节约照明用电。中国**1986-1991**年实行夏令时，1992年废除。
 - **CST：China Standard Time**（老外认为有其他含义，中国就这个缩写），中国标准时。

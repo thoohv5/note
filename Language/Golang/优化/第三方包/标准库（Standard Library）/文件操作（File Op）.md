@@ -1,12 +1,13 @@
 ---
 title: 文件操作（File Op）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# 文件操作（File Op）
+## 文件操作（File Op）
 
 os包
 

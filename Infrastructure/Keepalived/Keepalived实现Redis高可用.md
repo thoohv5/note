@@ -1,14 +1,15 @@
 ---
 title: Keepalived实现Redis高可用
 date: 2026-04-07
-tags: [基础设施, Keepalived]
+  - 基础设施
+  - Keepalived
 type: note
 status: complete
 ---
 
-# Keepalived实现Redis高可用
+## Keepalived实现Redis高可用
 
-## 作用范围
+### 作用范围
 
 keepalived只能做到对网络故障和keepalived本身的监控，即当出现网络故障或者keepalived本身出现问题时，进行切换。
 

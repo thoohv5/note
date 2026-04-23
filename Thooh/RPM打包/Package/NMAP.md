@@ -1,7 +1,9 @@
 ---
 title: NMAP
 date: 2023-12-15
-tags: [笔记, RPM打包, Package]
+  - 笔记
+  - RPM打包
+  - Package
 type: note
 status: incomplete
 ---

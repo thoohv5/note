@@ -1,12 +1,13 @@
 ---
 title: Go 语言使用 grpc 时，是否需要 grpc 连接池？
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Go 语言使用 grpc 时，是否需要 grpc 连接池？
+## Go 语言使用 grpc 时，是否需要 grpc 连接池？
 
 如果是在 grpc 上再包一层连接池肯定是不需要的，分两个层面看：
 

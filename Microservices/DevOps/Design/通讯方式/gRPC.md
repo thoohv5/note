@@ -1,12 +1,13 @@
 ---
 title: gRPC
 date: 2026-04-07
-tags: [微服务, DevOps]
+  - 微服务
+  - DevOps
 type: reference
 status: complete
 ---
 
-# gRPC
+## gRPC
 
 进行API开发选gRPC还是HTTP APIs?
 
@@ -44,16 +45,16 @@ rpc BidiHello(stream HelloRequest) returns (stream HelloResponse){
 }
 ```
 
-# 附录
+## 附录
 
 [如何在Kubernetes实现gRPC的负载平衡？](https://www.jdon.com/50653)
 
 [gRPC 官方文档中文版_V1.0](http://doc.oschina.net/grpc?t=58010)
 
-# The C based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)
+## The C based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)
 
 [grpc/grpc](https://github.com/grpc/grpc)
 
-# PHP Protobuf - Google's Protocol Buffers for PHP
+## PHP Protobuf - Google's Protocol Buffers for PHP
 
 [allegro/php-protobuf](https://github.com/allegro/php-protobuf)

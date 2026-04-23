@@ -1,12 +1,13 @@
 ---
 title: Go 嵌套结构体初始化不能直接指定内部元
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# Go 嵌套结构体初始化不能直接指定内部元
+## Go 嵌套结构体初始化不能直接指定内部元
 
 ### 问题
 

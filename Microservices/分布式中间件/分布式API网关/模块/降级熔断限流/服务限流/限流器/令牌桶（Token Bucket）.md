@@ -1,12 +1,13 @@
 ---
 title: 令牌桶（Token Bucket）
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# 令牌桶（Token Bucket）
+### 令牌桶（Token Bucket）
 
 核心思想：
 

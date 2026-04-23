@@ -1,12 +1,13 @@
 ---
 title: buff_cache
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: reference
 status: complete
 ---
 
-# buff_cache
+## buff_cache
 
 先来提一个问题： buffer 和 cache 应该是两种类型的内存，但是 free 命令为什么会把它们放在一起呢？要回答这个问题需要我们做些准备工作。让我们先来搞清楚 buffer 与 cache 的含义。
 

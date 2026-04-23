@@ -1,19 +1,20 @@
 ---
 title: go 中，json 转换时间（time.Time）的格式（默认格式为 RFC3339）_golang rfc3339_Grassto的博客-CSDN博客
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# go 中，json 转换时间（time.Time）的格式（默认格式为 RFC3339）_golang rfc3339_Grassto的博客-CSDN博客
+## go 中，json 转换时间（time.Time）的格式（默认格式为 RFC3339）_golang rfc3339_Grassto的博客-CSDN博客
 
 标签: Golang
 URL: https://blog.csdn.net/DisMisPres/article/details/119178013?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6-119178013-blog-119931046.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6-119178013-blog-119931046.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=10
 状态: 待完成
 类型: 文字
 
-# 简介
+## 简介
 
 go 中使用 `json.Unmarshal` 转换结构体时，若结构体中有**时间类型**作为解析字段时，使用的是国际标准 `RFC3339` （**2006-01-02T15:04:05Z07:00**） 格式来作为默认格式进行解析的。
 
@@ -23,7 +24,7 @@ go 中使用 `json.Unmarshal` 转换结构体时，若结构体中有**时间类
 2. 后端自定义 `MarshalJSON` 和 `UnmarshalJSON` 方法
 3. 前后端统一用时间戳进行交互（**推荐这种方式**）
 
-# 1. 前端的时间转换 `RFC3339`
+## 1. 前端的时间转换 `RFC3339`
 
 ### 标准格式日期转为 `RFC3339`
 
@@ -52,7 +53,7 @@ var toTime = function(dateStr) {
 1234
 ```
 
-# 2. 后端做转换
+## 2. 后端做转换
 
 自定义 `time` 类型，然后自己实现 `json` 的 `MarshalJSON` 和 `UnmarshalJSON` 方法。以下例子作参考：
 
@@ -112,7 +113,7 @@ func TestTimeJson(t *testing.T) {
 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152
 ```
 
-# 3. 统一使用[时间戳](https://so.csdn.net/so/search?q=时间)B3&spm=1001.2101.3001.7020
+## 3. 统一使用[时间戳](https://so.csdn.net/so/search?q=时间)B3&spm=1001.2101.3001.7020
 
 ### `go` 获取时间戳（秒）
 
@@ -129,7 +130,7 @@ d.getTime()  // 1627457656981
 12
 ```
 
-# `go time` 包源码查看
+## `go time` 包源码查看
 
 源代码在 `src/time/time.go` 文件中
 
@@ -173,7 +174,7 @@ const (
 123456789101112131415161718
 ```
 
-# 小结
+## 小结
 
 本篇的问题，主要是在前后端做交互时，接口调用报错，后发现 `json` 解析时间错误，前后端的时间格式不一致。
 
@@ -181,4 +182,4 @@ const (
 
 最后还要提一下，`js` 的 `date.getTime()` 获取到的默认时间戳是**毫秒**，而 `go` 的 `time.Unix()` 获取的默认为**秒**，这个在做前后端交互的时候一定要当心。
 
-# 参考
+## 参考

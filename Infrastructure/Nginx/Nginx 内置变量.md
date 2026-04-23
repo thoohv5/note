@@ -1,14 +1,15 @@
 ---
 title: Nginx 内置变量
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: note
 status: complete
 ---
 
-# Nginx 内置变量
+## Nginx 内置变量
 
-## 客户端相关
+### 客户端相关
 
 | 变量 | 含义 |
 | --- | --- |
@@ -17,7 +18,7 @@ status: complete
 | `$http_user_agent` | 客户端 UA（浏览器、curl 等） |
 | `$http_x_forwarded_for` | 客户端请求头里的 `X-Forwarded-For`（如果有的话） |
 
-## 服务器相关
+### 服务器相关
 
 | 变量 | 含义 |
 | --- | --- |
@@ -26,7 +27,7 @@ status: complete
 | `$server_port` | 服务器监听端口 |
 | `$hostname` | 主机名（系统级） |
 
-## 请求相关
+### 请求相关
 
 | 变量 | 含义 |
 | --- | --- |
@@ -39,7 +40,7 @@ status: complete
 | `$is_args` | 如果有参数则为 `?`，否则为空 |
 | `$request_filename` | 请求对应的文件路径（根据 root/alias 拼接出来的） |
 
-## 上游（proxy / fastcgi）相关
+### 上游（proxy / fastcgi）相关
 
 | 变量 | 含义 |
 | --- | --- |
@@ -49,7 +50,7 @@ status: complete
 | `$upstream_response_time` | 上游响应时间 |
 | `$upstream_connect_time` | 与上游建立连接耗时 |
 
-## 请求时间相关
+### 请求时间相关
 
 | 变量 | 含义 |
 | --- | --- |
@@ -58,7 +59,7 @@ status: complete
 | `$request_time` | 请求处理总耗时 |
 | `$msec` | 毫秒时间戳 |
 
-## 请求头相关
+### 请求头相关
 
 所有客户端请求头都可以通过 `$http_<header>` 获取，例如：
 

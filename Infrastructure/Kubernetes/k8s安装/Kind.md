@@ -1,14 +1,15 @@
 ---
 title: Kind
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# Kind
+## Kind
 
-# 安装
+## 安装
 
 ```bash
 brew install kubectl
@@ -19,13 +20,13 @@ brew install kind
 ### 创建集群
 
 ```yaml
-# 创建集群
+## 创建集群
 kind create cluster --name demo
 
-# 集群信息
+## 集群信息
 kubectl cluster-info --context kind-demo
 
-# 删除集群
+## 删除集群
 kind delete cluster --name demo
 ```
 
@@ -39,7 +40,7 @@ kubectl label namespace default istio-injection=enabled
 ### Ingress
 
 ```yaml
-# 支持 Ingress 控制器的集群
+## 支持 Ingress 控制器的集群
 cat <<EOF | kind create cluster --config=-
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
@@ -61,6 +62,6 @@ nodes:
 EOF
 ```
 
-# 附录
+## 附录
 
 [使用 kind 在本地运行 k8s - MaxBruce - 博客园](https://www.cnblogs.com/bruce1992/p/17782928.html)

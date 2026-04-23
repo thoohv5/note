@@ -1,12 +1,13 @@
 ---
 title: 锁类型（Lock Type）
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: reference
 status: complete
 ---
 
-# 锁类型（Lock Type）
+## 锁类型（Lock Type）
 
 ### 悲观锁（Pessimistic Lock）
 

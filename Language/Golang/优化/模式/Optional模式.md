@@ -1,12 +1,13 @@
 ---
 title: Optional模式
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# Optional模式
+## Optional模式
 
 Optional模式，也称为选项模式或函数选项模式，是一种用于在函数或结构体构造中提供灵活配置选项的设计模式。它允许以清晰、可读的方式为函数或结构体传递一系列的选项，而不是强制使用大量的参数或固定的配置。
 

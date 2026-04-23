@@ -1,12 +1,13 @@
 ---
 title: IPv6
 date: 2026-04-07
-tags: [理论, 网络]
+  - 理论
+  - 网络
 type: note
 status: incomplete
 ---
 
-# IPv6
+## IPv6
 
 IPv6有128位
 IPv6地址分成8段，每段16位（2字节），段之间用“冒号”(:)隔开

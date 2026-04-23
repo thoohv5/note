@@ -1,14 +1,15 @@
 ---
 title: AES-GCM
 date: 2026-04-07
-tags: [理论, 加密]
+  - 理论
+  - 加密
 type: reference
 status: complete
 ---
 
-# AES-GCM
+## AES-GCM
 
-# 概述
+## 概述
 
 ### **GMAC (Galois message authentication code mode, 伽罗华消息认证码)**
 

@@ -1,12 +1,13 @@
 ---
 title: SM4
 date: 2026-04-07
-tags: [理论, 加密]
+  - 理论
+  - 加密
 type: note
 status: complete
 ---
 
-# SM4
+## SM4
 
 ### SM4：分组对称加密算法
 

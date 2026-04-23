@@ -1,27 +1,28 @@
 ---
 title: Redis Cluster
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: reference
 status: complete
 ---
 
-# Redis Cluster
+## Redis Cluster
 
 Redis 集群并没有使用一致性hash，而是引入了哈希槽的概念
 
-## 问题
+### 问题
 
 - QPS上限
 - 内存单机容量上限
 
-## 作用
+### 作用
 
 - 分散单台服务器的访问压力，实现负载均衡
 - 分散单台服务器的存储压力，实现可扩展性
 - 降低单台服务器宕机带来的业务灾难
 
-## 结构设计
+### 结构设计
 
 - 数据存储设计
 - 集群内部通讯设计
@@ -52,20 +53,20 @@ Redis 集群失效检测是用来识别出大多数节点何时无法访问某�
 
 Redis 集群使用一个类似于木筏算法（Raft algorithm）”术语”的概念。在 Redis 集群中这个术语叫做 阶段（epoch），它是用来记录事件的版本号，所以当有多个节点提供了冲突的信息的时候，另外的节点就可以通过这个状态来了解哪个是最新的。 currentEpoch 是一个 64bit 的 unsigned 数。
 
-## 命令
+### 命令
 
 ```bash
-# 集群相关命令
+## 集群相关命令
 1、CLUSTER INFO 打印集群的信息  
 2、CLUSTER NODES 列出集群当前已知的所有节点（node），以及这些节点的相关信息。 
 3、CLUSTER FAILOVER 手动故障转移，需要在slave节点上执行
 
-# 键相关命令
+## 键相关命令
 1、CLUSTER KEYSLOT <key> 计算键 key 应该被放置在哪个槽上。  
 2、CLUSTER COUNTKEYSINSLOT <slot> 返回槽 slot 目前包含的键值对数量。  
 3、CLUSTER GETKEYSINSLOT <slot> <count>   返回 count 个 slot 槽中的键。
 
-# 不支持的命令
+## 不支持的命令
 1、不支持SELECT 命令,集群只使用数据库 0 
 2、不支持多个KEY的操作 如 MSET、SUION、SINTER等命令 (因为KEYS 无法hash到同一个slot中
 ```

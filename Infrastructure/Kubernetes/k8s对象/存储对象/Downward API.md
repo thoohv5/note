@@ -1,14 +1,15 @@
 ---
 title: Downward API
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# Downward API
+## Downward API
 
-# 概述
+## 概述
 
 让 Pod 里的容器能够直接获取到这个 Pod API 对象本身的信息。
 

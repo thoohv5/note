@@ -1,12 +1,13 @@
 ---
 title: Redis Bloom Filter
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: guide
 status: complete
 ---
 
-# Redis Bloom Filter
+## Redis Bloom Filter
 
 ### RedisBloom 提供的命令
 
@@ -17,7 +18,7 @@ RedisBloom 提供了以下常用命令：
 - **`BF.EXISTS key item`**：检查元素是否存在。
 - **`BF.MEXISTS key item1 item2 ...`**：检查多个元素是否存在。
 
-## `BF.RESERVE {key} {error_rate} {capacity} [EXPANSION expansion] [NONSCALING]`
+### `BF.RESERVE {key} {error_rate} {capacity} [EXPANSION expansion] [NONSCALING]`
 
 ### `假阳性率**{error_rate}**`
 
@@ -56,7 +57,7 @@ RedisBloom 提供了以下常用命令：
 
 您提供的是 Redis 布隆过滤器的 **`BF.INFO`** 命令输出结果。以下是详细解析和对应的处理建议：
 
-## **布隆过滤器信息解析**
+### **布隆过滤器信息解析**
 
 | **行号** | **字段名称** | **值** | **说明** |
 | --- | --- | --- | --- |
@@ -96,7 +97,7 @@ RedisBloom 提供了以下常用命令：
     ```
     
 
-# 持久化
+## 持久化
 
 ### **BF.SCANDUMP**
 
@@ -120,7 +121,7 @@ RedisBloom 提供了以下常用命令：
     - **`iterator`**：与SCANDUMP返回的迭代器对应
     - **`data`**：SCANDUMP返回的数据块
 
-# 附录
+## 附录
 
 [[../../../Algorithm/奇门遁甲/布隆过滤器（Bloom Filter）]] 
 

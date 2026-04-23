@@ -1,14 +1,15 @@
 ---
 title: ECC
 date: 2026-04-07
-tags: [理论, 加密]
+  - 理论
+  - 加密
 type: reference
 status: complete
 ---
 
-# ECC
+## ECC
 
-# 概述
+## 概述
 
 在密码学中，**ECC（Elliptic Curve Cryptography，椭圆曲线密码学）** 是一种基于椭圆曲线数学构造的 **非对称加密算法体系**，相比 RSA 在相同安全级别下使用更短的密钥，性能更优。
 
@@ -20,7 +21,7 @@ status: complete
 | 应用场景 | 数字签名、密钥交换、加密 | 同上 |
 | 国密版本 | ✅ SM2（ECC 国密标准） | ❌ 不属于国密 |
 
-## Go语言实现
+### Go语言实现
 
 Go 标准库原生支持 ECC（基于 `crypto/elliptic` 和 `crypto/ecdsa`）。以下是一个完整例子：
 

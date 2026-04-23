@@ -1,14 +1,15 @@
 ---
 title: Redis Pool
 date: 2026-04-07
-tags: [基础设施, Redis]
+  - 基础设施
+  - Redis
 type: note
 status: complete
 ---
 
-# Redis Pool
+## Redis Pool
 
-# 错误
+## 错误
 
 connection pool exhausted
 
@@ -55,10 +56,10 @@ func (p *Pool) put(pc *poolConn, forceClose bool) error {
 连接池的具体实现是通过一个链表来实现的。如果发现连接池里面的空闲个数超过了MaxIdle，就会把尾部的连接删除 把最新的连接放到头部。类似将老的连接删掉，加入最新的。
 
 ```bash
-# 查看连接数
+## 查看连接数
 info clients
 
-# 查看当前节点允许的最大连接数可用，默认10000
+## 查看当前节点允许的最大连接数可用，默认10000
 config get maxclients
 
 netstat -ano

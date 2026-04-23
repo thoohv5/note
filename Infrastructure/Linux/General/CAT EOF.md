@@ -1,14 +1,15 @@
 ---
 title: CAT EOF
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# CAT EOF
+## CAT EOF
 
-# 覆盖（>）
+## 覆盖（>）
 
 ```bash
 cat <<EOF > file
@@ -24,7 +25,7 @@ file content
 EOF
 ```
 
-# 追加（>>）
+## 追加（>>）
 
 ```bash
 cat <<EOF >> file
@@ -40,7 +41,7 @@ file content
 EOF
 ```
 
-# EOF 说明
+## EOF 说明
 
 | 写法 | 含义 |
 | --- | --- |
@@ -55,7 +56,7 @@ EOF
 cat <<EOF
 Hello $NAME
 EOF
-# 输出: Hello world
+## 输出: Hello world
 ```
 
 ---
@@ -66,7 +67,7 @@ EOF
 cat <<'EOF'
 Hello $NAME
 EOF
-# 输出: Hello $NAME
+## 输出: Hello $NAME
 ```
 
 ---
@@ -77,7 +78,7 @@ EOF
 cat <<-EOF
 	This is tab-indented
 EOF
-# 输出: This is tab-indented
+## 输出: This is tab-indented
 ```
 
 注意：**只有 tab 会被忽略，空格不会！**
@@ -92,5 +93,5 @@ EOF
 cat <<-'EOF'
 	Hello $NAME
 EOF
-# 输出: Hello $NAME
+## 输出: Hello $NAME
 ```

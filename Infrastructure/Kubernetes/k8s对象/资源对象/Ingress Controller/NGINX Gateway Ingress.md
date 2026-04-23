@@ -1,22 +1,23 @@
 ---
 title: NGINX Gateway Ingress
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# NGINX Gateway Ingress
+## NGINX Gateway Ingress
 
 ### 安装
 
 ```bash
 kubectl create namespace ingress-nginx
 
-# 为裸机 / kubeadm / 无云 LB 环境准备的 NodePort 模式
+## 为裸机 / kubeadm / 无云 LB 环境准备的 NodePort 模式
 wget -O ingress-nginx.yaml https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.4/deploy/static/provider/baremetal/deploy.yaml
 
-# 3. 替换镜像为国内源（阿里云）
+## 3. 替换镜像为国内源（阿里云）
 sed -i 's|registry.k8s.io/ingress-nginx/controller:[^[:space:]]*|registry.aliyuncs.com/google_containers/nginx-ingress-controller:v1.9.4|g' ingress-nginx.yaml
 sed -i 's|registry.k8s.io/ingress-nginx/kube-webhook-certgen:[^[:space:]]*|registry.aliyuncs.com/google_containers/kube-webhook-certgen:v20231011-8b53cabe0|g' ingress-nginx.yaml
 
@@ -35,7 +36,7 @@ kubectl get svc ingress-nginx-controller -n ingress-nginx
 
 ```bash
 ---
-# 创建命名空间
+## 创建命名空间
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -107,5 +108,5 @@ spec:
                 port:
                   number: 18080
 
-# curl -H "Host: demo-interface.local" http://192.168.31.100:31982
+## curl -H "Host: demo-interface.local" http://192.168.31.100:31982
 ```

@@ -1,14 +1,15 @@
 ---
 title: Nginx请求处理流程
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: guide
 status: complete
 ---
 
-# Nginx请求处理流程
+## Nginx请求处理流程
 
-## **nginx 11 个处理阶段**
+### **nginx 11 个处理阶段**
 
 1. **NGX_HTTP_POST_READ_PHASE**
     
@@ -62,7 +63,7 @@ status: complete
 3. NGX_HTTP_POST_ACCESS_PHASE
 4. NGX_HTTP_TRY_FILES_PHASE
 
-## **nginx lua 8个阶段**
+### **nginx lua 8个阶段**
 
 ```bash
 init_by_lua                      http
@@ -108,7 +109,7 @@ log_by_lua                       http, server, location, location if
     会话完成后本地异步完成日志记录(日志可以记录在本地，还可以同步到其他机器)（该阶段总是运行在请求结束的时候，用于请求的后续操作，如在共享内存中进行统计数据,如果要高精确的数据统计，应该使用body_filter_by_lua，该阶段不能运行Output API、Control API、Subrequest API、Cosocket API）
     
 
-## **nginx和lua运行阶段的对应关系**
+### **nginx和lua运行阶段的对应关系**
 
 1. init_by_lua，运行在initialization Phase；
 2. set_by_lua，运行在rewrite 阶段；

@@ -1,39 +1,40 @@
 ---
 title: 程序调试（GDB，GNU Debugger）
 date: 2026-04-07
-tags: [编程语言, 汇编]
+  - 编程语言
+  - 汇编
 type: reference
 status: complete
 ---
 
-# 程序调试（GDB，GNU Debugger）
+## 程序调试（GDB，GNU Debugger）
 
-# 概述
+## 概述
 
 GDB，全称 `GNU Debugger`，是 GNU 开源组织发布的一款功能强大的程序调试工具。自 1986 年由理查德・斯托曼（Richard Stallman）编写以来，它不断发展和完善，如今已成为 Linux 系统下调试程序的首选工具 ，在整个 Linux 生态系统中占据着举足轻重的地位。它就像是一位经验丰富的侦探，深入程序的 “案发现场”，帮助开发者们找到隐藏在代码中的 “罪犯”——Bug。
 
 GDB 支持多种编程语言，包括但不限于 C、C++、Fortran、Ada、Objective-C、Go、D 等，能够与 GCC、Clang、LLVM 等一系列主流编译器无缝集成。这意味着无论你使用哪种编程语言进行开发，GDB 都能为你提供高效的调试支持，在桌面应用程序、服务器端服务，还是嵌入式系统的开发中，都能以其强大的功能和灵活的交互方式，为开发者提供无与伦比的调试体验
 
-# 安装
+## 安装
 
 ```bash
 gdb -v
 ```
 
-# 启动
+## 启动
 
 ***需要可执行文件，包含可调试信息***
 
 ```bash
-# 调试新程序
+## 调试新程序
 gdb <program>
 
-# 附加到正在运行的进程
+## 附加到正在运行的进程
 gdb
 (gdb) attach <PID>
 ```
 
-## 交互命令
+### 交互命令
 
 ### 运行
 
@@ -93,6 +94,6 @@ where/bt 当前运行的堆栈列表
 layout split 
 ```
 
-# 附录
+## 附录
 
 [1. gdb 调试利器 - Linux Tools Quick Tutorial](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html)

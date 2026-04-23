@@ -1,12 +1,13 @@
 ---
 title: 整型（int）
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: incomplete
 ---
 
-# 整型（int）
+## 整型（int）
 
 - 任意大的整数，只要计算机内存足够大
 

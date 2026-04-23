@@ -1,12 +1,13 @@
 ---
 title: PG VACUUM
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: incomplete
 ---
 
-# PG VACUUM
+## PG VACUUM
 
 ### VACUUM（清理）
 

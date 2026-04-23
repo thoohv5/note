@@ -3,7 +3,7 @@ title: 概述
 date: 2026-04-15
 ---
 
-# 概述
+## 概述
 
 **`JSON**(JavaScript Object Notation)` 是一种轻量级的数据交换格式。基于 `JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999` 的一个子集。
 
@@ -14,9 +14,9 @@ date: 2026-04-15
 
 值（`value`）可以是双引号括起来的字符串（`string`）、数值 (`number`)、布尔 (`true/false`)、 `null`、对象（`object`）或者数组（`array`）。
 
-# GO 语言中的 JSON
+## GO 语言中的 JSON
 
-## **布尔型**
+### **布尔型**
 
 `Boolean values encode as JSON booleans.`
 
@@ -38,7 +38,7 @@ func main() {
 }
 ```
 
-# **数值型**
+## **数值型**
 
 `Floating point, integer, and [Number] values encode as JSON numbers.`
 
@@ -62,7 +62,7 @@ func main() {
 }
 ```
 
-# **字符串**
+## **字符串**
 
 `String values encode as JSON strings coerced to valid UTF-8, replacing invalid bytes with the Unicode replacement rune. So that the JSON will be safe to embed inside HTML <script> tags, the string is encoded using [HTMLEscape], which replaces "<", ">", "&", U+2028, and U+2029 are escaped to "\\u003c","\\u003e", "\\u0026", "\\u2028", and "\\u2029". This replacement can be disabled when using an [Encoder], by calling [Encoder.SetEscapeHTML](false).`
 
@@ -89,7 +89,7 @@ func main() {
 }
 ```
 
-# **数组型**
+## **数组型**
 
 `Array and slice values encode as JSON arrays, except that []byte encodes as a base64-encoded string, and a nil slice encodes as the null JSON value.`
 
@@ -111,7 +111,7 @@ func main() {
 }
 ```
 
-# 结构体
+## 结构体
 
 `Struct values encode as JSON objects. Each exported struct field becomes a member of the object, using the field name as the object key, unless the field is omitted for one of the reasons given below.`
 
@@ -137,7 +137,7 @@ func main() {
 }
 ```
 
-## **字段忽略**(`-`)
+### **字段忽略**(`-`)
 
 默认可见字段可导出，指定 `-` 标识可忽略导出字段。
 
@@ -157,7 +157,7 @@ func main() {
 }
 ```
 
-## **空值忽略**(`omitempty`)
+### **空值忽略**(`omitempty`)
 
 `defined as false, 0, a nil pointer, a nil interface value, and any array, slice, map, or string of length zero.`
 
@@ -189,7 +189,7 @@ func main() {
 }
 ```
 
-## **零值忽略**(`omitzero`)
+### **零值忽略**(`omitzero`)
 
 **Go 1.24**
 
@@ -233,7 +233,7 @@ func main() {
 | **自定义判断**     | ❌ 不支持           | ✅ 支持 IsZero() |
 | **适用场景**      | 常规空值忽略          | 精确零值控制        |
 
-## **字符串化**(`string`)
+### **字符串化**(`string`)
 
 仅支持 `string, floating point, integer, or boolean` 类型的字段
 
@@ -259,7 +259,7 @@ func main() {
 }
 ```
 
-## **内嵌结构**(`Embedded struct`)
+### **内嵌结构**(`Embedded struct`)
 
 `JSON` 字符串扁平化，需要
 
@@ -293,7 +293,7 @@ func main() {
 }
 ```
 
-# **KV 字典**(`Map values`)
+## **KV 字典**(`Map values`)
 
 `Map values encode as JSON objects. The map's key type must either be a string, an integer type, or implement [encoding.TextMarshaler]. The map keys are sorted and used as JSON object keys by applying the following rules, subject to the UTF-8 coercion described for string values above:`
 
@@ -301,11 +301,11 @@ func main() {
 - `keys that implement [encoding.TextMarshaler] are marshaled`
 - `integer keys are converted to strings`
 
-# **空对象**(`null`)
+## **空对象**(`null`)
 
 `Pointer values encode as the value pointed to. A nil pointer encodes as the null JSON value.`
 
-# 不支持类型
+## 不支持类型
 
 `Channel, complex, and function values cannot be encoded in JSON. Attempting to encode such a value causes Marshal to return an [UnsupportedTypeError].`
 
@@ -317,9 +317,9 @@ _**Marshal**_ 不支持的标准类型有 _**Complex64**_ ，_**Complex128**_
 
 对于不支持的值，会返回 _**UnsupportedValueError**_ 错误，如浮点数的无穷大，无穷小，NaN 和出现循环引用的 map、slice 和 pointer。
 
-# 方法
+## 方法
 
-## `json.Marshal`
+### `json.Marshal`
 
 ```go
 // Marshal returns the JSON encoding of v.
@@ -367,7 +367,7 @@ func main() {
 }
 ```
 
-## `json.Unmarshal`
+### `json.Unmarshal`
 
 ```go
 // Unmarshal parses the JSON-encoded data and stores the result
@@ -415,7 +415,7 @@ func main() {
 }
 ```
 
-## `json.RawMessage`
+### `json.RawMessage`
 
 ```go
 // RawMessage is a raw encoded JSON value.
@@ -426,7 +426,7 @@ type RawMessage []byte
 
 `RawMessage` 是 `[]byte` 的别名，被声明为 `RawMessage` 类型的字段，在 `Marshal` 和 `Unmarshal` 过程中将不被处理，因此如果我们将透传的信息存储在声明为 `RawMessage` 类型的字段中，就可以避免 `JSON` 的二次编码。
 
-## `json.Number`
+### `json.Number`
 
 ```go
 // A Number represents a JSON number literal.
@@ -515,7 +515,7 @@ func isValidNumber(s string) bool {
 }
 ```
 
-# 附录
+## 附录
 
 [JSON](https://www.json.org/json-en.html)
 

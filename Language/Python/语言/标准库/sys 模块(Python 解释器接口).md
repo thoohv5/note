@@ -1,14 +1,15 @@
 ---
 title: sys 模块(Python 解释器接口)
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# sys 模块(Python 解释器接口)
+## sys 模块(Python 解释器接口)
 
-## sys.argv
+### sys.argv
 
 在 `Python` 解释器下执行一个脚本时，会通过 `sys.argv` 变量向这个脚本传递一个命令行参数列表。 其中，第一个元素 `sys.argv[0]`是脚本程序的完整路径或文件名(取决于操作系统)。
 

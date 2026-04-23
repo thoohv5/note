@@ -1,12 +1,13 @@
 ---
 title: Happened before
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: incomplete
 ---
 
-# Happened before
+## Happened before
 
 ```go
 1. 第 n 个 send 一定 happened before 第 n 个 receive finished，无论是缓冲型还是非缓冲型的 channel。

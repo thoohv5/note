@@ -1,14 +1,15 @@
 ---
 title: 字符串(str)
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: complete
 ---
 
-# 字符串(str)
+## 字符串(str)
 
-## 定义
+### 定义
 
 Python 没有表示单个字符的字符类型，只有字符串类型 str。字符串是用单引号或双引号括起来 的一系列字符。
 

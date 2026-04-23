@@ -1,14 +1,15 @@
 ---
 title: ABAC模型
 date: 2026-04-07
-tags: [微服务, 分布式]
+  - 微服务
+  - 分布式
 type: note
 status: complete
 ---
 
-# ABAC模型
+## ABAC模型
 
-## **ABAC (Attribute-Based Access Control 属性访问控制)**
+### **ABAC (Attribute-Based Access Control 属性访问控制)**
 
 基于属性的权限控制不同于常见的将用户通过某种方式关联到权限的方式，ABAC则是通过动态计算一个或一组属性来是否满足某种条件来进行授权判断（可以编写简单的逻辑）。
 
@@ -24,6 +25,6 @@ status: complete
 
 门卫检查每个来访者的身份、来访时间，来决定他们能否进入 1 号办公室
 
-# 附录
+## 附录
 
 [【IT老齐218】浅析强大但复杂的ABAC属性访问控制_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1wT411M7bd?spm_id_from=333.788.player.switch&vd_source=8542b846ff58e0506b2a7b7916a22ed8)

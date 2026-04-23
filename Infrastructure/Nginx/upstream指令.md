@@ -1,18 +1,19 @@
 ---
 title: upstream指令
 date: 2026-04-07
-tags: [基础设施, Nginx]
+  - 基础设施
+  - Nginx
 type: reference
 status: complete
 ---
 
-# upstream指令
+## upstream指令
 
-# 概述
+## 概述
 
 nginx中通过upstream实现负载均衡配置，upstream块内可以定义一组服务，nginx按不同的策略将请求转发到这些服务上实现负载均衡。
 
-# 示例
+## 示例
 
 ```bash
 upstream balance {
@@ -30,7 +31,7 @@ server {
 }
 ```
 
-## upstream指令的参数
+### upstream指令的参数
 
 ```bash
 upstream balance {
@@ -46,7 +47,7 @@ upstream balance {
 - `max_fails`：表示失败几次，则标记此服务不可用，默认值1
 - `fail_timeout`：在fail_timeout设置的时间段内，请求失败max_fails次后标记此服务不可用。fail_timeout默认值10。
 
-# 负载均衡策略
+## 负载均衡策略
 
 ### 轮循
 

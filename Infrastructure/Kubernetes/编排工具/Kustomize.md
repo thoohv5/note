@@ -1,12 +1,13 @@
 ---
 title: Kustomize
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# Kustomize
+## Kustomize
 
 最初，由 Kubernetes 官方给出的“如何封装应用”的解决方案是“用配置文件来配置文件”，这不是绕口令，你可以把它理解为是一种针对 YAML 的模版引擎的变体。
 

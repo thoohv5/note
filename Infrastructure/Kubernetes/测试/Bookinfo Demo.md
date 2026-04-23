@@ -1,14 +1,15 @@
 ---
 title: Bookinfo Demo
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# Bookinfo Demo
+## Bookinfo Demo
 
-## 部署
+### 部署
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.27/samples/bookinfo/platform/kube/bookinfo.yaml
@@ -17,13 +18,13 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.27/samp
 
 ```
 
-## 访问
+### 访问
 
 ```bash
-# 查看端口
+## 查看端口
 kubectl get svc istio-ingressgateway -n istio-system
 
-# 查看IP
+## 查看IP
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' demo-control-plane
 ```
 

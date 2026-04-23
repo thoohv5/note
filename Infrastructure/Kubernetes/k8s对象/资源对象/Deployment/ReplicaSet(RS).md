@@ -1,18 +1,19 @@
 ---
 title: ReplicaSet(RS)
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# ReplicaSet(RS)
+## ReplicaSet(RS)
 
-# 概述
+## 概述
 
 `ReplicaSet (RS)` 是 Kubernetes 中用来 维持一组 Pod 副本始终处于期望状态 的控制器。它是 `ReplicationController (RC)` 的升级版，并且是 `Deployment` 的核心组成部分 —— 每次你创建一个 Deployment，其实底层就是由一个或多个 ReplicaSet 托管 Pod 的。
 
-## 示例
+### 示例
 
 ```yaml
 apiversion: extensions/v1betal 
@@ -27,7 +28,7 @@ spec:
             - {key: tier, operator: In, values: [frontend])
 ```
 
-## ✅ `matchLabels` 是简单的等值匹配（key = value）
+### ✅ `matchLabels` 是简单的等值匹配（key = value）
 
 ```yaml
 selector:
@@ -42,7 +43,7 @@ selector:
 
 ---
 
-## ✅ `matchExpressions` 是更灵活的表达式匹配
+### ✅ `matchExpressions` 是更灵活的表达式匹配
 
 ```yaml
 selector:
@@ -62,7 +63,7 @@ selector:
 
 ---
 
-## 🧠 两者可以同时使用
+### 🧠 两者可以同时使用
 
 ```yaml
 selector:

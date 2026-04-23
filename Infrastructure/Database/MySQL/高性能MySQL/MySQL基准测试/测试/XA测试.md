@@ -1,12 +1,13 @@
 ---
 title: XA测试
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# XA测试
+## XA测试
 
 ```jsx
 XA {START|BEGIN} xid [JOIN|RESUME]    #开始一个分布式事务  

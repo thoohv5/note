@@ -1,12 +1,13 @@
 ---
 title: mitchellh/mapstructure
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# mitchellh/mapstructure
+## mitchellh/mapstructure
 
 [https://www.jb51.net/article/271451.htm](https://www.jb51.net/article/271451.htm)
 
@@ -18,7 +19,7 @@ mapstructure用于将通用的map[string]interface{}解码到对应的 Go 结构
 
 在数据传递时，需要先编解码；常用的方式是JSON编解码（参见《[golang之JSON处理](https://www.jb51.net/article/255438.htm)》）。但有时却需要读取部分字段后，才能知道具体类型，此时就可借助mapstructure库了。
 
-## mapstructure库
+### mapstructure库
 
 mapstructure可方便地实现`map[string]interface{}`与`struct`间的转换；使用前，需要先导入库：
 
@@ -84,7 +85,7 @@ mapstructure中可以使用Metadata收集一些解码时会产生的有用信息
 | 123456 | `p := &Student{Name: "Mike",Age:  12,}var` `m map[string]interface{}mapstructure.Decode(p, &m)` |
 | --- | --- |
 
-## 解码器
+### 解码器
 
 mapstructure提供了解码器（Decoder），可灵活方便地控制解码：
 
@@ -96,7 +97,7 @@ mapstructure提供了解码器（Decoder），可灵活方便地控制解码：
 | 123456789101112131415161718192021222324252627 | `Name stringAge  int}func` `decoderConfig() {m := map[string]interface{}{"name": 123,"age":  "12","job":  "programmer",}var` `p Personvar` `metadata mapstructure.Metadatadecoder, err := mapstructure.NewDecoder(&mapstructure.DecoderConfig{WeaklyTypedInput: true,Result:           &p,Metadata:         &metadata,})if` `err != nil` `{log.Fatal(err)}err = decoder.Decode(m)if` `err == nil` `{log.Printf("Result: %#v", p)log.Printf("keys:%#v, unused:%#v\n", metadata.Keys, metadata.Unused)} else` `{log.Println("decode fail:", err)}}` |
 | --- | --- |
 
-## 示例
+### 示例
 
 通过一个messageData结构，action会指示最终的data类型。接收到数据后，先解析出atcion，再根据action转换为真实的类型。
 

@@ -1,16 +1,17 @@
 ---
 title: NTP服务
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# NTP服务
+## NTP服务
 
-# ntp服务
+## ntp服务
 
-## 同步不同机器的时间
+### 同步不同机器的时间
 
 ```bash
 yum install ntp -y
@@ -18,7 +19,7 @@ yum install ntp -y
 
 ntpd有一个自我保护设置: 如果本机与上源时间相差太大, ntpd不运行. 所以新设置的时间服务器一定要先ntpdate从上源取得时间初值, 然后启动ntpd服务。ntpd服务运行后, 先是每64秒与上源服务器同步一次, 根据每次同步时测得的误差值经复杂计算逐步调整自己的时间, 随着误差减小, 逐步增加同步的间隔. 每次跳动, 都会重复这个调整的过程.
 
-## 同步网络时间
+### 同步网络时间
 
 ```bash
 yum install ntpdate -y

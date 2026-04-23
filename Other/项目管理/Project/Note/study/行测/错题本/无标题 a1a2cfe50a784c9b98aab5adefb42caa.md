@@ -1,12 +1,12 @@
 ---
 title: 无标题
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# 无标题
+## 无标题
 
 Status: In progress
 分类: 错题

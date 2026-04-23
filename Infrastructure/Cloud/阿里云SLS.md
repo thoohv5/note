@@ -1,12 +1,13 @@
 ---
 title: 阿里云SLS
 date: 2026-04-07
-tags: [基础设施, 云服务]
+  - 基础设施
+  - 云服务
 type: guide
 status: complete
 ---
 
-# 阿里云SLS
+## 阿里云SLS
 
 ### 术语表
 
@@ -24,6 +25,6 @@ status: complete
 2. LoongCollector（Logtail 升级版）
 3. SDK&API
 
-# 附录
+## 附录
 
 [日志服务](https://help.aliyun.com/zh/sls/?spm=a2c4g.11186623.help-sub-nav.2.1132142anpM91O)

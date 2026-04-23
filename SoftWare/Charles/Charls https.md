@@ -1,14 +1,14 @@
 ---
 title: Charls https
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: note
 status: complete
 ---
 
-# Charls https
+## Charls https
 
-# **背景**
+## **背景**
 
 使用抓包软件（以 Charles 为例）抓取APP的 https 请求时，Android和Charles都正确安装了证书却出现抓包失败，报错：
 
@@ -16,7 +16,7 @@ Client SSL handshake failed: An unknown issue occurred processing the certificat
 
 [](https://img-blog.csdn.net/20180330132929243?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NoYWRvd3lTcGlyaXRz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-# **原因**
+## **原因**
 
 Android7.0 之后默认不信任用户添加到系统的CA证书：
 
@@ -25,7 +25,7 @@ Android7.0 之后默认不信任用户添加到系统的CA证书：
 
 也就是说对基于 SDK24 及以上的APP来说，即使你在手机上安装了抓包工具的证书也无法抓取 https 请求
 
-# **解决方案**
+## **解决方案**
 
 ### **一、官方解决方案（需修改代码）**
 

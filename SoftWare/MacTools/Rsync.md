@@ -1,16 +1,16 @@
 ---
 title: Rsync
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: guide
 status: complete
 ---
 
-# Rsync
+## Rsync
 
-# 概念
+## 概念
 
-## 工作方式
+### 工作方式
 
 ```bash
 Local:
@@ -34,28 +34,28 @@ Access via rsync daemon:
 2. Rsync refers to the local side as the lqclientrq and the remote side as the lqserverrq. Don't confuse lqserverrq with an rsync daemon -- a daemon is always a server, but a server can be either a daemon or a remote-shell spawned process Rsync 将本地端称为 lqclientrq，将远程端称为 lqserverrq。不要将 lqserverrq 与 rsync 守护进程混淆——守护进程始终是服务器，但服务器既可以是守护进程，也可以是远程 shell 生成的进程。
 3. Note that rsync must be installed on both the source and destination machines. 请注意，必须在源计算机和目标计算机上都安装 rsync。
 
-## 作用
+### 作用
 
 1. 通过Rsync可以实现增量备份
 2. 配合计划任务，Rsync可以实现定时或间隔时间数据同步
 3. 配合inotify，Rsync可以实现触发式的实时同步
 
-# 部署
+## 部署
 
 ### 配置文件 `[/etc/rsyncd.conf](<https://linux.die.net/man/5/rsyncd.conf>)`
 
 ```bash
 ### 全局配置 ###
-# 欢迎词，默认：无
+## 欢迎词，默认：无
 motd file = /etc/rsyncd.motd
-# 服务进程
+## 服务进程
 pid file = /var/run/rsyncd.pid
-# 服务端口，默认：873
+## 服务端口，默认：873
 port 873
-# 服务地址，默认：0.0.0.0
+## 服务地址，默认：0.0.0.0
 adress 192.168.1.128
 
-# 可以包括模块配置的参数
+## 可以包括模块配置的参数
 
 ### 模块配置 ###
 [common]
@@ -105,13 +105,13 @@ adress 192.168.1.128
 ### 密码文件 `/etc/rsyncd.secrets`
 
 ```bash
-# 服务端
-# user:password
+## 服务端
+## user:password
 tom:123456
 jerry:123456
 
-# 客户端
-# password
+## 客户端
+## password
 123456
 
 ```
@@ -120,7 +120,7 @@ jerry:123456
 
 </aside>
 
-## [参数说明](https://linux.die.net/man/1/rsync)
+### [参数说明](https://linux.die.net/man/1/rsync)
 
 ```bash
 -v 显示Rsync过程中的详细信息
@@ -159,7 +159,7 @@ rsync -avz --delete --password-file=/etc/rsync.passwd SRC... rsync://[USER@]HOST
 
 [[cp scp rsync mv 拷贝常识问题]]
 
-# 附录
+## 附录
 
 [rsync(1) - Linux man page](https://linux.die.net/man/1/rsync)
 

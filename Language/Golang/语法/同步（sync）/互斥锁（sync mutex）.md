@@ -1,20 +1,21 @@
 ---
 title: 互斥锁（sync.mutex）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 互斥锁（sync.mutex）
+## 互斥锁（sync.mutex）
 
-# 特性
+## 特性
 
 1. 支持[互斥访问](https://zhida.zhihu.com/search?content_id=227246263&content_type=Article&match_order=1&q=互斥访)AE&zhida_source=entity，即同时只有一个goroutine能够进入被锁定的代码块。
 2. 不支持重入，即同一个goroutine不能重复获取同一个Mutex。
 3. 不支持递归，即在没有解锁之前，该goroutine不能再次获取Mutex。
 
-# **基本结构**
+## **基本结构**
 
 ```go
 // sync/mutex.go 25行
@@ -38,9 +39,9 @@ const (
 )
 ```
 
-# 锁模式
+## 锁模式
 
-## 正常模式
+### 正常模式
 
 通过自旋获取锁（>4）
 
@@ -48,7 +49,7 @@ const (
 
 **如果一个等待的goroutine有超过1ms（写死在代码中）都没获取到锁，那么就会把锁转变为饥饿模式。**
 
-## 饥饿模式
+### 饥饿模式
 
 在饥饿模式中，锁的所有权会直接从释放锁(unlock)的goroutine转交给队列头的goroutine，新请求锁的goroutine就算锁是空闲状态也不会去获取锁，并且也不会尝试自旋。它们只是排到队列的尾部。
 
@@ -59,9 +60,9 @@ const (
 
 **以上只要有一个成立，它就会把锁转变回正常模式。**
 
-# 加锁
+## 加锁
 
-## Lock函数
+### Lock函数
 
 ```go
 func (m *Mutex) Lock() {
@@ -79,7 +80,7 @@ func (m *Mutex) Lock() {
 
 Lock函数有两个路径，快速路径和慢速路径。快速路径通过原子操作直接尝试获取锁，如果获取成功则返回。否则会调用慢速路径lockSlow()进行锁的获取。
 
-## **lockSlow函数**
+### **lockSlow函数**
 
 ```go
 func (m *Mutex) lockSlow() {
@@ -179,9 +180,9 @@ lockSlow()函数是Lock的慢速路径，它会对Mutex进行详细的状态检�
 3. 如果等待时间超过阈值，则将Mutex设置为饥饿模式。
 4. 如果饥饿模式下已经有等待者，则直接将锁转交给等待者，否则将当前[goroutine](https://zhida.zhihu.com/search?content_id=227246263&content_type=Article&match_order=11&q=goroutine&zhida_source=entity)加入等待队列。
 
-# 解锁
+## 解锁
 
-## **Unlock函数**
+### **Unlock函数**
 
 ```go
 unc (m *Mutex) Unlock() {
@@ -202,7 +203,7 @@ unc (m *Mutex) Unlock() {
 
 Unlock函数用于解锁Mutex。它首先通过原子操作将state中的mutexLocked标志位清除，如果清除后还有等待者，则会调用unlockSlow()函数唤醒等待者。
 
-## **unlockSlow函数**
+### **unlockSlow函数**
 
 ```go
 func (m *Mutex) unlockSlow(new int32) {
@@ -242,6 +243,6 @@ func (m *Mutex) unlockSlow(new int32) {
 
 unlockSlow()函数用于唤醒等待者。如果当前Mutex处于非饥饿模式，则通过循环检查等待者队列，尝试将Mutex的锁转交给队列中的第一个等待者。如果当前Mutex处于饥饿模式，则直接唤醒等待者，由等待者来竞争获取Mutex。
 
-# 附录
+## 附录
 
 [](https://www.jianshu.com/p/28ec64fd65e8)

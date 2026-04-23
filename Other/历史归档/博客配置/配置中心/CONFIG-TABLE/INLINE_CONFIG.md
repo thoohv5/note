@@ -1,12 +1,12 @@
 ---
 title: INLINE_CONFIG
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# INLINE_CONFIG
+## INLINE_CONFIG
 
 配置值: { "TEST" : "测试值" }
 创建日期: 2025年2月25日 10:57

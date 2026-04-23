@@ -1,9 +1,9 @@
 ---
 title: API设计
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: reference
 status: incomplete
 ---
 
-# API设计
+## API设计

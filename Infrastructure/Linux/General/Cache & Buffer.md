@@ -1,12 +1,13 @@
 ---
 title: Cache & Buffer
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: note
 status: complete
 ---
 
-# Cache & Buffer
+## Cache & Buffer
 
 Page Cache和Buffer cache的区别
 

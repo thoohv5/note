@@ -1,14 +1,15 @@
 ---
 title: 单例模式（single mode）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: reference
 status: complete
 ---
 
-# 单例模式（single mode）
+## 单例模式（single mode）
 
-# 单例实现
+## 单例实现
 
 ### 懒汉模式，非线程安全
 
@@ -115,6 +116,6 @@ func GetInstance() *singleton {
 }
 ```
 
-# 附录
+## 附录
 
 [Go并发编程 - sync.Once 单实例模式的思考](https://mp.weixin.qq.com/s/ELnUQL-EnK8w8EpdbZKDWA)

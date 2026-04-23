@@ -1,12 +1,13 @@
 ---
 title: GO SDK
 date: 2026-04-07
-tags: [基础设施, 消息队列]
+  - 基础设施
+  - 消息队列
 type: guide
 status: complete
 ---
 
-# GO SDK
+## GO SDK
 
 ### **Apache RocketMQ Go 客户端完整对比**
 
@@ -86,12 +87,12 @@ status: complete
 
 如果需要具体代码示例或迁移指导，可以进一步展开说明！ 🚀
 
-# Github
+## Github
 
-## `github.com/apache/rocketmq-clients/golang/v5(推荐)`
+### `github.com/apache/rocketmq-clients/golang/v5(推荐)`
 
 [https://github.com/apache/rocketmq-clients](https://github.com/apache/rocketmq-clients)
 
-## `github.com/apache/rocketmq-client-go/v2`
+### `github.com/apache/rocketmq-client-go/v2`
 
 [https://github.com/apache/rocketmq-client-go](https://github.com/apache/rocketmq-client-go)

@@ -1,37 +1,38 @@
 ---
 title: DB的编码
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: incomplete
 ---
 
-# DB的编码
+## DB的编码
 
 ```
-# 创建数据库执行编码
+## 创建数据库执行编码
 CREATE DATABASE your_database_name ENCODING 'UTF-8';
 
-# DB
+## DB
 SELECT datname, pg_encoding_to_char(encoding) FROM pg_database;
 
 ```
 
-## 服务器编码
+### 服务器编码
 
 ```
 show server_encoding;
 
 ```
 
-## 客户端编码
+### 客户端编码
 
 ```
 show client_encoding;
 
 ```
 
-## 本地环境编码
+### 本地环境编码
 
 ```
 locale

@@ -1,14 +1,15 @@
 ---
 title: dlv
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# dlv
+## dlv
 
-## 安装
+### 安装
 
 ```bash
 go install github.com/go-delve/delve/cmd/dlv@latest
@@ -20,7 +21,7 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 dlv version
 ```
 
-## 编译
+### 编译
 
 ```
 
@@ -37,7 +38,7 @@ go build -gcflags="all=-N -l＂ -o main .
 
 编译时不指定参数：dlv 调试，p打印变量时无法正常打印，报错：Command failed: could not find symbol value for 变量
 
-## Panic时自动生成core与调试
+### Panic时自动生成core与调试
 
 GO提供环境变量GOTRACEBACK，控制在panic时的行为。
 
@@ -49,7 +50,7 @@ GO提供环境变量GOTRACEBACK，控制在panic时的行为。
 - GOTRACEBACK=system 输出所有goroutines的相关信息，包括与go runtime相关的stack frames,从而得知哪些goroutine是go runtime启动运行的
 - GOTRACEBACK=crash 与system的唯一区别是crash会生成core[dump文件](https://so.csdn.net/so/search?q=dump文)B6&spm=1001.2101.3001.7020
 
-## 常用命令
+### 常用命令
 
 ### 启动调试
 
@@ -151,6 +152,6 @@ run
 | help | h | 查看使用手册 |
 | list | ls/l | 查看源代码 |
 
-# 附录
+## 附录
 
 [https://github.com/go-delve/delve](https://github.com/go-delve/delve)

@@ -1,24 +1,25 @@
 ---
 title: Telepresence[官方推荐]
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: complete
 ---
 
-# Telepresence[官方推荐]
+## Telepresence[官方推荐]
 
-# 安装Client
+## 安装Client
 
 ```bash
-# 1. Download the binary.
+## 1. Download the binary.
 sudo curl -fL https://github.com/telepresenceio/telepresence/releases/latest/download/telepresence-darwin-amd64 -o /usr/local/bin/telepresence
 
-# 2. Make the binary executable:
+## 2. Make the binary executable:
 sudo chmod a+x /usr/local/bin/telepresence
 ```
 
-# 安装**Traffic Manager**
+## 安装**Traffic Manager**
 
 ```bash
 mkdir -p "$HOME/Library/Application\ Support/telepresence"
@@ -39,25 +40,25 @@ helm repo update
 helm install traffic-manager datawire/telepresence --namespace ambassador --create-namespace
 ```
 
-# 卸载
+## 卸载
 
 ```bash
 telepresence uninstall --everything
 ```
 
-# 使用
+## 使用
 
 ```bash
 telepresence connect
 ```
 
-## 替换
+### 替换
 
 ```bash
 Replace
 ```
 
-## 拦截
+### 拦截
 
 ### 全局拦截（Global intercept）
 
@@ -78,6 +79,6 @@ telepresence intercept <service-name> --port <local-port>[:<remote-port>] --http
 --http-path-regex <regex> 基于请求路径是否匹配给定的正则表达式
 ```
 
-## **窃听**
+### **窃听**
 
-## **摄取**
+### **摄取**

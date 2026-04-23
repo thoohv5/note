@@ -1,12 +1,12 @@
 ---
 title: PREVIEW_TAG_COUNT
 date: 2026-04-07
-tags: [其他]
+  - 其他
 type: note
 status: incomplete
 ---
 
-# PREVIEW_TAG_COUNT
+## PREVIEW_TAG_COUNT
 
 配置值: 5
 创建日期: 2025年2月25日 10:57

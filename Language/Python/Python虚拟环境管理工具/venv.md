@@ -1,37 +1,38 @@
 ---
 title: venv
 date: 2026-04-07
-tags: [编程语言, Python]
+  - 编程语言
+  - Python
 type: note
 status: incomplete
 ---
 
-# venv
+## venv
 
-# 安装
+## 安装
 
 make venv
 
-# 创建
+## 创建
 
 python3 -m venv <env_name>
 
-# 激活
+## 激活
 
 source myenv/bin/activate
 
-# 安装
+## 安装
 
 pip install requests xxx
 
-# 退出
+## 退出
 
 deactivate
 
-# 生成依赖文件
+## 生成依赖文件
 
 pip freeze > requirements.txt
 
-# 从依赖文件安装
+## 从依赖文件安装
 
 pip install -r requirements.txt

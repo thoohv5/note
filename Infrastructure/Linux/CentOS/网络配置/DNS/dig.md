@@ -1,16 +1,17 @@
 ---
 title: dig
 date: 2026-04-07
-tags: [基础设施, Linux]
+  - 基础设施
+  - Linux
 type: guide
 status: incomplete
 ---
 
-# dig
+## dig
 
 DNS lookup utility
 
-## 安装
+### 安装
 
 ```bash
 yum install bind-utils

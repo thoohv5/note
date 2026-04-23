@@ -1,12 +1,13 @@
 ---
 title: echo
 date: 2026-04-07
-tags: [编程语言, Shell]
+  - 编程语言
+  - Shell
 type: note
 status: complete
 ---
 
-# echo
+## echo
 
 ```bash
 echo -e “\033[30m 黑色字 \033[0m”

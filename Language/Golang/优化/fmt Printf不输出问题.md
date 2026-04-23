@@ -1,25 +1,26 @@
 ---
 title: fmt.Printf不输出问题
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: complete
 ---
 
-# fmt.Printf不输出问题
+## fmt.Printf不输出问题
 
 **`os.Stdout` 缓冲区问题** 和 `fmt.Printf` 不输出的总结：
 
 ---
 
-## ✅ 现象总结
+### ✅ 现象总结
 
 - `fmt.Printf("hello")` **没有换行符 `\n`，程序未退出时可能不会立即输出**。
 - 原因：**`os.Stdout` 是缓冲输出流，内容被缓存在缓冲区里**，没有触发刷新。
 
 ---
 
-## ✅ 根本原因
+### ✅ 根本原因
 
 - **`os.Stdout` 是缓冲输出（buffered output）**。
 - 在终端环境一般为**行缓冲**（输出遇到 `\n` 会立即刷新）。
@@ -27,7 +28,7 @@ status: complete
 
 ---
 
-## ✅ 解决方案
+### ✅ 解决方案
 
 | 方法 | 是否推荐 | 说明 |
 | --- | --- | --- |
@@ -38,7 +39,7 @@ status: complete
 
 ---
 
-## ✅ 推荐实践
+### ✅ 推荐实践
 
 - **总是添加 `\n`** 或使用 `fmt.Println()`，避免缓冲区未刷新的问题。
 - 调试时注意 IDE 或重定向可能带来的缓冲行为差异。

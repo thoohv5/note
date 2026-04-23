@@ -1,12 +1,13 @@
 ---
 title: golang Http server包分析 二 源码解析
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: note
 status: incomplete
 ---
 
-# golang Http server包分析 二 源码解析
+## golang Http server包分析 二 源码解析
 
 标签: Golang
 URL: https://liangtian.me/post/golang-http-2/

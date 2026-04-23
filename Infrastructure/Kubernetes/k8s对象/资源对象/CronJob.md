@@ -1,18 +1,19 @@
 ---
 title: CronJob
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: reference
 status: complete
 ---
 
-# CronJob
+## CronJob
 
-# 概述
+## 概述
 
 在 Kubernetes 中，**CronJob** 是 Job 的扩展，用于**按照指定时间计划（Cron 表达式）周期性地运行 Job**。它非常适合执行如定时备份、清理、发送通知、数据同步等周期性任务。
 
-## 核心特性
+### 核心特性
 
 | 特性 | 说明 |
 | --- | --- |

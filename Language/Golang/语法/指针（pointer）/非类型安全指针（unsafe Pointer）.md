@@ -1,16 +1,17 @@
 ---
 title: 非类型安全指针（unsafe.Pointer）
 date: 2026-04-07
-tags: [编程语言, Golang]
+  - 编程语言
+  - Golang
 type: guide
 status: complete
 ---
 
-# 非类型安全指针（unsafe.Pointer）
+## 非类型安全指针（unsafe.Pointer）
 
-# 类型安全指针
+## 类型安全指针
 
-## 创建
+### 创建
 
 1. 通过内置函数 `new` 获取某个类型值的指针
 2. 通过取地址符 `&` 获取某个变量的指针
@@ -26,7 +27,7 @@ c := &b
 fmt.Printf("%p\n", c) // 0xc000116030
 ```
 
-## 限制
+### 限制
 
 1. 不能对指针的地址进行算术运算
 2. 两个任意指针类型不能随意转换
@@ -34,11 +35,11 @@ fmt.Printf("%p\n", c) // 0xc000116030
     只有两个类型的底层数据类型是一致的，才可以完成转换
     
 
-# 非类型安全指针（unsafe.Pointer）
+## 非类型安全指针（unsafe.Pointer）
 
 `Go` 实际上是支持`非类型安全`的指针的，通过非类型安全指针，我们可以绕过诸多限制，在某些情况下甚至可以写出更高效的代码，但同时也可能会引入一些潜在的不容易发现的问题。其次，非类型安全指针没有受到 [Go1兼容性保证](https://link.juejin.cn/?target=https://golang.google.cn/doc2Fgo1compat 的保护，在后续的Go版本中，使用非类型安全指针的代码可能会无法编译通过。
 
-## [Pointer](https://github.com/golang/go/blob/master/src/unsafe/unsafe.go#L21)
+### [Pointer](https://github.com/golang/go/blob/master/src/unsafe/unsafe.go#L21)
 
 我们说的 `非类型安全指针` 就是指 `unsafe` 包中的 `Pointer`，它被类型定义为 `type Pointer *ArbitraryType`，`ArbitraryType` 在这里仅仅是用于表示任意类型，也就是说 `Pointer` 可以指向任意数据类型，可以和任意类型的指针相互转换。
 
@@ -106,7 +107,7 @@ fmt.Println(unsafe.Sizeof(s)) // 16
 fmt.Println(unsafe.Alignof(s)) // 8
 ```
 
-## uintptr
+### uintptr
 
 内置类型，是能存储指针的整型，uintptr的底层类型是int；和unsafe.Pointer可相互转换；用于指针运算，无法持有对象
 
@@ -133,7 +134,7 @@ type S struct {
 	fmt.Println(s)
 ```
 
-## 使用方式
+### 使用方式
 
 ### **利用 Pointer 作为中介，完成 T1 类型 到 T2 类型的转换**
 
@@ -222,12 +223,12 @@ type S struct {
 	fmt.Println(b)
 ```
 
-## 使用限制
+### 使用限制
 
 1. 超出变量内存范围
 2. 使用变量保存 uintptr 的值
 3. Pointer 指向 nil
 
-# 附录
+## 附录
 
 [juejin.cn](https://juejin.cn/post/7083853142403579911)

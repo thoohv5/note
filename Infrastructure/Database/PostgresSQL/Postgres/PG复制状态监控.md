@@ -1,14 +1,15 @@
 ---
 title: PG复制状态监控
 date: 2026-04-07
-tags: [基础设施, 数据库]
+  - 基础设施
+  - 数据库
 type: note
 status: complete
 ---
 
-# PG复制状态监控
+## PG复制状态监控
 
-## 发布端
+### 发布端
 
 ### 逻辑/物理复制槽信息
 
@@ -63,7 +64,7 @@ select * from pg_stat_replication;
 | sync_state |  | async : 异步复制 <br />potential : 目前是异步复制且后续有可能提升为同步复制 <br />sync : 同步复制 <br />quorum : 同步复制的备选节点 |
 | reply_time |  | 逻辑/物理复制备库返回应用日志的最后时间 |
 
-## 订阅端
+### 订阅端
 
 ### 逻辑复制订阅端每个表对象的逻辑复制状态
 

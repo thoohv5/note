@@ -1,12 +1,12 @@
 ---
 title: ntlm
 date: 2026-04-07
-tags: [软件工具]
+  - 软件工具
 type: guide
 status: complete
 ---
 
-# ntlm
+## ntlm
 
 NTLM is a [challenge–response authentication protocol](https://en.wikipedia.org/wiki/Challenge)93response_authentication which uses three messages to authenticate a client in a connection-oriented environment (connectionless is similar), and a fourth additional message if integrity is desired.[[5]](https://en.wikipedia.org/wiki/NTLM#cite_note-5)[[6]](https://en.wikipedia.org/wiki/NTLM#cite_note-6)[[7]](https://en.wikipedia.org/wiki/NTLM#cite_note-7)[[8]](https://en.wikipedia.org/wiki/NTLM#cite_note-8)NTLM 是一种质询-响应身份验证协议，它使用三条消息在面向连接的环境中对客户端进行身份验证（无连接类似），如果需要完整性，则使用第四条附加消息。 [[5]](https://en.wikipedia.org/wiki/NTLM#cite_note-5) [[6]](https://en.wikipedia.org/wiki/NTLM#cite_note-6) [[7]](https://en.wikipedia.org/wiki/NTLM#cite_note-7) [[8]](https://en.wikipedia.org/wiki/NTLM#cite_note-8)
 
@@ -29,7 +29,7 @@ NTLM is a [challenge–response authentication protocol](https://en.wikipedia.o
     最后，客户以AUTHENTICATE_MESSAGE回应挑战。
     
 
-## 分类
+### 分类
 
 ### LM hash
 

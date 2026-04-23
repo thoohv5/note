@@ -1,12 +1,13 @@
 ---
 title: Persistent VolumeClaim (PVC)
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: note
 status: incomplete
 ---
 
-# Persistent VolumeClaim (PVC)
+## Persistent VolumeClaim (PVC)
 
 - 示例YAML
     

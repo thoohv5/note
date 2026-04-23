@@ -1,14 +1,15 @@
 ---
 title: Protocol Buffer
 date: 2026-04-07
-tags: [编程语言, ProtocolBuffers]
+  - 编程语言
+  - ProtocolBuffers
 type: reference
 status: incomplete
 ---
 
-# Protocol Buffer
+## Protocol Buffer
 
-# 概述（Overview）
+## 概述（Overview）
 
 Protocol Buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data.
 

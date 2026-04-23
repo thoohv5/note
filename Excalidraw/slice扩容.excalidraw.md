@@ -1,21 +1,21 @@
 ---
 
 excalidraw-plugin: parsed
-tags: [excalidraw]
+  - excalidraw
 
 ---
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 
-# Text Elements
+## Text Elements
 [[Language/Golang/源码阅读/slice/slice]] ^4dS644E9
 
 
-# Embedded files
+## Embedded files
 326be1a6aff68a5f91290a906ab6d62d2f9890a2: [[Pasted Image 20231201112840_992.svg]]
 
 %%
-# Drawing
+## Drawing
 ```json
 {
 	"type": "excalidraw",

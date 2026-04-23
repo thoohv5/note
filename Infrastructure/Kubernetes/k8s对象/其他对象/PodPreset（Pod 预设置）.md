@@ -1,12 +1,13 @@
 ---
 title: PodPreset（Pod 预设置）
 date: 2026-04-07
-tags: [基础设施, K8s]
+  - 基础设施
+  - K8s
 type: guide
 status: complete
 ---
 
-# PodPreset（Pod 预设置）
+## PodPreset（Pod 预设置）
 
 如果您需要在现代 Kubernetes 集群 (v1.21+) 中实现类似 PodPreset 的功能，Mutating Admission Webhook 是最佳选择。以下是完整实现方案：
 
@@ -17,7 +18,7 @@ status: complete
 ```bash
 kubectl create -f https://github.com/kyverno/kyverno/releases/latest/download/install.yaml
 
-# 验证
+## 验证
 kubectl api-versions | grep "kyverno.io/v1"
 ```
 
