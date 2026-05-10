@@ -1,0 +1,16 @@
+---
+title: shopspring/decimal
+date: 2026-04-07
+tags:
+  - 编程语言
+  - Golang
+  - 第三方包
+type: note
+status: incomplete
+---
+
+## shopspring/decimal
+
+## 附录
+
+[https://github.com/shopspring/decimal](https://github.com/shopspring/decimal)

@@ -1,0 +1,15 @@
+---
+title: %x
+date: 2026-04-07
+tags:
+  - 编程语言
+  - Golang
+  - 第三方包
+type: note
+status: incomplete
+---
+
+## %x
+
+输出: 十六进制字符串
+作用范围: 字符串、字节数组以及整数

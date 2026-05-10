@@ -1,0 +1,39 @@
+---
+title: TIME_WAIT端口耗尽
+date: 2026-04-07
+tags: [理论, 网络]
+type: note
+status: incomplete
+---
+
+## TIME_WAIT端口耗尽
+
+```
+connect: cannot assign requested address
+
+```
+
+### 查看
+
+```
+netstat -a|grep TIME_WAIT
+
+netstat -ant|grep -i time_wait |wc -l
+
+```
+
+### 解决
+
+```
+vim /etc/sysctl.conf
+
+net.ipv4.ip_forward=1
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_tw_recycle = 1
+
+```
+
+```
+/sbin/sysctl -p
+
+```

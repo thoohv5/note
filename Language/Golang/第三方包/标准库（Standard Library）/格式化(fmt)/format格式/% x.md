@@ -1,0 +1,14 @@
+---
+title: % x
+date: 2026-04-07
+tags:
+  - 编程语言
+  - Golang
+  - 第三方包
+type: note
+status: incomplete
+---
+
+## % x
+
+输出: 字节之间插入空格
