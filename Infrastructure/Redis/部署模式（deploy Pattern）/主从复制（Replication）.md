@@ -1,9 +1,7 @@
 ---
 title: 主从复制（Replication）
 date: 2026-04-11
-tags:
-  - 基础设施
-  - Redis
+tags: [基础设施, Redis, 部署模式]
 type: note
 status: incomplete
 ---

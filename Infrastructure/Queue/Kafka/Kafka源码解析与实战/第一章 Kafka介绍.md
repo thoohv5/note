@@ -1,9 +1,7 @@
 ---
 title: 第一章 Kafka介绍
 date: 2026-04-07
-tags:
-  - 基础设施
-  - 消息队列
+tags: [基础设施, 消息队列, Kafka]
 type: reference
 status: complete
 ---

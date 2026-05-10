@@ -1,9 +1,7 @@
 ---
 title: 深入理解Golang的sync.Pool原理
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Golang
+tags: [编程语言, Golang, 优化]
 type: reference
 status: incomplete
 ---

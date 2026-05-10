@@ -1,6 +1,9 @@
 ---
 title: 概述
 date: 2026-04-15
+tags: [编程语言, Golang, 其他]
+type: note
+status: incomplete
 ---
 
 ## 概述

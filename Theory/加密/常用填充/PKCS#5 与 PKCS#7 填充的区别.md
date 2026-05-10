@@ -1,9 +1,7 @@
 ---
 title: PKCS#5 与 PKCS#7 填充的区别
 date: 2026-04-07
-tags:
-  - 理论
-  - 加密
+tags: [理论, 加密, 填充]
 type: guide
 status: complete
 ---

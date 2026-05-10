@@ -1,8 +1,7 @@
 ---
 title: 复制（Replication）
 date: 2026-05-10
-tags:
-  - 索引
+tags: [基础设施, 数据库, MySQL]
 type: index
 status: complete
 ---

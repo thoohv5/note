@@ -1,8 +1,7 @@
 ---
 title: Redis
 date: 2026-05-10
-tags:
-  - 索引
+tags: [基础设施, Redis]
 type: index
 status: complete
 ---

@@ -1,9 +1,7 @@
 ---
 title: n-grams 语言模型
 date: 2026-04-07
-tags:
-  - 理论
-  - AI
+tags: [理论, AI, 大模型]
 type: guide
 status: complete
 ---

@@ -1,9 +1,7 @@
 ---
 title: 整数集合（intset）
 date: 2026-04-11
-tags:
-  - 基础设施
-  - Redis
+tags: [基础设施, Redis, 相关概念]
 type: note
 status: incomplete
 ---

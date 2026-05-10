@@ -1,9 +1,7 @@
 ---
 title: CMD & ENTRYPOINT
 date: 2026-04-07
-tags:
-  - 基础设施
-  - Docker
+tags: [基础设施, Docker, Dockerfile]
 type: guide
 status: complete
 ---

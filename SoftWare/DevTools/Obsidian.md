@@ -1,9 +1,7 @@
 ---
 title: Obsidian
 date: 2026-04-07
-tags:
-  - 软件工具
-  - 开发工具
+tags: [软件工具, 开发工具, Obsidian]
 type: note
 status: incomplete
 ---

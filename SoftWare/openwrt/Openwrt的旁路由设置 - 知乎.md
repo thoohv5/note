@@ -1,8 +1,7 @@
 ---
 title: Openwrt的旁路由设置 - 知乎
 date: 2026-05-10
-tags:
-  - 索引
+tags: [软件工具]
 type: index
 status: complete
 ---

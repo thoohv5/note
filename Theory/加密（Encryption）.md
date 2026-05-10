@@ -1,8 +1,7 @@
 ---
 title: 加密（Encryption）
 date: 2026-05-10
-tags:
-  - 索引
+tags: [理论]
 type: index
 status: complete
 ---

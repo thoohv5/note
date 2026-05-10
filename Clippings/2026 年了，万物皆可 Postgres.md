@@ -1,13 +1,9 @@
 ---
 title: "2026 年了，万物皆可 Postgres"
-source: "https://mp.weixin.qq.com/s/f41BzHMxbHnCKZc0ua4oRA"
-author:
-  - "Tiger Data"
-published:
-created: 2026-04-15
-description: "把你的数据库想象成你的家。客厅、卧室、浴室、厨房、车库——各司其职，但都在同一个屋檐下，有门有走廊互相连通。"
-tags:
-  - "clippings"
+date: 2026-05-10
+tags: [clippings]
+type: note
+status: incomplete
 ---
 原创 Tiger Data *2026年2月23日 09:52*
 

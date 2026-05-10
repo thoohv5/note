@@ -1,9 +1,7 @@
 ---
 title: 二进制日志（binlog）
 date: 2026-04-07
-tags:
-  - 基础设施
-  - 数据库
+tags: [基础设施, 数据库, MySQL]
 type: guide
 status: complete
 ---

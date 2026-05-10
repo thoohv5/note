@@ -1,8 +1,7 @@
 ---
 title: 安全（Security）
 date: 2026-05-10
-tags:
-  - 索引
+tags: [理论, 安全]
 type: index
 status: complete
 ---

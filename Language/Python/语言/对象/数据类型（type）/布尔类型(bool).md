@@ -1,9 +1,7 @@
 ---
 title: 布尔类型(bool)
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Python
+tags: [编程语言, Python, 语言]
 type: note
 status: incomplete
 ---

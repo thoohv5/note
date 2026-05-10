@@ -1,8 +1,7 @@
 ---
 title: 增长率计算
 date: 2024-08-23
-tags:
-  - 行测
+tags: [行测, 资料分析]
 type: cheatsheet
 status: complete
 ---

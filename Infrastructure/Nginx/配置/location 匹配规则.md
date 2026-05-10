@@ -1,9 +1,7 @@
 ---
 title: location 匹配规则
 date: 2026-04-07
-tags:
-  - 基础设施
-  - Nginx
+tags: [基础设施, Nginx, 配置]
 type: note
 status: incomplete
 ---

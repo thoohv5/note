@@ -1,9 +1,7 @@
 ---
 title: RDB 文件的创建
 date: 2026-04-11
-tags:
-  - 基础设施
-  - Redis
+tags: [基础设施, Redis, 相关概念]
 type: note
 status: incomplete
 ---

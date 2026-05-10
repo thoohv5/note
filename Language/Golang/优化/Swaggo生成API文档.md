@@ -1,9 +1,7 @@
 ---
 title: 使用 swaggo 及 gin-swagger 生成 API 文档 - golang - 大象笔记
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Golang
+tags: [编程语言, Golang, 优化]
 type: reference
 status: complete
 ---

@@ -1,8 +1,7 @@
 ---
 title: go语言规范-扩展（推荐写法）
 date: 2026-04-07
-tags:
-  - 其他
+tags: [其他, 项目管理]
 type: guide
 status: complete
 ---

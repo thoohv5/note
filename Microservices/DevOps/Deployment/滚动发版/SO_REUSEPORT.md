@@ -1,9 +1,7 @@
 ---
 title: SO_REUSEPORT
 date: 2026-04-07
-tags:
-  - 微服务
-  - DevOps
+tags: [微服务, DevOps, 部署]
 type: note
 status: complete
 ---

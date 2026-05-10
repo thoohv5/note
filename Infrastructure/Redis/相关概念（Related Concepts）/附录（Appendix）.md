@@ -1,9 +1,7 @@
 ---
 title: 附录（Appendix）
 date: 2026-04-07
-tags:
-  - 基础设施
-  - Redis
+tags: [基础设施, Redis, 相关概念]
 type: reference
 status: incomplete
 ---

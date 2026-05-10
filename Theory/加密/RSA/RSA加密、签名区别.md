@@ -1,9 +1,7 @@
 ---
 title: RSA加密、签名区别
 date: 2026-04-07
-tags:
-  - 理论
-  - 加密
+tags: [理论, 加密, RSA]
 type: note
 status: complete
 ---

@@ -1,9 +1,7 @@
 ---
 title: AES-GCM
 date: 2026-04-07
-tags:
-  - 理论
-  - 加密
+tags: [理论, 加密, AES]
 type: reference
 status: complete
 ---

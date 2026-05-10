@@ -1,8 +1,7 @@
 ---
 title: Python
 date: 2026-05-10
-tags:
-  - 索引
+tags: [编程语言, Python]
 type: index
 status: complete
 ---

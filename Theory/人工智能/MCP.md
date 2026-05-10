@@ -1,9 +1,7 @@
 ---
 title: MCP
 date: 2026-04-07
-tags:
-  - 理论
-  - AI
+tags: [理论, AI, MCP]
 type: reference
 status: complete
 ---

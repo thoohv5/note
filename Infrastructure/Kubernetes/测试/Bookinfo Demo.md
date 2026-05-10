@@ -1,9 +1,7 @@
 ---
 title: Bookinfo Demo
 date: 2026-04-07
-tags:
-  - 基础设施
-  - K8s
+tags: [基础设施, K8s, 测试]
 type: guide
 status: complete
 ---

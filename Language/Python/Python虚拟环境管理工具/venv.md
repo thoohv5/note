@@ -1,9 +1,7 @@
 ---
 title: venv
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Python
+tags: [编程语言, Python, 虚拟环境]
 type: note
 status: incomplete
 ---

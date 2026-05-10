@@ -1,9 +1,7 @@
 ---
 title: WithNsResolver WithNameServer WithNameServerDomain
 date: 2026-04-07
-tags:
-  - 基础设施
-  - 消息队列
+tags: [基础设施, 消息队列, RocketMQ]
 type: note
 status: complete
 ---

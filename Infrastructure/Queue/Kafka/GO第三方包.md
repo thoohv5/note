@@ -1,9 +1,7 @@
 ---
 title: GO第三方包
 date: 2026-04-07
-tags:
-  - 基础设施
-  - 消息队列
+tags: [基础设施, 消息队列, Kafka]
 type: guide
 status: complete
 ---

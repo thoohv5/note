@@ -1,9 +1,7 @@
 ---
 title: Go 语言使用 grpc 时，是否需要 grpc 连接池？
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Golang
+tags: [编程语言, Golang, 优化]
 type: note
 status: complete
 ---

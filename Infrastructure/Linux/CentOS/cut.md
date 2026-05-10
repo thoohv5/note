@@ -1,9 +1,7 @@
 ---
 title: cut
 date: 2026-04-07
-tags:
-  - 基础设施
-  - Linux
+tags: [基础设施, Linux, CentOS]
 type: note
 status: complete
 ---

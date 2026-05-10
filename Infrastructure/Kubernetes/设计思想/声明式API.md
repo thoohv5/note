@@ -1,9 +1,7 @@
 ---
 title: 声明式API
 date: 2026-04-07
-tags:
-  - 基础设施
-  - K8s
+tags: [基础设施, K8s, 设计思想]
 type: reference
 status: incomplete
 ---

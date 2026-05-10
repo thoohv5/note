@@ -1,8 +1,7 @@
 ---
 title: Nginx
 date: 2026-05-10
-tags:
-  - 索引
+tags: [基础设施, Nginx]
 type: index
 status: complete
 ---

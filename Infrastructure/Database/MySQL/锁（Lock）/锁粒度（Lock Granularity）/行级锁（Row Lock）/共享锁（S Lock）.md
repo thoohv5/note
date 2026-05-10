@@ -1,9 +1,7 @@
 ---
 title: 共享锁（S Lock）
 date: 2026-04-07
-tags:
-  - 基础设施
-  - 数据库
+tags: [基础设施, 数据库, MySQL]
 type: reference
 status: complete
 ---

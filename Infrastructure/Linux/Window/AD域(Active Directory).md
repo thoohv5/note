@@ -1,9 +1,7 @@
 ---
 title: AD域(Active Directory)
 date: 2026-04-07
-tags:
-  - 基础设施
-  - Linux
+tags: [基础设施, Linux, Windows]
 type: reference
 status: complete
 ---

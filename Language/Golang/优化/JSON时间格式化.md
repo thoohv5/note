@@ -1,9 +1,7 @@
 ---
 title: go 中，json 转换时间（time.Time）的格式（默认格式为 RFC3339）_golang rfc3339_Grassto的博客-CSDN博客
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Golang
+tags: [编程语言, Golang, 优化]
 type: guide
 status: complete
 ---

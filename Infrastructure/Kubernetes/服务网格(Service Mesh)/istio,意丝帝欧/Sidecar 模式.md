@@ -1,9 +1,7 @@
 ---
 title: Sidecar 模式
 date: 2026-04-07
-tags:
-  - 基础设施
-  - K8s
+tags: [基础设施, K8s, 服务网格]
 type: note
 status: incomplete
 ---

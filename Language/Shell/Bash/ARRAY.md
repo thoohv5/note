@@ -1,9 +1,7 @@
 ---
 title: ARRAY
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Shell
+tags: [编程语言, Shell, Bash]
 type: note
 status: complete
 ---

@@ -1,8 +1,7 @@
 ---
 title: Golang
 date: 2026-05-10
-tags:
-  - 索引
+tags: [编程语言, Golang]
 type: index
 status: complete
 ---

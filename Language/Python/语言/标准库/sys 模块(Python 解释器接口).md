@@ -1,9 +1,7 @@
 ---
 title: sys 模块(Python 解释器接口)
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Python
+tags: [编程语言, Python, 语言]
 type: note
 status: complete
 ---

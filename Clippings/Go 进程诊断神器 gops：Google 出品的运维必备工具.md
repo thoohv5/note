@@ -1,13 +1,9 @@
 ---
 title: "Go 进程诊断神器 gops：Google 出品的运维必备工具"
-source: "https://mp.weixin.qq.com/s/ezZEUdhkNIiJby0oP4-oOQ"
-author:
-  - "研习大师兄"
-published:
-created: 2026-04-15
-description:
-tags:
-  - "clippings"
+date: 2026-05-10
+tags: [clippings]
+type: note
+status: incomplete
 ---
 原创 研习大师兄 *2026年3月15日 12:02*
 

@@ -1,8 +1,7 @@
 ---
 title: 网络（Network）
 date: 2026-05-10
-tags:
-  - 索引
+tags: [理论, 网络]
 type: index
 status: complete
 ---

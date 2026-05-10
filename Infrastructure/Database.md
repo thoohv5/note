@@ -1,8 +1,7 @@
 ---
 title: Database
 date: 2026-05-10
-tags:
-  - 索引
+tags: [基础设施, 数据库]
 type: index
 status: complete
 ---
@@ -24,5 +23,5 @@ status: complete
 
 - MongoDB/
 - MySQL/
-- PostgresSQL/
+- PostgreSQL/
 - Sqlite/

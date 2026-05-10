@@ -1,9 +1,7 @@
 ---
 title: 协程（goroutine）
 date: 2026-05-10
-tags:
-  - 编程语言
-  - Golang
+tags: [编程语言, Golang, 语法]
 type: index
 status: complete
 ---

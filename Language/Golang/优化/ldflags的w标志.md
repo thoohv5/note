@@ -1,9 +1,7 @@
 ---
 title: 当通过ldflags选项传递给go命令时，w标志是什么意思？(What does the w flag mean when passed in via the ldflags option to the go command?)_电脑培训
 date: 2026-04-07
-tags:
-  - 编程语言
-  - Golang
+tags: [编程语言, Golang, 优化]
 type: note
 status: complete
 ---

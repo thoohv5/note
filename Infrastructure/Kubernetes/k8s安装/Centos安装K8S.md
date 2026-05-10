@@ -1,9 +1,7 @@
 ---
 title: Centos安装K8S
 date: 2026-04-08
-tags:
-  - 基础设施
-  - K8s
+tags: [基础设施, K8s, 安装]
 type: guide
 status: complete
 ---

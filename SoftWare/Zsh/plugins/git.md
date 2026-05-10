@@ -1,9 +1,7 @@
 ---
 title: git
 date: 2026-04-07
-tags:
-  - 软件工具
-  - Zsh
+tags: [软件工具, Zsh, 插件]
 type: note
 status: incomplete
 ---

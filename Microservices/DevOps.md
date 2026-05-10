@@ -1,8 +1,7 @@
 ---
 title: DevOps
 date: 2026-05-10
-tags:
-  - 索引
+tags: [微服务, DevOps]
 type: index
 status: complete
 ---

@@ -1,8 +1,7 @@
 ---
 title: ZDNS
 date: 2026-05-10
-tags:
-  - 索引
+tags: [其他]
 type: index
 status: complete
 ---

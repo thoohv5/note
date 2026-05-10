@@ -1,9 +1,7 @@
 ---
 title: 数据可视化（Grafana）
 date: 2026-04-07
-tags:
-  - 微服务
-  - 服务治理
+tags: [微服务, 服务治理, Prometheus]
 type: guide
 status: incomplete
 ---

@@ -1,9 +1,7 @@
 ---
 title: 无状态的服务（Stateless Service）
 date: 2026-04-07
-tags:
-  - 微服务
-  - 服务治理
+tags: [微服务, 服务治理, 可伸缩性]
 type: note
 status: complete
 ---

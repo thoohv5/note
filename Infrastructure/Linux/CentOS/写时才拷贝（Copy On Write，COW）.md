@@ -1,9 +1,7 @@
 ---
 title: 写时才拷贝（Copy On Write，COW）
 date: 2026-04-07
-tags:
-  - 基础设施
-  - Linux
+tags: [基础设施, Linux, CentOS]
 type: note
 status: incomplete
 ---

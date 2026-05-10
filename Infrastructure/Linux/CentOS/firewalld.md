@@ -1,9 +1,7 @@
 ---
 title: firewalld
 date: 2026-05-10
-tags:
-  - 基础设施
-  - Linux
+tags: [基础设施, Linux, CentOS]
 type: index
 status: complete
 ---

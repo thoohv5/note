@@ -1,9 +1,7 @@
 ---
 title: OpenTelemetry Go
 date: 2026-04-07
-tags:
-  - 微服务
-  - 服务治理
+tags: [微服务, 服务治理, 可观测性]
 type: reference
 status: complete
 ---

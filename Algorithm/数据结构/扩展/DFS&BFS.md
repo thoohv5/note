@@ -1,9 +1,7 @@
 ---
 title: DFS&BFS
 date: 2026-04-07
-tags:
-  - 算法
-  - 数据结构
+tags: [算法, 数据结构, 扩展]
 type: note
 status: incomplete
 ---

@@ -1,9 +1,7 @@
 ---
 title: ACL模型
 date: 2026-04-07
-tags:
-  - 微服务
-  - 分布式
+tags: [微服务, 分布式, 权限系统]
 type: note
 status: complete
 ---

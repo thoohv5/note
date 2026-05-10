@@ -1,9 +1,7 @@
 ---
 title: 接口文档（OpenAPI/Swagger）
 date: 2026-04-07
-tags:
-  - 微服务
-  - DevOps
+tags: [微服务, DevOps, 设计]
 type: guide
 status: complete
 ---

@@ -1,8 +1,7 @@
 ---
 title: Kubernetes
 date: 2026-05-10
-tags:
-  - 索引
+tags: [基础设施, K8s]
 type: index
 status: complete
 ---
