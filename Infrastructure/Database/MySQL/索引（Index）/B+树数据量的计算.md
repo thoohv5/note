@@ -1,6 +1,7 @@
 ---
 title: B+树数据量的计算
 date: 2026-04-07
+tags:
   - 基础设施
   - 数据库
 type: note

@@ -1,6 +1,7 @@
 ---
 title: 升级node版本（MAC系统）
 date: 2026-04-07
+tags:
   - 编程语言
   - Node
 type: note

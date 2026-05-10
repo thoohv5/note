@@ -1,6 +1,7 @@
 ---
 title: Kubernetes API Server(kube-apiserver)
 date: 2026-04-07
+tags:
   - 基础设施
   - K8s
 type: reference

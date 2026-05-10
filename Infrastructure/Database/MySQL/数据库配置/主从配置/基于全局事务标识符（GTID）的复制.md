@@ -1,6 +1,7 @@
 ---
 title: 基于全局事务标识符（GTID）的复制
 date: 2026-04-07
+tags:
   - 基础设施
   - 数据库
 type: guide

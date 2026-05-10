@@ -1,6 +1,7 @@
 ---
 title: EXSI 6.7
 date: 2026-04-07
+tags:
   - 软件工具
 type: note
 status: incomplete
@@ -24,6 +25,6 @@ chmod +x /etc/rc.local.d/local.sh
 
 ## 附录
 
-[[EXSI 6 7/ESXI 6 7 安装黑群晖7 1版本]]
+[[SoftWare/EXSI 6 7/ESXI 6 7 安装黑群晖7 1版本|ESXI 6.7 安装黑群晖 7.1 版本]]
 
-[[EXSI 6 7/如何在#VMWare #ESXi 6 7上安装OpenWrt虚拟机充当旁路由]]
+[[SoftWare/EXSI 6 7/VMWare ESXi 6 7 安装 OpenWrt 旁路由|VMWare ESXi 6.7 安装 OpenWrt 旁路由]]

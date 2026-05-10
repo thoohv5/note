@@ -1,6 +1,7 @@
 ---
 title: github
 date: 2024-03-28
+tags:
   - 笔记
 type: note
 status: incomplete

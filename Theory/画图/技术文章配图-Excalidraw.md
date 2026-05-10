@@ -1,6 +1,7 @@
 ---
 title: 技术文章配图——Excalidraw
 date: 2026-04-07
+tags:
   - 理论
   - 画图
 type: note

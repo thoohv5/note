@@ -1,6 +1,7 @@
 ---
 title: Nginx中add_header和proxy_set_header的区别
 date: 2026-04-07
+tags:
   - 基础设施
   - Nginx
 type: note

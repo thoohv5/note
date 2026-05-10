@@ -1,6 +1,7 @@
 ---
 title: Keepalived实现Redis高可用
 date: 2026-04-07
+tags:
   - 基础设施
   - Keepalived
 type: note

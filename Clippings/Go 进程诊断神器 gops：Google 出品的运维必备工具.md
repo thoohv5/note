@@ -2,7 +2,7 @@
 title: "Go 进程诊断神器 gops：Google 出品的运维必备工具"
 source: "https://mp.weixin.qq.com/s/ezZEUdhkNIiJby0oP4-oOQ"
 author:
-  - "[[研习大师兄]]"
+  - "研习大师兄"
 published:
 created: 2026-04-15
 description:

@@ -1,6 +1,7 @@
 ---
 title: 忽略已提交的文件（.gitignore）
 date: 2026-04-07
+tags:
   - 软件工具
   - Git
 type: guide

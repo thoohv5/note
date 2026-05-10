@@ -1,6 +1,7 @@
 ---
 title: 控制组（Linux Control Groups，Linux CGroup）
 date: 2026-04-07
+tags:
   - 基础设施
   - Docker
 type: reference

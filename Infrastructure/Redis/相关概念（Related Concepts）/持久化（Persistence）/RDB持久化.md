@@ -1,6 +1,7 @@
 ---
 title: RDB 文件的创建
 date: 2026-04-11
+tags:
   - 基础设施
   - Redis
 type: note

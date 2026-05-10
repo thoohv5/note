@@ -1,6 +1,7 @@
 ---
 title: kafka规范
 date: 2026-04-07
+tags:
   - 其他
 type: guide
 status: complete

@@ -1,6 +1,7 @@
 ---
 title: Telepresence[官方推荐]
 date: 2026-04-07
+tags:
   - 基础设施
   - K8s
 type: note

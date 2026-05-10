@@ -1,6 +1,7 @@
 ---
 title: FOR UPDATE SKIP LOCKED
 date: 2026-04-11
+tags:
   - 基础设施
   - 数据库
   - MySQL

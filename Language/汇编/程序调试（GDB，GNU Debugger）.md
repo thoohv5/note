@@ -1,6 +1,7 @@
 ---
 title: 程序调试（GDB，GNU Debugger）
 date: 2026-04-07
+tags:
   - 编程语言
   - 汇编
 type: reference

@@ -1,6 +1,7 @@
 ---
 title: 增长量计算
 date: 2024-08-23
+tags:
   - 行测
 type: note
 status: complete

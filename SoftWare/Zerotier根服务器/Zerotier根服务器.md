@@ -1,6 +1,7 @@
 ---
 title: Zerotier根服务器
 date: 2026-04-07
+tags:
   - 软件工具
 type: guide
 status: complete

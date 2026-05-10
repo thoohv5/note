@@ -1,6 +1,7 @@
 ---
 title: pgsql 报错 in a read-only transaction_ORACLE的技术博客_51CTO博客
 date: 2026-04-07
+tags:
   - 基础设施
   - 数据库
 type: note

@@ -1,6 +1,7 @@
 ---
 title: Centos安装K8S
 date: 2026-04-08
+tags:
   - 基础设施
   - K8s
 type: guide
@@ -104,7 +105,7 @@ sudo yum install -y device-mapper-persistent-data lvm2 vim wget lrzsz net-tools
 
 ### 安装 Docker
 
-[[../../Docker/知识点/Docker安装]] 
+[[Infrastructure/Docker/Docker安装|Docker安装]] 
 
 ```bash
 ## 配置docker yum源
@@ -202,7 +203,7 @@ export KUBECONFIG=~/.kube/config
 
 ### 加入 Worker 节点
 
-[[../知识点/命令行工具/kubeadm]] 
+[[Infrastructure/Kubernetes/命令行工具/kubeadm|kubeadm]] 
 
 ```bash
 ## 在 node1 和 node2 上执行 kubeadm join 命令，该命令在Master节点初始化集群的时候（kubeadm init） 成功后会输出。

@@ -1,6 +1,7 @@
 ---
 title: 二进制日志（binlog）
 date: 2026-04-07
+tags:
   - 基础设施
   - 数据库
 type: guide
@@ -40,4 +41,4 @@ sync_binlog
 
 ## 日志格式
 
-[[../高性能MySQL/复制/复制（Replication）]]
+[[Infrastructure/Database/MySQL/高性能MySQL/复制/复制（Replication）|复制（Replication）]]

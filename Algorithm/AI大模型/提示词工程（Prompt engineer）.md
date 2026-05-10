@@ -1,6 +1,7 @@
 ---
 title: 提示词工程（Prompt engineer）
 date: 2026-04-07
+tags:
   - 算法
   - AI
 type: reference

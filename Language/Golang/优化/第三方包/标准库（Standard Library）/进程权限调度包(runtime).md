@@ -1,6 +1,7 @@
 ---
 title: 进程权限调度包(runtime)
 date: 2026-04-07
+tags:
   - 编程语言
   - Golang
 type: reference

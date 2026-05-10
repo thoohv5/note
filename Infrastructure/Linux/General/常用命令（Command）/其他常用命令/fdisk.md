@@ -1,6 +1,7 @@
 ---
 title: fdisk
 date: 2026-04-07
+tags:
   - 基础设施
   - Linux
 type: reference
@@ -16,7 +17,7 @@ fdisk, Partition table manipulator for Linux, 用于管理磁盘的分区信息
 ## 命令
 
 [[fdisk]]
-[[mkfs.ext4]]
+[[Infrastructure/Linux/General/常用命令（Command）/其他常用命令/mkfs ext4|mkfs.ext4]]
 
 ```
 ## 查看分区

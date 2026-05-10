@@ -1,6 +1,7 @@
 ---
 title: 将Redis当做使用LRU算法的缓存来使用
 date: 2026-04-07
+tags:
   - 基础设施
   - Redis
 type: guide

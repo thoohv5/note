@@ -1,6 +1,7 @@
 ---
 title: 避免Big Key
 date: 2026-04-07
+tags:
   - 基础设施
   - Redis
 type: note

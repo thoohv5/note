@@ -1,6 +1,7 @@
 ---
 title: Go 每日一库之 casbin - 掘金
 date: 2026-04-07
+tags:
   - 编程语言
   - Golang
 type: note

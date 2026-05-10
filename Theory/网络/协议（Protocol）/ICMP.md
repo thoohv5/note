@@ -1,6 +1,7 @@
 ---
 title: ICMP
 date: 2026-04-07
+tags:
   - 理论
   - 网络
 type: note
@@ -52,4 +53,4 @@ status: complete
 
 ### 跟踪路由（traceroute）
 
-[[../../../Assembly/Linux/CentOS/网络配置/网关/traceroute]]
+[[Infrastructure/Linux/CentOS/网络配置/网关/traceroute|traceroute]]

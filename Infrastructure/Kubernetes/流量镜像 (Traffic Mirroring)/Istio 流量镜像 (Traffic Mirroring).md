@@ -1,6 +1,7 @@
 ---
 title: Istio 流量镜像 (Traffic Mirroring)
 date: 2026-04-07
+tags:
   - 基础设施
   - K8s
 type: guide

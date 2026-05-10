@@ -1,6 +1,7 @@
 ---
 title: 领域驱动（DDD）
 date: 2026-04-07
+tags:
   - 微服务
   - DevOps
 type: note

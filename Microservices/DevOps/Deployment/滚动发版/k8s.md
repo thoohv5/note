@@ -1,6 +1,7 @@
 ---
 title: k8s
 date: 2026-04-07
+tags:
   - 微服务
   - DevOps
 type: note

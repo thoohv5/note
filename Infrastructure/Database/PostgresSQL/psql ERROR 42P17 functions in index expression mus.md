@@ -1,6 +1,7 @@
 ---
 title: psql: ERROR: 42P17: functions in index expression must be marked IMMUTABLE
 date: 2026-04-07
+tags:
   - 基础设施
   - 数据库
 type: guide

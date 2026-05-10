@@ -1,6 +1,7 @@
 ---
 title: 领域事件（FastDDD）
 date: 2026-04-07
+tags:
   - 微服务
   - DevOps
 type: note

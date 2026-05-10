@@ -1,6 +1,7 @@
 ---
 title: 监控 jaeger 配置
 date: 2026-04-07
+tags:
   - 微服务
   - 服务治理
 type: note

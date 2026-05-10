@@ -1,6 +1,7 @@
 ---
 title: Linux 网络流量监控利器 iftop 中文入门指南-CSDN博客
 date: 2026-04-07
+tags:
   - 基础设施
   - Linux
 type: note

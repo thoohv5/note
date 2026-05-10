@@ -2,7 +2,7 @@
 title: "每日一Go-84、从 0 到 1：用 Go 打造千万级 Excel 高性能批量处理系统（实战）"
 source: "https://mp.weixin.qq.com/s/hQuTF4zosJ44Vt045xwfAA"
 author:
-  - "[[Coding君]]"
+  - "Coding君"
 published:
 created: 2026-04-15
 description: "高并发 + 流式处理 + 内存优化 + 工程化架构，一篇讲透 Go 处理千万级 Excel 的正确姿势。"

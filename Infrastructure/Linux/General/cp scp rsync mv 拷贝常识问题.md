@@ -1,6 +1,7 @@
 ---
 title: cp scp rsync mv 拷贝常识问题
 date: 2026-04-07
+tags:
   - 基础设施
   - Linux
 type: note

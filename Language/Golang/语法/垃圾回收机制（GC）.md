@@ -1,6 +1,7 @@
 ---
 title: 垃圾回收机制（GC）
 date: 2026-04-07
+tags:
   - 编程语言
   - Golang
 type: guide

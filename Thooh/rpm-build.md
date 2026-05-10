@@ -1,6 +1,7 @@
 ---
 title: rpm-build
 date: 2023-12-12
+tags:
   - 笔记
 type: note
 status: incomplete

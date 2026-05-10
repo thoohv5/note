@@ -1,6 +1,7 @@
 ---
 title: Padding Oracle
 date: 2026-04-07
+tags:
   - 理论
   - 安全
 type: guide

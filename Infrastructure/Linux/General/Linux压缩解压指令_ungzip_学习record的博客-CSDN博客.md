@@ -1,6 +1,7 @@
 ---
 title: Linux压缩解压指令_ungzip_学习record的博客-CSDN博客
 date: 2026-04-07
+tags:
   - 基础设施
   - Linux
 type: guide

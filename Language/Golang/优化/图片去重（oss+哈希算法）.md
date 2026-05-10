@@ -1,6 +1,7 @@
 ---
 title: 图片去重（oss+哈希算法）
 date: 2026-04-07
+tags:
   - 编程语言
   - Golang
 type: guide

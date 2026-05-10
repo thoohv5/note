@@ -1,6 +1,7 @@
 ---
 title: 集合（set）
 date: 2026-04-07
+tags:
   - 编程语言
   - Python
 type: note

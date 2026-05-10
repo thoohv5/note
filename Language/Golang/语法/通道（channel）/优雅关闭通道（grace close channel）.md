@@ -1,6 +1,7 @@
 ---
 title: 优雅关闭通道（grace close channel）
 date: 2026-04-07
+tags:
   - 编程语言
   - Golang
 type: note

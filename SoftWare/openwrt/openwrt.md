@@ -1,6 +1,7 @@
 ---
 title: openwrt
 date: 2026-04-07
+tags:
   - 软件工具
 type: note
 status: incomplete
@@ -8,4 +9,4 @@ status: incomplete
 
 ## openwrt
 
-[[openwrt/Openwrt的旁路由设置 - 知乎]]
+[[SoftWare/openwrt/Openwrt的旁路由设置 - 知乎|Openwrt的旁路由设置 - 知乎]]

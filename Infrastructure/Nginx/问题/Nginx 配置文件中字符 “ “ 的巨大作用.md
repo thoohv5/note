@@ -1,6 +1,7 @@
 ---
 title: Nginx 配置文件中字符 “/“ 的巨大作用
 date: 2026-04-07
+tags:
   - 基础设施
   - Nginx
 type: note

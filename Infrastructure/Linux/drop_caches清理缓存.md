@@ -1,6 +1,7 @@
 ---
 title: Linux shell：echo N ＞ /proc/sys/vm/drop_caches清理缓存-CSDN博客
 date: 2026-04-07
+tags:
   - 基础设施
   - Linux
 type: note

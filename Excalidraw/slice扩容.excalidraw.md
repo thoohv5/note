@@ -1,6 +1,7 @@
 ---
 
 excalidraw-plugin: parsed
+tags:
   - excalidraw
 
 ---
@@ -8,7 +9,7 @@ excalidraw-plugin: parsed
 
 
 ## Text Elements
-[[Language/Golang/源码阅读/slice/slice]] ^4dS644E9
+[[Language/Golang/概述/Go 语言圣经/第4章 复合数据类型/切片(slice)|切片(slice)]] ^4dS644E9
 
 
 ## Embedded files

@@ -1,6 +1,7 @@
 ---
 title: Zsh
 date: 2026-04-07
+tags:
   - 软件工具
   - Zsh
 type: note
@@ -39,4 +40,4 @@ source ~/.zshrc
 ENABLE_CORRECTION="true"
 ```
 
-[[Zsh/plugins]]
+[[SoftWare/Zsh/plugins|plugins]]

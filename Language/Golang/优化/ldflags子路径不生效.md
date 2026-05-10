@@ -1,6 +1,7 @@
 ---
 title: golang编译参数ldflags子路径不生效
 date: 2026-04-07
+tags:
   - 编程语言
   - Golang
 type: note

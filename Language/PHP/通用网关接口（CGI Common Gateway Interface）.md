@@ -1,6 +1,7 @@
 ---
 title: 通用网关接口（CGI Common Gateway Interface）
 date: 2026-04-07
+tags:
   - 编程语言
   - PHP
 type: reference

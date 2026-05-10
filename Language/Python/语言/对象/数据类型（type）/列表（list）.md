@@ -1,6 +1,7 @@
 ---
 title: 列表（list）
 date: 2026-04-07
+tags:
   - 编程语言
   - Python
 type: note

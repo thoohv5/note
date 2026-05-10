@@ -1,6 +1,7 @@
 ---
 title: 关闭expect执行spawn时回显spawn - 道霖 - 博客园
 date: 2026-04-07
+tags:
   - 软件工具
 type: note
 status: complete

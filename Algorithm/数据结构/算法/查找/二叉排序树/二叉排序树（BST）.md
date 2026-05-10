@@ -1,6 +1,7 @@
 ---
 title: 二叉排序树（BST）
 date: 2026-04-07
+tags:
   - 算法
   - 数据结构
 type: reference

@@ -1,6 +1,7 @@
 ---
 title: 分布式集群：Redis Cluster
 date: 2026-04-11
+tags:
   - 基础设施
   - Redis
 type: note

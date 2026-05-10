@@ -1,6 +1,7 @@
 ---
 title: bitmap
 date: 2026-04-07
+tags:
   - 算法
   - 奇门遁甲
 type: reference

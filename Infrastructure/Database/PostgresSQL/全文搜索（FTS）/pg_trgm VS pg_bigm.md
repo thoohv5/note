@@ -1,6 +1,7 @@
 ---
 title: pg_trgm VS pg_bigm
 date: 2026-04-07
+tags:
   - 基础设施
   - 数据库
 type: note

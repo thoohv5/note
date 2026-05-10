@@ -1,6 +1,7 @@
 ---
 title: 基期计算
 date: 2024-08-23
+tags:
   - 行测
 type: cheatsheet
 status: complete
