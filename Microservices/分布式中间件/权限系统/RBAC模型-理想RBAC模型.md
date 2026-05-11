@@ -3,11 +3,46 @@ title: 理想RBAC模型
 date: 2026-04-07
 tags: [微服务, 分布式, 权限系统]
 type: note
-status: incomplete
+status: complete
 ---
 
 ## 理想RBAC模型
 
-![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202401261520051.png)
+> RBAC (Role-Based Access Control) 理想模型由四层组成，构建灵活可扩展的权限体系。
 
-![](https://raw.githubusercontent.com/thoohv5/ob/main/picture202401261521910.png)
+### 四层模型
+
+| 层级 | 实体 | 说明 |
+|------|------|------|
+| RBAC0 | 用户-角色-权限 | 基础模型，用户通过角色关联权限 |
+| RBAC1 | + 角色继承 | 角色层级，上级角色继承下级权限 |
+| RBAC2 | + 约束 | 互斥角色、基数约束、先决条件 |
+| RBAC3 | 统一模型 | RBAC1 + RBAC2 的完整组合 |
+
+### 核心概念
+
+```
+用户 (User) ──多对多──> 角色 (Role) ──多对多──> 权限 (Permission)
+```
+
+- **用户**：系统操作实体
+- **角色**：权限的集合，语义化分组
+- **权限**：资源的操作许可（资源 + 动作）
+- **会话**：用户激活角色集的临时映射
+
+### 设计要点
+
+- 权限粒度：资源和操作的最小组合
+- 角色设计遵循最小权限原则
+- 考虑动态职责分离（DSoD）和静态职责分离（SSoD）
+- 避免权限硬编码到业务逻辑
+
+![]()
+
+![]()
+
+### 相关笔记
+
+- [[RBAC权限模型]]
+- [[权限系统设计]]
+- [[Casbin权限库]]
